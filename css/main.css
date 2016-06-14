@@ -2188,6 +2188,87 @@ html .b-gadget__subscribe__field {
 
 
 
+/* ---------------------------------------------------- Map pages style ---------------------------------------------------- */
+
+
+
+.b-map-menu {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 100px;
+    background: #0e0f11;
+    height: 100%;
+}
+
+.b-map-menu__list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.b-map-menu__list li {
+    border-bottom: 1px solid #000;
+}
+
+.b-map-menu__list li.active {
+    background: #3b3b3c;
+}
+
+.b-map-menu__list a {
+    font: 300 13px Roboto;
+    color: #b0b0b0;
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 15px 0;
+}
+
+.b-map-menu__list i {
+    color: #fff;
+    font-size: 45px;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.b-map-menu__list__bars:hover a, .b-map-menu__list__bars:hover a i, .b-map-menu__list__bars.active a, .b-map-menu__list__bars.active i {
+    color: #f2df35;
+}
+
+.b-map-menu__list__food:hover a, .b-map-menu__list__food:hover a i, .b-map-menu__list__food.active a, .b-map-menu__list__food.active a i {
+    color: #75bc51;
+}
+
+.b-map-menu__list__restaurants:hover a, .b-map-menu__list__restaurants:hover a i, .b-map-menu__list__restaurants.active a, .b-map-menu__list__restaurants.active a i {
+    color: #de443a;
+}
+
+.b-map-menu__list__night-life:hover a, .b-map-menu__list__night-life:hover a i, .b-map-menu__list__night-life.active a, .b-map-menu__list__night-life.active a i {
+    color: #90a9d1;
+}
+
+.b-map-menu__list__entertainment:hover a, .b-map-menu__list__entertainment:hover a i, .b-map-menu__list__entertainment.active a, .b-map-menu__list__entertainment.active a i {
+    color: #084e8c;
+}
+
+.b-map-menu__list__cinema:hover a, .b-map-menu__list__cinema:hover a i, .b-map-menu__list__cinema.active a, .b-map-menu__list__cinema.active a i {
+    color: #ec7368;
+}
+
+.b-map-menu__list__hotels:hover a, .b-map-menu__list__hotels:hover a i, .b-map-menu__list__hotels.active a, .b-map-menu__list__hotels.active a i {
+    color: #8c8a98;
+}
+
+.b-map-menu__list__shopping:hover a, .b-map-menu__list__shopping:hover a i, .b-map-menu__list__shopping.active a, .b-map-menu__list__shopping.active a i {
+    color: #b18f6a;
+}
+
+
+
+
+
+
 
 /* ---------------------------------------------------- Footer style ---------------------------------------------------- */
 
