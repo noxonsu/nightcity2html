@@ -14,7 +14,7 @@
   text-transform: uppercase;
   text-shadow: none;
   vertical-align: middle;
-  color: #fff !important;
+  color: #fff;
   cursor: pointer;
   background: #de443a;
   height: 60px;
@@ -74,6 +74,18 @@
 
 .btn--black:hover {
   background: #393b3f;
+}
+
+.btn--white {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  color: #555;
+  text-transform: none;
+  font-weight: 300;
+}
+
+.btn--white:hover {
+  background: #f8f8f8;
 }
 
 .btn--green {

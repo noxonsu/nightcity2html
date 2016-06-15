@@ -119,5 +119,26 @@
             type: 'html'
         });
 
+        $('#example_id').ionRangeSlider({
+            type: 'double',
+            min: 0,
+            max: 750,
+            from: 150,
+            to: 590
+        });
+
+        $('.b-hide-filters').on('click', function () {
+            var filterBtn = $('.b-hide-filters');
+            var menuForm = $('.b-slide-menu__form');
+            if(menuForm.hasClass('opened')){
+                menuForm.removeClass('opened').addClass('closed');
+                filterBtn.text('Show filters');
+            }else if(menuForm.hasClass('closed')){
+                menuForm.removeClass('closed').addClass('opened');
+                filterBtn.text('Hide filters');
+            }
+            $('.b-slide-menu__form').slideToggle('medium');
+        })
+
     });
 })(jQuery);

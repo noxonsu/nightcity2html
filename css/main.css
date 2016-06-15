@@ -11,6 +11,8 @@
 @import url(../css/animate.css);
 @import url(../css/jquery.formstyler.css);
 @import url(../css/popup.css);
+@import url(../css/ion.rangeSlider.css);
+@import url(../css/ion.rangeSlider.skinFlat.css);
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -150,7 +152,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 .b-header{
     background: #0f0f11;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 .logo{
@@ -2199,6 +2201,7 @@ html .b-gadget__subscribe__field {
     width: 100px;
     background: #0e0f11;
     height: 100%;
+    z-index: 2;
 }
 
 .b-map-menu__list {
@@ -2264,6 +2267,159 @@ html .b-gadget__subscribe__field {
     color: #b18f6a;
 }
 
+.b-slide-menu {
+    width: 660px;
+    left: 100px;
+    top: 80px;
+    position: fixed;
+    z-index: 1;
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+    background: #f8f8f8;
+    padding: 0;
+    box-shadow: 2px 0 4px #b7b5b5;
+}
+
+.b-slide-menu__title {
+    font: bold 16px Roboto;
+    text-transform: uppercase;
+    text-align: center;
+    background: #fff;
+    margin: 0;
+    padding: 25px 0;
+}
+
+.b-slide-menu__form {
+    background: #fff;
+}
+
+.b-slide-menu__form__row {
+    padding: 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.b-slide-menu__row {
+    margin-bottom: 20px;
+    padding: 20px 30px 0 20px;
+}
+
+.b-slide-menu__form__row:first-child {
+    border-top: 1px solid #f2f2f2;
+}
+
+.b-place-list .b-pop-place {
+    float: left;
+    width: 290px;
+    margin: 0 0 20px 20px;
+}
+
+.b-place-list__pager {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.b-place-list__pager li {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.b-place-list__pager li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    text-align: center;
+    font: 300 16px/40px Roboto;
+    color: #555;
+    border: 1px solid #e2e2e2;
+}
+
+.b-place-list__pager li a:hover {
+    background: #f8f8f8;
+}
+
+.b-place-list__pager li.active a {
+    border-color: #555;
+}
+
+.b-slide-menu__pages-num {
+    vertical-align: middle;
+    padding: 15px 0;
+}
+
+.b-slide-menu__form__row__item {
+    position: relative;
+}
+
+.b-slide-menu__form__row__title {
+    padding-top: 15px;
+    display: inline-block;
+}
+
+.b-slide-menu__form .jq-selectbox__select {
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.b-slide-menu__form .jq-selectbox__trigger-arrow {
+    top: 23px;
+}
+
+.b-slide-menu__form .jq-checkbox {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+}
+
+.b-slide-menu__form .jq-checkbox.checked .jq-checkbox__div {
+    margin: 3px 0 0 1px;
+}
+
+.b-slide-menu__form .b-checkbox {
+    padding-top: 13px;
+}
+
+.b-icon-medal, .b-icon-fire, .b-icon-coins {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 62px;
+    height: 62px;
+    background: url('../img/sprite-1.png') left top no-repeat;
+}
+
+.b-icon-fire {
+    background-position: left -62px;
+}
+
+.b-icon-coins {
+    background-position: left -124px;
+}
+
+.b-slide-menu__toggle {
+    position: absolute;
+    right: -25px;
+    top: 30px;
+    width: 25px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 2px 2px 2px #b7b5b5;
+    cursor: pointer;
+}
+
+
+
+.b-map {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 
