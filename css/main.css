@@ -1552,6 +1552,13 @@ html .b-gadget__subscribe__field {
     background: #b32d25 url('../img/counter-bg.jpg') center top no-repeat;
 }
 
+.b-event-counter--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
 .b-event-counter__title {
     font: 300 24px Roboto;
     color: #fff;
