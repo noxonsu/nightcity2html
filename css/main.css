@@ -1547,6 +1547,10 @@ html .b-gadget__subscribe__field {
     color: #fff;
 }
 
+.b-event-counter-container {
+    height: 100px;
+}
+
 .b-event-counter {
     height: 100px;
     background: #b32d25 url('../img/counter-bg.jpg') center top no-repeat;

@@ -217,11 +217,10 @@
 
 
         var counterTop = $('.b-event-counter');
-        var counterHeight = counterTop.height();
         var counterOffset = counterTop.offset();
 
         $(document).on("scroll", function(){
-            if($(document).scrollTop() > (counterOffset.top + counterHeight)){
+            if($(document).scrollTop() > (counterOffset.top)){
                 counterTop.addClass("b-event-counter--fixed");
             }
             else
