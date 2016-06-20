@@ -31,6 +31,7 @@
 .btn:HOVER {
   text-decoration: none;
   background: #f37b78;
+  color: #fff;
 }
 
 .btn:FOCUS {

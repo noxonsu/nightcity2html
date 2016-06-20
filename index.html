@@ -88,25 +88,24 @@
             <h6 class="b-promo__sub-title">See and visit interesting places. Share experiences with your friends.</h6>
             <form method="post" action="#">
                 <div class="b-promo__form input-group">
-                    <input type="text" class="form-control m--border-radius-left" placeholder="Find places or events" name="search">
-                    <input type="text" class="form-control" placeholder="Enter Location" name="location">
-
-                    <div class="input-group-btn btn_cat">
-                        <button aria-expanded="false" data-toggle="dropdown" class="btn-default dropdown-toggle" type="button">
-                                <span><a data-catis="-1"></a> <i class="fa fa-caret-square-o-down"></i> Select category<span class="caret"></span></span>
-                        </button>
-                        <ul role="menu" class="dropdown-menu dropdown-menu-right place_dd">
-                            <li><a class="cinema" data-catis="3" href="#"><i class=" fa  fa-beer"></i> Bar</a></li>
-                            <li><a class="cinema" data-catis="4" href="#"><i class=" fa  fa-life-ring"></i> Beach</a></li>
-                            <li><a class="cinema" data-catis="5" href="#"><i class=" fa  fa-film"></i> Films</a></li>
-                            <li><a class="cinema" data-catis="6" href="#"><i class=" fa  fa-cutlery"></i> Food</a></li>
-                            <li><a class="cinema" data-catis="7" href="#"><i class=" fa  fa-envelope-o"></i> Post</a></li>
-                            <li><a class="cinema" data-catis="8" href="#"><i class=" fa  fa-shopping-cart"></i> Shopping</a></li>
-                            <li><a class="cinema" data-catis="9" href="#"><i class=" fa  fa-futbol-o"></i> Sport</a></li>
-                            <li><a class="cinema" data-catis="437" href="#"><i class=" fa  "></i> test</a></li>
-                        </ul>
+                    <div class="b-promo__form__col1">
+                        <input type="text" class="form-control m--border-radius-left" placeholder="Find places or events" name="search">
                     </div>
-                    <div class="input-group-btn btn_promo_search">
+                    <div class="b-promo__form__col1">
+                        <input type="text" class="form-control" placeholder="Enter Location" name="location">
+                    </div>
+                    <div class="b-promo__form__col1">
+                        <select name="#" id="#">
+                            <option value="1"><i class=" fa  fa-beer"></i> Select Category</a></option>
+                            <option value="2"><i class=" fa  fa-life-ring"></i> Beach</a></option>
+                            <option value="3"><i class=" fa  fa-film"></i> Films</option>
+                            <option value="4"><i class=" fa  fa-cutlery"></i> Food</option>
+                            <option value="6"><i class=" fa  fa-envelope-o"></i> Post</option>
+                            <option value="7"><i class=" fa  fa-shopping-cart"></i> Shopping</option>
+                            <option value="8"><i class=" fa  fa-futbol-o"></i> Sport</option>
+                        </select>
+                    </div>
+                    <div class="b-promo__form__col2">
                         <button class="btn btn-success m--border-radius-right" type="submit">Search</button>
                     </div>
                 </div>
@@ -1053,7 +1052,13 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+<script src="js/masonry.pkgd.min.js"></script>
 <script src="js/owl.carousel.js"></script>
+<script src="js/lightcase.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.popup.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

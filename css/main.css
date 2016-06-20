@@ -13,6 +13,7 @@
 @import url(../css/popup.css);
 @import url(../css/ion.rangeSlider.css);
 @import url(../css/ion.rangeSlider.skinFlat.css);
+@import url(../css/horizontalScroll.css);
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -375,15 +376,29 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     vertical-align: top;
 }
 
-.btn_promo_search {
-    width: 170px;
+.b-promo__form__col1 {
+    float: left;
+    width: 28%;
+}
+
+.b-promo__form__col1 .jq-selectbox__select {
+    background: #fff;
     height: 60px;
-    display: inline-block;
+    line-height: 60px;
+}
+
+.b-promo__form__col1 .jq-selectbox__dropdown {
+    background: #fff;
+}
+
+.b-promo__form__col2 {
+    float: left;
+    width: 16%;
     border-left: 1px solid #e2e2e2;
     vertical-align: top;
 }
 
-.btn_promo_search .btn {
+.b-promo__form__col2 .btn {
     width: 100%;
 }
 
@@ -2268,16 +2283,24 @@ html .b-gadget__subscribe__field {
 }
 
 .b-slide-menu {
-    width: 660px;
-    left: 100px;
-    top: 80px;
-    position: fixed;
-    z-index: 1;
+    /*width: 660px;*/
+    /*left: 100px;*/
+    /*top: 80px;*/
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*height: calc(100% - 80px);*/
+    /*overflow-y: scroll;*/
+    /*background: #f8f8f8;*/
+    /*padding: 0;*/
+    /*box-shadow: 2px 0 4px #b7b5b5;*/
+
+
     height: calc(100% - 80px);
-    overflow-y: scroll;
-    background: #f8f8f8;
+    left: 100px;
     padding: 0;
-    box-shadow: 2px 0 4px #b7b5b5;
+    position: fixed;
+    top: 80px;
+    z-index: 1;
 }
 
 .b-slide-menu__title {
@@ -2408,6 +2431,19 @@ html .b-gadget__subscribe__field {
     background: #fff;
     box-shadow: 2px 2px 2px #b7b5b5;
     cursor: pointer;
+    text-align: center;
+}
+
+.b-slide-menu__toggle i {
+    margin-top: 15px;
+}
+
+.b-slide-menu__content {
+    background: #f8f8f8;
+    box-shadow: 2px 0 4px #b7b5b5;
+    height: 100%;
+    overflow-y: scroll;
+    width: 660px;
 }
 
 
