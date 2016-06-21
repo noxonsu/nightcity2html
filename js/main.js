@@ -119,6 +119,11 @@
             type: 'html'
         });
 
+        $('a.jquery_popup').popup({
+            content: $('.b-jquery-popup')
+
+        });
+
         $('#example_id').ionRangeSlider({
             type: 'double',
             min: 0,
@@ -197,16 +202,6 @@
                 // Buttons
                 prevPage: $wrap.find('.prevPage'),
                 nextPage: $wrap.find('.nextPage')
-            });
-
-            // Pause button
-            $wrap.find('.pause').on('click', function () {
-                $frame.sly('pause');
-            });
-
-            // Resume button
-            $wrap.find('.resume').on('click', function () {
-                $frame.sly('resume');
             });
 
             // Toggle button

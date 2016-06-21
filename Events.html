@@ -1,0 +1,470 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Welcome to Night City</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <header class="b-header clearfix">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Night City" title="Night City">
+            </a>
+            <div class="b-header__ctrl">
+                <div class="b-header__ctrl__item">
+                    <a href="#" class="btn btn--black">Submit your place</a>
+                </div>
+                <div class="b-header__ctrl__item">
+                    <a href="#" class="login">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>My Account
+                    </a>
+                </div>
+                <div class="b-header__ctrl__item">
+                    <a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
+            </div><!--.b-header__ctrl-->
+            <nav class="b-nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>Places
+                        </a>
+                        <ul>
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">Single Map</a></li>
+                            <li><a href="#">Single Page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+                        <ul>
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">Single Map</a></li>
+                            <li><a href="#">Single Page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+                        <ul>
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">Single Map</a></li>
+                            <li><a href="#">Single Page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a>
+                    </li>
+                </ul>
+            </nav><!--.b-nav-->
+        </header> <!-- .b-header -->
+
+
+        <div class="b-main-container">
+            <div class="b-map-menu">
+                <ul class="b-map-menu__list">
+                    <li class="b-map-menu__list__bars active"><a href="#"><i class="fmr fmr-icon-2813"></i><br>Party</a></li>
+                    <li class="b-map-menu__list__food"><a href="#"><i class="fmr fmr-icon-1106"></i><br>Concerts</a></li>
+                    <li class="b-map-menu__list__restaurants"><a href="#"><i class="fmr fmr-icon-398"></i><br>Live Music</a></li>
+                    <li class="b-map-menu__list__night-life"><a href="#"><i class="fmr fmr-icon-2718"></i><br>Festivals</a></li>
+                    <li class="b-map-menu__list__entertainment"><a href="#"><i class="fmr fmr-icon-2012"></i><br>Seasonal</a></li>
+                    <li><a href="#">ALL<br>places</a></li>
+                </ul>
+            </div><!-- .b-map-menu -->
+            <div class="b-slide-menu opened">
+                <div class="b-slide-menu__toggle"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-right hidden" aria-hidden="true"></i></div>
+                <div class="b-slide-menu__content">
+                    <h2 class="b-slide-menu__title">All Events</h2>
+                    <div class="b-slide-menu__form container-fluid opened">
+                        <div class="b-slide-menu__form__row row">
+                            <div class="col-md-3"><span class="b-slide-menu__form__row__title">Types:</span></div>
+                            <div class="col-md-9">
+                                <div class="b-slide-menu__form__row__item">
+                                    <select name="#" id="#">
+                                        <option value="1">Any type</option>
+                                        <option value="2">Bla bla bla</option>
+                                        <option value="3">Tili tili</option>
+                                        <option value="4">Trali vali</option>
+                                        <option value="5">Eto nam ne zadovali</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-slide-menu__form__row row">
+                            <div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span></div>
+                            <div class="col-md-9">
+                                <div class="b-slide-menu__form__row__item">
+                                    <input type="text" id="example_id" name="example_name" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-slide-menu__form__row row">
+                            <div class="col-md-3"><span class="b-slide-menu__form__row__title">Location:</span></div>
+                            <div class="col-md-6">
+                                <div class="b-slide-menu__form__row__item">
+                                    <input type="text" placeholder="Enter location">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="b-checkbox">
+                                    <label><input type="checkbox"> Near me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-slide-menu__form__row row">
+                            <div class="col-md-3"><span class="b-slide-menu__form__row__title">Keywords:</span></div>
+                            <div class="col-md-9">
+                                <div class="b-slide-menu__form__row__item">
+                                    <input type="text" placeholder="Start typing">
+                                    <button type="submit" title="Search" class="b-gadget__search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-slide-menu__form__row row">
+                            <div class="col-md-3"><span class="b-slide-menu__form__row__title">Sorting by:</span></div>
+                            <div class="col-md-9">
+                                <div class="b-slide-menu__form__row__item">
+                                    <select name="#" id="#">
+                                        <option value="1">Popular</option>
+                                        <option value="2">Bla bla bla</option>
+                                        <option value="3">Tili tili</option>
+                                        <option value="4">Trali vali</option>
+                                        <option value="5">Eto nam ne zadovali</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-slide-menu__row clearfix">
+                        <div class="btn btn--white press--left b-hide-filters">Hide filters</div>
+                        <div class="b-slide-menu__pages-num press--right">1-10 of 24</div>
+                    </div>
+                    <div class="b-place-list clearfix">
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                        <div class="b-event">
+                            <div class="b-event__img">
+                                <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+                                <time class="b-sm-post__date">
+                                    <div class="b-sm-post__month">apr</div>
+                                    <div class="b-sm-post__day">29</div>
+                                </time>
+                                <a href="#" class="b-icon-like"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <div class="b-event__links">
+                                    <div class="press--left">
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-book" aria-hidden="true"></i></a>
+                                        <a href="#" class="b-event__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="press--right">$50 - $100</div>
+                                </div>
+                            </div>
+                            <div class="b-event__desc clearfix">
+                                <div class="press--left">
+                                    <h3 class="b-event__name">Lincoln square steak</h3>
+                                    <h5 class="b-event__cat">Restaurant</h5>
+                                </div>
+                                <a href="#" class="btn btn--sm press--right">Buy Ticket</a>
+                            </div>
+                        </div>
+                    </div><!-- .b-place-list -->
+                    <ul class="b-place-list__pager">
+                        <li class="prev"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div><!-- .b-slide-menu__content -->
+            </div><!-- .b-slide-menu -->
+            <div class="b-map">
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                <div style='overflow:hidden;height:100%;width:100%;'>
+                    <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                    <div>
+                        <small>
+                            <a href="http://embedgooglemaps.com">embed google maps</a>
+                        </small>
+                    </div>
+                    <div>
+                        <small>
+                            <a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
+                        </small>
+                    </div>
+                    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                </div>
+                <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            </div>
+        </div> <!-- .b-main-container -->
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
+
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/lightcase.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>
+        <script src="js/jquery.popup.min.js"></script>
+        <script src="js/ion.rangeSlider.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
