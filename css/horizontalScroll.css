@@ -4,34 +4,34 @@
     margin: 3em 0;
 }
 
-/* Frame */
-.frame {
-    height: 250px;
-    line-height: 250px;
-    overflow: hidden;
-}
-.frame ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-size: 50px;
-}
-.frame ul li {
-    float: left;
-    width: 227px;
-    height: 100%;
-    margin: 0 1px 0 0;
-    padding: 0;
-    background: #333;
-    color: #ddd;
-    text-align: center;
-    cursor: pointer;
-}
-.frame ul li.active {
-    color: #fff;
-    background: #a03232;
-}
+/*!* Frame *!*/
+/*.frame {*/
+    /*height: 250px;*/
+    /*line-height: 250px;*/
+    /*overflow: hidden;*/
+/*}*/
+/*.frame ul {*/
+    /*list-style: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*height: 100%;*/
+    /*font-size: 50px;*/
+/*}*/
+/*.frame ul li {*/
+    /*float: left;*/
+    /*width: 227px;*/
+    /*height: 100%;*/
+    /*margin: 0 1px 0 0;*/
+    /*padding: 0;*/
+    /*background: #333;*/
+    /*color: #ddd;*/
+    /*text-align: center;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.frame ul li.active {*/
+    /*color: #fff;*/
+    /*background: #a03232;*/
+/*}*/
 
 /* Scrollbar */
 .scrollbar {
