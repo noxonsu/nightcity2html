@@ -330,13 +330,14 @@
 }
 .jq-selectbox li {
 	min-height: 18px;
-	padding: 5px 10px 6px;
+	padding: 5px 15px 6px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
 	white-space: nowrap;
 	color: #231F20;
+	font-size: 16px;
 }
 .jq-selectbox li.selected {
 	background-color: #A3ABB1;
