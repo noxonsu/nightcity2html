@@ -80,8 +80,50 @@
 
 
 <div class="b-main-container">
-    <div class="b-promo">
-        <div class="b-promo__search container">
+    <div class="b-promo lazy" style='background-image:none' data-src='./img/home-bg.jpg' > <!-- в data-src большая картинка -->
+		<!-- .placeholder это тот самый плейсхолдер с сильно облегченной версией картинки в base64 (его надо везде добавить background: url(data:image/jpeg;base64,/9j/4AAQS..... можешь не менять в верстке и вообще вынести style в файл стилей, а то валидацию не пройдет)-->
+		<div class='placeholder' style='height:800px;width:100%;background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) center top no-repeat;background-size:cover' ></div>
+		
+		<!-- TODO ниже собсно скрипт его просто вынеси в main.js -->
+		<script>
+		//these handlers will be removed once the images have loaded
+		window.addEventListener("DOMContentLoaded", lazyLoadImages);
+		window.addEventListener("load", lazyLoadImages);
+		window.addEventListener("resize", lazyLoadImages);
+		window.addEventListener("scroll", lazyLoadImages);
+
+		function lazyLoadImages() {
+		  var images = document.querySelectorAll(".lazy[data-src]"),
+			  item;
+		  // load images that have entered the viewport
+		  
+		  [].forEach.call(images, function (item) {
+			if (item.getBoundingClientRect().top>0) { //alert(1);
+			 
+			  //$(this).
+				var image = item.getAttribute("data-src"),
+				img = $('<img />');
+				img.bind('load', function() {
+					  $(item).find(".placeholder").fadeOut(); //TODO тут jquery fadeOut надо заменить на css анимацию для производительности
+				});
+				img.attr('src', image);
+				$(item).css("background-image","url("+image+")")
+			
+			  item.removeAttribute("data-src");
+			}
+		  })
+		  // if all the images are loaded, stop calling the handler
+		  if (images.length == 0) {
+			window.removeEventListener("DOMContentLoaded", lazyLoadImages);
+			window.removeEventListener("load", lazyLoadImages);
+			window.removeEventListener("resize", lazyLoadImages);
+			window.removeEventListener("scroll", lazyLoadImages);
+		  }
+		}
+
+		
+		</script>
+		<div class="b-promo__search container">
             <h1 class="b-promo__title">Welcome to Beautiful Night City</h1>
             <h6 class="b-promo__sub-title">See and visit interesting places. Share experiences with your friends.</h6>
             <form method="post" action="#">
@@ -1047,9 +1089,15 @@
     </div><!--.b-footer__info-->
 </div><!--.b-footer-->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+<script src='http://www.appelsiini.net/projects/lazyload/jquery.lazyload.js?v=1.9.1'></script>
+<Script>/*
+	 $("div.lazy").lazyload({
+      effect : "fadeIn"
+  }); */
+	</script>
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/lightcase.js"></script>
@@ -1061,14 +1109,6 @@
 <script src="js/tooltip.js"></script>
 <script src="js/main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-</script>
+
 </body>
 </html>
