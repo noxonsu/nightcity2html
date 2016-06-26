@@ -188,51 +188,6 @@
 
 
         //****************************** Sly plugin activate ******************************//
-        // -------------------------------------------------------------
-        //   Cycle By Pages
-        // -------------------------------------------------------------
-        // (function () {
-        //     var $frame = $('#cyclepages');
-        //     var $wrap  = $frame.parent();
-        //
-        //     // Call Sly on frame
-        //     $frame.sly({
-        //         horizontal: 1,
-        //         itemNav: 'basic',
-        //         smart: 1,
-        //         activateOn: 'click',
-        //         mouseDragging: 1,
-        //         touchDragging: 1,
-        //         releaseSwing: 1,
-        //         startAt: 0,
-        //         scrollBar: $wrap.find('.scrollbar'),
-        //         scrollBy: 1,
-        //         pagesBar: $wrap.find('.pages'),
-        //         activatePageOn: 'click',
-        //         speed: 300,
-        //         elasticBounds: 1,
-        //         easing: 'easeOutExpo',
-        //         dragHandle: 1,
-        //         dynamicHandle: 1,
-        //         clickBar: 1,
-        //
-        //         // Cycling
-        //         cycleBy: 'pages',
-        //         cycleInterval: 1000,
-        //         pauseOnHover: 1,
-        //         startPaused: 1,
-        //
-        //         // Buttons
-        //         prevPage: $wrap.find('.prevPage'),
-        //         nextPage: $wrap.find('.nextPage')
-        //     });
-        //
-        //     // Toggle button
-        //     $wrap.find('.toggle').on('click', function () {
-        //         $frame.sly('toggle');
-        //     });
-        // }());
-
         (function () {
             var $frame = $('.custom-scroll');
             var $wrap  = $frame.parent();
@@ -247,6 +202,8 @@
                 dynamicHandle: 1
             });
         }());
+
+
 
 
 
@@ -266,8 +223,119 @@
 
 
 
+        //****************************** Tooltip plugin activate ******************************//
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+
+
+
+
+        //****************************** Lazy load ******************************//
+        window.addEventListener("DOMContentLoaded", lazyLoadImages);
+        window.addEventListener("load", lazyLoadImages);
+        window.addEventListener("resize", lazyLoadImages);
+        window.addEventListener("scroll", lazyLoadImages);
+
+        function lazyLoadImages() {
+            var images = document.querySelectorAll(".lazy[data-src]"), item;
+            // load images that have entered the viewport
+
+            [].forEach.call(images, function (item) {
+                if (item.getBoundingClientRect().top>0) { //alert(1);
+
+                    //$(this).
+                    var image = item.getAttribute("data-src"),
+                        img = $('<img />');
+                    img.bind('load', function() {
+                        $(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
+                    });
+                    img.attr('src', image);
+                    $(item).css("background-image","url("+image+")")
+
+                    item.removeAttribute("data-src");
+                }
+            })
+            // if all the images are loaded, stop calling the handler
+            if (images.length == 0) {
+                window.removeEventListener("DOMContentLoaded", lazyLoadImages);
+                window.removeEventListener("load", lazyLoadImages);
+                window.removeEventListener("resize", lazyLoadImages);
+                window.removeEventListener("scroll", lazyLoadImages);
+            }
+        }
+
+
+
+
+
+        //****************************** determine and set the window height to the home page promo ******************************//
+        $(function(){
+            var windowHeight = $(window).height();
+            var topMenu = $('.b-header').height();
+            var promoHeight = windowHeight-topMenu;
+            $('.b-promo').css({
+                height: promoHeight
+            })
+        })
+
+
+
+
+
+       
+
+
+
+
+//         //****************************** Dropzone plugin activate ******************************//
+//         // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+//         var previewNode = document.querySelector("#template");
+//         previewNode.id = "";
+//         var previewTemplate = previewNode.parentNode.innerHTML;
+//         previewNode.parentNode.removeChild(previewNode);
+//
+//         var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+//             url: "/target-url", // Set the url
+//             thumbnailWidth: 80,
+//             thumbnailHeight: 80,
+//             parallelUploads: 20,
+//             previewTemplate: previewTemplate,
+//             autoQueue: false, // Make sure the files aren't queued until manually added
+//             previewsContainer: "#previews", // Define the container to display the previews
+//             clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+//         });
+//
+//         myDropzone.on("addedfile", function(file) {
+//             // Hookup the start button
+//             file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file); };
+//         });
+//
+// // Update the total progress bar
+//         myDropzone.on("totaluploadprogress", function(progress) {
+//             document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
+//         });
+//
+//         myDropzone.on("sending", function(file) {
+//             // Show the total progress bar when upload starts
+//             document.querySelector("#total-progress").style.opacity = "1";
+//             // And disable the start button
+//             file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+//         });
+//
+// // Hide the total progress bar when nothing's uploading anymore
+//         myDropzone.on("queuecomplete", function(progress) {
+//             document.querySelector("#total-progress").style.opacity = "0";
+//         });
+//
+// // Setup the buttons for all transfers
+// // The "add files" button doesn't need to be setup because the config
+// // `clickable` has already been specified.
+//         document.querySelector("#actions .start").onclick = function() {
+//             myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+//         };
+//         document.querySelector("#actions .cancel").onclick = function() {
+//             myDropzone.removeAllFiles(true);
+//         };
     });
 })(jQuery);

@@ -12,6 +12,7 @@
 @import url(../css/animate.css);
 @import url(../css/jquery.formstyler.css);
 @import url(../css/popup.css);
+@import url(../css/dropzone.css);
 @import url(../css/ion.rangeSlider.css);
 @import url(../css/ion.rangeSlider.skinFlat.css);
 @import url(../css/horizontalScroll.css);
@@ -319,6 +320,43 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     color: #fff;
 }
 
+.b-placeholder {
+    height:100%;
+    width:100%;
+    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) center top no-repeat;
+    background-size:cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s ease 0s;
+}
+
+.b-placeholder--fadeout {
+    opacity: 0;
+}
+
+.b-promo__search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -250px;
+    width: 1200px;
+}
+
+.scroll_block {
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroll_block img {
+    display: block;
+    margin: 20px auto;
+}
+
 
 /* ---------------------------------------------------- Home page style ---------------------------------------------------- */
 
@@ -348,21 +386,21 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .b-promo {
-    min-height: 800px;
-    background: url('../img/home-bg.jpg') center top no-repeat;
+    position: relative;
+    background-size: cover;
 }
 
 .b-promo__title {
     font: bold 68px Philosopher;
     color: #fff;
     text-align: center;
-    margin-top: 280px;
 }
 
 .b-promo__sub-title {
     font: 300 18px Roboto;
     color: #fff;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .b-promo__form__input {
@@ -448,13 +486,18 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-pop-place__img {
     position: relative;
+    overflow: hidden;
+}
 
+.b-pop-place__img:hover .b-pop-place__img__img {
+    transform: scale(1.25);
 }
 
 .b-pop-place__img__img {
     width: 100%;
     height: auto;
     display: block;
+    transition: all 0.8s ease 0s;
 }
 
 .b-icon-like {
@@ -849,7 +892,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-counter2 {
     height: 360px;
-    background: url('../img/src/banner-2.jpg');
+    /*background: url('../img/src/banner-2.jpg');*/
     padding-top: 110px;
     color: #fff;
     text-align: center;
@@ -972,14 +1015,20 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-sm-post__img-cont {
     position: relative;
+    overflow: hidden;
     min-height: 200px;
     background-color: #5c5c5c;
+}
+
+.b-sm-post__img-cont:hover img {
+    transform: scale(1.25);
 }
 
 .b-sm-post__img-cont img {
     display: block;
     width: 100%;
     height: auto;
+    transition: all 0.8s ease 0s;
 }
 
 .b-sm-post__date {
@@ -1557,7 +1606,8 @@ html .b-gadget__subscribe__field {
 /* ---------------------------------------------------- Single event page style ---------------------------------------------------- */
 
 .b-pic--event {
-    background: url('../img/event-bg.jpg') center top no-repeat;
+    /*background: url('../img/event-bg.jpg') center top no-repeat;*/
+    background: none;
     height: 587px;
     position: relative;
 }
@@ -1754,7 +1804,7 @@ html .b-gadget__subscribe__field {
 
 .b-mini-promo {
     height: 360px;
-    background: url('../img/src/banner-6.jpg');
+    /*background: url('../img/src/banner-6.jpg');*/
     padding-top: 110px;
     color: #fff;
     text-align: center;
@@ -1775,7 +1825,8 @@ html .b-gadget__subscribe__field {
 }
 
 .b-mini-promo--2 {
-    background: url('../img/src/banner-7.jpg');
+    /*background: url('../img/src/banner-7.jpg');*/
+    background: none;
 }
 
 .b-speakers {
@@ -1852,6 +1903,7 @@ html .b-gadget__subscribe__field {
 
 .b-pic-1 {
     width: 100%;
+    height: 660px;
 }
 
 .b-pic-1 img {
