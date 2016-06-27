@@ -87,6 +87,7 @@
 
 .btn--white:hover {
   background: #f8f8f8;
+  color: #555;
 }
 
 .btn--green {
