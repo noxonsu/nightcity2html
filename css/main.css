@@ -1885,6 +1885,7 @@ html .b-gadget__subscribe__field {
     width: 100%;
     text-align: center;
     padding: 25px 0;
+    height: 75px;
     color: #fff;
     transition: all 0.3s ease;
 }

@@ -283,16 +283,16 @@
 
 
         //****************************** Preloader script ******************************//
-        var hellopreloader = document.getElementById("hellopreloader_preload");
-        function fadeOutnojquery(el){el.style.opacity = 1;
-            var interhellopreloader = setInterval(function(){
-                el.style.opacity = el.style.opacity - 0.05;
-                if (el.style.opacity <=0.05){
-                    clearInterval(interhellopreloader);
-                    hellopreloader.style.display = "none";
-                }},16);
-        }
-        window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
+        // var hellopreloader = document.getElementById("hellopreloader_preload");
+        // function fadeOutnojquery(el){el.style.opacity = 1;
+        //     var interhellopreloader = setInterval(function(){
+        //         el.style.opacity = el.style.opacity - 0.05;
+        //         if (el.style.opacity <=0.05){
+        //             clearInterval(interhellopreloader);
+        //             hellopreloader.style.display = "none";
+        //         }},16);
+        // }
+        // window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
 
 
 
@@ -317,6 +317,30 @@
 
             }
         }
+
+
+
+
+
+
+
+        //********************************************** Ajax script **************************************** //
+        // $(function() {
+        //     $('a').click(function() {
+        //         var $linkClicked = $(this).attr('href'); //берем урл
+        //         console.log($linkClicked);
+        //         $.get($linkClicked,function(d){ //обращаемся по этому урл через аякс
+        //             var response = new Object();
+        //             response.html = $('<div>').html(d);
+        //             $(".b-main-container").html($(response.html).find('.b-main-container').html());
+        //             document.title = $(response.html).find('title').html(); //собсно назначем тайтл
+        //             //ии меняем урл в адресной строке
+        //             window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
+        //         });
+        //         return false;
+        //
+        //     });
+        // });
 
 
 
