@@ -78,9 +78,10 @@
             </nav><!--.b-nav-->
         </header> <!-- .b-header -->
 
-        <div class="b-main-container">
-            <section class="b-pic b-pic--place">
-                <hgroup class="container b-pic-hgroup">
+        <div class="b-main-container" id="content">
+            <section class="b-pic b-pic--place lazy" data-src="img/place-bg.jpg">
+                <div class="b-placeholder"></div>
+                <hgroup class="container b-pic-hgroup lazy-cont">
                     <h1 class="b-pic__title">Ceviche Soho</h1>
                     <h6 class="b-pic__sub-title">Restaurant Italian Food <img src="img/src/rating.jpg" alt=""></h6>
                 </hgroup>
@@ -131,7 +132,7 @@
                 </div>
             </div><!-- b-desc -->
 
-            <div class="b-mini-promo b-mini-promo--3">
+            <div class="b-mini-promo b-mini-promo--3 b-parallax" data-parallax="scroll" data-image-src="img/src/banner-8.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -482,9 +483,7 @@
                 </div><!-- .container -->
             </div><!-- .b-reviews -->
 
-            <div class="b-pic-1">
-                <img src="img/src/banner-5.jpg" alt="">
-            </div>
+            <div class="b-pic-1 b-parallax" data-image-src="img/src/banner-5.jpg" data-parallax="scroll"></div>
 
             <div class="b-events container">
                 <h2 class="b-cont-title">Upcoming events</h2>

@@ -356,6 +356,11 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     opacity: 0;
 }
 
+.lazy-cont {
+    z-index: 2;
+    position: relative;
+}
+
 .b-promo__search {
     position: absolute;
     top: 50%;
@@ -584,7 +589,6 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 .b-place-cat__item {
     width: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 .b-place-cat__item img {
@@ -623,6 +627,10 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .b-place-cat__item__img {
+    overflow: hidden;
+}
+
+.b-place-cat__item__img img {
     width: 100%;
     display: block;
 }
@@ -933,7 +941,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-promo3 {
     height: 600px;
-    background: url('../img/src/banner-3.jpg') center top no-repeat;
+
 }
 
 .b-promo3__cont {
@@ -946,9 +954,10 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 /* ---------------------------------------------------- Banner style ---------------------------------------------------- */
 
 .b-pic {
-    background: url("../img/src/banner-1.jpg") center top;
+    /*background: url("../img/src/banner-1.jpg") center top;*/
     padding-top: 60px;
     height: 200px;
+    position: relative;
 }
 
 .b-pic__title {
@@ -1638,15 +1647,15 @@ html .b-gadget__subscribe__field {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background: url('../img/src/photo-slider/a17.png') no-repeat;
+    background: url('../img/photo-slider-arrows.png') no-repeat;
     overflow: hidden;
 }
-.jssora05l { background-position: -10px -40px; }
-.jssora05r { background-position: -70px -40px; }
-.jssora05l:hover { background-position: -130px -40px; }
-.jssora05r:hover { background-position: -190px -40px; }
-.jssora05l.jssora05ldn { background-position: -250px -40px; }
-.jssora05r.jssora05rdn { background-position: -310px -40px; }
+.jssora05l { background-position: 0px 0px; }
+.jssora05r { background-position: -17px 0px; }
+/*.jssora05l:hover { background-position: -130px -40px; }*/
+/*.jssora05r:hover { background-position: -190px -40px; }*/
+/*.jssora05l.jssora05ldn { background-position: -250px -40px; }*/
+/*.jssora05r.jssora05rdn { background-position: -310px -40px; }*/
 
 /* jssor slider thumbnail navigator skin 01 css */
 /*
@@ -2031,6 +2040,7 @@ html .b-gadget__subscribe__field {
 .b-pic-1 {
     width: 100%;
     height: 660px;
+    position: relative;
 }
 
 .b-pic-1 img {
@@ -2296,9 +2306,9 @@ html .b-gadget__subscribe__field {
     font-size: 30px;
 }
 
-.b-mini-promo--3 {
-    background: url('../img/src/banner-8.jpg') center top no-repeat;
-}
+/*.b-mini-promo--3 {*/
+    /*background: url('../img/src/banner-8.jpg') center top no-repeat;*/
+/*}*/
 
 .b-menu {
     padding: 90px 15px;

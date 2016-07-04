@@ -79,8 +79,8 @@
 </header> <!-- .b-header -->
 
 
-<div class="b-main-container">
-    <div class="b-promo lazy" data-src='./img/home-bg.jpg' > <!-- в data-src большая картинка -->
+<div class="b-main-container" id="content">
+    <div class="b-promo lazy" data-src='img/home-bg.jpg' > <!-- в data-src большая картинка -->
         <!-- .placeholder это тот самый плейсхолдер с сильно облегченной версией картинки в base64 (его надо везде добавить background: url(data:image/jpeg;base64,/9j/4AAQS..... можешь не менять в верстке и вообще вынести style в файл стилей, а то валидацию не пройдет)-->
         <div class="b-placeholder"></div>
         <div class="b-stars">
@@ -281,25 +281,33 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-1.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img src="img/src/place-category-1.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-glass" aria-hidden="true"></i><span>135 Bars</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-2.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-2.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-cutlery" aria-hidden="true"></i>76 Restaurants</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-3.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-3.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-coffee" aria-hidden="true"></i>53 Snack bars</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-4.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-4.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i>67 Night clubs</span></a>
                 </div>
             </div>
@@ -307,25 +315,33 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-5.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-5.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fmr fmr-icon-4514"></i>39 Entertainments</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-6.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-6.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-film" aria-hidden="true"></i>20 Cinemas</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-7.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-7.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-bed" aria-hidden="true"></i>86 Hotels</span></a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="b-place-cat__item">
-                    <img class="b-place-cat__item__img" src="img/src/place-category-8.jpg" alt="">
+                    <div class="b-place-cat__item__img">
+                        <img class="b-place-cat__item__img" src="img/src/place-category-8.jpg" alt="">
+                    </div>
                     <a class="b-place-cat__item__link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>129 Shops</span></a>
                 </div>
             </div>
@@ -969,7 +985,7 @@
         </div>
     </div><!-- .b-latest-post -->
 
-    <div class="b-promo3">
+    <div class="b-promo3 b-parallax" data-parallax="scroll" data-image-src="img/src/banner-3.jpg">
         <div class="container">
             <div class="row">
                 <div class="b-promo3__cont col-md-6 col-sm-12 col-xs-12">
@@ -1072,6 +1088,7 @@
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/tooltip.js"></script>
+<script src="js/jssor.slider.mini.js"></script>
 <script src="js/main.js"></script>
 
 
