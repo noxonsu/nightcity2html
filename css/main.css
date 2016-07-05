@@ -150,24 +150,6 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 
 
-/* ---------------------------------------- preloader style -------------------------------------------------- */
-
-
-#hellopreloader>p {
-    display:none;
-}
-#hellopreloader_preload {
-    display: block;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-width: 1000px;
-    background: #F22613 url(http://hello-site.ru//main/images/preloads/oval.svg) center center no-repeat;
-    background-size:116px;
-}
 
 
 /* ---------------------------------------------------- Header style ---------------------------------------------------- */
@@ -342,10 +324,8 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .b-placeholder {
-    height:100%;
-    width:100%;
-    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) center top no-repeat;
-    background-size:cover;
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -414,6 +394,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 .b-promo {
     position: relative;
     background-size: cover;
+    height: calc(100vh - 80px);
 }
 
 .b-promo__title {

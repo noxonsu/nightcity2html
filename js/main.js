@@ -274,14 +274,14 @@
 
 
         //****************************** determine and set the window height to the home page promo ******************************//
-        $(function(){
-            var windowHeight = $(window).height();
-            var topMenu = $('.b-header').height();
-            var promoHeight = windowHeight-topMenu;
-            $('.b-promo').css({
-                height: promoHeight
-            })
-        })
+        // $(function(){
+        //     var windowHeight = $(window).height();
+        //     var topMenu = $('.b-header').height();
+        //     var promoHeight = windowHeight-topMenu;
+        //     $('.b-promo').css({
+        //         height: promoHeight
+        //     })
+        // })
 
 
 
@@ -358,13 +358,13 @@
 
         $('a').click(function(){
             var toLoad = $(this).attr('href')+' #content';
-            $('#content').hide('fast',loadContent);
+            $('#content').hide(0,loadContent);
             window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
             function loadContent() {
                 $('#content').load(toLoad,'',showNewContent())
             }
             function showNewContent() {
-                $('#content').show('normal');
+                $('#content').show(0);
             }
             return false;
         });
