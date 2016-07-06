@@ -904,6 +904,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     padding-top: 110px;
     color: #fff;
     text-align: center;
+    position: relative;
 }
 
 .b-counter2__title {
@@ -922,6 +923,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-promo3 {
     height: 600px;
+    position: relative;
 
 }
 
@@ -1924,6 +1926,7 @@ html .b-gadget__subscribe__field {
     padding-top: 110px;
     color: #fff;
     text-align: center;
+    position: relative;
 }
 
 .b-mini-promo__icon {
@@ -2747,6 +2750,7 @@ html .b-gadget__subscribe__field {
     background: url(../img/footer.png) center top no-repeat;
     padding-top: 128px;
     margin-top: -132px;
+    position: relative;
 }
 
 .b-footer__info{
@@ -3448,4 +3452,8 @@ pre {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.b-parallax {
+    background-position: 50% 0;
 }

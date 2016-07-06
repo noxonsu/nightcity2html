@@ -347,14 +347,14 @@
         //     });
         // });
 
-        var hash = window.location.hash.substr(1);
-        var href = $('a').each(function(){
-            var href = $(this).attr('href');
-            if(hash==href.substr(0,href.length-5)){
-                var toLoad = hash+'.html #content';
-                $('#content').load(toLoad)
-            }
-        });
+        // var hash = window.location.hash.substr(1);
+        // var href = $('a').each(function(){
+        //     var href = $(this).attr('href');
+        //     if(hash==href.substr(0,href.length-5)){
+        //         var toLoad = hash+'.html #content';
+        //         $('#content').load(toLoad)
+        //     }
+        // });
 
         $('a').click(function(){
             var toLoad = $(this).attr('href')+' #content';
@@ -372,7 +372,27 @@
 
 
 
+        //**************************************** Parallax script ****************************************** //
 
-        
+        var $window = $(window);
+        $('.b-parallax[data-type="background"]').each(function(){
+            var $bgobj = $(this); // Назначаем объект
+            $(window).scroll(function() {
+                // Прокручиваем фон со скоростью var.
+                // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
+                var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                // Размещаем все вместе в конечной точке
+                var coords = '50% '+ yPos + 'px';
+                // Смещаем фон
+                $bgobj.css({ backgroundPosition: coords });
+            });
+        });
+
+
+
+
+
+
+
     });
 })(jQuery);
