@@ -4,7 +4,7 @@
         $('html').removeClass('no-js');
 
 
-        var main_js = function(){
+
             //****************************** owlCarousel plugin activate ******************************//
             $(".owl-carousel-1").owlCarousel({
                 loop:true,
@@ -302,7 +302,7 @@
 
 
 
-            
+
 
 
 
@@ -323,7 +323,7 @@
                     document.title = $(response.html).find('title').html(); //собсно назначем тайтл
                     //ии меняем урл в адресной строке
                     window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
-                    main_js();
+                    
                 });
                 return false;
 
@@ -370,7 +370,7 @@
                     $bgobj.css({ backgroundPosition: coords });
                 });
             });
-        }
+
 
 
 
