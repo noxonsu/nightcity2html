@@ -302,25 +302,7 @@
 
 
 
-            //********************************************** Stars script **************************************** //
-
-
-            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-            var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-
-            if(isChrome || isSafari){
-                for (var e = 0; 400 > e; e++) {
-                    var f = document.createElement("div");
-                    f.className = "star";
-                    $(".stars").append(f);
-
-                    var g = (.4 * Math.random() + .1).toFixed(3),
-                        h = 500 + 300 * Math.random();
-                    $(f).css("transform-origin", "0 0 " + h + "px"),
-                        $(f).css("transform", " translate3d(0,0,-" + h + "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g + "," + g + ")");
-
-                }
-            }
+            
 
 
 
