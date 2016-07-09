@@ -79,7 +79,7 @@
         </header> <!-- .b-header -->
 
         <div class="b-main-container" id="content">
-            <section class="b-pic b-pic--submit-place">
+            <section class="b-pic b-pic--submit-place b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-9.jpg">
                 <hgroup class="container">
                     <h1 class="b-pic__title">Submit your place</h1>
                     <h6 class="b-pic__sub-title">Home / Submit your place</h6>
@@ -314,6 +314,14 @@
                     </div>
                 </div><!-- .row -->
             </div><!-- .b-form-place -->
+            <script>
+                main_js = function(){
+                    //****************************** Form styler plugin activate ******************************//
+                    $('input, select').styler();
+
+                    parallax();
+                }
+            </script>
         </div> <!-- .b-main-container -->
 
         <div class="b-footer">
@@ -396,7 +404,6 @@
         <script src="js/jquery.formstyler.min.js"></script>
         <script src="js/owl.carousel.js"></script>
         <script src="js/masonry.pkgd.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
         <script src="js/dropzone.js"></script>
         <script src="js/tooltip.js"></script>
         <script src="js/sly.min.js"></script>

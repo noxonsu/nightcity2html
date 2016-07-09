@@ -325,6 +325,21 @@
                     </div><!-- .b-content -->
                 </div><!-- .row -->
             </div> <!-- .container -->
+            <script>
+                main_js = function(){
+                    //****************************** Masonry plugin activate ******************************//
+                    $('.b-grid').masonry({
+                        // options
+                        // set itemSelector so .grid-sizer is not used in layout
+                        itemSelector: '.b-grid-item',
+                        // use element for option
+                        columnWidth: '.b-grid-sizer',
+                        percentPosition: true
+                    });
+
+                    parallax();
+                }
+            </script>
         </div> <!-- .b-main-container -->
 
         <div class="b-footer">
@@ -406,7 +421,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/owl.carousel.js"></script>
         <script src="js/lightcase.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.formstyler.min.js"></script>
         <script src="js/sly.min.js"></script>
         <script src="js/jquery.popup.min.js"></script>

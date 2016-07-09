@@ -1,3 +1,27 @@
+//**************************************** Parallax script ****************************************** //
+
+function parallax() {
+    var $window = $(window);
+    $('.b-parallax[data-type="background"]').each(function(){
+        var $bgobj = $(this); // Назначаем объект
+        $(window).scroll(function() {
+            // Прокручиваем фон со скоростью var.
+            // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            // Размещаем все вместе в конечной точке
+            var coords = '50% '+ yPos + 'px';
+            // Смещаем фон
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });
+}
+
+
+
+
+
+
+
 //****************************** Lazy load ******************************//
 window.addEventListener("DOMContentLoaded", lazyLoadImages);
 window.addEventListener("load", lazyLoadImages);
@@ -39,94 +63,15 @@ function lazyLoadImages() {
 
 
 
-        //****************************** owlCarousel plugin activate ******************************//
-        $(".owl-carousel-1").owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                600:{
-                    items:2,
-                    nav:true
-                },
-                1000:{
-                    items:3,
-                    nav:true,
-                    loop:false
-                }
-            }
-        });
 
-        $(".owl-carousel-2").owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                600:{
-                    items:1,
-                    nav:true
-                },
-                1000:{
-                    items:2,
-                    nav:true,
-                    loop:false
-                }
-            }
-        })
 
-        $(".owl-carousel-3").owlCarousel({
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                600:{
-                    items:1,
-                    nav:true
-                },
-                1000:{
-                    items:1,
-                    nav:true
-                }
-            }
-        })
-
-        $(".owl-carousel-4").owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                600:{
-                    items:3,
-                    nav:true
-                },
-                1000:{
-                    items:4,
-                    nav:true
-                }
-            }
-        })
+        
 
 
 
-        //****************************** Lightcase plugin activate ******************************//
-        $('a[data-rel^=lightcase]').lightcase();
-        $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({showSequenceInfo: false, transition: 'scrollHorizontal'});
-        $('a[data-rel="lightcase:myCollection"]').lightcase({showSequenceInfo: false});
-        $('#example1').lightcase({transition: 'none'});
+
+
+
 
 
 
@@ -142,19 +87,7 @@ function lazyLoadImages() {
 
 
 
-        //****************************** Masonry plugin activate ******************************//
-        $('.b-grid').masonry({
-            // options
-            // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.b-grid-item',
-            // use element for option
-            columnWidth: '.b-grid-sizer',
-            percentPosition: true
-        });
 
-
-        //****************************** Tabs plugin activate (jQuery UI) ******************************//
-        $( '#scheduleTabs' ).tabs();
 
 
 
@@ -172,89 +105,22 @@ function lazyLoadImages() {
         });
 
 
-        //****************************** Ion range slider plugin activate ******************************//
-        $('#example_id').ionRangeSlider({
-            type: 'double',
-            min: 0,
-            max: 750,
-            from: 150,
-            to: 590
-        });
-
-
-        //****************************** Show/Hide filters on map pages ******************************//
-        $('.b-hide-filters').on('click', function () {
-            var filterBtn = $('.b-hide-filters');
-            var menuForm = $('.b-slide-menu__form');
-            if(menuForm.hasClass('opened')){
-                menuForm.removeClass('opened').addClass('closed');
-                filterBtn.text('Show filters');
-            }else if(menuForm.hasClass('closed')){
-                menuForm.removeClass('closed').addClass('opened');
-                filterBtn.text('Hide filters');
-            }
-            $('.b-slide-menu__form').slideToggle('medium');
-        });
-
-
-        //****************************** Slide menu on map pages ******************************//
-        $('.b-slide-menu__toggle').on('click', function () {
-            var slideMenu = $('.b-slide-menu');
-            if(slideMenu.hasClass('opened')){
-                slideMenu.removeClass('opened').addClass('closed');
-                $(this).find($('.fa-caret-right')).removeClass('hidden');
-                $(this).find($('.fa-caret-left')).addClass('hidden');
-                slideMenu.animate({
-                    left: '-560px'
-                }, 500);
-            }else if(slideMenu.hasClass('closed')){
-                slideMenu.removeClass('closed').addClass('opened');
-                $(this).find($('.fa-caret-left')).removeClass('hidden');
-                $(this).find($('.fa-caret-right')).addClass('hidden');
-                slideMenu.animate({
-                    left: '100px'
-                }, 500);
-            }
-        });
-
-
-
-
-        //****************************** Sly plugin activate ******************************//
-        (function () {
-            var $frame = $('.custom-scroll');
-            var $wrap  = $frame.parent();
-
-            // Call Sly on frame
-            $frame.sly({
-                speed: 300,
-                easing: 'easeOutExpo',
-                scrollBar: $wrap.find('.scrollbar'),
-                scrollBy: 50,
-                dragHandle: 1,
-                dynamicHandle: 1
-            });
-        }());
 
 
 
 
 
-        //****************************** Stick counter to top on the event page ******************************//
 
-        if($('.b-event-counter').length > 0){4
-            var counterTop = $(document).find($('.b-event-counter'));
-            var counterOffset = counterTop.offset();
-            $(document).on("scroll", function(){
-                if($(document).scrollTop() > (counterOffset.top)){
-                    counterTop.addClass("b-event-counter--fixed");
-                }
-                else
-                {
-                    counterTop.removeClass("b-event-counter--fixed");
-                }
-            });
-        }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -325,6 +191,7 @@ function lazyLoadImages() {
                 //ии меняем урл в адресной строке
                 window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
                 lazyLoadImages();
+                main_js();
             });
             return false;
 
@@ -356,21 +223,8 @@ function lazyLoadImages() {
 
 
 
-        //**************************************** Parallax script ****************************************** //
 
-        var $window = $(window);
-        $('.b-parallax[data-type="background"]').each(function(){
-            var $bgobj = $(this); // Назначаем объект
-            $(window).scroll(function() {
-                // Прокручиваем фон со скоростью var.
-                // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
-                var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-                // Размещаем все вместе в конечной точке
-                var coords = '50% '+ yPos + 'px';
-                // Смещаем фон
-                $bgobj.css({ backgroundPosition: coords });
-            });
-        });
+
 
 
         main_js();

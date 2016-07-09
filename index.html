@@ -1001,7 +1001,7 @@
         </div>
     </div><!-- .b-promo3 -->
     <script>
-        function main_js(){
+        main_js = function(){
             //********************************************** Stars script **************************************** //
 
 
@@ -1024,6 +1024,51 @@
 
             //****************************** Form styler plugin activate ******************************//
             $('input, select').styler();
+
+            //****************************** owlCarousel plugin activate ******************************//
+            $(".owl-carousel-1").owlCarousel({
+                loop:true,
+                margin:30,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:2,
+                        nav:true
+                    },
+                    1000:{
+                        items:3,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            });
+
+            $(".owl-carousel-2").owlCarousel({
+                loop:true,
+                margin:30,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:1,
+                        nav:true
+                    },
+                    1000:{
+                        items:2,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            })
+
+            parallax();
         }
     </script>
 </div> <!-- .b-main-container -->
@@ -1109,7 +1154,6 @@
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/lightcase.js"></script>
-<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.formstyler.min.js"></script>
 <script src="js/sly.min.js"></script>
 <script src="js/jquery.popup.min.js"></script>

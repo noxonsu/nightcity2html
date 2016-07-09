@@ -906,6 +906,46 @@
                     </div>
                 </div>
             </div><!-- .b-sponsors -->
+            <script>
+                main_js = function(){
+                    //****************************** Stick counter to top on the event page ******************************//
+
+                    if($('.b-event-counter').length > 0){4
+                        var counterTop = $(document).find($('.b-event-counter'));
+                        var counterOffset = counterTop.offset();
+                        $(document).on("scroll", function(){
+                            if($(document).scrollTop() > (counterOffset.top)){
+                                counterTop.addClass("b-event-counter--fixed");
+                            }
+                            else
+                            {
+                                counterTop.removeClass("b-event-counter--fixed");
+                            }
+                        });
+                    }
+
+                    $(".owl-carousel-4").owlCarousel({
+                        loop:true,
+                        margin:30,
+                        responsiveClass:true,
+                        responsive:{
+                            0:{
+                                items:1,
+                                nav:true
+                            },
+                            600:{
+                                items:3,
+                                nav:true
+                            },
+                            1000:{
+                                items:4,
+                                nav:true
+                            }
+                        }
+                    })
+                    parallax();
+                }
+            </script>
         </div> <!-- .b-main-container -->
 
         <div class="b-footer">
@@ -987,7 +1027,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/owl.carousel.js"></script>
         <script src="js/lightcase.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.formstyler.min.js"></script>
         <script src="js/sly.min.js"></script>
         <script src="js/jquery.popup.min.js"></script>

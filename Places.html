@@ -376,6 +376,74 @@
                 </div>
                 <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map); init_map();</script>
             </div>
+            <script>
+                main_js = function(){
+                    //****************************** Show/Hide filters on map pages ******************************//
+                    $('.b-hide-filters').on('click', function () {
+                        var filterBtn = $('.b-hide-filters');
+                        var menuForm = $('.b-slide-menu__form');
+                        if(menuForm.hasClass('opened')){
+                            menuForm.removeClass('opened').addClass('closed');
+                            filterBtn.text('Show filters');
+                        }else if(menuForm.hasClass('closed')){
+                            menuForm.removeClass('closed').addClass('opened');
+                            filterBtn.text('Hide filters');
+                        }
+                        $('.b-slide-menu__form').slideToggle('medium');
+                    });
+
+
+                    //****************************** Slide menu on map pages ******************************//
+                    $('.b-slide-menu__toggle').on('click', function () {
+                        var slideMenu = $('.b-slide-menu');
+                        if(slideMenu.hasClass('opened')){
+                            slideMenu.removeClass('opened').addClass('closed');
+                            $(this).find($('.fa-caret-right')).removeClass('hidden');
+                            $(this).find($('.fa-caret-left')).addClass('hidden');
+                            slideMenu.animate({
+                                left: '-560px'
+                            }, 500);
+                        }else if(slideMenu.hasClass('closed')){
+                            slideMenu.removeClass('closed').addClass('opened');
+                            $(this).find($('.fa-caret-left')).removeClass('hidden');
+                            $(this).find($('.fa-caret-right')).addClass('hidden');
+                            slideMenu.animate({
+                                left: '100px'
+                            }, 500);
+                        }
+                    });
+
+
+                    //****************************** Sly plugin activate ******************************//
+
+                    var $frame = $('.custom-scroll');
+                    var $wrap  = $frame.parent();
+
+                    // Call Sly on frame
+                    $frame.sly({
+                        speed: 300,
+                        easing: 'easeOutExpo',
+                        scrollBar: $wrap.find('.scrollbar'),
+                        scrollBy: 50,
+                        dragHandle: 1,
+                        dynamicHandle: 1
+                    });
+
+
+                    //****************************** Ion range slider plugin activate ******************************//
+                    $('#example_id').ionRangeSlider({
+                        type: 'double',
+                        min: 0,
+                        max: 750,
+                        from: 150,
+                        to: 590
+                    });
+
+
+                    //****************************** Form styler plugin activate ******************************//
+                    $('input, select').styler();
+                }
+            </script>
         </div> <!-- .b-main-container -->
 
 
@@ -388,7 +456,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/owl.carousel.js"></script>
         <script src="js/lightcase.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.formstyler.min.js"></script>
         <script src="js/sly.min.js"></script>
         <script src="js/jquery.popup.min.js"></script>
