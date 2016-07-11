@@ -79,7 +79,7 @@
         </header> <!-- .b-header -->
 
 
-        <div class="b-main-container" id="content">
+        <div class="b-main-container places-page" id="content">
             <div class="b-map-menu">
                 <ul class="b-map-menu__list">
                     <li class="b-map-menu__list__bars active"><a href="#"><i class="fmr fmr-icon-2810"></i><br>bars</a></li>
@@ -359,7 +359,7 @@
                 </div><!-- .b-slide-menu__content -->
             </div><!-- .b-slide-menu -->
             <div class="b-map">
-                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
                 <div style='overflow:hidden;height:100%;width:100%;'>
                     <div id='gmap_canvas' style='height:100%;width:100%;'></div>
                     <div>
@@ -414,20 +414,7 @@
                     });
 
 
-                    //****************************** Sly plugin activate ******************************//
 
-                    var $frame = $('.custom-scroll');
-                    var $wrap  = $frame.parent();
-
-                    // Call Sly on frame
-                    $frame.sly({
-                        speed: 300,
-                        easing: 'easeOutExpo',
-                        scrollBar: $wrap.find('.scrollbar'),
-                        scrollBy: 50,
-                        dragHandle: 1,
-                        dynamicHandle: 1
-                    });
 
 
                     //****************************** Ion range slider plugin activate ******************************//
@@ -446,7 +433,78 @@
             </script>
         </div> <!-- .b-main-container -->
 
+        <div class="b-footer">
+            <div class="b-footer__info">
+                <div class="container clearfix">
+                    <div class="row">
+                        <div class="b-footer__text col-md-3 col-sm-12">
+                            <a href="#" class="b-footer__logo">Night City</a>
+                            <p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <div class="b-footer__copyright">© 2016 All Rights Reserved</div>
+                        </div>
 
+
+                        <div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+                            <div class="b-footer__nav__col__title">About us</div>
+                            <ul>
+                                <li><a href="#">Our history</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+                            <div class="b-footer__nav__col__title">Categories</div>
+                            <ul>
+                                <li><a href="#">Bars</a></li>
+                                <li><a href="#">Food</a></li>
+                                <li><a href="#">Restaurants</a></li>
+                                <li><a href="#">Night life</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Activities</a></li>
+                                <li><a href="#">Cinema</a></li>
+                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Shopping</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+                            <div class="b-footer__nav__col__title">menu</div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Places</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gallery</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Account</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- .row -->
+                </div><!-- .container -->
+
+                <div class="shared">
+                    <div class="container clearfix">
+                        <div class="b-soc">
+                            <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div><!--.b-soc-->
+
+                        <div class="stores">
+                            <img src="img/src/icons-markets.png" alt="">
+                        </div>
+                    </div>
+                </div><!--.shared-->
+
+            </div><!--.b-footer__info-->
+        </div><!--.b-footer-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -460,7 +518,6 @@
         <script src="js/sly.min.js"></script>
         <script src="js/jquery.popup.min.js"></script>
         <script src="js/ion.rangeSlider.min.js"></script>
-        <script src="js/parallax.min.js"></script>
         <script src="js/tooltip.js"></script>
         <script src="js/main.js"></script>
 

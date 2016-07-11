@@ -56,6 +56,23 @@ function lazyLoadImages() {
     }
 }
 
+
+
+
+
+
+//****************************** Tooltip plugin activate ******************************//
+function tooltip(){
+    $('[data-toggle="tooltip"]').tooltip()
+}
+
+
+
+
+
+
+
+
 (function ($) {
     $(document).ready(function () {
         'use strict';
@@ -113,33 +130,6 @@ function lazyLoadImages() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //****************************** Tooltip plugin activate ******************************//
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-
-
-
-
-
-
-
-
-
-
         //****************************** determine and set the window height to the home page promo ******************************//
         // $(function(){
         //     var windowHeight = $(window).height();
@@ -170,17 +160,32 @@ function lazyLoadImages() {
 
 
 
+        //****************************** Sly plugin activate ******************************//
+        (function () {
+            var $frame = $('.custom-scroll');
+            var $wrap  = $frame.parent();
+
+            // Call Sly on frame
+            $frame.sly({
+                speed: 300,
+                easing: 'easeOutExpo',
+                scrollBar: $wrap.find('.scrollbar'),
+                scrollBy: 50,
+                dragHandle: 1,
+                dynamicHandle: 1
+            });
+        }());
 
 
 
 
-
+        
 
 
         //********************************************** Ajax script **************************************** //
 
 
-        $('a').click(function() {
+        $('a:not(.noajax)').click(function() {
             var $linkClicked = $(this).attr('href'); //берем урл
             console.log($linkClicked);
             $.get($linkClicked,function(d){ //обращаемся по этому урл через аякс
@@ -194,7 +199,6 @@ function lazyLoadImages() {
                 main_js();
             });
             return false;
-
         });
 
 
