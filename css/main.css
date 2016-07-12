@@ -15,7 +15,7 @@
 @import url(../css/dropzone.css);
 @import url(../css/ion.rangeSlider.css);
 @import url(../css/ion.rangeSlider.skinFlat.css);
-@import url(../css/horizontalScroll.css);
+@import url(../css/jquery.custom-scrollbar.css);
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -722,17 +722,14 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     padding: 50px 20px 17px;
     height: 90px;
     background: url('../img/b-sm-post--bg.png') repeat-x;
-}
-
-.b-album__title {
-    margin: 0;
     font: 400 18px Roboto;
     text-transform: capitalize;
     color: #fff;
 }
 
-.b-album__title:hover, .b-album__top-links__item:hover {
-    color: #de443a;
+.b-album__title {
+    margin: 0;
+
 }
 
 .b-album__top-links__item {
@@ -2711,7 +2708,6 @@ html .b-gadget__subscribe__field {
     background: #f8f8f8;
     box-shadow: 2px 0 4px #b7b5b5;
     height: 100%;
-    overflow-y: scroll;
     width: 660px;
 }
 

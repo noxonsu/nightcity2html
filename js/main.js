@@ -68,6 +68,22 @@ function tooltip(){
 
 
 
+// //****************************** Sly plugin activate ******************************//
+// function customScrollInit(){
+//     var $frame = $('.custom-scroll');
+//     var $wrap  = $frame.parent();
+//
+//     // Call Sly on frame
+//     $frame.sly({
+//         speed: 300,
+//         easing: 'easeOutExpo',
+//         scrollBar: $wrap.find('.scrollbar'),
+//         scrollBy: 50,
+//         dragHandle: 1,
+//         dynamicHandle: 1
+//     });
+// }
+
 
 
 
@@ -160,22 +176,12 @@ function tooltip(){
 
 
 
-        //****************************** Sly plugin activate ******************************//
-        (function () {
-            var $frame = $('.custom-scroll');
-            var $wrap  = $frame.parent();
 
-            // Call Sly on frame
-            $frame.sly({
-                speed: 300,
-                easing: 'easeOutExpo',
-                scrollBar: $wrap.find('.scrollbar'),
-                scrollBy: 50,
-                dragHandle: 1,
-                dynamicHandle: 1
-            });
-        }());
-
+        if($("div").is(".b-map-menu")){
+            $(".b-footer").hide(0);
+        }else{
+            $(".b-footer").show(0);
+        }
 
 
 
@@ -192,6 +198,11 @@ function tooltip(){
                 var response = new Object();
                 response.html = $('<div>').html(d);
                 $("#content").html($(response.html).find('#content').html());
+                if($("div").is(".b-map-menu")){
+                    $(".b-footer").hide(0);
+                }else{
+                    $(".b-footer").show(0);
+                }
                 document.title = $(response.html).find('title').html(); //собсно назначем тайтл
                 //ии меняем урл в адресной строке
                 window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
@@ -228,7 +239,7 @@ function tooltip(){
 
 
 
-
+        $('.custom-scroll').customScrollbar();
 
 
         main_js();
