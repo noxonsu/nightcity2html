@@ -92,7 +92,7 @@
             </div><!-- .b-map-menu -->
             <div class="b-slide-menu opened">
                 <div class="b-slide-menu__toggle"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-right hidden" aria-hidden="true"></i></div>
-                <div class="b-slide-menu__content">
+                <div class="b-slide-menu__content custom-scroll default-skin">
                     <h2 class="b-slide-menu__title">All Events</h2>
                     <div class="b-slide-menu__form container-fluid opened">
                         <div class="b-slide-menu__form__row row">
@@ -475,20 +475,7 @@
                     });
 
 
-                    //****************************** Sly plugin activate ******************************//
 
-                    var $frame = $('.custom-scroll');
-                    var $wrap  = $frame.parent();
-
-                    // Call Sly on frame
-                    $frame.sly({
-                        speed: 300,
-                        easing: 'easeOutExpo',
-                        scrollBar: $wrap.find('.scrollbar'),
-                        scrollBy: 50,
-                        dragHandle: 1,
-                        dynamicHandle: 1
-                    });
 
 
                     //****************************** Ion range slider plugin activate ******************************//
@@ -503,6 +490,8 @@
 
                     //****************************** Form styler plugin activate ******************************//
                     $('input, select').styler();
+
+                    $('.custom-scroll').customScrollbar();
                 }
             </script>
         </div> <!-- .b-main-container -->
@@ -585,14 +574,16 @@
 
 
 
+        <script src="js/dropzone.js"></script>
+        <script src="js/ion.rangeSlider.min.js"></script>
+        <script src="js/jquery.custom-scrollbar.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>
+        <script src="js/jquery.popup.min.js"></script>
+        <script src="js/jssor.slider.mini.js"></script>
+        <script src="js/lightcase.js"></script>
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/owl.carousel.js"></script>
-        <script src="js/lightcase.js"></script>
-        <script src="js/jquery.formstyler.min.js"></script>
-        <script src="js/sly.min.js"></script>
-        <script src="js/jquery.popup.min.js"></script>
-        <script src="js/ion.rangeSlider.min.js"></script>
-        <script src="js/parallax.min.js"></script>
+        <script src="js/tabs.js"></script>
         <script src="js/tooltip.js"></script>
         <script src="js/main.js"></script>
 
