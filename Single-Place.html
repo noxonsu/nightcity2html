@@ -350,7 +350,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -358,7 +358,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -366,7 +366,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -374,7 +374,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -382,7 +382,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -390,7 +390,7 @@
                         <div class="col-md-2">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg">
-                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase">
+                                <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -702,7 +702,13 @@
                             }
                         }
                     });
-                    parallax();
+
+                    //****************************** Lightcase plugin activate ******************************//
+                    $('a[data-rel^=lightcase]').lightcase();
+                    $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({showSequenceInfo: false, transition: 'scrollHorizontal'});
+                    $('a[data-rel="lightcase:myCollection"]').lightcase({showSequenceInfo: false});
+                    $('#example1').lightcase({transition: 'none'});
+//                    parallax();
                 }
             </script>
         </div> <!-- .b-main-container -->

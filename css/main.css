@@ -573,7 +573,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     width: 100%;
     height: auto;
     display: block;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-icon-like {
@@ -642,7 +642,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 }
 
 .b-place-cat__item img {
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-place-cat__item:hover img {
@@ -709,7 +709,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     width: 100%;
     height: auto;
     display: block;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-event__cat {
@@ -772,7 +772,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-album__top-links {
@@ -903,7 +903,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-price-card__title {
@@ -1006,6 +1006,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 
 .b-pic {
     /*background: url("../img/src/banner-1.jpg") center top;*/
+    background-attachment: fixed;
     padding-top: 60px;
     height: 200px;
     position: relative;
@@ -1107,7 +1108,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-sm-post__date {
@@ -1642,7 +1643,7 @@ html .b-gadget__subscribe__field {
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-photo {
@@ -1797,7 +1798,7 @@ html .b-gadget__subscribe__field {
 
 .b-pic--event {
     /*background: url('../img/event-bg.jpg') center top no-repeat;*/
-    background: none;
+    background-image: none;
     height: 587px;
     position: relative;
 }
@@ -2033,7 +2034,7 @@ html .b-gadget__subscribe__field {
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.8s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 .b-speaker__img {
@@ -2097,6 +2098,7 @@ html .b-gadget__subscribe__field {
     width: 100%;
     height: 660px;
     position: relative;
+    background-attachment: fixed;
 }
 
 .b-pic-1 img {
@@ -2341,7 +2343,8 @@ html .b-gadget__subscribe__field {
 
 
 .b-pic--place {
-    background: url('../img/place-bg.jpg') center top no-repeat;
+    /*background: url('../img/place-bg.jpg') center top no-repeat;*/
+    background-attachment: fixed;
     height: 587px;
     position: relative;
 }
@@ -2554,7 +2557,7 @@ html .b-gadget__subscribe__field {
     position: fixed;
     left: 0;
     top: 80px;
-    width: 100px;
+    width: 200px;
     background: #0e0f11;
     height: 100%;
     z-index: 3;
@@ -2563,7 +2566,6 @@ html .b-gadget__subscribe__field {
 .b-map-menu__list {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 .b-map-menu__list li {
@@ -2575,20 +2577,21 @@ html .b-gadget__subscribe__field {
 }
 
 .b-map-menu__list a {
-    font: 300 13px Roboto;
+    font: 600 17px Roboto;
     color: #b0b0b0;
     display: block;
     width: 100%;
     height: 100px;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .b-map-menu__list i {
     color: #fff;
     font-size: 45px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-right: 10px;
     transition: all 0.3s ease;
+    vertical-align: middle;
 }
 
 .b-map-menu__list__bars:hover a, .b-map-menu__list__bars:hover a i, .b-map-menu__list__bars.active a, .b-map-menu__list__bars.active i {
@@ -2637,7 +2640,7 @@ html .b-gadget__subscribe__field {
 
 
     height: calc(100% - 80px);
-    left: 100px;
+    left: 200px;
     padding: 0;
     position: fixed;
     top: 80px;
@@ -2943,9 +2946,15 @@ html .b-gadget__subscribe__field {
    Media Queries
    ========================================================================== */
 
-/*@media only screen and (max-width: 1140px) {*/
-
-/*}*/
+@media only screen and (max-width: 1140px) {
+    .b-nav {
+        clear: both;
+    }
+    .b-event-counter-container, .b-event-counter {
+        height: auto;
+        background: #de443a;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     .b-price-card {
@@ -2976,18 +2985,29 @@ html .b-gadget__subscribe__field {
         padding: 30px 15px;
         background: #de443a none;
     }
+    .b-promo3 {
+        background-position: 0 0;
+    }
+    .b-promo__search {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding-top: 100px;
+    }
+    .b-promo__title {
+        font-size: 40px;
+    }
+    .b-header__ctrl {
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .b-counter__item {
         margin-bottom: 20px;
         display: inline-block;
-    }
-
-    .b-promo3 {
-        background-position: right center;
-        background-size: cover;
-        height: auto;
     }
     .b-promo3__cont {
         padding: 15px;
@@ -3018,6 +3038,22 @@ html .b-gadget__subscribe__field {
         padding: 0;
         border: none;
     }
+    .logo {
+        float: none;
+    }
+    .b-header__ctrl {
+        text-align: center;
+    }
+    .b-event-counter {
+        padding: 0 0 10px;
+    }
+    .b-event-counter__title {
+        margin-top: 10px;
+    }
+    .b-schedule-tabs__list li {
+        width: 100%;
+        float: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -3041,11 +3077,50 @@ html .b-gadget__subscribe__field {
     .b-desc__links {
         text-align: center;
     }
+    .b-promo__form__col1, .b-promo__form__col2 {
+        float: none;
+        width: 100%;
+        border: none;
+    }
+    .b-promo__form__col2 .m--border-radius-right, .b-promo__form__col1 .m--border-radius-left {
+        border-radius: 0;
+    }
+    .b-promo__search {
+        padding-top: 50px;
+    }
+    .scroll_block {
+        height: 70px;
+    }
 }
 
-/*@media only screen and (max-width: 480px) {*/
-
-/*}*/
+@media only screen and (max-width: 480px) {
+    .b-price-card__price {
+        top: 85px;
+    }
+    .b-price-card__desc {
+        top: 130px;
+    }
+    .logo {
+        background: #FF4237 none repeat scroll 0 0;
+        display: block;
+        float: none;
+        height: 80px;
+        line-height: 11px;
+        text-align: center;
+        width: 100%;
+    }
+    .logo img {
+        margin: 0 auto;
+    }
+    .b-header__ctrl__item {
+        display: block;
+        text-align: right;
+    }
+    .b-gallery__header__title, .b-gallery__header__date, .b-gallery__header__author {
+        float: none;
+        margin: 0 0 10px 0;
+    }
+}
 
 
 /* ==========================================================================
@@ -3537,6 +3612,6 @@ pre {
     top: 0;
 }
 
-.b-parallax {
-    background-position: 50% 0;
-}
+/*.b-parallax {*/
+    /*background-position: 50% 0;*/
+/*}*/
