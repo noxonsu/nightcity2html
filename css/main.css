@@ -801,6 +801,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 .b-event__name {
     margin: 5px 0;
     font: 400 18px Roboto;
+    color: #0e0f11;
 }
 
 .b-event__desc .btn {
@@ -2761,6 +2762,16 @@ html .b-gadget__subscribe__field {
     float: left;
     width: 297px;
     margin: 0 0 20px 20px;
+}
+
+.b-place-list .b-pop-place__img__img, .b-place-list .b-event__img__img {
+    width: 297px;
+    height: 197px;
+    background: url("../img/src/pop-place-1.jpg");
+}
+
+.b-place-list .b-event__img__img {
+    background: url("../img/src/upcoming-event-2.jpg");
 }
 
 .b-place-list__pager {
