@@ -184,7 +184,6 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 
 .b-nav{
     text-align: center;
-    display: none;
 }
 
 .b-nav ul{
@@ -400,6 +399,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 .searchbox-open input.searchbox-input{
     width: 300px;
     padding:0px 55px 0px 20px;
+    transition: all 0.1s ease 0s;
 }
 
 .b-placeholder {
@@ -425,7 +425,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     top: 50%;
     left: 50%;
     margin-left: -600px;
-    margin-top: -250px;
+    margin-top: -150px;
     width: 1200px;
 }
 
@@ -440,6 +440,18 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 .scroll_block img {
     display: block;
     margin: 20px auto;
+}
+
+.fadein {
+    display: none;
+}
+
+.fadein.active {
+    display: block;
+    animation: 1s ease 0s normal none 1 running fadein;
+    -moz-animation: 1s ease 0s normal none 1 running fadein; /* Firefox */
+    -webkit-animation: 1s ease 0s normal none 1 running fadein; /* Safari and Chrome */
+    -o-animation: 1s ease 0s normal none 1 running fadein; /* Opera */
 }
 
 
@@ -524,7 +536,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     font: 300 18px Roboto;
     color: #fff;
     text-align: center;
-    margin-bottom: 60px;
+    margin: 30px 0 60px;
 }
 
 .b-promo__form__input {
@@ -652,7 +664,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     background: url('../img/b-sm-post--bg.png') repeat-x;
 }
 
-.b-pop-place__links a {
+.b-pop-place__links__item {
     color: #fff;
     margin-right: 10px;
 }
@@ -874,7 +886,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 
 .b-promo2__list {
     list-style-type: none;
-    padding: 0;
+    padding: 20px 0 0 0;
 }
 
 .b-promo2__list li {
@@ -884,8 +896,10 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 .b-promo2__list__icon {
     float: left;
     font-size: 50px;
-    margin: 0 25px 40px 0;
+    margin: 17px 25px 40px 0;
 }
+
+.b-promo2__list li:last-child .b-promo2__list__icon {margin-top:0;}
 
 .b-promo2__list__title {
     font: 500 16px Roboto;
@@ -1054,6 +1068,16 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
 .b-promo3__cont {
     color: #fff;
     padding: 155px 70px 0 0;
+}
+
+.b-google-store, .b-apple-store {
+    display: inline-block;
+    width: 170px;
+    height: 52px;
+    background: url("../img/src/google-apple.png");
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 40px 30px 0 0;
 }
 
 
@@ -1861,7 +1885,9 @@ html .b-gadget__subscribe__field {
 .b-pic--event {
     /*background: url('../img/event-bg.jpg') center top no-repeat;*/
     background-image: none;
-    height: 587px;
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(100vh - 80px);
     position: relative;
 }
 
@@ -1871,6 +1897,9 @@ html .b-gadget__subscribe__field {
 
 .b-pic-hgroup {
     padding-top: 345px;
+    position: absolute;
+    left: 10%;
+    bottom: 7%;
     animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -2426,7 +2455,8 @@ html .b-gadget__subscribe__field {
 .b-pic--place {
     /*background: url('../img/place-bg.jpg') center top no-repeat;*/
     background-attachment: fixed;
-    height: 587px;
+    background-size: cover;
+    height: calc(100vh - 80px);
     position: relative;
 }
 
@@ -2669,9 +2699,10 @@ html .b-gadget__subscribe__field {
     color: #fff;
     font-size: 35px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
     transition: all 0.3s ease;
     vertical-align: middle;
+    margin-top: -5px;
 }
 
 .b-map-menu__list li:hover a, .b-map-menu__list li:hover i {

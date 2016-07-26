@@ -280,7 +280,10 @@ function buttonUp(){
         });
 
 
-        $('.fadein').delay(1000).fadeIn(2000);
+        $('.fadein').delay(2000).queue(function(next){
+            $(this).addClass('active');
+            next();
+        });
 
 
 
