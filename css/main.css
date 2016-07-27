@@ -2301,7 +2301,7 @@ html .b-gadget__subscribe__field {
 .b-schedule-tabs__list a.is-active:before {
     content: '';
     position: absolute;
-    bottom: -16px;
+    bottom: -14px;
     left: 50%;
     margin-left: -9px;
     border: 8px solid transparent;
