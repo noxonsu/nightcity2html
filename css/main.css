@@ -2972,7 +2972,7 @@ html .b-gadget__subscribe__field {
 }
 
 .b-places-list-mobile {
-
+    display: none;
 }
 
 
@@ -3106,8 +3106,14 @@ html .b-gadget__subscribe__field {
         height: auto;
         background: #de443a;
     }
-    .b-map-menu, .b-map {
+    .b-map-menu, .b-map, .b-slide-menu {
         display: none;
+    }
+    .b-places-list-mobile {
+        display: block;
+    }
+    .b-slide-menu__form__row__title {
+        margin-bottom: 15px;
     }
 }
 

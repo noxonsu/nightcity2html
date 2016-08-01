@@ -120,7 +120,7 @@
                             <div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span></div>
                             <div class="col-md-9">
                                 <div class="b-slide-menu__form__row__item">
-                                    <input type="text" id="example_id" name="example_name" value="" />
+                                    <input type="text" class="example_class" name="example_name" value="" />
                                 </div>
                             </div>
                         </div>
@@ -371,7 +371,6 @@
                     </div>
                     <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
                 </div>
-                <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map); init_map();</script>
             </div>
 
             <div class="b-places-list-mobile">
@@ -395,7 +394,7 @@
                         <div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span></div>
                         <div class="col-md-9">
                             <div class="b-slide-menu__form__row__item">
-                                <input type="text" id="example_id" name="example_name" value="" />
+                                <input type="text" class="example_class" name="example_name" value="" />
                             </div>
                         </div>
                     </div>
@@ -671,7 +670,7 @@
 
 
                     //****************************** Ion range slider plugin activate ******************************//
-                    $('#example_id').ionRangeSlider({
+                    $('.example_class').ionRangeSlider({
                         type: 'double',
                         min: 0,
                         max: 750,
@@ -686,6 +685,8 @@
                     $('.custom-scroll').customScrollbar();
 
                     tooltip();
+
+                    init_map();
 
                 }
             </script>
@@ -765,9 +766,10 @@
         </div><!--.b-footer-->
 
         <link rel="stylesheet" href="css/combined.css">
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
+
 
 
 
@@ -782,8 +784,9 @@
         <!--<script src="js/owl.carousel.js"></script>-->
         <!--<script src="js/tabs.js"></script>-->
         <!--<script src="js/tooltip.js"></script>-->
-        <!--<script src="js/main.js"></script>-->
+
         <script src="js/compiled_lib.js"></script>
+        <script src="js/main.js"></script>
 
     </body>
 </html>

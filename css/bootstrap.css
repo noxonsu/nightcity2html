@@ -1082,11 +1082,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
+  /*color: #333;*/
+  /*background-color: #fff;*/
 }
 input,
 button,
@@ -1100,10 +1100,10 @@ a {
   color: #337ab7;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: #23527c;
-}
+/*a:hover,*/
+/*a:focus {*/
+  /*color: #23527c;*/
+/*}*/
 /*a:focus {*/
   /*outline: thin dotted;*/
   /*outline: 5px auto -webkit-focus-ring-color;*/
