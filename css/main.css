@@ -1,21 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Philosopher:400,700italic,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
-@import url(../css/font-awesome.css);
-@import url(../css/font_fmr.css);
-@import url(../css/normalize.css);
-@import url(../css/bootstrap_mobile.css);
-@import url(../css/bootstrap.css);
 @import url(../css/button.css);
-@import url(../css/owl.carousel.css);
-@import url(../css/owl.theme.default.css);
-@import url(../css/lightcase.css);
-/*@import url(../css/animate.css);*/
-@import url(../css/jquery.formstyler.css);
-@import url(../css/popup.css);
-@import url(../css/dropzone.css);
-@import url(../css/ion.rangeSlider.css);
-@import url(../css/ion.rangeSlider.skinFlat.css);
-@import url(../css/jquery.custom-scrollbar.css);
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -420,7 +403,7 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     position: relative;
 }
 
-.b-promo__search {
+html .b-promo__search {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2988,6 +2971,10 @@ html .b-gadget__subscribe__field {
     color: #F9AD35;
 }
 
+.b-places-list-mobile {
+
+}
+
 
 
 
@@ -3118,6 +3105,9 @@ html .b-gadget__subscribe__field {
     .b-event-counter-container, .b-event-counter {
         height: auto;
         background: #de443a;
+    }
+    .b-map-menu, .b-map {
+        display: none;
     }
 }
 

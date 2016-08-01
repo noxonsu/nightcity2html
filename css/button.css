@@ -1,7 +1,7 @@
 /**
  * ThemePile Buttons
  */
-.btn {
+html .btn {
   display: inline-block;
   padding: 0 20px;
   border: none;
@@ -28,26 +28,26 @@
   transition: all 0.3s ease;
 }
 
-.btn:HOVER {
+html .btn:HOVER {
   text-decoration: none;
   background: #f37b78;
   color: #fff;
 }
 
-.btn:FOCUS {
+html .btn:FOCUS {
   outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-.btn:ACTIVE {
+html .btn:ACTIVE {
   outline: 0;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.btn--lg {
+html .btn--lg {
   font-size: 18px;
   height: 66px;
   line-height: 66px;
@@ -55,7 +55,7 @@
   margin: 0 0 45px;
 }
 
-.btn--sm {
+html .btn--sm {
   font-size: 14px;
   font-weight: 400;
   height: 32px;
@@ -64,7 +64,7 @@
   text-transform: capitalize;
 }
 
-.btn--black {
+html .btn--black {
   background: #0e0f11;
   border: 1px solid #fff;
   line-height: 48px;
@@ -74,11 +74,11 @@
   font-weight: lighter;
 }
 
-.btn--black:hover {
+html .btn--black:hover {
   background: #393b3f;
 }
 
-.btn--white {
+html .btn--white {
   background: #fff;
   border: 1px solid #e2e2e2;
   color: #555;
@@ -86,15 +86,15 @@
   font-weight: 300;
 }
 
-.btn--white:hover {
+html .btn--white:hover {
   background: #f8f8f8;
   color: #555;
 }
 
-.btn--green {
+html .btn--green {
   background: #42ba6c;
 }
 
-.btn--green:hover {
+html .btn--green:hover {
   background: #5bcc83;
 }
