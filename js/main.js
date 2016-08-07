@@ -298,6 +298,21 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
         $('.custom-scroll').customScrollbar();
 
 
+        $('.b-nav-toggle').on('click', function(){
+            var bNav = $('.b-nav');
+            var iconToggle = $(this).find('.fa');
+            if($(this).hasClass('closed')){
+                bNav.slideDown('fast');
+                $(this).removeClass('closed').addClass('opened');
+                iconToggle.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            }else if($(this).hasClass('opened')){
+                bNav.slideUp('fast');
+                $(this).removeClass('opened').addClass('closed');
+                iconToggle.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+
+
         main_js();
 
 

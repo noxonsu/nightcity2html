@@ -626,12 +626,12 @@ a:hover {
     text-align: left;
 }
 
-.m--border-radius-left {
+html .m--border-radius-left {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
-.m--border-radius-right {
+html .m--border-radius-right {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -960,6 +960,10 @@ html .b-promo__search {
     -moz-animation: 1s ease 0s normal none 1 running fadein; /* Firefox */
     -webkit-animation: 1s ease 0s normal none 1 running fadein; /* Safari and Chrome */
     -o-animation: 1s ease 0s normal none 1 running fadein; /* Opera */
+}
+
+.b-nav-toggle {
+    display: none;
 }
 
 
@@ -3701,6 +3705,20 @@ html .b-gadget__subscribe__field {
     .b-header__ctrl {
         float: none;
     }
+    html .b-promo__search {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .b-promo {
+        padding-bottom: 100px;
+        height: auto;
+    }
+    .logo {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -3790,6 +3808,45 @@ html .b-gadget__subscribe__field {
     .scroll_block {
         height: 70px;
     }
+    .b-nav {
+        display: none;
+    }
+    .b-nav ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .b-nav > ul > li {
+        height: auto;
+    }
+    .b-nav ul li ul {
+        display: block;
+        position: static;
+        width: 100%;
+    }
+    .b-nav > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .b-nav > ul > li:before {
+        content: none;
+    }
+    .b-nav > ul > li:hover {
+        background: #1f2022;
+    }
+    .b-nav-toggle {
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        display: block;
+    }
+    .b-nav-toggle img {
+        margin-right: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -3799,18 +3856,18 @@ html .b-gadget__subscribe__field {
     .b-price-card__desc {
         top: 130px;
     }
-    .logo {
-        background: #FF4237 none repeat scroll 0 0;
-        display: block;
-        float: none;
-        height: 80px;
-        line-height: 11px;
-        text-align: center;
-        width: 100%;
-    }
-    .logo img {
-        margin: 0 auto;
-    }
+    /*.logo {*/
+        /*background: #FF4237 none repeat scroll 0 0;*/
+        /*display: block;*/
+        /*float: none;*/
+        /*height: 80px;*/
+        /*line-height: 11px;*/
+        /*text-align: center;*/
+        /*width: 100%;*/
+    /*}*/
+    /*.logo img {*/
+        /*margin: 0 auto;*/
+    /*}*/
     .b-header__ctrl__item {
         display: block;
         text-align: right;
