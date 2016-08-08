@@ -3517,6 +3517,19 @@ html .b-gadget__subscribe__field {
     display: none;
 }
 
+.b-gmap-canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.b-map__wrapper {
+    overflow:hidden;height:100%;width:100%;
+}
+
+#gmap_canvas img {
+    max-width:none!important;background:none!important
+}
+
 
 
 

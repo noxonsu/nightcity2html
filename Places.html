@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Welcome to Night City</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -357,8 +357,8 @@
             </div><!-- .b-slide-menu -->
 
             <div class="b-map">
-                <div style='overflow:hidden;height:100%;width:100%;'>
-                    <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                <div class="b-map__wrapper">
+                    <div id='gmap_canvas' class="b-gmap-canvas"></div>
                     <div>
                         <small>
                             <a href="http://embedgooglemaps.com">embed google maps</a>
@@ -369,7 +369,6 @@
                             <a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
                         </small>
                     </div>
-                    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
                 </div>
             </div>
 

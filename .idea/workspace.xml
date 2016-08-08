@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ddd2613c-cc86-4925-8b3d-47a8dacb36b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Add-Place.html" afterPath="$PROJECT_DIR$/Add-Place.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Events.html" afterPath="$PROJECT_DIR$/Events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gallery.html" afterPath="$PROJECT_DIR$/Gallery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gallery_Photos.html" afterPath="$PROJECT_DIR$/Gallery_Photos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Places.html" afterPath="$PROJECT_DIR$/Places.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Single-Event.html" afterPath="$PROJECT_DIR$/Single-Event.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Single-Place.html" afterPath="$PROJECT_DIR$/Single-Place.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Single-Post_Standart.html" afterPath="$PROJECT_DIR$/Single-Post_Standart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.html" afterPath="$PROJECT_DIR$/blog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="nightcity2html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,18 +37,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6820">
+            <state relative-caret-position="0">
               <caret line="310" column="81" selection-start-line="310" selection-start-column="81" selection-end-line="310" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="633" column="5" selection-start-line="633" selection-start-column="5" selection-end-line="633" selection-end-column="5" />
+            <state relative-caret-position="508">
+              <caret line="3525" column="43" selection-start-line="3525" selection-start-column="43" selection-end-line="3525" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -50,8 +57,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-638">
-              <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="131" />
+            <state relative-caret-position="22">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gallery_Photos.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gallery_Photos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="192" column="90" selection-start-line="192" selection-start-column="90" selection-end-line="192" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -77,21 +94,21 @@
         <option value="$PROJECT_DIR$/Gallery_Photos4.html" />
         <option value="$PROJECT_DIR$/css/ion.rangeSlider.skinFlat.css" />
         <option value="$PROJECT_DIR$/css/jquery.formstyler.css" />
-        <option value="$PROJECT_DIR$/Places.html" />
-        <option value="$PROJECT_DIR$/Add-Place.html" />
-        <option value="$PROJECT_DIR$/blog.html" />
-        <option value="$PROJECT_DIR$/Events.html" />
-        <option value="$PROJECT_DIR$/Gallery.html" />
-        <option value="$PROJECT_DIR$/Gallery_Photos.html" />
-        <option value="$PROJECT_DIR$/Single-Event.html" />
-        <option value="$PROJECT_DIR$/Single-Place.html" />
-        <option value="$PROJECT_DIR$/Single-Post_Standart.html" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/css/button.css" />
         <option value="$PROJECT_DIR$/css/combined.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/Add-Place.html" />
+        <option value="$PROJECT_DIR$/blog.html" />
+        <option value="$PROJECT_DIR$/Events.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/Places.html" />
+        <option value="$PROJECT_DIR$/Single-Event.html" />
+        <option value="$PROJECT_DIR$/Single-Place.html" />
+        <option value="$PROJECT_DIR$/Single-Post_Standart.html" />
+        <option value="$PROJECT_DIR$/Gallery.html" />
+        <option value="$PROJECT_DIR$/Gallery_Photos.html" />
       </list>
     </option>
   </component>
@@ -274,17 +291,18 @@
       <workItem from="1470491460030" duration="1240000" />
       <workItem from="1470566010037" duration="3498000" />
       <workItem from="1470584165895" duration="1070000" />
+      <workItem from="1470643087465" duration="9712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133322000" />
+    <option name="totallyTimeSpent" value="143034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1712" y="0" width="1736" height="1410" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25691938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26113117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -398,69 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Add-Place.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="320" column="40" selection-start-line="320" selection-start-column="40" selection-end-line="320" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="330" column="40" selection-start-line="330" selection-start-column="40" selection-end-line="330" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="441" column="40" selection-start-line="441" selection-start-column="40" selection-end-line="441" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="242" column="40" selection-start-line="242" selection-start-column="40" selection-end-line="242" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gallery_Photos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Places.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="788" column="42" selection-start-line="767" selection-start-column="8" selection-end-line="788" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Single-Event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="928" column="40" selection-start-line="928" selection-start-column="40" selection-end-line="928" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Single-Place.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="697" column="40" selection-start-line="697" selection-start-column="40" selection-end-line="697" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Single-Post_Standart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="898">
-          <caret line="426" column="52" selection-start-line="426" selection-start-column="52" selection-end-line="426" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -586,24 +541,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6820">
+        <state relative-caret-position="0">
           <caret line="310" column="81" selection-start-line="310" selection-start-column="81" selection-end-line="310" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-638">
-          <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="131" />
+        <state relative-caret-position="420">
+          <caret line="305" column="48" selection-start-line="305" selection-start-column="48" selection-end-line="305" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add-Place.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="3525" column="43" selection-start-line="3525" selection-start-column="43" selection-end-line="3525" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Single-Place.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="654" column="36" selection-start-line="654" selection-start-column="36" selection-end-line="654" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Single-Event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="896" column="56" selection-start-line="896" selection-start-column="56" selection-end-line="896" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Places.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="427" column="63" selection-start-line="427" selection-start-column="42" selection-end-line="427" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Single-Post_Standart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="273" column="49" selection-start-line="273" selection-start-column="49" selection-end-line="273" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="633" column="5" selection-start-line="633" selection-start-column="5" selection-end-line="633" selection-end-column="5" />
+          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gallery_Photos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="192" column="90" selection-start-line="192" selection-start-column="90" selection-end-line="192" selection-end-column="90" />
           <folding />
         </state>
       </provider>
