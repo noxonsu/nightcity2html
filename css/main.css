@@ -2508,7 +2508,7 @@ html .b-gadget__subscribe__field {
     color: #fff;
 }
 
-.btn--buy-ticket {
+html .btn--buy-ticket {
     background: #0e0f11;
     height: 100px;
     float: right;
@@ -2517,7 +2517,7 @@ html .b-gadget__subscribe__field {
     line-height: 100px;
 }
 
-.btn--buy-ticket:hover {
+html .btn--buy-ticket:hover {
     background: #35373b;
 }
 
@@ -2597,6 +2597,10 @@ html .b-gadget__subscribe__field {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.b-gmap #map_place {
+    height: 340px;
 }
 
 .b-map__footer {
@@ -3319,7 +3323,7 @@ html .b-gadget__subscribe__field {
     border-top: 1px solid #f2f2f2;
 }
 
-.b-place-list .b-pop-place, .b-place-list .b-grid-item {
+.b-place-list .b-grid-item, .b-place-list .b-grid-item {
     float: left;
     margin: 0 0 20px 0;
     padding: 0 10px;
@@ -3690,7 +3694,7 @@ html .b-gadget__subscribe__field {
         padding: 30px 15px;
         text-align: center;
     }
-    .btn--buy-ticket {
+    html .btn--buy-ticket {
         float: none;
         height: 50px;
         line-height: 50px;
