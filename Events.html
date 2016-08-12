@@ -498,9 +498,7 @@
 
 
 
-                    $('.custom-scroll').customScrollbar({
-                        updateOnWindowResize: true
-                    });
+
 
 
 
@@ -530,6 +528,13 @@
 
                     //****************************** Form styler plugin activate ******************************//
                     $('input, select').styler();
+
+                    $(window).trigger('resize');
+
+
+                    $('.custom-scroll').customScrollbar({
+                        updateOnWindowResize: true
+                    });
 
                     tooltip();
 
