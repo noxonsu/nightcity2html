@@ -13216,6 +13216,7 @@ i.fa {
 
 .scrollable .viewport .overview {
     position: absolute;
+    width: 100%;
 }
 
 .scrollable .scroll-bar {

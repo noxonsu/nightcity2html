@@ -295,7 +295,9 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
 
 
 
-        $('.custom-scroll').customScrollbar();
+        $('.custom-scroll').customScrollbar({
+            updateOnWindowResize: true
+        });
 
 
         $('.b-nav-toggle').on('click', function(){

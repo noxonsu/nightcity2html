@@ -3190,6 +3190,10 @@ html .b-gadget__subscribe__field {
 
 
 
+.logged-in .b-map-menu, .logged-in .b-slide-menu {
+    top: 112px;
+}
+
 .b-map-menu {
     position: fixed;
     left: 0;
@@ -3315,15 +3319,15 @@ html .b-gadget__subscribe__field {
     border-top: 1px solid #f2f2f2;
 }
 
-.b-place-list .b-pop-place, .b-place-list .b-event {
+.b-place-list .b-pop-place, .b-place-list .b-grid-item {
     float: left;
-    width: 297px;
-    margin: 0 0 20px 20px;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
 }
 
 .b-place-list .b-pop-place__img__img, .b-place-list .b-event__img__img {
-    width: 297px;
-    height: 197px;
+    width: 100%;
+    height: auto;
     background: url("../img/src/pop-place-1.jpg");
 }
 
