@@ -216,6 +216,7 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
         $('a:not(.noajax)').click(function() {
             var $linkClicked = $(this).attr('href'); //берем урл
             console.log($linkClicked);
+            $('.b-preloader').fadeIn('fast');
             $.get($linkClicked,function(d){ //обращаемся по этому урл через аякс
                 var response = new Object();
                 response.html = $('<div>').html(d);
@@ -230,6 +231,7 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
                 window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
                 lazyLoadImages();
                 main_js();
+                $('.b-preloader').fadeOut('fast');
             });
             return false;
         });
