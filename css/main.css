@@ -694,6 +694,11 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     text-align: center;
 }
 
+.b-nav .fa-angle-down {
+    color: white;
+    margin-left: 4px;
+}
+
 .b-nav ul{
     margin:0;
     padding: 0;
@@ -746,7 +751,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 .b-nav ul li ul{
     position: absolute;
     top:100%;
-    left:0;
+    left: -30px;
     width: 200px;
     box-sizing:border-box;
     background: #161618;
@@ -1302,9 +1307,9 @@ html .b-promo__search {
     color: #fff;
     font: 300 16px Roboto;
     width: 100%;
-    padding: 60px 10px 10px;
-    height: 90px;
-    background: url('../img/b-sm-post--bg.png') repeat-x;
+    padding: 0 10px 10px;
+    height: 30px;
+    background: url('../img/b-sm-post--bg.png') repeat-x left top;
 }
 
 .b-event__links__item {
@@ -4550,7 +4555,7 @@ marker_info .info span, .marker_info2 .info span {
     top: 0;
 }
 
-.fa-star {
+.infoBox .fa-star {
     color: rgba(255, 210, 0, 0.84);
 }
 

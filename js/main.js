@@ -37,12 +37,12 @@ function lazyLoadImages() {
 
             //$(this).
             var image = item.getAttribute("data-src"),
-                img = $('<img />');
+                img = jQuery('<img />');
             img.bind('load', function() {
-                $(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
+                jQuery(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
             });
             img.attr('src', image);
-            $(item).css("background-image","url("+image+")")
+            jQuery(item).css("background-image","url("+image+")")
 
             item.removeAttribute("data-src");
         }
@@ -63,7 +63,7 @@ function lazyLoadImages() {
 
 //****************************** Tooltip plugin activate ******************************//
 function tooltip(){
-    $('[data-toggle="tooltip"]').tooltip()
+    jQuery('[data-toggle="tooltip"]').tooltip()
 }
 
 
@@ -89,13 +89,13 @@ function tooltip(){
 
 
 function buttonUp(){
-    var inputVal = $('.searchbox-input').val();
-    inputVal = $.trim(inputVal).length;
+    var inputVal = jQuery('.searchbox-input').val();
+    inputVal = jQuery.trim(inputVal).length;
     if( inputVal !== 0){
-        $('.searchbox-icon').css('display','none');
+        jQuery('.searchbox-icon').css('display','none');
     } else {
-        $('.searchbox-input').val('');
-        $('.searchbox-icon').css('display','block');
+        jQuery('.searchbox-input').val('');
+        jQuery('.searchbox-icon').css('display','block');
     }
 }
 
@@ -313,6 +313,9 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
                 iconToggle.removeClass('fa-chevron-up').addClass('fa-chevron-down');
             }
         });
+
+
+        $('.b-nav>ul>li.menu-item-has-children>a').append('<i class="fa fa-angle-down"></i>');
 
 
         main_js();
