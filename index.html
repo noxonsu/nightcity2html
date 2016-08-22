@@ -21,12 +21,17 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="b-preloader">
-    <div class='uil-ring-css' style='transform:scale(0.75);'><div></div></div>
+
+<div class="b-preloader animated yt-loader">
+    <div class="b-preloader__decor"></div>
 </div>
 <header class="b-header clearfix">
     <a href="index.html" class="logo">
         <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80">
+    </a>
+    <a class="weather" href="#">
+        <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png">
+        <span>+ 24° C</span>
     </a>
     <div class="b-header__ctrl">
         <div class="b-header__ctrl__item">
@@ -58,7 +63,7 @@
                     <li><a href="Single-Place.html">Single place</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="menu-item-has-children">
                 <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
                 <ul>
                     <li><a href="Events.html">Events</a></li>
@@ -71,7 +76,7 @@
             <li>
                 <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a>
             </li>
-            <li>
+            <li class="menu-item-has-children">
                 <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
                 <ul>
                     <li><a href="Single-Post_Standart.html">Single Page</a></li>

@@ -690,6 +690,15 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     height: 80px;
 }
 
+.weather {
+    color: white;
+    float: left;
+    margin-left: 10px;
+    margin-top: 22px;
+    min-height: 40px;
+    display: none;
+}
+
 .b-nav{
     text-align: center;
 }
@@ -725,7 +734,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     vertical-align: middle;
     list-style-type: none;
     text-transform: uppercase;
-    margin-left:2%;
+    margin-left: 1%;
     position: relative;
 }
 
@@ -745,7 +754,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .b-nav ul li a .fa{
-    margin-right:10px;
+    margin: 0 5px;
 }
 
 .b-nav ul li ul{
@@ -3664,6 +3673,12 @@ html .btn--buy-ticket:hover {
    Media Queries
    ========================================================================== */
 
+@media only screen and (min-width: 1440px) {
+    .weather {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 1140px) {
     .b-nav {
         clear: both;
@@ -4650,167 +4665,50 @@ ul.gp_content {
 /********************* preloader style **********************/
 
 
-@-webkit-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
-@-webkit-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@-moz-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@-ms-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@-moz-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@-webkit-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@-o-keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes uil-ring-anim {
-    0% {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-.uil-ring-css {
-    background: none;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: -100px 0 0 -100px;
-    top: 50%;
-    left: 50%;
-}
-.uil-ring-css > div {
-    position: absolute;
-    display: block;
-    width: 160px;
-    height: 160px;
-    top: 20px;
-    left: 20px;
-    border-radius: 80px;
-    box-shadow: 0 6px 0 0 #FF4237;
-    -ms-animation: uil-ring-anim 1s linear infinite;
-    -moz-animation: uil-ring-anim 1s linear infinite;
-    -webkit-animation: uil-ring-anim 1s linear infinite;
-    -o-animation: uil-ring-anim 1s linear infinite;
-    animation: uil-ring-anim 1s linear infinite;
-}
-.b-preloader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+
+.yt-loader {
+    -webkit-animation-name: horizontalProgressBar;
+    animation-name: horizontalProgressBar;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    background: #de443a;
+    height: 3px;
     left: 0;
+    position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
+    width: 0%;
     z-index: 9999;
-    background: rgba(0,0,0,0.7);
     display: none;
+}
+
+@keyframes horizontalProgressBar
+{
+    0%   {width: 0%;}
+    75%  {width: 83%;}
+    100% {width:100%;}
+}
+
+@-webkit-keyframes horizontalProgressBar /* Safari and Chrome */
+{
+    0%   {width: 0%;}
+    75%  {width: 83%;}
+    100% {width:100%;}
+}
+
+.b-preloader__decor {
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: 2px -2px 5px rgba(0,0,0,0.5);
 }
