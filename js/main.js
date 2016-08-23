@@ -213,7 +213,7 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
         //********************************************** Ajax script **************************************** //
 
 
-        $('a:not(.noajax)').click(function() {
+        $('a:not(.noajax, .ab-item)').click(function() {
             var $linkClicked = $(this).attr('href'); //берем урл
             console.log($linkClicked);
             $('.b-preloader').fadeIn('fast');
