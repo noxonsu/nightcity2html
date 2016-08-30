@@ -1019,6 +1019,10 @@ html .b-promo__search {
     background-attachment: fixed;
 }
 
+.logged-in .b-promo {
+    height: calc(100vh - 115px);
+}
+
 .b-promo__title {
     font: bold 68px Philosopher;
     color: #fff;
@@ -1997,10 +2001,10 @@ html .b-gadget__subscribe__field {
 }
 
 
-.b-grid-item {
-    width: 50%;
-    padding: 0 15px;
-}
+/*.b-grid-item {*/
+    /*width: 50%;*/
+    /*padding: 0 15px;*/
+/*}*/
 
 .b-grid {
     margin: 0 -15px 0 -15px;
@@ -2427,6 +2431,10 @@ html .b-gadget__subscribe__field {
     background-size: cover;
     height: calc(100vh - 80px);
     position: relative;
+}
+
+.logged-in .b-pic--event {
+    height: calc(100vh - 115px);
 }
 
 .b-pic--event .b-pic__title {
@@ -3007,6 +3015,10 @@ html .btn--buy-ticket:hover {
     position: relative;
 }
 
+.logged-in .b-pic--place {
+    height: calc(100vh - 115px);
+}
+
 .b-pic__check {
     position: absolute;
     right: 0;
@@ -3340,11 +3352,24 @@ html .btn--buy-ticket:hover {
     border-top: 1px solid #f2f2f2;
 }
 
-.b-place-list .b-grid-item, .b-place-list .b-grid-item {
-    float: left;
-    margin: 0 0 20px 0;
-    padding: 0 10px;
+.b-place-list {
+    -moz-column-count:2;
+    -moz-column-gap: 4%;
+    -moz-column-width: 46%;
+    -webkit-column-count:2;
+    -webkit-column-gap: 4%;
+    -webkit-column-width: 46%;
+    column-count: 2;
+    column-gap: 4%;
+    column-width: 46%;
+    padding: 0 10px 15px;
 }
+
+.b-place-list .b-grid-item {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
 
 .b-place-list .b-pop-place__img__img, .b-place-list .b-event__img__img {
     width: 100%;
