@@ -510,15 +510,16 @@
 
 
 
-//                    //****************************** Masonry plugin activate ******************************//
-//                    $('.b-place-list').masonry({
-//                        // options
-//                        // set itemSelector so .grid-sizer is not used in layout
-//                        itemSelector: '.b-grid-item',
-//                        // use element for option
-//                        columnWidth: '.b-grid-sizer',
-//                        percentPosition: true
-//                    });
+                    //****************************** Masonry plugin activate ******************************//
+                    $(window).load(function(){
+                        $('.b-place-list').masonry({
+                            // options
+                            // set itemSelector so .grid-sizer is not used in layout
+                            itemSelector: '.b-grid-item',
+                            // use element for option
+                            gutter: 20
+                        });
+                    });
 
 
 

@@ -4,10 +4,9 @@
     <list default="true" id="ddd2613c-cc86-4925-8b3d-47a8dacb36b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Events.html" afterPath="$PROJECT_DIR$/Events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Places.html" afterPath="$PROJECT_DIR$/Places.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Single-Event.html" afterPath="$PROJECT_DIR$/Single-Event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/combined.css" afterPath="$PROJECT_DIR$/css/combined.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="nightcity2html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3300">
-              <caret line="150" column="862" selection-start-line="150" selection-start-column="861" selection-end-line="150" selection-end-column="862" />
+            <state relative-caret-position="880">
+              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -42,8 +41,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="3369" column="13" selection-start-line="3369" selection-start-column="13" selection-end-line="3369" selection-end-column="13" />
+            <state relative-caret-position="74668">
+              <caret line="3394" column="24" selection-start-line="3394" selection-start-column="24" selection-end-line="3394" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -61,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Events.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Events.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+            <state relative-caret-position="11484">
+              <caret line="522" column="0" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,18 +91,14 @@
         <option value="$PROJECT_DIR$/css/jquery.formstyler.css" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/css/button.css" />
-        <option value="$USER_HOME$/Desktop/taxonomy-places_categories.php" />
         <option value="$USER_HOME$/Desktop/single.php" />
         <option value="$USER_HOME$/Desktop/page.php" />
         <option value="$USER_HOME$/Desktop/category.php" />
-        <option value="$USER_HOME$/Desktop/main.js" />
         <option value="$USER_HOME$/Desktop/footer.php" />
         <option value="$USER_HOME$/Desktop/header.php" />
         <option value="$USER_HOME$/Desktop/header-place.php" />
         <option value="$USER_HOME$/Desktop/loop-placelist.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/blog.html" />
-        <option value="$PROJECT_DIR$/Add-Place.html" />
         <option value="$PROJECT_DIR$/Gallery.html" />
         <option value="$PROJECT_DIR$/Gallery_Photos.html" />
         <option value="$PROJECT_DIR$/Gallery_Photos4.html" />
@@ -111,8 +106,6 @@
         <option value="$PROJECT_DIR$/Single-Post_Standart.html" />
         <option value="$PROJECT_DIR$/css/combined.css" />
         <option value="$USER_HOME$/Desktop/template-fullwidth.php" />
-        <option value="$PROJECT_DIR$/Single-Event.html" />
-        <option value="$USER_HOME$/Desktop/single-places.php" />
         <option value="$USER_HOME$/Desktop/content-image.php" />
         <option value="$USER_HOME$/Desktop/content-quote.php" />
         <option value="$USER_HOME$/Desktop/content-standard.php" />
@@ -121,8 +114,14 @@
         <option value="$USER_HOME$/Desktop/content.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Places.html" />
+        <option value="$PROJECT_DIR$/Single-Event.html" />
+        <option value="$USER_HOME$/Desktop/single-places.php" />
+        <option value="$PROJECT_DIR$/Add-Place.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$USER_HOME$/Desktop/taxonomy-places_categories.php" />
         <option value="$PROJECT_DIR$/Events.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$USER_HOME$/Desktop/main.js" />
       </list>
     </option>
   </component>
@@ -166,7 +165,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,6 +213,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,18 +328,21 @@
       <workItem from="1472396738674" duration="3230000" />
       <workItem from="1472474212474" duration="608000" />
       <workItem from="1472535023409" duration="4998000" />
-      <workItem from="1472562705113" duration="1383000" />
+      <workItem from="1472562705113" duration="4630000" />
+      <workItem from="1472663606358" duration="220000" />
+      <workItem from="1472669944252" duration="5104000" />
+      <workItem from="1472739871414" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230069000" />
+    <option name="totallyTimeSpent" value="239241000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1712" y="0" width="1736" height="1410" extended-state="0" />
-    <editor active="true" />
+    <frame x="1712" y="0" width="1736" height="1410" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30505416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31949458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -488,13 +490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/main.css" />
-    <entry file="file://$USER_HOME$/Desktop/taxonomy-places_categories.php" />
     <entry file="file://$USER_HOME$/Desktop/single.php" />
     <entry file="file://$USER_HOME$/Desktop/page.php" />
     <entry file="file://$USER_HOME$/Desktop/category.php" />
     <entry file="file://$USER_HOME$/Desktop/ring.css" />
-    <entry file="file://$USER_HOME$/Desktop/main.js" />
     <entry file="file://$USER_HOME$/Desktop/footer.php" />
     <entry file="file://$PROJECT_DIR$/js/compiled_lib.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -507,13 +506,6 @@
     <entry file="file://$USER_HOME$/Desktop/header.php" />
     <entry file="file://$USER_HOME$/Desktop/header-place.php" />
     <entry file="file://$USER_HOME$/Desktop/loop-placelist.php" />
-    <entry file="file://$PROJECT_DIR$/Add-Place.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gallery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -560,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1141">
           <caret line="14832" column="1" selection-start-line="14832" selection-start-column="1" selection-end-line="14832" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,26 +569,44 @@
     <entry file="file://$USER_HOME$/Desktop/content-video.php" />
     <entry file="file://$USER_HOME$/Desktop/content-page.php" />
     <entry file="file://$USER_HOME$/Desktop/content.php" />
-    <entry file="file://$USER_HOME$/Desktop/single-places.php" />
-    <entry file="file://$PROJECT_DIR$/Single-Event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1630">
-          <caret line="269" column="52" selection-start-line="269" selection-start-column="52" selection-end-line="269" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="150" column="862" selection-start-line="150" selection-start-column="861" selection-end-line="150" selection-end-column="862" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Places.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="722" column="0" selection-start-line="722" selection-start-column="0" selection-end-line="722" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Single-Event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15694">
+          <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="113" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Add-Place.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="141" column="84" selection-start-line="141" selection-start-column="68" selection-end-line="141" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/main.css" />
+    <entry file="file://$USER_HOME$/Desktop/single-places.php" />
+    <entry file="file://$USER_HOME$/Desktop/taxonomy-places_categories.php" />
+    <entry file="file://$USER_HOME$/Desktop/main.js" />
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74668">
+          <caret line="3394" column="24" selection-start-line="3394" selection-start-column="24" selection-end-line="3394" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -611,18 +620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="3369" column="13" selection-start-line="3369" selection-start-column="13" selection-end-line="3369" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+        <state relative-caret-position="11484">
+          <caret line="522" column="0" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
           <folding />
         </state>
       </provider>

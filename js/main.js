@@ -111,6 +111,21 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
 
 
 
+function init_masonry(){
+    //****************************** Masonry plugin activate ******************************//
+
+        jQuery('.b-place-list').masonry({
+            // options
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.b-grid-item',
+            // use element for option
+            gutter: 20
+        });
+
+}
+
+
+
 (function ($) {
     $(document).ready(function () {
         'use strict';
@@ -231,6 +246,7 @@ function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.50
                 window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
                 lazyLoadImages();
                 main_js();
+                init_masonry();
                 $('.b-preloader').fadeOut('fast');
             });
             return false;
