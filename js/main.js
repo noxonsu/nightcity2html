@@ -335,6 +335,17 @@ function init_masonry(){
 
         $('.b-nav>ul>li.menu-item-has-children>a').append('<i class="fa fa-angle-down"></i>');
 
+        $('.b-view-btn__grid').on('click', function(){
+            $('.b-place-list--list').removeClass('opened').addClass('closed');
+            $('.b-place-list--grid').removeClass('closed').addClass('opened');
+            $(window).trigger('resize');
+        });
+        $('.b-view-btn__list').on('click', function(){
+            $('.b-place-list--grid').removeClass('opened').addClass('closed');
+            $('.b-place-list--list').removeClass('closed').addClass('opened');
+            $(window).trigger('resize');
+        });
+
 
         main_js();
 

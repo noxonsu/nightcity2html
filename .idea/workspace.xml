@@ -4,7 +4,6 @@
     <list default="true" id="ddd2613c-cc86-4925-8b3d-47a8dacb36b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Events.html" afterPath="$PROJECT_DIR$/Events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Single-Event.html" afterPath="$PROJECT_DIR$/Single-Event.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
@@ -28,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+            <state relative-caret-position="751">
+              <caret line="337" column="8" selection-start-line="337" selection-start-column="8" selection-end-line="346" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74668">
-              <caret line="3394" column="24" selection-start-line="3394" selection-start-column="24" selection-end-line="3394" selection-end-column="24" />
+            <state relative-caret-position="375">
+              <caret line="684" column="23" selection-start-line="684" selection-start-column="23" selection-end-line="684" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -51,8 +50,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="1320">
+              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -60,12 +59,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Events.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Events.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11484">
-              <caret line="522" column="0" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="527">
+              <caret line="176" column="44" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="44" />
+              <folding>
+                <element signature="n#div#2;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,15 +114,17 @@
         <option value="$USER_HOME$/Desktop/content-video.php" />
         <option value="$USER_HOME$/Desktop/content-page.php" />
         <option value="$USER_HOME$/Desktop/content.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Places.html" />
         <option value="$PROJECT_DIR$/Single-Event.html" />
         <option value="$USER_HOME$/Desktop/single-places.php" />
         <option value="$PROJECT_DIR$/Add-Place.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$USER_HOME$/Desktop/taxonomy-places_categories.php" />
         <option value="$PROJECT_DIR$/Events.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/../../../SSD(SmartSoftwareDevelopment)/Icapture/Icapture-templates/Template31/index.html" />
+        <option value="$PROJECT_DIR$/../../../SSD(SmartSoftwareDevelopment)/Icapture/Icapture-templates/Template9/blue/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$USER_HOME$/Desktop/main.js" />
       </list>
     </option>
@@ -136,8 +140,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1712" />
+    <option name="y" value="2" />
     <option name="width" value="1736" />
-    <option name="height" value="1410" />
+    <option name="height" value="1408" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -331,18 +336,21 @@
       <workItem from="1472562705113" duration="4630000" />
       <workItem from="1472663606358" duration="220000" />
       <workItem from="1472669944252" duration="5104000" />
-      <workItem from="1472739871414" duration="601000" />
+      <workItem from="1472739871414" duration="2879000" />
+      <workItem from="1472808511770" duration="14000" />
+      <workItem from="1472826137022" duration="7028000" />
+      <workItem from="1472876311808" duration="1260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239241000" />
+    <option name="totallyTimeSpent" value="249821000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1712" y="0" width="1736" height="1410" extended-state="1" />
+    <frame x="1712" y="2" width="1736" height="1408" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31949458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33513838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -377,20 +385,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1059">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="1092" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="6758" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap_mobile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -593,27 +587,48 @@
     <entry file="file://$USER_HOME$/Desktop/main.css" />
     <entry file="file://$USER_HOME$/Desktop/single-places.php" />
     <entry file="file://$USER_HOME$/Desktop/taxonomy-places_categories.php" />
-    <entry file="file://$USER_HOME$/Desktop/main.js" />
+    <entry file="file://$PROJECT_DIR$/../../../SSD(SmartSoftwareDevelopment)/Icapture/Icapture-templates/Template31/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SSD(SmartSoftwareDevelopment)/Icapture/Icapture-templates/Template9/blue/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+        <state relative-caret-position="751">
+          <caret line="337" column="8" selection-start-line="337" selection-start-column="8" selection-end-line="346" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1151">
+          <caret line="344" column="11" selection-start-line="344" selection-start-column="11" selection-end-line="344" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74668">
-          <caret line="3394" column="24" selection-start-line="3394" selection-start-column="24" selection-end-line="3394" selection-end-column="24" />
+        <state relative-caret-position="375">
+          <caret line="684" column="23" selection-start-line="684" selection-start-column="23" selection-end-line="684" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="1320">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -622,9 +637,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11484">
-          <caret line="522" column="0" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="527">
+          <caret line="176" column="44" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#2;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
