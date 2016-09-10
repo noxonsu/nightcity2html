@@ -274,7 +274,7 @@ function init_masonry(){
         //     }
         //     return false;
         // });
-
+        //
 
         var submitIcon = $('.searchbox-icon');
         var inputBox = $('.searchbox-input');
