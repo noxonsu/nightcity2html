@@ -1,285 +1,482 @@
 <!doctype html>
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Welcome to Night City</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-
-        <link rel="stylesheet" href="css/main.css">
-
-        <!--[if lt IE 9]>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Night City</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/main.css">
+	<!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="b-preloader animated yt-loader">
-            <div class="b-preloader__decor"></div>
-        </div>
-        <header class="b-header clearfix">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80">
-            </a>
-            <a class="weather" href="#">
-                <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png">
-                <span>+ 24° C</span>
-            </a>
-            <div class="b-header__ctrl">
-                <div class="b-header__ctrl__item">
-                    <a href="Add-Place.html" class="btn btn--black">Submit your place</a>
-                </div>
-                <div class="b-header__ctrl__item">
-                    <a href="#" class="login">
-                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>My Account
-                    </a>
-                </div>
-                <div class="b-header__ctrl__item">
-                    <!--<a href="#" class="b-header__ctrl__item__search"></a>-->
-                    <form class="searchbox">
-                        <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
-                        <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    </form>
-                </div>
-            </div><!--.b-header__ctrl-->
-            <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-            <nav class="b-nav fadein">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="Places.html">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>Places
-                        </a>
-                        <ul>
-                            <li><a href="Places.html">Places</a></li>
-                            <li><a href="Single-Place.html">Single place</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
-                        <ul>
-                            <li><a href="Events.html">Events</a></li>
-                            <li><a href="Single-Event.html">Single event</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a>
-                    </li>
-                    <li>
-                        <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
-                        <ul>
-                            <li><a href="Single-Post_Standart.html">Single Page</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </li>
-                </ul>
-            </nav><!--.b-nav-->
-        </header> <!-- .b-header -->
-
-        <div class="b-main-container">
-            <div class="b-page-content container clearfix">
-                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; visibility: hidden;">
-                    <!-- Loading Screen -->
-                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                        <div style="position:absolute;display:block;background:url('img/src/photo-slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-                    </div>
-                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/01.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-01.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/02.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-02.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/03.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-03.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/04.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-04.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/05.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-05.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/06.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-06.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/07.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-07.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/08.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-08.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/09.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-09.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/10.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-10.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/11.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-11.jpg" />
-                        </div>
-                        <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src="img/src/photo-slider/12.jpg" />
-                            <img data-u="thumb" src="img/src/photo-slider/thumb-12.jpg" />
-                        </div>
-                        <a data-u="ad" href="http://www.jssor.com" style="display:none">Bootstrap Slider</a>
-
-                    </div>
-                    <!-- Thumbnail Navigator -->
-                    <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
-                        <!-- Thumbnail Item Skin Begin -->
-                        <div data-u="slides" style="cursor: default;">
-                            <div data-u="prototype" class="p">
-                                <div class="w">
-                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                </div>
-                                <div class="c"></div>
-                            </div>
-                        </div>
-                        <!-- Thumbnail Item Skin End -->
-                    </div>
-                    <!-- Arrow Navigator -->
-                    <span data-u="arrowleft" class="jssora05l" style="top:158px;left:-85px;width:17px;height:30px;"></span>
-                    <span data-u="arrowright" class="jssora05r" style="top:158px;right:-85px;width:17px;height:30px;"></span>
-                </div>
-                <!-- #endregion Jssor Slider End -->
-            </div> <!-- .container -->
-        </div> <!-- .b-main-container -->
-
-        <div class="b-footer">
-            <div class="b-footer__info">
-
-
-                <div class="shared">
-                    <div class="container clearfix">
-                        <div class="b-soc">
-                            <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div><!--.b-soc-->
-
-                        <div class="stores">
-                            <img src="img/src/photo-slider/src/icons-markets.png" alt="">
-                        </div>
-                    </div>
-                </div><!--.shared-->
-
-            </div><!--.b-footer__info-->
-        </div><!--.b-footer-->
-
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-
-        <script>
-            jQuery(function (){
-
-                var jssor_1_SlideshowTransitions = [
-                    {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-                    {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+	<div class="b-preloader animated yt-loader">
+		<div class="b-preloader__decor"></div>
+	</div>
+	<header class="b-header clearfix">
+		<a href="index.html" class="logo"> <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80"> </a>
+		<a class="weather" href="#"> <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+		<div class="b-header__ctrl">
+			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black">Submit your place</a> </div>
+			<div class="b-header__ctrl__item">
+				<a href="#" class="login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>My Account </a>
+			</div>
+			<div class="b-header__ctrl__item">
+				<!--<a href="#" class="b-header__ctrl__item__search"></a>-->
+				<form class="searchbox">
+					<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
+					<button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i></button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+			</div>
+		</div>
+		<!--.b-header__ctrl-->
+		<div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+		<nav class="b-nav fadein">
+			<ul>
+				<li class="menu-item-has-children">
+					<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+					<ul>
+						<li><a href="Places.html">Places</a></li>
+						<li><a href="Single-Place.html">Single place</a></li>
+					</ul>
+				</li>
+				<li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+					<ul>
+						<li><a href="Events.html">Events</a></li>
+						<li><a href="Single-Event.html">Single event</a></li>
+					</ul>
+				</li>
+				<li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+				<li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+				<li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+					<ul>
+						<li><a href="Single-Post_Standart.html">Single Page</a></li>
+					</ul>
+				</li>
+				<li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+			</ul>
+		</nav>
+		<!--.b-nav-->
+	</header>
+	<!-- .b-header -->
+	<div class="b-main-container">
+		<div class="b-page-content container clearfix">
+			<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; visibility: hidden;">
+				<!-- Loading Screen -->
+				<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+					<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+					<div style="position:absolute;display:block;background:url('img/src/photo-slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+				</div>
+				<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/01.jpg" alt="big-slide-1 " /> <img data-u="thumb" src="img/src/photo-slider/thumb-01.jpg" alt="Slide-1" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/02.jpg" alt="big-slide-2" /> <img data-u="thumb" src="img/src/photo-slider/thumb-02.jpg" alt="Slide-2" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/03.jpg" alt="big-slide-3" /> <img data-u="thumb" src="img/src/photo-slider/thumb-03.jpg" alt="Slide-3" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/04.jpg" alt="big-slide-4" /> <img data-u="thumb" src="img/src/photo-slider/thumb-04.jpg" alt="Slide-4" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/05.jpg" alt="big-slide-5" /> <img data-u="thumb" src="img/src/photo-slider/thumb-05.jpg" alt="Slide-5" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/06.jpg" alt="big-slide-6" /> <img data-u="thumb" src="img/src/photo-slider/thumb-06.jpg" alt="Slide-6" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/07.jpg" alt="big-slide-7" /> <img data-u="thumb" src="img/src/photo-slider/thumb-07.jpg" alt="Slide-7" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/08.jpg" alt="big-slide-8" /> <img data-u="thumb" src="img/src/photo-slider/thumb-08.jpg" alt="Slide-8" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/09.jpg" alt="big-slide-9" /> <img data-u="thumb" src="img/src/photo-slider/thumb-09.jpg" alt="Slide-9" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/10.jpg" alt="big-slide-10" /> <img data-u="thumb" src="img/src/photo-slider/thumb-10.jpg" alt="Slide-10" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/11.jpg" alt="big-slide-11" /> <img data-u="thumb" src="img/src/photo-slider/thumb-11.jpg" alt="Slide-11" /> </div>
+					<div data-p="144.50" style="display: none;"> <img data-u="image" src="img/src/photo-slider/12.jpg" alt="big-slide-12" /> <img data-u="thumb" src="img/src/photo-slider/thumb-12.jpg" alt="Slide-12" /> </div> <a data-u="ad" href="http://www.jssor.com" style="display:none">Bootstrap Slider</a> </div>
+				<!-- Thumbnail Navigator -->
+				<div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+					<!-- Thumbnail Item Skin Begin -->
+					<div data-u="slides" style="cursor: default;">
+						<div data-u="prototype" class="p">
+							<div class="w">
+								<div data-u="thumbnailtemplate" class="t"></div>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+					<!-- Thumbnail Item Skin End -->
+				</div>
+				<!-- Arrow Navigator --><span data-u="arrowleft" class="jssora05l" style="top:158px;left:-85px;width:17px;height:30px;"></span> <span data-u="arrowright" class="jssora05r" style="top:158px;right:-85px;width:17px;height:30px;"></span> </div>
+			<!-- #endregion Jssor Slider End -->
+		</div>
+		<!-- .container -->
+	</div>
+	<!-- .b-main-container -->
+	<div class="b-footer">
+		<div class="b-footer__info">
+			<div class="shared">
+				<div class="container clearfix">
+					<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+					<!--.b-soc-->
+					<div class="stores"> <img src="img/src/photo-slider/src/icons-markets.png" alt=""> </div>
+				</div>
+			</div>
+			<!--.shared-->
+		</div>
+		<!--.b-footer__info-->
+	</div>
+	<!--.b-footer-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	</script>
+	<script>
+		jQuery(function () {
+			var jssor_1_SlideshowTransitions = [
+				{
+					$Duration: 1200
+					, x: 0.3
+					, $During: {
+						$Left: [0.3, 0.7]
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: -0.3
+					, $SlideOut: true
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: -0.3
+					, $During: {
+						$Left: [0.3, 0.7]
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, $SlideOut: true
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: 0.3
+					, $During: {
+						$Top: [0.3, 0.7]
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: -0.3
+					, $SlideOut: true
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: -0.3
+					, $During: {
+						$Top: [0.3, 0.7]
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: 0.3
+					, $SlideOut: true
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, $Cols: 2
+					, $During: {
+						$Left: [0.3, 0.7]
+					}
+					, $ChessMode: {
+						$Column: 3
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, $Cols: 2
+					, $SlideOut: true
+					, $ChessMode: {
+						$Column: 3
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: 0.3
+					, $Rows: 2
+					, $During: {
+						$Top: [0.3, 0.7]
+					}
+					, $ChessMode: {
+						$Row: 12
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: 0.3
+					, $Rows: 2
+					, $SlideOut: true
+					, $ChessMode: {
+						$Row: 12
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: 0.3
+					, $Cols: 2
+					, $During: {
+						$Top: [0.3, 0.7]
+					}
+					, $ChessMode: {
+						$Column: 12
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, y: -0.3
+					, $Cols: 2
+					, $SlideOut: true
+					, $ChessMode: {
+						$Column: 12
+					}
+					, $Easing: {
+						$Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, $Rows: 2
+					, $During: {
+						$Left: [0.3, 0.7]
+					}
+					, $ChessMode: {
+						$Row: 3
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: -0.3
+					, $Rows: 2
+					, $SlideOut: true
+					, $ChessMode: {
+						$Row: 3
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, y: 0.3
+					, $Cols: 2
+					, $Rows: 2
+					, $During: {
+						$Left: [0.3, 0.7]
+						, $Top: [0.3, 0.7]
+					}
+					, $ChessMode: {
+						$Column: 3
+						, $Row: 12
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, x: 0.3
+					, y: 0.3
+					, $Cols: 2
+					, $Rows: 2
+					, $During: {
+						$Left: [0.3, 0.7]
+						, $Top: [0.3, 0.7]
+					}
+					, $SlideOut: true
+					, $ChessMode: {
+						$Column: 3
+						, $Row: 12
+					}
+					, $Easing: {
+						$Left: $Jease$.$InCubic
+						, $Top: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, $Delay: 20
+					, $Clip: 3
+					, $Assembly: 260
+					, $Easing: {
+						$Clip: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, $Delay: 20
+					, $Clip: 3
+					, $SlideOut: true
+					, $Assembly: 260
+					, $Easing: {
+						$Clip: $Jease$.$OutCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, $Delay: 20
+					, $Clip: 12
+					, $Assembly: 260
+					, $Easing: {
+						$Clip: $Jease$.$InCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
+				, {
+					$Duration: 1200
+					, $Delay: 20
+					, $Clip: 12
+					, $SlideOut: true
+					, $Assembly: 260
+					, $Easing: {
+						$Clip: $Jease$.$OutCubic
+						, $Opacity: $Jease$.$Linear
+					}
+					, $Opacity: 2
+				}
                 ];
+			var jssor_1_options = {
+				$AutoPlay: true
+				, $SlideshowOptions: {
+					$Class: $JssorSlideshowRunner$
+					, $Transitions: jssor_1_SlideshowTransitions
+					, $TransitionsOrder: 1
+				}
+				, $ArrowNavigatorOptions: {
+					$Class: $JssorArrowNavigator$
+				}
+				, $ThumbnailNavigatorOptions: {
+					$Class: $JssorThumbnailNavigator$
+					, $Cols: 6
+					, $SpacingX: 30
+					, $SpacingY: 30
+					, $Align: 360
+				}
+			};
+			var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+			//responsive code begin
+			//you can remove responsive code if you don't want the slider scales while window resizing
+			function ScaleSlider() {
+				var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+				if (refSize) {
+					refSize = Math.min(refSize, 800);
+					jssor_1_slider.$ScaleWidth(refSize);
+				}
+				else {
+					window.setTimeout(ScaleSlider, 30);
+				}
+			}
+			ScaleSlider();
+			$(window).bind("load", ScaleSlider);
+			$(window).bind("resize", ScaleSlider);
+			$(window).bind("orientationchange", ScaleSlider);
+			//responsive code end
+		});
+	</script>
+	<script src="js/dropzone.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/jquery.custom-scrollbar.js"></script>
+	<script src="js/jquery.formstyler.min.js"></script>
+	<script src="js/jquery.popup.min.js"></script>
+	<script src="js/jssor.slider.mini.js"></script>
+	<script src="js/lightcase.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/tooltip.js"></script>
+	<script src="js/main.js"></script>
+</body>
 
-                var jssor_1_options = {
-                    $AutoPlay: true,
-                    $SlideshowOptions: {
-                        $Class: $JssorSlideshowRunner$,
-                        $Transitions: jssor_1_SlideshowTransitions,
-                        $TransitionsOrder: 1
-                    },
-                    $ArrowNavigatorOptions: {
-                        $Class: $JssorArrowNavigator$
-                    },
-                    $ThumbnailNavigatorOptions: {
-                        $Class: $JssorThumbnailNavigator$,
-                        $Cols: 6,
-                        $SpacingX: 30,
-                        $SpacingY: 30,
-                        $Align: 360
-                    }
-                };
-
-                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-                //responsive code begin
-                //you can remove responsive code if you don't want the slider scales while window resizing
-                function ScaleSlider() {
-                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                    if (refSize) {
-                        refSize = Math.min(refSize, 800);
-                        jssor_1_slider.$ScaleWidth(refSize);
-                    }
-                    else {
-                        window.setTimeout(ScaleSlider, 30);
-                    }
-                }
-                ScaleSlider();
-                $(window).bind("load", ScaleSlider);
-                $(window).bind("resize", ScaleSlider);
-                $(window).bind("orientationchange", ScaleSlider);
-                //responsive code end
-            });
-        </script>
-
-        <script src="js/dropzone.js"></script>
-        <script src="js/ion.rangeSlider.min.js"></script>
-        <script src="js/jquery.custom-scrollbar.js"></script>
-        <script src="js/jquery.formstyler.min.js"></script>
-        <script src="js/jquery.popup.min.js"></script>
-        <script src="js/jssor.slider.mini.js"></script>
-        <script src="js/lightcase.js"></script>
-        <script src="js/masonry.pkgd.min.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/tabs.js"></script>
-        <script src="js/tooltip.js"></script>
-        <script src="js/main.js"></script>
-
-    </body>
 </html>
