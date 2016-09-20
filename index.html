@@ -87,17 +87,15 @@
 						<div class="b-promo__form__col1">
 							<input type="text" class="b-promo__form__input" placeholder="Enter Location" name="location"> </div>
 						<div class="b-promo__form__col1">
-							<div class="b-select-wrapper">
-								<select name="category-select" id="category-select">
-									<option value="1">Select Category</option>
-									<option value="2">Beach</option>
-									<option value="3">Films</option>
-									<option value="4">Food</option>
-									<option value="6">Post</option>
-									<option value="7">Shopping</option>
-									<option value="8">Sport</option>
-								</select>
-							</div>
+						   <div class="button dropdown">
+						     <select>
+						       <option>Apples</option>
+						       <option>Bananas</option>
+						       <option>Grapes</option>
+						       <option>Oranges</option>
+						       <option selected>Select category</option>
+						     </select>
+						   </div>
 						</div>
 						<div class="b-promo__form__col2">
 							<button class="btn btn-success m--border-radius-right" type="submit">Search</button>
@@ -809,7 +807,7 @@
 					}
 				}
 				//****************************** Form styler plugin activate ******************************//
-				$('input, select').styler();
+				//$('input, select').styler();
 				//****************************** owlCarousel plugin activate ******************************//
 				$(".owl-carousel-1").owlCarousel({
 					loop: true

@@ -607,6 +607,103 @@ a {
     transition: all 0.3s ease;
 }
 
+label {
+    display:block;
+    margin-top:2em;
+    font-size: 0.9em;
+    color:#777;
+}
+.dropdown {
+    position: relative;
+    display:block;
+    margin-top:0.5em;
+    overflow:hidden;
+    width:100%;
+    max-width:100%;
+}
+.b-promo__form__col1{
+    font: 300 16px Roboto;
+    color: #878787;
+}
+.b-promo__form__col1 .dropdown{
+    margin-top: 0;
+}
+.b-promo__form__col1 select{
+    height: 60px;
+}
+.b-promo__form__col1 select:focus{
+    border-color:transparent;
+}
+.b-promo__form__col1 .button{
+    background:#fff;
+    border:none;
+    border-radius: 0;
+}
+.b-promo__form__col1 input[name="location"] {
+    border-left:none;
+}
+select {
+    /* Make sure the select is wider than the container so we can clip the arrow */
+    width:110%;
+    max-width:110%;
+    min-width:110%;
+    /* Remove select styling */
+    appearance: none;
+    -webkit-appearance: none;
+    /* Ugly Firefox way of doing it */
+    -moz-appearance: window;
+    text-indent: 0.01px;
+    text-overflow: "";
+    /* Magic font size number to prevent iOS text zoom */
+    font-size:16px;
+    font-weight: bold;
+    background:none;
+    border: none;
+    color: #444;
+    outline: none;
+    /* Padding works surpringly well */
+    padding: .4em 19% .4em .8em;
+    font-family: helvetica, sans-serif;
+    line-height:1.2;
+    margin:.2em;
+}
+   
+/* This hides native dropdown button arrow in IE */
+select::-ms-expand {
+    display: none;
+}
+/* Custom arrow - could be an image, SVG, icon font, etc. */
+.dropdown:after {
+    background: none;
+    color: #bbb;
+    content: "\25BC";
+    font-size: .7em;
+    padding:0;
+    position: absolute;
+    right: 1em;
+    top: 2.2em;
+    bottom: .3em;
+    z-index: 1;
+    pointer-events:none;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.button {
+    border: 1px solid #bbb;
+    border-radius: .3em;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    background: #f3f3f3; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
 a:hover {
     color: #eb7b73;
 }
@@ -1110,9 +1207,10 @@ html .b-promo__search {
     border-left: 1px solid #e2e2e2;
 }
 
-.b-promo__form {
+/*.b-promo__form {
     font-size: 0;
 }
+*/
 
 .btn_cat {
     width: 300px;
@@ -4073,10 +4171,13 @@ html .btn--buy-ticket:hover {
         font-size:13px;
     }
     .b-header__ctrl__item {
-        padding: 16px 5px;
+        padding: 16px 3px;
     }
     .scroll_block{
         display: none;
+    }
+    .searchbox{
+        min-width: 38px;
     }
 }
 
