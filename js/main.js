@@ -230,7 +230,7 @@ function init_masonry(){
 
         var windowWidth = $(window).width();
 
-        if(windowWidth > 600){
+        if(windowWidth > 992){
             $('.fadein').delay(2000).queue(function(next){
                 $(this).addClass('active');
                 next();
