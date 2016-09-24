@@ -1025,7 +1025,9 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     color:#fff;
     background:#0e0f11;
 }
-
+.searchbox-icon:hover .fa{
+    color:#de443a;
+}
 
 
 .searchbox-open input.searchbox-input{
@@ -2049,7 +2051,6 @@ html .b-recent-post__img {
 .b-category-list__item {
     font: 400 16px Roboto;
     position: relative;
-    /*border-bottom: 1px solid #e2e2e2;*/
     padding: 15px 10px 15px 30px;
 }
 
@@ -2058,9 +2059,8 @@ html .b-recent-post__img {
     border: 6px solid transparent;
     border-left: 6px solid #929292;
     position: absolute;
-    left: 10px;
-    top: 50%;
-    margin-top: -6px;
+    left: 2px!important;
+    top: 19px!important;
 }
 
 .b-category-list__item a {
@@ -2085,7 +2085,7 @@ html .b-recent-post__img {
     font: 400 16px Roboto;
     color: #0e0f11;
     text-decoration: none;
-    margin: 0 5px 5px 0;
+    margin: 0 10px 10px 0;
     display: inline-block;
 }
 
@@ -2097,7 +2097,6 @@ html .b-recent-post__img {
     position: relative;
     width: 100%;
 }
-
 .b-gadget__search__field {
     border: 1px solid #e2e2e2;
     padding: 15px 25px;
@@ -2123,6 +2122,10 @@ html .b-recent-post__img {
 .b-gadget__subscribe .b-form__row {
 
 }
+.b-gadget__subscribe .btn {
+    height: 50px;
+    line-height: 16px;
+}
 
 html .b-gadget__subscribe__field {
     width: 80%;
@@ -2133,11 +2136,9 @@ html .b-gadget__subscribe__field {
     line-height: 50px;
     vertical-align: top;
 }
-
-.b-grid {
-    margin: 0 -15px 0 -15px;
+.b-grid-sizer{
+    width: 33.33333333%;
 }
-
 .b-sm-post__popup {
     width: 270px;
 }
@@ -2195,7 +2196,9 @@ html .b-gadget__subscribe__field {
     color: #929292;
     margin-right: 25px;
 }
-
+.b-post-container {
+    margin: 0 -15px;
+}
 .b-post-feature__tag {
     float: right;
     background: #de443a;
@@ -3876,7 +3879,11 @@ html .btn--buy-ticket:hover {
 .b-soc{
     float:left;
 }
-
+.b-content .b-loadmore {
+    margin: 40px auto;
+    display: block;
+    width: 260px;
+}
 .soc-item{
     color:#fff;
     display: inline-block;
@@ -4014,6 +4021,12 @@ html .btn--buy-ticket:hover {
         padding: 30px 15px;
         background: #0F111E none;
         height: auto;
+    }
+    .b-big-post {
+        margin-bottom: 50px;
+    }
+    .b-page-content {
+        padding: 50px 15px 132px;
     }
     .b-header__ctrl {
         margin-right: 0px;
@@ -4523,6 +4536,7 @@ html .btn--buy-ticket:hover {
 }
 .b-gadget ul li a {
     color: #0e0f11;
+    padding-left: 10px;
     text-decoration: none;
 }
 
