@@ -3,23 +3,50 @@
 // function parallax() {
 //     var $window = $(window);
 //     $('.b-parallax[data-type="background"]').each(function(){
-//         var $bgobj = $(this); // Назначаем объект
+//         var $bgobj = $(this); // РќР°Р·РЅР°С‡Р°РµРј РѕР±СЉРµРєС‚
 //         $(window).scroll(function() {
-//             // Прокручиваем фон со скоростью var.
-//             // Значение yPos отрицательное, так как прокручивание осуществляется вверх!
+//             // РџСЂРѕРєСЂСѓС‡РёРІР°РµРј С„РѕРЅ СЃРѕ СЃРєРѕСЂРѕСЃС‚СЊСЋ var.
+//             // Р—РЅР°С‡РµРЅРёРµ yPos РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ, С‚Р°Рє РєР°Рє РїСЂРѕРєСЂСѓС‡РёРІР°РЅРёРµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІРІРµСЂС…!
 //             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-//             // Размещаем все вместе в конечной точке
+//             // Р Р°Р·РјРµС‰Р°РµРј РІСЃРµ РІРјРµСЃС‚Рµ РІ РєРѕРЅРµС‡РЅРѕР№ С‚РѕС‡РєРµ
 //             var coords = '50% '+ yPos +'px';
-//             // Смещаем фон
+//             // РЎРјРµС‰Р°РµРј С„РѕРЅ
 //             $bgobj.css({ backgroundPosition: coords });
 //         });
 //     });
 // }
 
 
+/*ajax subscribe*/
+jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
+    e.preventDefault();
+    var email = jQuery(".b-gadget__subscribe__field");
+    email.removeClass('error');
+    var thisbtn = jQuery(this);
 
 
+    if (isValidEmailAddress(email.val())) {
+        thisbtn.prop('disabled', true);
 
+        jQuery.ajax({
+            url: nightcity_obj.ajaxurl,
+            type: 'POST',
+            data: "action=nightcity_mailchimp_send&email=" + email.val(),
+            success: function (date) {
+                jQuery('#subscribe_mini_form').append("<div class=\"alert alert-success fade in\">" +
+                    "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">&times;</button><strong>" +
+                    "" + date + "" +
+                    "</strong></div>");
+                jQuery('#subscribe_mini_form')[0].reset();
+                thisbtn.prop('disabled', false);
+            }
+
+        });
+    } else {
+        email.addClass('error');
+
+    }
+});
 
 
 //****************************** Lazy load ******************************//
@@ -33,16 +60,16 @@ function lazyLoadImages() {
     // load images that have entered the viewport
 
     [].forEach.call(images, function (item) {
-        if (item.getBoundingClientRect().top>0) { //alert(1);
+        if (item.getBoundingClientRect().top > 0) { //alert(1);
 
             //$(this).
             var image = item.getAttribute("data-src"),
                 img = jQuery('<img />');
-            img.bind('load', function() {
+            img.bind('load', function () {
                 jQuery(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
             });
             img.attr('src', image);
-            jQuery(item).css("background-image","url("+image+")")
+            jQuery(item).css("background-image", "url(" + image + ")")
 
             item.removeAttribute("data-src");
         }
@@ -57,15 +84,10 @@ function lazyLoadImages() {
 }
 
 
-
-
-
-
 //****************************** Tooltip plugin activate ******************************//
-function tooltip(){
+function tooltip() {
     jQuery('[data-toggle="tooltip"]').tooltip()
 }
-
 
 
 // //****************************** Sly plugin activate ******************************//
@@ -85,46 +107,49 @@ function tooltip(){
 // }
 
 
-
-
-
-function buttonUp(){
-    var inputVal = jQuery('.searchbox-input').val();
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
     inputVal = jQuery.trim(inputVal).length;
-    if( inputVal !== 0){
-        jQuery('.searchbox-icon').css('display','none');
+    if (inputVal !== 0) {
+        jQuery('.searchbox-icon').css('display', 'none');
     } else {
         jQuery('.searchbox-input').val('');
-        jQuery('.searchbox-icon').css('display','block');
+        jQuery('.searchbox-icon').css('display', 'block');
     }
 }
 
-
-
-
-
-
-
-
-function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-
+/*
+function init_map() {
+    var myOptions = {
+        zoom: 10,
+        center: new google.maps.LatLng(51.5073509, -0.12775829999998223),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+    marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(51.5073509, -0.12775829999998223)});
+    infowindow = new google.maps.InfoWindow({content: '<strong>Title</strong><br>London, United Kingdom<br>'});
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
+    infowindow.open(map, marker);
+}
+google.maps.event.addDomListener(window, 'load', init_map);
+*/
 
 
 
 function init_masonry(){
     //****************************** Masonry plugin activate ******************************//
 
-        jQuery('.b-place-list').masonry({
-            // options
-            // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.b-grid-item',
-            // use element for option
-            gutter: 20
-        });
+    jQuery('.b-place-list').masonry({
+        // options
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.b-grid-item',
+        // use element for option
+        gutter: 20
+    });
 
 }
-
-
 
 (function ($) {
     $(document).ready(function () {
@@ -132,33 +157,15 @@ function init_masonry(){
         $('html').removeClass('no-js');
 
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
         //****************************** Script for animate.css ******************************//
         $.fn.extend({
             animateCss: function (animationName) {
                 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-                $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).addClass('animated ' + animationName).one(animationEnd, function () {
                     $(this).removeClass('animated ' + animationName);
                 });
             }
         });
-
-
-
-
-
 
 
         //****************************** Simple popup plugin activate ******************************//
@@ -169,18 +176,14 @@ function init_masonry(){
 
         $('.jquery_popup').popup({
             content: $('.b-jquery-popup'),
-            afterOpen: function(){$('input, select').styler()},
-            afterClose: function(){$('input, select').styler('destroy')}
+            afterOpen: function () {
+                $('input, select').styler()
+            },
+            afterClose: function () {
+                $('input, select').styler('destroy')
+            }
 
         });
-
-
-
-
-
-
-
-
 
 
         //****************************** determine and set the window height to the home page promo ******************************//
@@ -192,8 +195,6 @@ function init_masonry(){
         //         height: promoHeight
         //     })
         // })
-
-
 
 
         //****************************** Preloader script ******************************//
@@ -209,72 +210,52 @@ function init_masonry(){
         // window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
 
 
-
-
-
-
-
-        if($("div").is(".b-map-menu")){
+        if ($("div").is(".b-map-menu")) {
             $(".b-footer").hide(0);
-        }else{
+        } else {
             $(".b-footer").show(0);
         }
 
 
-
-        
-
-
         //********************************************** Ajax script **************************************** //
 
-
-        var windowWidth = $(window).width();
-
-        if(windowWidth > 992){
-            $('.fadein').delay(2000).queue(function(next){
-                $(this).addClass('active');
-                next();
-            });
-        }
-
-        if(windowWidth < 600) {
-                $('.b-nav .menu-item-has-children a').addClass('noajax');
-                $('ul li > a').on('click', function(e) {
-                    if ($(this).parent().find('ul').length > 0) {
-                        e.preventDefault();
-                    }
-                });
-            }
-
-
-
-        $('a:not(.noajax, .ab-item)').click(function() {
-            var $linkClicked = $(this).attr('href'); //берем урл
+        function ajax_init() {
+        $('a:not(.noajax):not(.ab-item)').unbind( "click" );
+        $('a:not(.noajax):not(.ab-item)').click(function () {
+            var $linkClicked = $(this).attr('href'); //Р±РµСЂРµРј СѓСЂР»
             console.log($linkClicked);
-            $('.b-preloader').fadeIn('fast');
-            $.get($linkClicked,function(d){ //обращаемся по этому урл через аякс
+            //$("body").css('opacity',"0.5");
+            $('.b-preloader').show();
+
+            $.get($linkClicked, function (d) { //РѕР±СЂР°С‰Р°РµРјСЃСЏ РїРѕ СЌС‚РѕРјСѓ СѓСЂР» С‡РµСЂРµР· Р°СЏРєСЃ
                 var response = new Object();
                 response.html = $('<div>').html(d);
                 $("#content").html($(response.html).find('#content').html());
-                if($("div").is(".b-map-menu")){
+                if ($("div").is(".b-map-menu")) {
                     $(".b-footer").hide(0);
-                }else{
+                } else {
                     $(".b-footer").show(0);
                 }
-                document.title = $(response.html).find('title').html(); //собсно назначем тайтл
-                //ии меняем урл в адресной строке
-                window.history.pushState({"html":$(response.html).find('html').html(),"pageTitle":response.pageTitle},"", $linkClicked);
+                document.title = $(response.html).find('title').html(); //СЃРѕР±СЃРЅРѕ РЅР°Р·РЅР°С‡РµРј С‚Р°Р№С‚Р»
+                //РёРё РјРµРЅСЏРµРј СѓСЂР» РІ Р°РґСЂРµСЃРЅРѕР№ СЃС‚СЂРѕРєРµ
+                window.history.pushState({
+                    "html": $(response.html).find('html').html(),
+                    "pageTitle": response.pageTitle
+                }, "", $linkClicked);
                 lazyLoadImages();
                 main_js();
                 init_masonry();
-                $('.b-preloader').fadeOut('fast');
-            }).fail(function(){
-                window.location = $linkClicked;
+                ajax_init();//РЅСѓР¶РЅРѕ РµС‰Рµ СЂР°Р· РЅР°РІРµСЃРёС‚СЊ РЅР° РІСЃРµ СЃСЃС‹Р»РєРё РѕР±СЂР°Р±РѕС‚С‡РёРє Р°СЏРєСЃР°
+                window.scrollTo(0, 0);
+                $('.b-preloader').hide();
+                //$("body").css('opacity',"1");
             });
             return false;
         });
-
-
+        }
+        
+        ajax_init();
+        
         // var hash = window.location.hash.substr(1);
         // var href = $('a').each(function(){
         //     var href = $(this).attr('href');
@@ -302,8 +283,8 @@ function init_masonry(){
         var inputBox = $('.searchbox-input');
         var searchBox = $('.searchbox');
         var isOpen = false;
-        submitIcon.click(function(){
-            if(isOpen == false){
+        submitIcon.click(function () {
+            if (isOpen == false) {
                 searchBox.addClass('searchbox-open');
                 inputBox.focus();
                 isOpen = true;
@@ -313,47 +294,42 @@ function init_masonry(){
                 isOpen = false;
             }
         });
-        submitIcon.mouseup(function(){
+        submitIcon.mouseup(function () {
             return false;
         });
-        searchBox.mouseup(function(){
+        searchBox.mouseup(function () {
             return false;
         });
-        $(document).mouseup(function(){
-            if(isOpen == true){
-                $('.searchbox-icon').css('display','block');
+        $(document).mouseup(function () {
+            if (isOpen == true) {
+                $('.searchbox-icon').css('display', 'block');
                 submitIcon.click();
             }
         });
 
 
-
-
-
-        //if (!elem.childNodes.length) { ... }
-
-
-
-        $('.custom-scroll').customScrollbar({
-            updateOnWindowResize: true
+        $('.fadein').delay(2000).queue(function (next) {
+            $(this).addClass('active');
+            next();
         });
 
 
-        $('.b-nav-toggle').on('click', function(){
+
+
+
+        $('.b-nav-toggle').on('click', function () {
             var bNav = $('.b-nav');
             var iconToggle = $(this).find('.fa');
-            if($(this).hasClass('closed')){
-                //alert('1');
+            if ($(this).hasClass('closed')) {
                 bNav.slideDown('fast');
                 $(this).removeClass('closed').addClass('opened');
                 iconToggle.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-            }else if($(this).hasClass('opened')){
+            } else if ($(this).hasClass('opened')) {
                 bNav.slideUp('fast');
                 $(this).removeClass('opened').addClass('closed');
                 iconToggle.removeClass('fa-chevron-up').addClass('fa-chevron-down');
             }
         });
-
 
         $('.b-nav>ul>li.menu-item-has-children>a').append('<i class="fa fa-angle-down"></i>');
 
@@ -368,8 +344,7 @@ function init_masonry(){
             $(window).trigger('resize');
         });
 
-
-        main_js();
+        main_js($);
 
 
     });

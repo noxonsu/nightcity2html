@@ -631,13 +631,22 @@ label {
 .b-promo__form__col1 select{
     height: 60px;
 }
-.b-promo__form__col1 select:focus{
+.b-slide-menu__content select {
+    height: 50px;
+}
+.b-promo__form__col1 select:focus,
+.b-slide-menu__content select:focus{
     border-color:transparent;
 }
-.b-promo__form__col1 .button{
+.b-promo__form__col1 .button,
+.b-slide-menu__content .button{
     background:#fff;
     border:none;
     border-radius: 0;
+}
+.b-slide-menu__content .button{
+    border: 1px solid #e2e2e2;
+    margin-top: 0;
 }
 .b-promo__form__col1 input[name="location"] {
     border-left:none;
@@ -692,8 +701,6 @@ select:-moz-focusring {
 }
 .button {
     border: 1px solid #bbb;
-    border-radius: .3em;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
     background: #f3f3f3; /* Old browsers */
     background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
@@ -2109,7 +2116,7 @@ html .b-recent-post__img {
     width: 20px;
     height: 20px;
     right: 25px;
-    top: 15px;
+    top: 13px;
     background: none;
     border: none;
 }
@@ -3362,7 +3369,7 @@ html .btn--buy-ticket:hover {
     position: fixed;
     left: 0;
     top: 80px;
-    width: 200px;
+    width: 100px;
     background: #0e0f11;
     height: 100%;
     z-index: 3;
@@ -3382,21 +3389,28 @@ html .btn--buy-ticket:hover {
 }
 
 .b-map-menu__list a {
-    font: 300 16px Roboto;
+    font: 300 13px Roboto;
     color: #b0b0b0;
     display: block;
     width: 100%;
     padding: 15px;
+    text-align: center;
 }
-
+.b-map-menu__list__all-places {
+    text-align: center;
+    line-height: 1.4;
+}
+.b-map-menu__list__all-places a {
+    color:white;
+    font-size: 16px;
+}
 .b-map-menu__list i {
     color: #fff;
     font-size: 35px;
-    display: inline-block;
-    margin-right: 15px;
+    margin-bottom: 10px;
+    display: block;
     transition: all 0.3s ease;
     vertical-align: middle;
-    margin-top: -5px;
 }
 
 .b-map-menu__list li:hover a, .b-map-menu__list li:hover i {
@@ -3449,7 +3463,7 @@ html .btn--buy-ticket:hover {
 
 
     height: calc(100% - 80px);
-    left: 200px;
+    left: 100px;
     padding: 0;
     position: fixed;
     top: 80px;
@@ -3473,7 +3487,9 @@ html .btn--buy-ticket:hover {
     padding: 20px;
     border-bottom: 1px solid #f2f2f2;
 }
-
+.b-slide-menu__form__row label{
+    margin-top: 0;
+}
 .b-slide-menu__row {
     margin-bottom: 20px;
     padding: 20px 30px 0 20px;
@@ -3960,9 +3976,15 @@ html .btn--buy-ticket:hover {
     .b-nav {
         clear: both;
     }
+    .b-place-list .b-grid-item {
+        width:94%;
+    }
     html .btn--black:hover{
         color: #e23d37;
         background:#0f0f11;
+    }
+    .b-slide-menu__content {
+        width:500px;
     }
     .searchbox-icon {
         width:64px;
@@ -3990,9 +4012,9 @@ html .btn--buy-ticket:hover {
         height: auto;
         background: #de443a;
     }
-    .b-map-menu, .b-map, .b-slide-menu {
+/*    .b-map-menu, .b-map, .b-slide-menu {
         display: none;
-    }
+    }*/
     .b-places-list-mobile {
         display: block;
     }
@@ -5098,6 +5120,71 @@ ul.gp_content {
     top: 0;
     box-shadow: 2px -2px 5px rgba(0,0,0,0.5);
 }
+/* new select */
+.b-slide-menu .chosen-container-single .chosen-single {
+    height: 50px;
+    background: #fff;
+    border-color:#e2e2e2;
+    border-radius: 0;
+}
+.b-slide-menu .chosen-container-active.chosen-with-drop .chosen-single {
+    background: #fff;
+}
+.b-slide-menu .chosen-container-single .chosen-single span {
+    font-size: 16px;
+    line-height: 47px;
+}
+.b-slide-menu .chosen-container-single .chosen-search {
+    display: none;
+}
+.b-slide-menu .chosen-container-active .chosen-single {
+    border: 1px solid #de443a;
+    box-shadow: 0 0 5px rgba(0,0,0,.0);
+}
+.chosen-container {
+    width:100%!important;
+}
+.b-slide-menu .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 13px;
+}
+.b-slide-menu .chosen-container-single .chosen-single div b {
+    background: url(chosen-sprite.png) no-repeat 0 12px;
+}
+.b-slide-menu .chosen-container .chosen-results li.highlighted {
+    background-color: #de443a;
+/*    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#3875d7),color-stop(90%,#2a62bc));
+    background-image: -webkit-linear-gradient(#3875d7 20%,#2a62bc 90%);
+    background-image: -moz-linear-gradient(#3875d7 20%,#2a62bc 90%);
+    background-image: -o-linear-gradient(#3875d7 20%,#2a62bc 90%);
+    background-image: linear-gradient(#3875d7 20%,#2a62bc 90%);*/
+    color: #fff;
+}
+/* end new select */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
