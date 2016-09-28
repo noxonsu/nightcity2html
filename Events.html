@@ -121,7 +121,7 @@
 						<div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span></div>
 						<div class="col-md-9">
 							<div class="b-slide-menu__form__row__item">
-								<input type="text" id="example_id" name="example_name" value="" /> </div>
+								<input type="text" class="example_class" name="example_name" value="" /> </div>
 						</div>
 					</div>
 					<div class="b-slide-menu__form__row row">
@@ -150,15 +150,29 @@
 						<div class="col-md-3"><span class="b-slide-menu__form__row__title">Sorting by:</span></div>
 						<div class="col-md-9">
 							<div class="b-slide-menu__form__row__item">
-						   <div class="button dropdown">
-						     <select>
-						       <option>Apples</option>
-						       <option>Bananas</option>
-						       <option>Grapes</option>
-						       <option>Oranges</option>
-						       <option selected>Popular</option>
-						     </select>
-						   </div>
+								          <select data-placeholder="Popular" class="chosen-select" style="width:350px;" tabindex="2">
+            <option value=""></option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Aland Islands">Aland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+          </select>
 							</div>
 						</div>
 					</div>
@@ -173,6 +187,7 @@
 					<div class="b-grid-item">
 						<div class="b-event">
 							<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+								<div class="b-events__time"><span>08:00 pm - 05:00 am</span></div>
 								<div class="b-sm-post__date">
 									<div class="b-sm-post__month">apr</div>
 									<div class="b-sm-post__day">29</div>
@@ -539,6 +554,17 @@
 		</div>
 	<script>
 		main_js = function () {
+
+			var slideLeft = -560,
+				slideRight = 100;
+
+			if($(window).width() < 1140) {
+				slideLeft = -400;
+			}
+			if($(window).width() < 768) {
+				slideLeft = -440;
+				slideRight = 60;
+			}
 			//****************************** Show/Hide filters on map pages ******************************//
 			jQuery('.b-hide-filters').on('click', function () {
 				var filterBtn = jQuery('.b-hide-filters');
@@ -560,26 +586,29 @@
 					jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
 					jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
 					slideMenu.animate({
-						left: '-560px'
+						left: slideLeft + 'px'
 					}, 500);
 				} else if (slideMenu.hasClass('closed')) {
 					slideMenu.removeClass('closed').addClass('opened');
 					jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
 					jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
 					slideMenu.animate({
-						left: '100px'
+						left: slideRight + 'px'
 					}, 500);
 				}
 			});
+
 			//****************************** Masonry plugin activate ******************************//
 			jQuery(window).load(function(){
-				jQuery('.b-place-list').masonry({
-					// options
-					// set itemSelector so .grid-sizer is not used in layout
-					itemSelector: '.b-grid-item',
-					// use element for option
-					gutter: 20
-				});
+				if($(window).width() > 1140) {
+					jQuery('.b-place-list').masonry({
+						// options
+						// set itemSelector so .grid-sizer is not used in layout
+						itemSelector: '.b-grid-item',
+						// use element for option
+						gutter: 20
+					});
+				}
 			});
 			//****************************** Ion range slider plugin activate ******************************//
 			jQuery('.example_class').ionRangeSlider({
@@ -809,9 +838,9 @@
 		function after_load() {
 			initialize_new();
 		}
-		jQuery(document).ready(function ($) {
-			google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
-		});
+		// jQuery(document).ready(function ($) {
+		// 	google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
+		// });
 	</script>
 	</div>
 	<!-- .b-main-container -->

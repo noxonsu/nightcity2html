@@ -307,11 +307,13 @@ function init_masonry(){
             }
         });
 
+        if($(window).width() > 992) {
+            $('.fadein').delay(2000).queue(function (next) {
+                $(this).addClass('active');
+                next();
+            });
+        }
 
-        $('.fadein').delay(2000).queue(function (next) {
-            $(this).addClass('active');
-            next();
-        });
 
 
 

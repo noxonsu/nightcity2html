@@ -3412,28 +3412,36 @@ html .btn--buy-ticket:hover {
     transition: all 0.3s ease;
     vertical-align: middle;
 }
-
-.b-map-menu__list li:hover a, .b-map-menu__list li:hover i {
-    color: #48494c;
-}
-
-.b-map-menu__list__bars.active a, .b-map-menu__list__bars.active i {
+.b-map-menu__list__bars.active a
+.b-map-menu__list__bars.active i,
+.b-map-menu__list__bars:hover a,
+.b-map-menu__list__bars:hover i{
     color: #f2df35;
 }
-
-.b-map-menu__list__food.active a, .b-map-menu__list__food.active a i {
+.b-map-menu__list__food.active a, 
+.b-map-menu__list__food.active a i,
+.b-map-menu__list__food:hover a,
+.b-map-menu__list__food:hover i{
     color: #75bc51;
 }
 
-.b-map-menu__list__restaurants.active a, .b-map-menu__list__restaurants.active a i {
+.b-map-menu__list__restaurants.active a,
+.b-map-menu__list__restaurants.active a i,
+.b-map-menu__list__restaurants:hover a,
+.b-map-menu__list__restaurants:hover i {
     color: #de443a;
 }
 
-.b-map-menu__list__night-life.active a, .b-map-menu__list__night-life.active a i {
+.b-map-menu__list__night-life.active a,
+.b-map-menu__list__night-life.active a i,
+.b-map-menu__list__night-life:hover a,
+.b-map-menu__list__night-life:hover i {
     color: #90a9d1;
 }
-
-.b-map-menu__list__entertainment.active a, .b-map-menu__list__entertainment.active a i {
+.b-map-menu__list__entertainment.active a,
+.b-map-menu__list__entertainment.active a i,
+.b-map-menu__list__entertainment:hover a,
+.b-map-menu__list__entertainment:hover i {
     color: #084e8c;
 }
 
@@ -3509,7 +3517,7 @@ html .btn--buy-ticket:hover {
     /*column-count: 2;*/
     /*column-gap: 10px;*/
     /*column-width: 300px;*/
-    padding: 0 5px 15px 20px;
+    padding: 0 20px 15px 20px;
 }
 
 .b-place-list.opened {
@@ -3702,7 +3710,7 @@ html .btn--buy-ticket:hover {
 }
 
 .b-slide-menu__toggle i {
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .b-slide-menu__content {
@@ -3977,7 +3985,7 @@ html .btn--buy-ticket:hover {
         clear: both;
     }
     .b-place-list .b-grid-item {
-        width:94%;
+        width:100%;
     }
     html .btn--black:hover{
         color: #e23d37;
@@ -4039,6 +4047,10 @@ html .btn--buy-ticket:hover {
     }
 }
 @media only screen and (max-width: 992px) {
+    .b-map-menu,
+    .b-slide-menu {
+        top:60px;
+    }
     .b-counter2 {
         padding: 30px 15px;
         background: #0F111E none;
@@ -4178,6 +4190,37 @@ html .btn--buy-ticket:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .b-map-menu__list a {
+        font: 300 11px Roboto;
+        padding: 10px 0px;
+    }
+    .b-slide-menu__content {
+        width: 40%;
+    }
+    .b-slide-menu input[type="text"] {
+        min-height: 25px;
+        font-size: 12px;
+    }
+    .b-gadget__search__button .fa {
+        font-size: 14px;
+        top: -12px;
+        right: -14px;
+        position: relative;
+    }
+    .b-slide-menu__form__row__title {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .b-map-menu__list i {
+        font-size: 20px;
+    }
+    .b-map-menu {
+        width:60px;
+    }
+    .b-slide-menu {
+        left:60px;
+        height: calc(100% - 60px);
+    }
     .b-promo3 {
         padding-top:60px;
     }
@@ -5152,18 +5195,44 @@ ul.gp_content {
 }
 .b-slide-menu .chosen-container .chosen-results li.highlighted {
     background-color: #de443a;
-/*    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#3875d7),color-stop(90%,#2a62bc));
-    background-image: -webkit-linear-gradient(#3875d7 20%,#2a62bc 90%);
-    background-image: -moz-linear-gradient(#3875d7 20%,#2a62bc 90%);
-    background-image: -o-linear-gradient(#3875d7 20%,#2a62bc 90%);
-    background-image: linear-gradient(#3875d7 20%,#2a62bc 90%);*/
     color: #fff;
 }
+.b-slide-menu .chosen-container-single .chosen-drop {
+    margin-top: 0;
+}
+
 /* end new select */
-
-
-
-
+.irs-slider {
+    width: 18px!important;
+    height: 18px!important;
+    cursor: pointer!important;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.3);
+    border: 1px solid #e2e2e2;
+    background: #ffffff!important;
+    top: 22px;
+}
+.irs-to,
+.irs-from,
+.irs-min,
+.irs-max {
+    top:-5px!important;
+}
+.b-slide-menu__form__row input {
+    box-shadow: 0 0 3px #fff inset,0 1px 1px rgba(0,0,0,.1);
+}
+.b-slide-menu__content{
+    overflow: scroll;
+}
+.b-events__time {
+    position: absolute;
+    z-index: 11111;
+    text-transform: uppercase;
+    top: 20px;
+    left: 80px;
+    font: 300 12px Roboto;
+    color: white;
+}
 
 
 
