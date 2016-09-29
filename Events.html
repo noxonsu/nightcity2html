@@ -555,16 +555,16 @@
 	<script>
 		main_js = function () {
 
-			var slideLeft = -560,
-				slideRight = 100;
+			// var slideLeft = -560 + 'px',
+			// 	slideRight = 100;
 
-			if($(window).width() < 1140) {
-				slideLeft = -400;
-			}
-			if($(window).width() < 768) {
-				slideLeft = -440;
-				slideRight = 60;
-			}
+			// if($(window).width() < 1140) {
+			// 	slideLeft = -400 + 'px';
+			// }
+			// if($(window).width() < 768) {
+			// 	slideLeft = 'calc(-76% + 25px)';
+			// 	slideRight = 60;
+			// }
 			//****************************** Show/Hide filters on map pages ******************************//
 			jQuery('.b-hide-filters').on('click', function () {
 				var filterBtn = jQuery('.b-hide-filters');
@@ -585,16 +585,12 @@
 					slideMenu.removeClass('opened').addClass('closed');
 					jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
 					jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
-					slideMenu.animate({
-						left: slideLeft + 'px'
-					}, 500);
+					slideMenu.removeClass('oopeen').addClass('closseed');
 				} else if (slideMenu.hasClass('closed')) {
 					slideMenu.removeClass('closed').addClass('opened');
 					jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
 					jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
-					slideMenu.animate({
-						left: slideRight + 'px'
-					}, 500);
+					slideMenu.removeClass('closseed').addClass('oopeen');
 				}
 			});
 

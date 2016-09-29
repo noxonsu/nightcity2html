@@ -2809,7 +2809,9 @@ html .btn--buy-ticket:hover {
     padding: 90px 15px;
     background: #fff;
 }
-
+.b-slide-menu.closseed {
+    left:-560px;
+}
 .b-speaker {
     width: 100%;
 }
@@ -4045,17 +4047,24 @@ html .btn--buy-ticket:hover {
     .b-header__ctrl {
         margin-right: 15px;
     }
+    .b-slide-menu.closseed {
+        left:-400px;
+    }
 }
 @media only screen and (max-width: 992px) {
     .b-map-menu,
     .b-slide-menu {
         top:60px;
     }
+    .b-slide-menu{
+        height: calc(100% - 60px);
+    }
     .b-counter2 {
         padding: 30px 15px;
         background: #0F111E none;
         height: auto;
     }
+
     .b-big-post {
         margin-bottom: 50px;
     }
@@ -4190,12 +4199,15 @@ html .btn--buy-ticket:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .b-slide-menu.closseed {
+        left: calc(-70% + 25px);
+    }
     .b-map-menu__list a {
         font: 300 11px Roboto;
-        padding: 10px 0px;
+        padding: 10px 5px;
     }
     .b-slide-menu__content {
-        width: 40%;
+        width: initial;
     }
     .b-slide-menu input[type="text"] {
         min-height: 25px;
@@ -4215,10 +4227,11 @@ html .btn--buy-ticket:hover {
         font-size: 20px;
     }
     .b-map-menu {
-        width:60px;
+        width:15%;
     }
     .b-slide-menu {
-        left:60px;
+        left: 15%;
+        width: calc(85% - 25px);
         height: calc(100% - 60px);
     }
     .b-promo3 {
@@ -4361,6 +4374,9 @@ html .btn--buy-ticket:hover {
     }
     .searchbox-open input.searchbox-input {
         max-width: 235px;
+    }
+    .b-map-menu, .b-slide-menu {
+        top: 104px;
     }
 }
 
@@ -5233,11 +5249,9 @@ ul.gp_content {
     font: 300 12px Roboto;
     color: white;
 }
-
-
-
-
-
+.b-slide-menu {
+    transition: left 0.3s ease-in;
+}
 
 
 
