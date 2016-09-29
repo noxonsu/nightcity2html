@@ -445,6 +445,7 @@ html .btn {
     background: #de443a;
     height: 60px;
     border-radius: 0;
+    letter-spacing: 1.3px;
     position: relative;
     box-sizing: border-box;
     -webkit-transition: all 0.3s ease;
@@ -561,6 +562,10 @@ video {
     vertical-align: middle;
 }
 
+iframe	{
+	border: 0
+}
+
 fieldset {
     border: 0;
     margin: 0;
@@ -600,6 +605,110 @@ a {
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+label {
+    display:block;
+    margin-top:2em;
+    font-size: 0.9em;
+    color:#777;
+}
+.dropdown {
+    position: relative;
+    display:block;
+    margin-top:0.5em;
+    overflow:hidden;
+    width:100%;
+    max-width:100%;
+}
+.b-promo__form__col1{
+    font: 300 16px Roboto;
+    color: #878787;
+}
+.b-promo__form__col1 .dropdown{
+    margin-top: 0;
+}
+.b-promo__form__col1 select{
+    height: 60px;
+}
+.b-slide-menu__content select {
+    height: 50px;
+}
+.b-promo__form__col1 select:focus,
+.b-slide-menu__content select:focus{
+    border-color:transparent;
+}
+.b-promo__form__col1 .button,
+.b-slide-menu__content .button{
+    background:#fff;
+    border:none;
+    border-radius: 0;
+}
+.b-slide-menu__content .button{
+    border: 1px solid #e2e2e2;
+    margin-top: 0;
+}
+.b-promo__form__col1 input[name="location"] {
+    border-left:none;
+}
+select {
+    /* Make sure the select is wider than the container so we can clip the arrow */
+    width:110%;
+    max-width:110%;
+    min-width:110%;
+    /* Remove select styling */
+    appearance: none;
+    -webkit-appearance: none;
+    /* Ugly Firefox way of doing it */
+    -moz-appearance: window;
+    text-indent: 0.01px;
+    text-overflow: "";
+    /* Magic font size number to prevent iOS text zoom */
+    font-size:16px;
+    font-weight: bold;
+    background:none;
+    border: none;
+    color: #444;
+    outline: none;
+    /* Padding works surpringly well */
+    padding: .4em 19% .4em .8em;
+    font-family: helvetica, sans-serif;
+    line-height:1.2;
+    margin:.2em;
+}
+   
+/* This hides native dropdown button arrow in IE */
+select::-ms-expand {
+    display: none;
+}
+/* Custom arrow - could be an image, SVG, icon font, etc. */
+.dropdown:after {
+    background: none;
+    color: #bbb;
+    content: "\25BC";
+    font-size: .7em;
+    padding:0;
+    position: absolute;
+    right: 1em;
+    top: 2.2em;
+    bottom: .3em;
+    z-index: 1;
+    pointer-events:none;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.button {
+    border: 1px solid #bbb;
+    background: #f3f3f3; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 
 a:hover {
@@ -681,6 +790,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     float:left;
     line-height: 11px;
     width: 200px;
+    cursor: pointer;
     height: 80px;
     margin-right: 20px;
 }
@@ -695,31 +805,34 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     color: white;
     float: left;
     margin-left: 10px;
-    margin-top: 22px;
+    margin-top: 24px;
     min-height: 40px;
     display: none;
 }
-
 .b-nav{
     text-align: left;
 }
-
 .b-nav .fa-angle-down {
     color: white;
     margin-left: 4px;
 }
-
 .b-nav ul {
     margin:0;
     padding: 0;
     vertical-align: middle;
 }
-
 .b-nav > ul{
     min-height: 80px;
-    padding-top: 15px;
+    padding-top: 28px;
+    top: 80px;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    position: absolute;
 }
-
+.b-nav ul li ul{
+    top:40px;
+}
 .b-nav > ul > li{
     height: 25px;
 }
@@ -730,17 +843,18 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     vertical-align: middle;
     height: 100%;
 }
-
-.b-nav > ul > li > a{
-    display: inline-block;
-    vertical-align: middle;
+.b-nav > ul > li:after{
+    content: "";
+    position: absolute;
+    border-bottom: 26px solid transparent;
+    width: 100%;
+    left: 0;
 }
-
 .b-nav ul li{
     display: inline-block;
     list-style-type: none;
     text-transform: uppercase;
-    margin-left: 1%;
+    margin-right: 20px;
     position: relative;
 }
 
@@ -749,6 +863,7 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
     text-decoration: none;
     font-size: 14px;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .b-nav ul li a:hover{
@@ -760,32 +875,27 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .b-nav ul li a .fa-angle-down {
-    margin: 0 5px;
+    margin: 0 0 0 5px;
 }
-
 .b-nav ul li ul{
     position: absolute;
-    top:100%;
-    left: -26px;
+    left: -22px;
     width: 200px;
     box-sizing:border-box;
     background: #161618;
     display: none;
     z-index: 1;
 }
-
 .b-nav ul li:hover > ul{
     display: block;
 }
-
-.b-nav ul li ul li{
+.b-nav ul li ul li {
     display: block;
     text-align: left;
     margin-left:0;
-
+    margin-right: 0;
     transition: all 0.3s ease;
 }
-
 .b-nav ul li ul li a {
     padding: 15px 30px;
     display: block;
@@ -922,7 +1032,9 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     color:#fff;
     background:#0e0f11;
 }
-
+.searchbox-icon:hover .fa{
+    color:#de443a;
+}
 
 
 .searchbox-open input.searchbox-input{
@@ -953,9 +1065,8 @@ html .b-promo__search {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -600px;
+    transform: translateX(-50%);
     margin-top: -150px;
-    width: 1200px;
 }
 
 .scroll_block {
@@ -1088,9 +1199,10 @@ html .b-promo__search {
     border-left: 1px solid #e2e2e2;
 }
 
-.b-promo__form {
+/*.b-promo__form {
     font-size: 0;
 }
+*/
 
 .btn_cat {
     width: 300px;
@@ -1130,11 +1242,10 @@ html .b-promo__search {
     border-left: 1px solid #e2e2e2;
     vertical-align: top;
 }
-
 .b-promo__form__col2 .btn {
     width: 100%;
+    letter-spacing: 1.2px;
 }
-
 .b-counter {
     background: #c8423a url('../img/counter-bg.jpg') center top repeat;
     min-height: 100px;
@@ -1227,15 +1338,22 @@ html .b-promo__search {
     color: #333;
     display: block;
 }
-
 .b-slider {
     margin-bottom: 60px;
 }
-
 .b-place-cat {
     width: 100%;
 }
-
+.b-slider.owl-carousel-2 .owl-prev{
+    left: 46%;
+    bottom: -80px;
+    top: auto;
+}
+.b-slider.owl-carousel-2 .owl-next{
+    right: 46%;
+    bottom: -80px;
+    top: auto;
+}
 .b-place-cat .col-md-3 {
     padding: 0;
 }
@@ -1573,12 +1691,13 @@ html .b-promo__search {
 }
 
 .b-counter2 {
-    height: 360px;
-    /*background: url('../img/src/banner-2.jpg');*/
-    padding-top: 110px;
     color: #fff;
+    display: flex;
+    height: 310px;
+    align-items: center;
     text-align: center;
     position: relative;
+
 }
 
 .b-counter2__title {
@@ -1612,17 +1731,17 @@ html .b-promo__search {
     display: inline-block;
     width: 170px;
     height: 52px;
-    background: url("../img/src/google-apple.png");
-    text-indent: -9999px;
-    overflow: hidden;
+    border:1px solid #fff;
     margin: 40px 30px 0 0;
 }
-
-.b-apple-store {
-    background-position: 170px 0;
+.b-google-store {
+    background: url(../img/icon-googleplay.png) no-repeat 50% 71%;
+    background-size: 87%;
 }
-
-
+.b-apple-store {
+    background: url(../img/apple-ic.png) no-repeat 41% 46%;
+    background-size: 85%;
+}
 
 /* ---------------------------------------------------- Banner style ---------------------------------------------------- */
 
@@ -1939,7 +2058,6 @@ html .b-recent-post__img {
 .b-category-list__item {
     font: 400 16px Roboto;
     position: relative;
-    /*border-bottom: 1px solid #e2e2e2;*/
     padding: 15px 10px 15px 30px;
 }
 
@@ -1948,9 +2066,8 @@ html .b-recent-post__img {
     border: 6px solid transparent;
     border-left: 6px solid #929292;
     position: absolute;
-    left: 10px;
-    top: 50%;
-    margin-top: -6px;
+    left: 2px!important;
+    top: 19px!important;
 }
 
 .b-category-list__item a {
@@ -1975,7 +2092,7 @@ html .b-recent-post__img {
     font: 400 16px Roboto;
     color: #0e0f11;
     text-decoration: none;
-    margin: 0 5px 5px 0;
+    margin: 0 10px 10px 0;
     display: inline-block;
 }
 
@@ -1987,7 +2104,6 @@ html .b-recent-post__img {
     position: relative;
     width: 100%;
 }
-
 .b-gadget__search__field {
     border: 1px solid #e2e2e2;
     padding: 15px 25px;
@@ -2000,7 +2116,7 @@ html .b-recent-post__img {
     width: 20px;
     height: 20px;
     right: 25px;
-    top: 15px;
+    top: 13px;
     background: none;
     border: none;
 }
@@ -2013,6 +2129,10 @@ html .b-recent-post__img {
 .b-gadget__subscribe .b-form__row {
 
 }
+.b-gadget__subscribe .btn {
+    height: 50px;
+    line-height: 16px;
+}
 
 html .b-gadget__subscribe__field {
     width: 80%;
@@ -2023,11 +2143,9 @@ html .b-gadget__subscribe__field {
     line-height: 50px;
     vertical-align: top;
 }
-
-.b-grid {
-    margin: 0 -15px 0 -15px;
+.b-grid-sizer{
+    width: 33.33333333%;
 }
-
 .b-sm-post__popup {
     width: 270px;
 }
@@ -2085,7 +2203,9 @@ html .b-gadget__subscribe__field {
     color: #929292;
     margin-right: 25px;
 }
-
+.b-post-container {
+    margin: 0 -15px;
+}
 .b-post-feature__tag {
     float: right;
     background: #de443a;
@@ -3249,7 +3369,7 @@ html .btn--buy-ticket:hover {
     position: fixed;
     left: 0;
     top: 80px;
-    width: 200px;
+    width: 100px;
     background: #0e0f11;
     height: 100%;
     z-index: 3;
@@ -3269,44 +3389,59 @@ html .btn--buy-ticket:hover {
 }
 
 .b-map-menu__list a {
-    font: 300 16px Roboto;
+    font: 300 13px Roboto;
     color: #b0b0b0;
     display: block;
     width: 100%;
     padding: 15px;
+    text-align: center;
 }
-
+.b-map-menu__list__all-places {
+    text-align: center;
+    line-height: 1.4;
+}
+.b-map-menu__list__all-places a {
+    color:white;
+    font-size: 16px;
+}
 .b-map-menu__list i {
     color: #fff;
     font-size: 35px;
-    display: inline-block;
-    margin-right: 15px;
+    margin-bottom: 10px;
+    display: block;
     transition: all 0.3s ease;
     vertical-align: middle;
-    margin-top: -5px;
 }
-
-.b-map-menu__list li:hover a, .b-map-menu__list li:hover i {
-    color: #48494c;
-}
-
-.b-map-menu__list__bars.active a, .b-map-menu__list__bars.active i {
+.b-map-menu__list__bars.active a
+.b-map-menu__list__bars.active i,
+.b-map-menu__list__bars:hover a,
+.b-map-menu__list__bars:hover i{
     color: #f2df35;
 }
-
-.b-map-menu__list__food.active a, .b-map-menu__list__food.active a i {
+.b-map-menu__list__food.active a, 
+.b-map-menu__list__food.active a i,
+.b-map-menu__list__food:hover a,
+.b-map-menu__list__food:hover i{
     color: #75bc51;
 }
 
-.b-map-menu__list__restaurants.active a, .b-map-menu__list__restaurants.active a i {
+.b-map-menu__list__restaurants.active a,
+.b-map-menu__list__restaurants.active a i,
+.b-map-menu__list__restaurants:hover a,
+.b-map-menu__list__restaurants:hover i {
     color: #de443a;
 }
 
-.b-map-menu__list__night-life.active a, .b-map-menu__list__night-life.active a i {
+.b-map-menu__list__night-life.active a,
+.b-map-menu__list__night-life.active a i,
+.b-map-menu__list__night-life:hover a,
+.b-map-menu__list__night-life:hover i {
     color: #90a9d1;
 }
-
-.b-map-menu__list__entertainment.active a, .b-map-menu__list__entertainment.active a i {
+.b-map-menu__list__entertainment.active a,
+.b-map-menu__list__entertainment.active a i,
+.b-map-menu__list__entertainment:hover a,
+.b-map-menu__list__entertainment:hover i {
     color: #084e8c;
 }
 
@@ -3336,7 +3471,7 @@ html .btn--buy-ticket:hover {
 
 
     height: calc(100% - 80px);
-    left: 200px;
+    left: 100px;
     padding: 0;
     position: fixed;
     top: 80px;
@@ -3360,7 +3495,9 @@ html .btn--buy-ticket:hover {
     padding: 20px;
     border-bottom: 1px solid #f2f2f2;
 }
-
+.b-slide-menu__form__row label{
+    margin-top: 0;
+}
 .b-slide-menu__row {
     margin-bottom: 20px;
     padding: 20px 30px 0 20px;
@@ -3380,7 +3517,7 @@ html .btn--buy-ticket:hover {
     /*column-count: 2;*/
     /*column-gap: 10px;*/
     /*column-width: 300px;*/
-    padding: 0 5px 15px 20px;
+    padding: 0 20px 15px 20px;
 }
 
 .b-place-list.opened {
@@ -3573,7 +3710,7 @@ html .btn--buy-ticket:hover {
 }
 
 .b-slide-menu__toggle i {
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .b-slide-menu__content {
@@ -3724,14 +3861,12 @@ html .btn--buy-ticket:hover {
 .b-footer__nav__col{
     margin-bottom: 30px;
 }
-
 .b-footer__nav__col__title{
-    margin-bottom:33px;
+    margin-bottom:30px;
     font-weight:bold;
     text-transform: uppercase;
     color:#fff;
 }
-
 .b-footer__nav__col ul{
     float:left;
     margin:0;
@@ -3768,7 +3903,11 @@ html .btn--buy-ticket:hover {
 .b-soc{
     float:left;
 }
-
+.b-content .b-loadmore {
+    margin: 40px auto;
+    display: block;
+    width: 260px;
+}
 .soc-item{
     color:#fff;
     display: inline-block;
@@ -3786,18 +3925,58 @@ html .btn--buy-ticket:hover {
     background: #de443a;
     color:#fff;
 }
-
 .stores{
     float:right;
 }
-
+.stores-black-gp img{
+    width:100px;
+}
+.stores-black-apps img {
+    width: 123px;
+    margin-left: 15px;
+}
+.btn--black .fa {display: none;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+@media only screen and (min-width: 1170px) {
+    .b-promo__search{
+        width: 1200px;
+    }
+}
+@media only screen and (min-width: 1371px) {
+    .b-nav > ul{
+        top:2px;
+        transform: translateX(-50%);
+        left: 40%;
+    }
+}
 @media only screen and (min-width: 1440px) {
-    .weather {
-        display: block;
+    .b-nav > ul{
+        transform: translateX(-50%);
+        left: 43%;
+    }
+}
+@media only screen and (min-width: 993px) {
+    .b-nav ul li ul {
+        top:50px;
+    }
+}
+@media only screen and (max-width: 1370px){
+    .b-nav > ul {
+        min-height: 80px;
+        padding-top: 28px;
+        top: 2px;
+        left: -70px;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+    }
+    .b-header__ctrl__item {
+        padding: 16px 5px;
+    }
+    html .btn--black {
+        padding:0 8px;
     }
 }
 
@@ -3805,29 +3984,159 @@ html .btn--buy-ticket:hover {
     .b-nav {
         clear: both;
     }
+    .b-place-list .b-grid-item {
+        width:100%;
+    }
+    html .btn--black:hover{
+        color: #e23d37;
+        background:#0f0f11;
+    }
+    .b-slide-menu__content {
+        width:500px;
+    }
+    .searchbox-icon {
+        width:64px;
+        top:-1px;
+    }
+    .btn--black .fa{display: inline-block;}
+    .b-nav > ul {
+        left: 15px;
+        top:0;
+    }
+    .b-header__ctrl__item {
+        padding: 16px 5px;
+    }
+    .b-header__ctrl__item  .btn--black {
+        border:none;
+        font-size: 22px;
+    }
+    .b-header__ctrl__item a {
+        cursor: pointer;
+    }
+    .b-header__ctrl__item a span {
+        display: none;
+    }
     .b-event-counter-container, .b-event-counter {
         height: auto;
         background: #de443a;
     }
-    .b-map-menu, .b-map, .b-slide-menu {
+/*    .b-map-menu, .b-map, .b-slide-menu {
         display: none;
-    }
+    }*/
     .b-places-list-mobile {
         display: block;
     }
     .b-slide-menu__form__row__title {
         margin-bottom: 15px;
     }
+    .searchbox-submit {
+        width: 67px;
+        top: -1px;
+    }
+    .searchbox {
+        min-width: 39px;
+    }
+    .login span {
+        display: none;
+    }
+    .login {
+        font-size: 22px;
+    }
+    .b-header__ctrl {
+        margin-right: 15px;
+    }
 }
-
-@media only screen and (max-width: 900px) {
-    .b-price-card {
-        margin-bottom: 20px;
+@media only screen and (max-width: 992px) {
+    .b-map-menu,
+    .b-slide-menu {
+        top:60px;
     }
     .b-counter2 {
         padding: 30px 15px;
         background: #0F111E none;
         height: auto;
+    }
+    .b-big-post {
+        margin-bottom: 50px;
+    }
+    .b-page-content {
+        padding: 50px 15px 132px;
+    }
+    .b-header__ctrl {
+        margin-right: 0px;
+    }
+    .searchbox-icon {
+        width:64px;
+        top:0;
+    }
+    .scroll_block{
+        display: none;
+    }
+    .b-nav > ul {
+        left: 0px;
+    }
+    .b-nav {
+        display: none;
+    }
+    .b-nav ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .b-nav > ul > li {
+        height: auto;
+    }
+    .b-nav ul li ul {
+        display: none;
+        position: static;
+        width: 100%;
+    }
+    .b-nav > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .b-nav > ul > li:before {
+        content: none;
+    }
+    .b-nav > ul > li:hover {
+        background: #1f2022;
+    }
+    .b-nav-toggle {
+        height: 60px;
+        cursor: pointer;
+        padding-top: 15px;
+        text-align: center;
+        color: #fff;
+        display: block;
+    }
+    .b-nav-toggle img {
+        margin-right: 10px;
+    }
+    .b-nav > ul{
+        background:#0f0f11;
+        top:59px;
+        padding-top:0;
+    }
+    .b-header__ctrl {
+        float: none;
+        text-align: center;
+        right: 7px;
+        top: 3px;
+        position: absolute;
+    }
+    .logo {
+        display: none;
+    }
+    .b-header__ctrl__item {
+        padding: 3px 4px;
+        height: 56px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .b-price-card {
+        margin-bottom: 20px;
     }
     .b-event-counter {
         height: auto;
@@ -3863,29 +4172,64 @@ html .btn--buy-ticket:hover {
     .b-promo__title {
         font-size: 40px;
     }
-    .b-header__ctrl {
-        float: none;
-    }
     html .b-promo__search {
         position: relative;
         margin: 0;
         width: 100%;
         left: 0;
         top: 0;
+        transform: translateX(0);
     }
     .b-promo {
         padding-bottom: 100px;
         height: auto;
     }
-    .logo {
-        display: none;
+    .b-header__ctrl__item {
+        border:none;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .b-map-menu__list a {
+        font: 300 11px Roboto;
+        padding: 10px 0px;
+    }
+    .b-slide-menu__content {
+        width: 40%;
+    }
+    .b-slide-menu input[type="text"] {
+        min-height: 25px;
+        font-size: 12px;
+    }
+    .b-gadget__search__button .fa {
+        font-size: 14px;
+        top: -12px;
+        right: -14px;
+        position: relative;
+    }
+    .b-slide-menu__form__row__title {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .b-map-menu__list i {
+        font-size: 20px;
+    }
+    .b-map-menu {
+        width:60px;
+    }
+    .b-slide-menu {
+        left:60px;
+        height: calc(100% - 60px);
+    }
+    .b-promo3 {
+        padding-top:60px;
+    }
     .b-counter__item {
         margin-bottom: 20px;
         display: inline-block;
+    }
+    .b-promo3__descr{
+        width:72%;
     }
     .b-promo3__cont {
         padding: 15px;
@@ -3918,9 +4262,6 @@ html .btn--buy-ticket:hover {
     }
     .logo {
         float: none;
-    }
-    .b-header__ctrl {
-        text-align: center;
     }
     .b-event-counter {
         padding: 0 0 10px;
@@ -3958,6 +4299,9 @@ html .btn--buy-ticket:hover {
     .b-desc__links {
         text-align: center;
     }
+    .b-header__ctrl {
+        right:-7px;
+    }
     .b-promo__form__col1, .b-promo__form__col2 {
         float: none;
         width: 100%;
@@ -3972,43 +4316,12 @@ html .btn--buy-ticket:hover {
     .scroll_block {
         height: 70px;
     }
-    .b-nav {
-        display: none;
+    html .btn--black{
+        padding: 0 10px;
     }
-    .b-nav ul li {
-        display: block;
-        width: 100%;
-        margin: 0;
-    }
-    .b-nav > ul > li {
-        height: auto;
-    }
-    .b-nav ul li ul {
-        display: block;
-        position: static;
-        width: 100%;
-    }
-    .b-nav > ul > li > a {
-        display: block;
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-    }
-    .b-nav > ul > li:before {
-        content: none;
-    }
-    .b-nav > ul > li:hover {
-        background: #1f2022;
-    }
-    .b-nav-toggle {
-        height: 50px;
-        cursor: pointer;
-        text-align: center;
-        color: #fff;
-        display: block;
-    }
-    .b-nav-toggle img {
-        margin-right: 10px;
+    .searchbox-icon {
+        width: 68px;
+        top:-1px;
     }
 
 }
@@ -4020,28 +4333,36 @@ html .btn--buy-ticket:hover {
     .b-price-card__desc {
         top: 130px;
     }
-    /*.logo {*/
-        /*background: #FF4237 none repeat scroll 0 0;*/
-        /*display: block;*/
-        /*float: none;*/
-        /*height: 80px;*/
-        /*line-height: 11px;*/
-        /*text-align: center;*/
-        /*width: 100%;*/
-    /*}*/
-    /*.logo img {*/
-        /*margin: 0 auto;*/
-    /*}*/
-    .b-header__ctrl__item {
-        display: block;
-        text-align: right;
-    }
     .b-gallery__header__title, .b-gallery__header__date, .b-gallery__header__author {
         float: none;
         margin: 0 0 10px 0;
     }
+    .b-google-store, .b-apple-store {
+        margin: 15px 25px 0 0;
+    }
+    html .btn--black {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+    .searchbox{
+        min-width: 38px;
+    }
+    .b-header__ctrl {
+        height: 44px;
+        position: static;
+        padding-left: 22px;
+    }
+    .b-nav > ul {
+        top:104px;
+    }
+    .searchbox-icon{
+        width: 62px;
+        top: -1px;
+    }
+    .searchbox-open input.searchbox-input {
+        max-width: 235px;
+    }
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -4280,6 +4601,7 @@ html .btn--buy-ticket:hover {
 }
 .b-gadget ul li a {
     color: #0e0f11;
+    padding-left: 10px;
     text-decoration: none;
 }
 
@@ -4841,3 +5163,97 @@ ul.gp_content {
     top: 0;
     box-shadow: 2px -2px 5px rgba(0,0,0,0.5);
 }
+/* new select */
+.b-slide-menu .chosen-container-single .chosen-single {
+    height: 50px;
+    background: #fff;
+    border-color:#e2e2e2;
+    border-radius: 0;
+}
+.b-slide-menu .chosen-container-active.chosen-with-drop .chosen-single {
+    background: #fff;
+}
+.b-slide-menu .chosen-container-single .chosen-single span {
+    font-size: 16px;
+    line-height: 47px;
+}
+.b-slide-menu .chosen-container-single .chosen-search {
+    display: none;
+}
+.b-slide-menu .chosen-container-active .chosen-single {
+    border: 1px solid #de443a;
+    box-shadow: 0 0 5px rgba(0,0,0,.0);
+}
+.chosen-container {
+    width:100%!important;
+}
+.b-slide-menu .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 13px;
+}
+.b-slide-menu .chosen-container-single .chosen-single div b {
+    background: url(chosen-sprite.png) no-repeat 0 12px;
+}
+.b-slide-menu .chosen-container .chosen-results li.highlighted {
+    background-color: #de443a;
+    color: #fff;
+}
+.b-slide-menu .chosen-container-single .chosen-drop {
+    margin-top: 0;
+}
+
+/* end new select */
+.irs-slider {
+    width: 18px!important;
+    height: 18px!important;
+    cursor: pointer!important;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.3);
+    border: 1px solid #e2e2e2;
+    background: #ffffff!important;
+    top: 22px;
+}
+.irs-to,
+.irs-from,
+.irs-min,
+.irs-max {
+    top:-5px!important;
+}
+.b-slide-menu__form__row input {
+    box-shadow: 0 0 3px #fff inset,0 1px 1px rgba(0,0,0,.1);
+}
+.b-slide-menu__content{
+    overflow: scroll;
+}
+.b-events__time {
+    position: absolute;
+    z-index: 11111;
+    text-transform: uppercase;
+    top: 20px;
+    left: 80px;
+    font: 300 12px Roboto;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
