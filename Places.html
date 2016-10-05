@@ -12,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/chosen.min.css">
 	<!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
@@ -28,9 +29,9 @@
 		<a href="index.html" class="logo"> <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80"> </a>
 		<a class="weather" href="#"> <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
 		<div class="b-header__ctrl">
-			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black">Submit your place</a> </div>
+			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
 			<div class="b-header__ctrl__item">
-				<a href="#" class="login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>My Account </a>
+				<a href="#" class="login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span></a>
 			</div>
 			<div class="b-header__ctrl__item">
 				<!--<a href="#" class="b-header__ctrl__item__search"></a>-->
@@ -44,7 +45,7 @@
 		<nav class="b-nav fadein">
 			<ul>
 				<li class="menu-item-has-children">
-					<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+					<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true" ></i>Places </a>
 					<ul>
 						<li><a href="Places.html">Places</a></li>
 						<li><a href="Single-Place.html">Single place</a></li>
@@ -80,7 +81,7 @@
 				<li class="b-map-menu__list__cinema"><a href="#"><i class="fmr fmr-icon-1618"></i>Cinema</a></li>
 				<li class="b-map-menu__list__hotels"><a href="#"><i class="fmr fmr-icon-53"></i>Hotels</a></li>
 				<li class="b-map-menu__list__shopping"><a href="#"><i class="fmr fmr-icon-454"></i>Shopping</a></li>
-				<li><a href="#">ALL places</a></li>
+				<li class="b-map-menu__list__all-places"><a href="#">all <br>places</a></li>
 			</ul>
 		</div>
 		<!-- .b-map-menu -->
@@ -93,13 +94,29 @@
 						<div class="col-md-3"><span class="b-slide-menu__form__row__title">Types:</span></div>
 						<div class="col-md-9">
 							<div class="b-slide-menu__form__row__item">
-								<select name="#" id="type">
-									<option value="1">Any type</option>
-									<option value="2">Bla bla bla</option>
-									<option value="3">Tili tili</option>
-									<option value="4">Trali vali</option>
-									<option value="5">Eto nam ne zadovali</option>
-								</select>
+          <select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
+            <option value=""></option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Aland Islands">Aland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+          </select>
 							</div>
 						</div>
 					</div>
@@ -306,183 +323,7 @@
                         </small> </div>
 			</div>
 		</div>
-		<div class="b-places-list-mobile">
-			<h2 class="b-slide-menu__title">Restaurants</h2>
-			<div class="b-slide-menu__form container-fluid opened">
-				<div class="b-slide-menu__form__row row">
-					<div class="col-md-3"><span class="b-slide-menu__form__row__title">Types:</span></div>
-					<div class="col-md-9">
-						<div class="b-slide-menu__form__row__item">
-							<select name="#" id="type-2">
-								<option value="1">Any type</option>
-								<option value="2">Bla bla bla</option>
-								<option value="3">Tili tili</option>
-								<option value="4">Trali vali</option>
-								<option value="5">Eto nam ne zadovali</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="b-slide-menu__form__row row">
-					<div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span></div>
-					<div class="col-md-9">
-						<div class="b-slide-menu__form__row__item">
-							<input type="text" class="example_class" name="example_name" value="" /> </div>
-					</div>
-				</div>
-				<div class="b-slide-menu__form__row row">
-					<div class="col-md-3"><span class="b-slide-menu__form__row__title">Location:</span></div>
-					<div class="col-md-6">
-						<div class="b-slide-menu__form__row__item">
-							<input type="text" placeholder="Enter location"> </div>
-					</div>
-					<div class="col-md-3">
-						<div class="b-checkbox">
-							<label>
-								<input type="checkbox"> Near me</label>
-						</div>
-					</div>
-				</div>
-				<div class="b-slide-menu__form__row row">
-					<div class="col-md-3"><span class="b-slide-menu__form__row__title">Keywords:</span></div>
-					<div class="col-md-9">
-						<div class="b-slide-menu__form__row__item">
-							<input type="text" placeholder="Start typing">
-							<button type="submit" title="Search" class="b-gadget__search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="b-slide-menu__row clearfix">
-				<div class="btn btn--white press--left b-hide-filters">Hide filters</div>
-				<div class="b-slide-menu__pages-num press--right">1-10 of 24</div>
-			</div>
-			<div class="b-place-list clearfix">
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div>
-						<a href="#" class="b-icon-medal"></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<a href="#" class="b-icon-fire"></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<a href="#" class="b-icon-coins"></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-				<div class="b-pop-place">
-					<div class="b-pop-place__img">
-						<div class="b-pop-place__img__img"></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
-						<div class="b-pop-place__links">
-							<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
-							<div class="press--right">$100 - $150</div>
-						</div>
-					</div>
-					<div class="b-pop-place__desc clearfix">
-						<div class="b-pop-place__rating">4,8</div> <a href="Single-Post_Standart.html" class="b-pop-place__name">Lincoln square steak</a>
-						<h5 class="b-pop-place__cat">Restaurant</h5> </div>
-				</div>
-			</div>
-		</div>
+
 		<!-- .b-place-list -->
 		<ul class="b-place-list__pager">
 			<li class="prev"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
@@ -528,13 +369,15 @@
 			});
 			//****************************** Masonry plugin activate ******************************//
 			jQuery(window).load(function(){
-				jQuery('.b-place-list').masonry({
-					// options
-					// set itemSelector so .grid-sizer is not used in layout
-					itemSelector: '.b-grid-item',
-					// use element for option
-					gutter: 20
-				});
+				if($(window).width() > 1140) {
+					jQuery('.b-place-list').masonry({
+						// options
+						// set itemSelector so .grid-sizer is not used in layout
+						itemSelector: '.b-grid-item',
+						// use element for option
+						gutter: 20
+					});
+				}
 			});
 			//****************************** Ion range slider plugin activate ******************************//
 			jQuery('.example_class').ionRangeSlider({
@@ -834,7 +677,21 @@
 	<link rel="stylesheet" href="css/combined.css">
 	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script>
+  	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+  	<script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+  	<script type="text/javascript">
+	    var config = {
+	      '.chosen-select'           : {},
+	      '.chosen-select-deselect'  : {allow_single_deselect:true},
+	      '.chosen-select-no-single' : {disable_search_threshold:10},
+	      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+	      '.chosen-select-width'     : {}
+	    }
+	    for (var selector in config) {
+	      $(selector).chosen(config[selector]);
+	    }
+  	</script>
+  	<script>
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
 	</script>
 	<!--<script src="js/dropzone.js"></script>-->
