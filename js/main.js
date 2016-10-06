@@ -1,21 +1,20 @@
 //**************************************** Parallax script ****************************************** //
 
-// function parallax() {
-//     var $window = $(window);
-//     $('.b-parallax[data-type="background"]').each(function(){
-//         var $bgobj = $(this); // РќР°Р·РЅР°С‡Р°РµРј РѕР±СЉРµРєС‚
-//         $(window).scroll(function() {
-//             // РџСЂРѕРєСЂСѓС‡РёРІР°РµРј С„РѕРЅ СЃРѕ СЃРєРѕСЂРѕСЃС‚СЊСЋ var.
-//             // Р—РЅР°С‡РµРЅРёРµ yPos РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ, С‚Р°Рє РєР°Рє РїСЂРѕРєСЂСѓС‡РёРІР°РЅРёРµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІРІРµСЂС…!
-//             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-//             // Р Р°Р·РјРµС‰Р°РµРј РІСЃРµ РІРјРµСЃС‚Рµ РІ РєРѕРЅРµС‡РЅРѕР№ С‚РѕС‡РєРµ
-//             var coords = '50% '+ yPos +'px';
-//             // РЎРјРµС‰Р°РµРј С„РѕРЅ
-//             $bgobj.css({ backgroundPosition: coords });
-//         });
-//     });
-// }
+function parallax() {
+    var $window = $(window);
+    $('.b-parallax[data-type="background"]').each(function(){
+        var $bgobj = $(this);
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+            var coords = '50% '+ yPos +'px';
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });
+}
 
+main_js = function () {
+    tooltip();
+}
 
 /*ajax subscribe*/
 jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
@@ -153,6 +152,18 @@ function init_masonry(){
 
 (function ($) {
     $(document).ready(function () {
+
+
+                
+
+
+
+
+
+
+
+
+
         'use strict';
         $('html').removeClass('no-js');
 

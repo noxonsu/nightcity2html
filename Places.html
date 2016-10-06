@@ -12,7 +12,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/chosen.min.css">
+	<link rel="stylesheet" href="css/chosen.min.css">
+	<link rel="stylesheet" href="css/combined.css">
 	<!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
@@ -27,7 +28,7 @@
 	</div>
 	<header class="b-header clearfix">
 		<a href="index.html" class="logo"> <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80"> </a>
-		<a class="weather" href="#"> <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+		<a class="weather" href="#"> <img width="35" height="35" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
 		<div class="b-header__ctrl">
 			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
 			<div class="b-header__ctrl__item">
@@ -94,7 +95,7 @@
 						<div class="col-md-3"><span class="b-slide-menu__form__row__title">Types:</span></div>
 						<div class="col-md-9">
 							<div class="b-slide-menu__form__row__item">
-          <select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
+          <select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
             <option value=""></option>
             <option value="United States">United States</option>
             <option value="United Kingdom">United Kingdom</option>
@@ -333,6 +334,110 @@
 			<li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
 		</ul>
 	</div>
+	<!-- .b-main-container -->
+	<div class="b-footer">
+		<div class="b-footer__info">
+			<div class="container clearfix">
+				<div class="row">
+					<div class="b-footer__text col-md-3 col-sm-12"> <a href="index.html" class="b-footer__logo">Night City</a>
+						<p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<div class="b-footer__copyright">© 2016 All Rights Reserved</div>
+					</div>
+					<div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+						<div class="b-footer__nav__col__title">About us</div>
+						<ul>
+							<li><a href="Single-Post_Standart.html">Our history</a></li>
+							<li><a href="Single-Post_Standart.html">Contact us</a></li>
+							<li><a href="Single-Post_Standart.html">Privacy Policy</a></li>
+							<li><a href="Single-Post_Standart.html">Terms of Use</a></li>
+						</ul>
+					</div>
+					<div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+						<div class="b-footer__nav__col__title">Categories</div>
+						<ul>
+							<li><a href="blog.html">Bars</a></li>
+							<li><a href="blog.html">Food</a></li>
+							<li><a href="blog.html">Restaurants</a></li>
+							<li><a href="blog.html">Night life</a></li>
+						</ul>
+						<ul>
+							<li><a href="blog.html">Activities</a></li>
+							<li><a href="blog.html">Cinema</a></li>
+							<li><a href="blog.html">Hotels</a></li>
+							<li><a href="blog.html">Shopping</a></li>
+						</ul>
+					</div>
+					<div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+						<div class="b-footer__nav__col__title">menu</div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="Places.html">Places</a></li>
+							<li><a href="Events.html">Events</a></li>
+							<li><a href="Gallery.html">Gallery</a></li>
+						</ul>
+						<ul>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="Single-Post_Standart.html">Help</a></li>
+							<li><a href="Single-Post_Standart.html">Account</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- .row -->
+			</div>
+			<!-- .container -->
+			<div class="shared">
+				<div class="container clearfix">
+					<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+					<!--.b-soc-->
+					<div class="stores"> <img src="img/src/icons-markets.png" alt=""> </div>
+				</div>
+			</div>
+			<!--.shared-->
+		</div>
+		<!--.b-footer__info-->
+	</div>
+	<!--.b-footer-->
+	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+  	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	</script>
+	<!--<script src="js/dropzone.js"></script>-->
+	<!--<script src="js/ion.rangeSlider.min.js"></script>-->
+	<!--<script src="js/jquery.custom-scrollbar.js"></script>-->
+	<!--<script src="js/jquery.formstyler.min.js"></script>-->
+	<!--<script src="js/jquery.popup.min.js"></script>-->
+	<!--<script src="js/jssor.slider.mini.js"></script>-->
+	<!--<script src="js/lightcase.js"></script>-->
+	<!--<script src="js/masonry.pkgd.min.js"></script>-->
+	<!--<script src="js/owl.carousel.js"></script>-->
+	<!--<script src="js/tabs.js"></script>-->
+	<!--<script src="js/tooltip.js"></script>-->
+
+	<script src="js/compiled_lib.js"></script>
+	<script src="js/main.js"></script>
+
+<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/compiled_lib.js?ver=1'></script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
+  	<script type="text/javascript">
+	    var config = {
+	      '.chosen-select'           : {},
+	      '.chosen-select-deselect'  : {allow_single_deselect:true},
+	      '.chosen-select-no-single' : {disable_search_threshold:10},
+	      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+	      '.chosen-select-width'     : {}
+	    }
+	    for (var selector in config) {
+	      $(selector).chosen(config[selector]);
+	    }
+  	</script>
 	<script>
 		main_js = function () {
 			//****************************** Show/Hide filters on map pages ******************************//
@@ -598,7 +703,7 @@
 			t.parentNode.insertBefore(s, t);
 		}
 		function initialize_map() {
-			console.log('gggg');
+			
 			/*   document.querySelector('header').className += " sticky";
 			 document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
 			 */
@@ -607,117 +712,10 @@
 		function after_load() {
 			initialize_new();
 		}
-		jQuery(document).ready(function ($) {
-			google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
-		});
+		// jQuery(document).ready(function ($) {
+		// 	google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
+		// });
 	</script>
-	<!-- .b-main-container -->
-	<div class="b-footer">
-		<div class="b-footer__info">
-			<div class="container clearfix">
-				<div class="row">
-					<div class="b-footer__text col-md-3 col-sm-12"> <a href="index.html" class="b-footer__logo">Night City</a>
-						<p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						<div class="b-footer__copyright">© 2016 All Rights Reserved</div>
-					</div>
-					<div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
-						<div class="b-footer__nav__col__title">About us</div>
-						<ul>
-							<li><a href="Single-Post_Standart.html">Our history</a></li>
-							<li><a href="Single-Post_Standart.html">Contact us</a></li>
-							<li><a href="Single-Post_Standart.html">Privacy Policy</a></li>
-							<li><a href="Single-Post_Standart.html">Terms of Use</a></li>
-						</ul>
-					</div>
-					<div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
-						<div class="b-footer__nav__col__title">Categories</div>
-						<ul>
-							<li><a href="blog.html">Bars</a></li>
-							<li><a href="blog.html">Food</a></li>
-							<li><a href="blog.html">Restaurants</a></li>
-							<li><a href="blog.html">Night life</a></li>
-						</ul>
-						<ul>
-							<li><a href="blog.html">Activities</a></li>
-							<li><a href="blog.html">Cinema</a></li>
-							<li><a href="blog.html">Hotels</a></li>
-							<li><a href="blog.html">Shopping</a></li>
-						</ul>
-					</div>
-					<div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
-						<div class="b-footer__nav__col__title">menu</div>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Places.html">Places</a></li>
-							<li><a href="Events.html">Events</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-						</ul>
-						<ul>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="Single-Post_Standart.html">Help</a></li>
-							<li><a href="Single-Post_Standart.html">Account</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- .row -->
-			</div>
-			<!-- .container -->
-			<div class="shared">
-				<div class="container clearfix">
-					<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
-					<!--.b-soc-->
-					<div class="stores"> <img src="img/src/icons-markets.png" alt=""> </div>
-				</div>
-			</div>
-			<!--.shared-->
-		</div>
-		<!--.b-footer__info-->
-	</div>
-	<!--.b-footer-->
-	<link rel="stylesheet" href="css/combined.css">
-	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
-  	<script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
-  	<script type="text/javascript">
-	    var config = {
-	      '.chosen-select'           : {},
-	      '.chosen-select-deselect'  : {allow_single_deselect:true},
-	      '.chosen-select-no-single' : {disable_search_threshold:10},
-	      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-	      '.chosen-select-width'     : {}
-	    }
-	    for (var selector in config) {
-	      $(selector).chosen(config[selector]);
-	    }
-  	</script>
-  	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-	</script>
-	<!--<script src="js/dropzone.js"></script>-->
-	<!--<script src="js/ion.rangeSlider.min.js"></script>-->
-	<!--<script src="js/jquery.custom-scrollbar.js"></script>-->
-	<!--<script src="js/jquery.formstyler.min.js"></script>-->
-	<!--<script src="js/jquery.popup.min.js"></script>-->
-	<!--<script src="js/jssor.slider.mini.js"></script>-->
-	<!--<script src="js/lightcase.js"></script>-->
-	<!--<script src="js/masonry.pkgd.min.js"></script>-->
-	<!--<script src="js/owl.carousel.js"></script>-->
-	<!--<script src="js/tabs.js"></script>-->
-	<!--<script src="js/tooltip.js"></script>-->
-
-	<script src="js/compiled_lib.js"></script>
-	<script src="js/main.js"></script>
-	<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs&#038;libraries=places&#038;ver=3'></script>
-
-<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/compiled_lib.js?ver=1'></script>
-
-<script type='text/javascript'>
-/* <![CDATA[ */
-var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
 </body>
 
 </html>

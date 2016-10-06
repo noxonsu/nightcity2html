@@ -7,10 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-
         <link rel="stylesheet" href="css/main.css">
-
+        <link rel="stylesheet" href="css/combined.css">
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
@@ -24,73 +22,54 @@
         <div class="b-preloader animated yt-loader">
             <div class="b-preloader__decor"></div>
         </div>
-        <header class="b-header clearfix">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80">
-            </a>
-            <a class="weather" href="#">
-                <img width="35" height="35" style="margin-left: 10px;" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather">
-                <span>+ 24° C</span>
-            </a>
-            <div class="b-header__ctrl">
-                <div class="b-header__ctrl__item">
-                    <a href="Add-Place.html" class="btn btn--black">Submit your place</a>
-                </div>
-                <div class="b-header__ctrl__item">
-                    <a href="#" class="login">
-                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>My Account
-                    </a>
-                </div>
-                <div class="b-header__ctrl__item">
-                    <!--<a href="#" class="b-header__ctrl__item__search"></a>-->
-                    <form class="searchbox">
-                        <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
-                        <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    </form>
-                </div>
-            </div><!--.b-header__ctrl-->
-            <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-            <nav class="b-nav fadein">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="Places.html">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>Places
-                        </a>
-                        <ul>
-                            <li><a href="Places.html">Places</a></li>
-                            <li><a href="Single-Place.html">Single place</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
-                        <ul>
-                            <li><a href="Events.html">Events</a></li>
-                            <li><a href="Single-Event.html">Single event</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a>
-                    </li>
-                    <li>
-                        <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
-                        <ul>
-                            <li><a href="Single-Post_Standart.html">Single Page</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a>
-                    </li>
-                </ul>
-            </nav><!--.b-nav-->
-        </header> <!-- .b-header -->
+    <header class="b-header clearfix">
+        <a href="index.html" class="logo"> <img src="img/logo.png" alt="Night City" title="Night City" width="200" height="80"> </a>
+        <a class="weather" href="#"> <img width="35" height="35" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+        <div class="b-header__ctrl">
+            <div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
+            <div class="b-header__ctrl__item">
+                <a href="#" class="login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span></a>
+            </div>
+            <div class="b-header__ctrl__item">
+                <!--<a href="#" class="b-header__ctrl__item__search"></a>-->
+                <form class="searchbox">
+                    <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
+                    <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i></button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+            </div>
+        </div>
+        <!--.b-header__ctrl-->
+        <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+        <nav class="b-nav fadein">
+            <ul>
+                <li class="menu-item-has-children">
+                    <a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true" ></i>Places </a>
+                    <ul>
+                        <li><a href="Places.html">Places</a></li>
+                        <li><a href="Single-Place.html">Single place</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+                    <ul>
+                        <li><a href="Events.html">Events</a></li>
+                        <li><a href="Single-Event.html">Single event</a></li>
+                    </ul>
+                </li>
+                <li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+                <li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+                <li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+                    <ul>
+                        <li><a href="Single-Post_Standart.html">Single Page</a></li>
+                    </ul>
+                </li>
+                <li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+            </ul>
+        </nav>
+        <!--.b-nav-->
+    </header>
 
         <div class="b-main-container" id="content">
             <section class="b-pic b-pic--event b-parallax lazy" data-type="background" data-speed="3" data-src="img/event-bg.jpg">
-                <div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;"></div>
+                <div class="b-placeholder"></div>
                 <div class="container b-pic-hgroup lazy-cont">
                     <h1 class="b-pic__title">Big music festival</h1>
                     <h6 class="b-pic__sub-title">
@@ -117,16 +96,16 @@
                 <div class="b-event-counter">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-md-3 col-sm-4">
                                 <span class="b-event-counter__title">Time left to event:</span>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-6 col-sm-6">
                                 <div class="b-event-counter__item"><b>135</b>Days</div>
                                 <div class="b-event-counter__item"><b>105</b>Hours</div>
                                 <div class="b-event-counter__item"><b>12</b>Minutes</div>
                                 <div class="b-event-counter__item"><b>1343</b>Seconds</div>
                             </div>
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-md-3 col-sm-2 col-xs-4 col-xs-offset-4 col-md-offset-0 col-sm-offset-0">
                                 <a href="#" class="btn btn--buy-ticket">Buy tickets</a>
                             </div>
                         </div>
@@ -168,7 +147,7 @@
             </div><!-- b-desc -->
 
             <div class="b-mini-promo lazy b-parallax" data-type="background" data-speed="7" data-src="img/src/banner-6.jpg">
-                <div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;"></div>
+                <div class="b-placeholder"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -284,7 +263,7 @@
             </div><!-- .b-buy-ticket -->
 
             <div class="b-mini-promo b-mini-promo--2 lazy b-parallax" data-type="background" data-speed="7" data-src="img/src/banner-7.jpg">
-                <div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;"></div>
+                <div class="b-placeholder"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -764,7 +743,7 @@
             <div class="b-photos">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -772,7 +751,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -780,7 +759,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -788,7 +767,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -796,7 +775,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -804,7 +783,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-sm-6">
                             <div class="b-photo">
                                 <img class="image" src="img/src/photo-1.jpg" alt="sdf">
                                 <a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax">
@@ -867,7 +846,7 @@
                                     <span>(5.0)</span>
                                 </div>
                             </div>
-                            <div class="col-md-3 m--righted">
+                            <div class="col-md-3 m--righted sb-btn">
                                 <a href="#" class="btn">Submit review</a>
                             </div>
                         </div>
@@ -917,7 +896,6 @@
             </div><!-- .b-reviews -->
 
             <div class="b-pic-1">
-                <!--<div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;"></div>-->
                 <div class="bs-example">
                     <div class="google_place">
                         <ul class="gp_nav">
@@ -962,79 +940,6 @@
                 </div>
             </div><!-- .b-sponsors -->
             <div id="gmap_canvas"></div>
-            <script>
-                main_js = function(){
-                    //****************************** Stick counter to top on the event page ******************************//
-
-                    if($('.b-event-counter').length > 0){4
-                        var counterTop = $(document).find($('.b-event-counter'));
-                        var counterOffset = counterTop.offset();
-                        $(document).on("scroll", function(){
-                            if($(document).scrollTop() > (counterOffset.top)){
-                                counterTop.addClass("b-event-counter--fixed");
-                            }
-                            else
-                            {
-                                counterTop.removeClass("b-event-counter--fixed");
-                            }
-                        });
-                    }
-
-                    $(".owl-carousel-4").owlCarousel({
-                        loop:true,
-                        margin:30,
-                        responsiveClass:true,
-                        responsive:{
-                            0:{
-                                items:1,
-                                nav:true
-                            },
-                            600:{
-                                items:3,
-                                nav:true
-                            },
-                            1000:{
-                                items:4,
-                                nav:true
-                            }
-                        }
-                    });
-                    //****************************** Lightcase plugin activate ******************************//
-                    $('a[data-rel^=lightcase]').lightcase();
-                    $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({showSequenceInfo: false, transition: 'scrollHorizontal'});
-                    $('a[data-rel="lightcase:myCollection"]').lightcase({showSequenceInfo: false});
-                    $('#example1').lightcase({transition: 'none'});
-
-//                    parallax();
-                    tooltip();
-
-                    //****************************** Tabs script activate ******************************//
-
-                    var myTabs = tabs({
-                        el: '#scheduleTabs',
-                        tabNavigationLinks: '.b-schedule-tabs__list a',
-                        tabContentContainers: '.b-schedule-tabs__cont'
-                    });
-
-                    myTabs.init();
-
-
-
-
-                    //***************************** Google tabs **************************************//
-
-                    $(document).on("click", '.google_place ul li a', function (e) {
-                        e.preventDefault();
-                        var item = $(this).closest('.tabs_controls_item'),
-                                contentItem = $('.tabs_item'),
-                                itemPosition = item.index();
-                        contentItem.eq(itemPosition).addClass('active').siblings().removeClass('active');
-                        $(this).addClass('active');
-                        $(this).parent().siblings().children('a').removeClass('active');
-
-                    });
-                }
-            </script>
         </div> <!-- .b-main-container -->
 
         <div class="b-footer">
@@ -1093,31 +998,17 @@
 
                 <div class="shared">
                     <div class="container clearfix">
-                        <div class="b-soc">
-                            <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div><!--.b-soc-->
-
-                        <div class="stores">
-                            <img src="img/src/icons-markets.png" alt="">
-                        </div>
+                        <div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+                        <!--.b-soc-->
+                        <div class="stores"><a href="#" class="stores-black-gp"><img src="img/blackgoogleplay-ic.png" alt=""></a><a href="#" class="stores-black-apps"><img src="img/blackappstore-ic.png" alt=""></a></div>
                     </div>
-                </div><!--.shared-->
+                </div>
 
             </div><!--.b-footer__info-->
         </div><!--.b-footer-->
-
-        <link rel="stylesheet" href="css/combined.css">
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-
-
-
         <!--<script src="js/dropzone.js"></script>-->
         <!--<script src="js/ion.rangeSlider.min.js"></script>-->
         <!--<script src="js/jquery.custom-scrollbar.js"></script>-->
@@ -1132,6 +1023,79 @@
 
         <script src="js/compiled_lib.js"></script>
         <script src="js/main.js"></script>
+                    <script>
+                        main_js = function(){
+                            //****************************** Stick counter to top on the event page ******************************//
+
+                            if($('.b-event-counter').length > 0){4
+                                var counterTop = $(document).find($('.b-event-counter'));
+                                var counterOffset = counterTop.offset();
+                                $(document).on("scroll", function(){
+                                    if($(document).scrollTop() > (counterOffset.top)){
+                                        counterTop.addClass("b-event-counter--fixed");
+                                    }
+                                    else
+                                    {
+                                        counterTop.removeClass("b-event-counter--fixed");
+                                    }
+                                });
+                            }
+
+                            $(".owl-carousel-4").owlCarousel({
+                                loop:true,
+                                margin:30,
+                                responsiveClass:true,
+                                responsive:{
+                                    0:{
+                                        items:1,
+                                        nav:true
+                                    },
+                                    600:{
+                                        items:3,
+                                        nav:true
+                                    },
+                                    1000:{
+                                        items:4,
+                                        nav:true
+                                    }
+                                }
+                            });
+                            //****************************** Lightcase plugin activate ******************************//
+                            $('a[data-rel^=lightcase]').lightcase();
+                            $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({showSequenceInfo: false, transition: 'scrollHorizontal'});
+                            $('a[data-rel="lightcase:myCollection"]').lightcase({showSequenceInfo: false});
+                            $('#example1').lightcase({transition: 'none'});
+
+        //                    parallax();
+                            tooltip();
+
+                            //****************************** Tabs script activate ******************************//
+
+                            var myTabs = tabs({
+                                el: '#scheduleTabs',
+                                tabNavigationLinks: '.b-schedule-tabs__list a',
+                                tabContentContainers: '.b-schedule-tabs__cont'
+                            });
+
+                            myTabs.init();
+
+
+
+
+                            //***************************** Google tabs **************************************//
+
+                            $(document).on("click", '.google_place ul li a', function (e) {
+                                e.preventDefault();
+                                var item = $(this).closest('.tabs_controls_item'),
+                                        contentItem = $('.tabs_item'),
+                                        itemPosition = item.index();
+                                contentItem.eq(itemPosition).addClass('active').siblings().removeClass('active');
+                                $(this).addClass('active');
+                                $(this).parent().siblings().children('a').removeClass('active');
+
+                            });
+                        }
+                    </script>
 
     </body>
 </html>

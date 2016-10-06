@@ -749,6 +749,9 @@ html .m--border-radius-right {
     width: 100%;
     overflow-x: hidden;
 }
+.b-main-container .b-placeholder {
+	background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;
+}
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="time"], textarea {
     border: 1px solid #e2e2e2;
@@ -2639,7 +2642,7 @@ html .b-gadget__subscribe__field {
 .b-event-counter--fixed {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 100000;
     width: 100%;
 }
 
@@ -2741,6 +2744,7 @@ html .btn--buy-ticket:hover {
 
 .b-contact-info__item {
     margin-bottom: 20px;
+    margin-left: 12px;
 }
 
 .b-contact-info__item a {
@@ -2888,7 +2892,7 @@ html .btn--buy-ticket:hover {
 
 .b-pic-1 {
     width: 100%;
-    height: 660px;
+    height: 450px;
     position: relative;
     background-attachment: fixed;
 }
@@ -4007,7 +4011,44 @@ html .btn--buy-ticket:hover {
     width: 123px;
     margin-left: 15px;
 }
+.chosen-select {
+	width:350px;
+}
 .btn--black .fa {display: none;}
+
+.jssor_1 {
+	position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 550px; visibility: hidden;
+}
+.jssor_loading {
+	position: absolute; top: 0px; left: 0px;
+}
+.jssor_loading_a {
+	filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;
+}
+.jssor_loading_b {
+	position:absolute;display:block;background:url('../img/src/photo-slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;
+}
+.jssor_slides {
+	cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;
+}
+.jssort01 {
+	position:absolute;left:0px;bottom:50px;width:800px;height:100px;
+}
+.jssora05l {
+	top:158px;left:-85px;width:17px;height:30px;
+}
+.jssora05r {
+	top:158px;right:-85px;width:17px;height:30px;
+}
+.b-promo .b-placeholder {
+	background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;
+}
+.b-pic .b-placeholder {
+	background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;
+}
+.b-mini-promo .b-placeholder {
+	background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -4122,6 +4163,27 @@ html .btn--buy-ticket:hover {
     }
 }
 @media only screen and (max-width: 992px) {
+	.b-event-counter .btn--buy-ticket{
+		width: 100%;
+	    text-align: center;
+	    display: flex;
+	    font-size: 10px;
+	    margin-top: 25px;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0 22px;
+	    height: 50px;
+	}
+	.b-mini-promo {
+		height: 440px;
+		padding-top: 50px;
+	}
+	.b-mini-promo .col-md-3 p:last-child{
+		margin-bottom: 50px;
+	}
+	.b-sidebar {
+		display: none;
+	}
 	.b-post-feature .b-post-feature__slider .owl-prev,
 	.b-post-feature .b-post-feature__slider .owl-next {
 		bottom: 40px;
@@ -4231,7 +4293,6 @@ html .btn--buy-ticket:hover {
     .b-event-counter {
         height: auto;
         background: #de443a none;
-        padding: 30px 15px;
         text-align: center;
     }
     html .btn--buy-ticket {
@@ -4241,11 +4302,6 @@ html .btn--buy-ticket:hover {
         padding: 0 20px;
     }
     .b-sponsors {
-        background: #de443a none;
-    }
-    .b-mini-promo {
-        height: auto;
-        padding: 30px 15px;
         background: #de443a none;
     }
     .b-promo3 {
@@ -4280,6 +4336,9 @@ html .btn--buy-ticket:hover {
 }
 
 @media only screen and (max-width: 768px) {
+	.b-event-counter .btn--buy-ticket {
+		margin-top:0;
+	}
 	.b-slide-menu .chosen-container-single .chosen-single div b {
     	background: url(chosen-sprite.png) no-repeat 0 2px;
 	}
@@ -4383,7 +4442,13 @@ html .btn--buy-ticket:hover {
         padding: 0 0 10px;
     }
     .b-event-counter__title {
-        margin-top: 10px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .b-event-counter__item {
+    	padding-top: 15px;
+    	font-size: 10px;
+    	height: 70px;
     }
     .b-schedule-tabs__list li {
         width: 100%;
@@ -4391,6 +4456,16 @@ html .btn--buy-ticket:hover {
     }
     .b-pic {
         display: none;
+    }
+    .b-mini-promo {
+    	height: auto;
+    }
+    .sb-btn {
+    	display: block;
+    	float: none;
+    	clear: both;
+    	margin-top: 40px;
+    	text-align: center;
     }
 }
 
@@ -4450,6 +4525,9 @@ html .btn--buy-ticket:hover {
 }
 
 @media only screen and (max-width: 480px) {
+	.b-comments__comment__date {
+		margin-bottom: 10px;
+	}
 	.b-tags-cloud {
     	font-size: 0;
     	margin-bottom: 20px;
@@ -4499,7 +4577,7 @@ html .btn--buy-ticket:hover {
         max-width: 235px;
     }
     .b-map-menu, .b-slide-menu {
-        top: 104px;
+        top: 60px;
     }
 }
 
@@ -5237,6 +5315,7 @@ ul.gp_content {
 
 .google_view iframe {
     width: 100%;
+    border:none;
 }
 
 .item_wide_container iframe {
