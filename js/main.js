@@ -12,9 +12,47 @@ function parallax() {
     });
 }
 
-main_js = function () {
-    tooltip();
+function masonryInit() {
+    if($(window).width() > 1140) {
+        jQuery('.b-place-list').masonry({
+            // options
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.b-grid-item',
+            // use element for option
+            gutter: 20
+        });
+    }
 }
+
+
+jQuery('.b-hide-filters').on('click', function () {
+    var filterBtn = jQuery('.b-hide-filters');
+    var menuForm = jQuery('.b-slide-menu__form');
+    if (menuForm.hasClass('opened')) {
+        menuForm.removeClass('opened').addClass('closed');
+        filterBtn.text('Show filters');
+    } else if (menuForm.hasClass('closed')) {
+        menuForm.removeClass('closed').addClass('opened');
+        filterBtn.text('Hide filters');
+    }
+    jQuery('.b-slide-menu__form').slideToggle('medium');
+});
+
+//****************************** Slide menu on map pages ******************************//
+jQuery('.b-slide-menu__toggle').on('click', function () {
+    var slideMenu = jQuery('.b-slide-menu');
+    if (slideMenu.hasClass('opened')) {
+        slideMenu.removeClass('opened').addClass('closed');
+        jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
+        jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
+        slideMenu.removeClass('oopeen').addClass('closseed');
+    } else if (slideMenu.hasClass('closed')) {
+        slideMenu.removeClass('closed').addClass('opened');
+        jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
+        jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
+        slideMenu.removeClass('closseed').addClass('oopeen');
+    }
+});
 
 /*ajax subscribe*/
 jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
@@ -137,36 +175,27 @@ google.maps.event.addDomListener(window, 'load', init_map);
 
 
 
-function init_masonry(){
-    //****************************** Masonry plugin activate ******************************//
 
-    jQuery('.b-place-list').masonry({
-        // options
-        // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.b-grid-item',
-        // use element for option
-        gutter: 20
-    });
-
-}
 
 (function ($) {
     $(document).ready(function () {
-
-
-                
-
-
-
-
-
-
-
-
-
         'use strict';
         $('html').removeClass('no-js');
+        masonryInit();
+        // $('.nano').nanoScroller();
+        jQuery('.custom-scroll').customScrollbar({
+            updateOnWindowResize: true
+        });
 
+
+        //****************************** Ion range slider plugin activate ******************************//
+        jQuery('.example_class').ionRangeSlider({
+            type: 'double',
+            min: 0,
+            max: 750,
+            from: 150,
+            to: 600
+        });
 
         //****************************** Script for animate.css ******************************//
         $.fn.extend({
@@ -231,38 +260,36 @@ function init_masonry(){
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-        $('a:not(.noajax):not(.ab-item)').unbind( "click" );
-        $('a:not(.noajax):not(.ab-item)').click(function () {
-            var $linkClicked = $(this).attr('href'); //Р±РµСЂРµРј СѓСЂР»
-            console.log($linkClicked);
-            //$("body").css('opacity',"0.5");
-            $('.b-preloader').show();
-
-            $.get($linkClicked, function (d) { //РѕР±СЂР°С‰Р°РµРјСЃСЏ РїРѕ СЌС‚РѕРјСѓ СѓСЂР» С‡РµСЂРµР· Р°СЏРєСЃ
-                var response = new Object();
-                response.html = $('<div>').html(d);
-                $("#content").html($(response.html).find('#content').html());
-                if ($("div").is(".b-map-menu")) {
-                    $(".b-footer").hide(0);
-                } else {
-                    $(".b-footer").show(0);
-                }
-                document.title = $(response.html).find('title').html(); //СЃРѕР±СЃРЅРѕ РЅР°Р·РЅР°С‡РµРј С‚Р°Р№С‚Р»
-                //РёРё РјРµРЅСЏРµРј СѓСЂР» РІ Р°РґСЂРµСЃРЅРѕР№ СЃС‚СЂРѕРєРµ
-                window.history.pushState({
-                    "html": $(response.html).find('html').html(),
-                    "pageTitle": response.pageTitle
-                }, "", $linkClicked);
-                lazyLoadImages();
-                main_js();
-                init_masonry();
-                ajax_init();//РЅСѓР¶РЅРѕ РµС‰Рµ СЂР°Р· РЅР°РІРµСЃРёС‚СЊ РЅР° РІСЃРµ СЃСЃС‹Р»РєРё РѕР±СЂР°Р±РѕС‚С‡РёРє Р°СЏРєСЃР°
-                window.scrollTo(0, 0);
-                $('.b-preloader').hide();
-                //$("body").css('opacity',"1");
-            });
+            //$('a:not(.noajax):not(.ab-item)').unbind( "click" );
+            $('a:not(.noajax):not(.ab-item)').click(function () {
+                var $linkClicked = $(this).attr('href');
+                console.log($linkClicked + 'lala');
+                //$("body").css('opacity',"0.5");
+                $('.b-preloader').show();
+                $.get($linkClicked, function (d) { 
+                    var response = new Object();
+                    response.html = $('<div>').html(d);
+                    $("#content").html($(response.html).find('#content').html());
+                    if ($("div").is(".b-map-menu")) {
+                        $(".b-footer").hide(0);
+                    } else {
+                        $(".b-footer").show(0);
+                    }
+                    document.title = $(response.html).find('title').html();
+                    window.history.pushState({
+                        "html": $(response.html).find('html').html(),
+                        "pageTitle": response.pageTitle
+                    }, "", $linkClicked);
+                    lazyLoadImages();
+                    main_js();
+                    init_masonry();
+                    //ajax_init();
+                    window.scrollTo(0, 0);
+                    $('.b-preloader').hide();
+                    //$("body").css('opacity',"1");
+                });
             return false;
-        });
+            });
         }
         
         ajax_init();
