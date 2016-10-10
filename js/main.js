@@ -180,13 +180,12 @@ google.maps.event.addDomListener(window, 'load', init_map);
     $(document).ready(function () {
         'use strict';
         $('html').removeClass('no-js');
-        
-        $(".chosen-select").chosen({
-          disable_search_threshold: 10,
-          no_results_text: "Oops, nothing found!",
-          width: "100%"
 
-        });
+        // $(".chosen-select").chosen({
+        //   disable_search_threshold: 10,
+        //   no_results_text: "Oops, nothing found!",
+        //   width: "100%"
+        // });
  
 
 
