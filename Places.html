@@ -651,26 +651,35 @@ var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-p
 				from: 150,
 				to: 590
 			});
-			
+
 			//****************************** Form styler plugin activate ******************************//
 			jQuery(window).trigger('resize');
 			tooltip();
 			//init_map();
 			initialize_map();
-			masonryInit();
+
+
+			$(".chosen-select").chosen({
+			  disable_search_threshold: 10,
+			  no_results_text: "Oops, nothing found!",
+			  width: "100%"
+
+			});
+			$('.chosen-single').addClass('noajax');
 
 
 
-			var config = {
-			  '.chosen-select'           : {},
-			  '.chosen-select-deselect'  : {allow_single_deselect:true},
-			  '.chosen-select-no-single' : {disable_search_threshold:10},
-			  '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-			  '.chosen-select-width'     : {}
-			}
-			for (var selector in config) {
-			  $(selector).chosen(config[selector]);
-			}
+			// var config = {
+			//   '.chosen-select'           : {},
+			//   '.chosen-select-deselect'  : {allow_single_deselect:true},
+			//   '.chosen-select-no-single' : {disable_search_threshold:10},
+			//   '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+			//   '.chosen-select-width'     : {},
+			//   'inherit_select_classes'
+			// }
+			// for (var selector in config) {
+			//   $(selector).chosen(config[selector]);
+			// }
 		}
 	</script>
 </body>
