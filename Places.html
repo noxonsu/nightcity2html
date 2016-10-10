@@ -659,7 +659,13 @@ var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-p
 			initialize_map();
 
 
+			$(".chosen-select").chosen({
+			  disable_search_threshold: 10,
+			  no_results_text: "Oops, nothing found!",
+			  width: "100%"
 
+			});
+			$('.chosen-single').addClass('noajax');
 		}
 	</script>
 </body>

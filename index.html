@@ -960,6 +960,13 @@
 				}
 			});
 			tooltip();
+
+			$('.chosen-single').addClass('noajax');
+			$(".chosen-select").chosen({
+			  disable_search_threshold: 10,
+			  no_results_text: "Oops, nothing found!",
+			  width: "100%"
+			});
 		}
 	</script>
 </body>
