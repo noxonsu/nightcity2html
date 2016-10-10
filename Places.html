@@ -426,36 +426,7 @@ var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-p
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
-  	<script type="text/javascript">
-	    var config = {
-	      '.chosen-select'           : {},
-	      '.chosen-select-deselect'  : {allow_single_deselect:true},
-	      '.chosen-select-no-single' : {disable_search_threshold:10},
-	      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-	      '.chosen-select-width'     : {}
-	    }
-	    for (var selector in config) {
-	      $(selector).chosen(config[selector]);
-	    }
-  	</script>
-	<script>
-		main_js = function () {
 
-			//****************************** Ion range slider plugin activate ******************************//
-			jQuery('.example_class').ionRangeSlider({
-				type: 'double',
-				min: 0,
-				max: 750,
-				from: 150,
-				to: 590
-			});
-			//****************************** Form styler plugin activate ******************************//
-			jQuery(window).trigger('resize');
-			tooltip();
-			//init_map();
-			initialize_map();
-		}
-	</script>
 	
 	<script>
 		var mapObject,
@@ -668,6 +639,39 @@ var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-p
 		// jQuery(document).ready(function ($) {
 		// 	google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
 		// });
+	</script>
+	<script>
+		main_js = function () {
+
+			//****************************** Ion range slider plugin activate ******************************//
+			jQuery('.example_class').ionRangeSlider({
+				type: 'double',
+				min: 0,
+				max: 750,
+				from: 150,
+				to: 590
+			});
+			
+			//****************************** Form styler plugin activate ******************************//
+			jQuery(window).trigger('resize');
+			tooltip();
+			//init_map();
+			initialize_map();
+			masonryInit();
+
+
+
+			var config = {
+			  '.chosen-select'           : {},
+			  '.chosen-select-deselect'  : {allow_single_deselect:true},
+			  '.chosen-select-no-single' : {disable_search_threshold:10},
+			  '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+			  '.chosen-select-width'     : {}
+			}
+			for (var selector in config) {
+			  $(selector).chosen(config[selector]);
+			}
+		}
 	</script>
 </body>
 

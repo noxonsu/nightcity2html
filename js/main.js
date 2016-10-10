@@ -23,6 +23,13 @@ function masonryInit() {
         });
     }
 }
+// main_js = function(){
+//    // masonryInit();
+//    // $('.nano').nanoScroller();
+//    jQuery('.custom-scroll').customScrollbar({
+//        updateOnWindowResize: true
+//    }); 
+// };
 
 
 jQuery('.b-hide-filters').on('click', function () {
@@ -181,11 +188,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
     $(document).ready(function () {
         'use strict';
         $('html').removeClass('no-js');
-        masonryInit();
-        // $('.nano').nanoScroller();
-        jQuery('.custom-scroll').customScrollbar({
-            updateOnWindowResize: true
-        });
+ 
 
 
         //****************************** Ion range slider plugin activate ******************************//
@@ -260,7 +263,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-            //$('a:not(.noajax):not(.ab-item)').unbind( "click" );
+            $('a:not(.noajax):not(.ab-item)').unbind( "click" );
             $('a:not(.noajax):not(.ab-item)').click(function () {
                 var $linkClicked = $(this).attr('href');
                 console.log($linkClicked + 'lala');
@@ -283,7 +286,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
                     lazyLoadImages();
                     main_js();
                     init_masonry();
-                    //ajax_init();
+                    ajax_init();
                     window.scrollTo(0, 0);
                     $('.b-preloader').hide();
                     //$("body").css('opacity',"1");
