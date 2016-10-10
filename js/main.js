@@ -23,14 +23,6 @@ function masonryInit() {
         });
     }
 }
-// main_js = function(){
-//    // masonryInit();
-//    // $('.nano').nanoScroller();
-//    jQuery('.custom-scroll').customScrollbar({
-//        updateOnWindowResize: true
-//    }); 
-// };
-
 
 jQuery('.b-hide-filters').on('click', function () {
     var filterBtn = jQuery('.b-hide-filters');
@@ -285,7 +277,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
                     }, "", $linkClicked);
                     lazyLoadImages();
                     main_js();
-                    init_masonry();
+                    masonryInit();
                     ajax_init();
                     window.scrollTo(0, 0);
                     $('.b-preloader').hide();
