@@ -180,6 +180,8 @@ google.maps.event.addDomListener(window, 'load', init_map);
     $(document).ready(function () {
         'use strict';
         $('html').removeClass('no-js');
+        $('.chosen-single').addClass('noajax');
+
 
         //****************************** Ion range slider plugin activate ******************************//
         jQuery('.example_class').ionRangeSlider({
@@ -253,7 +255,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-            $('a:not(.noajax):not(.ab-item)').unbind( "click" );
+            $('a:not(.noajax):not(.ab-item):not(.chosen-select)').unbind( "click" );
             $('a:not(.noajax):not(.ab-item):not(.chosen-select)').click(function () {
                 var $linkClicked = $(this).attr('href');
                 console.log($linkClicked + 'lala');
