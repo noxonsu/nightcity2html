@@ -180,7 +180,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
     $(document).ready(function () {
         'use strict';
         $('html').removeClass('no-js');
-        $('.chosen-single').addClass('noajax');
+        //$('.chosen-single').addClass('noajax');
 
 
         //****************************** Ion range slider plugin activate ******************************//
