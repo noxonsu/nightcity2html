@@ -254,7 +254,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
 
         function ajax_init() {
             $('a:not(.noajax):not(.ab-item)').unbind( "click" );
-            $('a:not(.noajax):not(.ab-item,.chosen-select)').click(function () {
+            $('a:not(.noajax):not(.ab-item):not(.chosen-select)').click(function () {
                 var $linkClicked = $(this).attr('href');
                 console.log($linkClicked + 'lala');
                 //$("body").css('opacity',"0.5");
