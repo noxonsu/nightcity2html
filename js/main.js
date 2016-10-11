@@ -1,5 +1,7 @@
 //**************************************** Parallax script ****************************************** //
 
+
+
 function parallax() {
     var $window = $(window);
     $('.b-parallax[data-type="background"]').each(function(){
@@ -180,8 +182,16 @@ google.maps.event.addDomListener(window, 'load', init_map);
     $(document).ready(function () {
         'use strict';
         $('html').removeClass('no-js');
-        //$('.chosen-single').addClass('noajax');
 
+        $(".chosen-select").chosen({
+          disable_search_threshold: 10,
+          no_results_text: "Oops, nothing found!",
+          width: "100%"
+
+        });
+        
+        // main_js();
+        
 
         //****************************** Ion range slider plugin activate ******************************//
         jQuery('.example_class').ionRangeSlider({
@@ -255,8 +265,8 @@ google.maps.event.addDomListener(window, 'load', init_map);
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-            //$('a:not(.noajax):not(.ab-item):not(.chosen-select)').unbind( "click" );
-            $('a:not(.noajax):not(.chosen-select)').click(function () {
+            $('a:not(.noajax):not(.ab-item):not(.chosen-single)').unbind( "click" );
+            $('a:not(.noajax):not(.ab-item):not(.chosen-single)').click(function () {
                 var $linkClicked = $(this).attr('href');
                 console.log($linkClicked + 'lala');
                 //$("body").css('opacity',"0.5");
@@ -276,9 +286,9 @@ google.maps.event.addDomListener(window, 'load', init_map);
                         "pageTitle": response.pageTitle
                     }, "", $linkClicked);
                     lazyLoadImages();
-                    main_js();
-                    
+                    masonryInit();
                     ajax_init();
+                    main_js();
                     window.scrollTo(0, 0);
                     $('.b-preloader').hide();
                     //$("body").css('opacity',"1");
