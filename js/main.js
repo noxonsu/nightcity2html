@@ -1,189 +1,3 @@
-//map init
-
-function addMarkers() {
-
-    var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
-
-    var mapObject,
-            markers = [],
-            markersData = {
-                                'bar': [
-                    
-            {
-            name: 'Lincoln square steak old Restaurant',
-            location_latitude: '51.50906037965617',
-            location_longitude:  '-0.11402538984384591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/upcoming-event-1-1-mush5flz5eip2rjl9f2b5diccn80uompql80zrefug.jpg',
-            name_point: 'Lincoln square steak old Restaurant',
-            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak-old-restaurant/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'Night club',
-            location_latitude: '51.517606815864085',
-            location_longitude:  '-0.13874462812509591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-4-murrc89n1eibw19j5rjc9uu7s35fmbr7bgg60h52uw.jpg',
-            name_point: 'Night club',
-            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-            url_point: 'http://city2.wpmix.net/places/night-club/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'Snack bar',
-            location_latitude: '51.51076979517296',
-            location_longitude:  '-0.13874462812509591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-3-murr24i3kiod2xxx5wapywmtvyydvgn2xfz9ae4fqw.jpg',
-            name_point: 'Snack bar',
-            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/snack-bar/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'bar',
-            location_latitude: '51.49880253959759',
-            location_longitude:  '-0.16071728437509591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-1-murqyfyusvmxlxafnt0bpc2u4n3mq50xf7zsmdky48.jpg',
-            name_point: 'bar',
-            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/bar/',
-            moreinfo: 'More info'
-            }
-            ]
-                ,               'cinema': [
-                    
-            {
-            name: 'Cinema',
-            location_latitude: '51.50735089999999',
-            location_longitude:  '-0.11402538984384591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-6-murrknvicw1y230iwwru5883njkzok8i57600umx14.jpg',
-            name_point: 'Cinema',
-            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/195.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/cinema/',
-            moreinfo: 'More info'
-            }
-            ]
-                ,               'entertainments': [
-                    
-            {
-            name: 'Entertainments',
-            location_latitude: '51.51589765689595',
-            location_longitude:  '-0.10303906171884591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/unicorn-wallpaper-mrhrymww0ea20p64fhbfj1tf7rcuuz5e31cmfvsdko.jpg',
-            name_point: 'Entertainments',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: 'Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis ',
-            url_point: 'http://city2.wpmix.net/places/entertainments/',
-            moreinfo: 'More info'
-            }
-            ]
-                ,               'hotels': [
-                    
-            {
-            name: 'Hotels',
-            location_latitude: '51.49452775804691',
-            location_longitude:  '-0.12501171796884591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-7-murrpneom8vpnlrqskdkvgx54503ir18hvrqop8q0o.jpg',
-            name_point: 'Hotels',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/hotels/',
-            moreinfo: 'More info'
-            }
-            ]
-                ,               'restaurant': [
-                    
-            {
-            name: 'Spice symphony',
-            location_latitude: '51.54152830765201',
-            location_longitude:  '-0.12775830000009591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-3-muq8294878dqfhte834c0iq9adhoqsoqpzkqslp5tk.jpg',
-            name_point: 'Spice symphony',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/spice-symphony/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'Club a steakhouse',
-            location_latitude: '51.50393174826599',
-            location_longitude:  '-0.16895703046884591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-2-muq7xea8w1qeg0vckzjq4quispfez3eo1y8fj4wdyw.jpg',
-            name_point: 'Club a steakhouse',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/club-a-steakhouse/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'Lincoln square steak',
-            location_latitude: '51.51589765689595',
-            location_longitude:  '-0.13050488203134591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-1-muq1gab5z6mf5fh5s82jrkj78mee1dz405tewqj92w.jpg',
-            name_point: 'Lincoln square steak',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak/',
-            moreinfo: 'More info'
-            }
-            ,
-            {
-            name: 'Test',
-            location_latitude: '51.52786042287008',
-            location_longitude:  '-0.16895703046884591',
-            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-bg-muhft6igxz2q6r9p1tr64i4of92amcqm3418kqgj3s.jpg',
-            name_point: 'Test',
-            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-            km: '',
-            time: '',
-            fetaturesicon: '',
-            description_point: '',
-            url_point: 'http://city2.wpmix.net/places/test/',
-            moreinfo: 'More info'
-            }
-            ]
-        };
-}
 
         function loadScript(src, callback) {
             var s,
@@ -219,7 +33,7 @@ function addMarkers() {
 
 //**************************************** Parallax script ****************************************** //
 
-addMarkers();
+
 
 function parallax() {
     var $window = $(window);
@@ -296,12 +110,16 @@ window.addEventListener("scroll", lazyLoadImages);
         'use strict';
         $('html').removeClass('no-js');
 
-        $(".chosen-select").chosen({
-          disable_search_threshold: 10,
-          no_results_text: "Oops, nothing found!",
-          width: "100%"
+        initialize_map();
 
-        });
+        // initialize_new();
+        // if ($(".chosen-select").length > 0) {
+            $(".chosen-select").chosen({
+              disable_search_threshold: 10,
+              no_results_text: "Oops, nothing found!",
+              width: "100%"
+            });
+        // }
 
         jQuery('.b-hide-filters').on('click', function () {
             var filterBtn = jQuery('.b-hide-filters');
@@ -437,6 +255,7 @@ window.addEventListener("scroll", lazyLoadImages);
                     lazyLoadImages();
                     ajax_init();
                     main_js();
+                    initialize_new();
                     window.scrollTo(0, 0);
                     $('.b-preloader').hide();
                     //$("body").css('opacity',"1");
@@ -446,6 +265,8 @@ window.addEventListener("scroll", lazyLoadImages);
         }
         
         ajax_init();
+
+
 
         var submitIcon = $('.searchbox-icon');
         var inputBox = $('.searchbox-input');
@@ -514,7 +335,7 @@ window.addEventListener("scroll", lazyLoadImages);
             $(window).trigger('resize');
         });
 
-        main_js($);
+        main_js(jQuery);
 
         // //****************************** Sly plugin activate ******************************//
         // function customScrollInit(){

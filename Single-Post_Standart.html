@@ -6,10 +6,12 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Welcome to Night City</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/chosen.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/combined.css">
 	<!--[if lt IE 9]>
@@ -236,6 +238,36 @@
 		</div>
 		<!-- .container -->
 		<div id="gmap_canvas"></div>
+		<script>
+			main_js = function () {
+
+				//chosen-select init
+
+				$(".chosen-select").chosen({
+				  disable_search_threshold: 10,
+				  no_results_text: "Oops, nothing found!",
+				  width: "100%"
+				});
+
+				$(".owl-carousel-3").owlCarousel({
+					responsiveClass: true
+					, responsive: {
+						0: {
+							items: 1
+							, nav: true
+						}
+						, 600: {
+							items: 1
+							, nav: true
+						}
+						, 1000: {
+							items: 1
+							, nav: true
+						}
+					}
+				});
+			}
+		</script>
 	</div>
 	<!-- .b-main-container -->
 	<div class="b-footer">
@@ -292,7 +324,7 @@
 				<div class="container clearfix">
 					<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
 					<!--.b-soc-->
-					<div class="stores"> <img src="img/src/icons-markets.png" alt=""> </div>
+					<div class="stores"><a href="#" class="stores-black-gp"><img src="img/blackgoogleplay-ic.png" alt=""></a><a href="#" class="stores-black-apps"><img src="img/blackappstore-ic.png" alt=""></a></div>
 				</div>
 			</div>
 			<!--.shared-->
@@ -303,43 +335,24 @@
 
 	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
 	<script>
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
 	</script>
-	<!--<script src="js/dropzone.js"></script>-->
-	<!--<script src="js/ion.rangeSlider.min.js"></script>-->
-	<!--<script src="js/jquery.custom-scrollbar.js"></script>-->
-	<!--<script src="js/jquery.formstyler.min.js"></script>-->
-	<!--<script src="js/jquery.popup.min.js"></script>-->
-	<!--<script src="js/jssor.slider.mini.js"></script>-->
-	<!--<script src="js/lightcase.js"></script>-->
-	<!--<script src="js/masonry.pkgd.min.js"></script>-->
-	<!--<script src="js/owl.carousel.js"></script>-->
-	<!--<script src="js/tabs.js"></script>-->
-	<!--<script src="js/tooltip.js"></script>-->
+	<script src="js/dropzone.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/jquery.custom-scrollbar.js"></script>
+	<script src="js/jquery.popup.min.js"></script>
+	<script src="js/jssor.slider.mini.js"></script>
+	<script src="js/lightcase.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js" async></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/tooltip.js"></script>
 	<script src="js/compiled_lib.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-		main_js = function () {
-			$(".owl-carousel-3").owlCarousel({
-				responsiveClass: true
-				, responsive: {
-					0: {
-						items: 1
-						, nav: true
-					}
-					, 600: {
-						items: 1
-						, nav: true
-					}
-					, 1000: {
-						items: 1
-						, nav: true
-					}
-				}
-			});
-		}
-	</script>
+	<script type='text/javascript' src='js/custum.js'></script>
 </body>
 
 </html>

@@ -71,71 +71,6 @@
 	</header>
 	<!-- .b-header -->
 	<div class="b-main-container" id="content">
-	<script>
-
-		var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
-
-		main_js = function () {
-			//********************************************** Stars script **************************************** //
-			var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-			var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-			if (isChrome || isSafari) {
-				for (var e = 0; 400 > e; e++) {
-					var f = document.createElement("div");
-					f.className = "star";
-					$(".stars").append(f);
-					var g = (.4 * Math.random() + .1).toFixed(3)
-						, h = 500 + 300 * Math.random();
-					$(f).css("transform-origin", "0 0 " + h + "px")
-						, $(f).css("transform", " translate3d(0,0,-" + h + "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g + "," + g + ")");
-				}
-			}
-			//****************************** Form styler plugin activate ******************************//
-			//$('input, select').styler();
-			//****************************** owlCarousel plugin activate ******************************//
-			$(".owl-carousel-1").owlCarousel({
-				loop: true
-				, margin: 30
-				, responsiveClass: true
-				, responsive: {
-					0: {
-						items: 1
-						, nav: true
-					}
-					, 600: {
-						items: 2
-						, nav: true
-					}
-					, 1000: {
-						items: 3
-						, nav: true
-						, loop: false
-					}
-				}
-			});
-			$(".owl-carousel-2").owlCarousel({
-				loop: true
-				, margin: 30
-				, responsiveClass: true
-				, responsive: {
-					0: {
-						items: 1
-						, nav: true
-					}
-					, 600: {
-						items: 1
-						, nav: true
-					}
-					, 1000: {
-						items: 2
-						, nav: true
-						, loop: false
-					}
-				}
-			});
-			tooltip();
-		}
-	</script>
 		<div class="b-promo lazy" data-src='img/home-bg.jpg'>
 			<div class="b-placeholder"></div>
 			<div class="b-stars">
@@ -704,7 +639,7 @@
 		</div>
 		<!-- .b-add-place -->
 		<div class="b-counter2 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-2.jpg">
-			<div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover;"></div>
+			<div class="b-placeholder"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
@@ -869,7 +804,82 @@
 		</div>
 		<!-- .b-promo3 -->
 		<div id="gmap_canvas"></div>
+		<script>
 
+
+
+			main_js = function () {
+
+				//chosen-select init
+
+				$(".chosen-select").chosen({
+				  disable_search_threshold: 10,
+				  no_results_text: "Oops, nothing found!",
+				  width: "100%"
+				});
+
+
+				//********************************************** Stars script **************************************** //
+				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+				var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+				if (isChrome || isSafari) {
+					for (var e = 0; 400 > e; e++) {
+						var f = document.createElement("div");
+						f.className = "star";
+						$(".stars").append(f);
+						var g = (.4 * Math.random() + .1).toFixed(3)
+							, h = 500 + 300 * Math.random();
+						$(f).css("transform-origin", "0 0 " + h + "px")
+							, $(f).css("transform", " translate3d(0,0,-" + h + "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g + "," + g + ")");
+					}
+				}
+				//****************************** Form styler plugin activate ******************************//
+				//$('input, select').styler();
+				//****************************** owlCarousel plugin activate ******************************//
+				$(".owl-carousel-1").owlCarousel({
+					loop: true
+					, margin: 30
+					, responsiveClass: true
+					, responsive: {
+						0: {
+							items: 1
+							, nav: true
+						}
+						, 600: {
+							items: 2
+							, nav: true
+						}
+						, 1000: {
+							items: 3
+							, nav: true
+							, loop: false
+						}
+					}
+				});
+				$(".owl-carousel-2").owlCarousel({
+					loop: true
+					, margin: 30
+					, responsiveClass: true
+					, responsive: {
+						0: {
+							items: 1
+							, nav: true
+						}
+						, 600: {
+							items: 1
+							, nav: true
+						}
+						, 1000: {
+							items: 2
+							, nav: true
+							, loop: false
+						}
+					}
+				});
+				tooltip();
+				initialize_new();
+			}
+		</script>
 	</div>
 	<!-- .b-main-container -->
 	<div class="b-footer">
@@ -952,8 +962,9 @@
 	<script src="js/tabs.js"></script>
 	<script src="js/tooltip.js"></script>
 	<script src="js/compiled_lib.js"></script>
+	<script src="js/custum.js"></script>
 	<script src="js/main.js"></script>
-	<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
+
 </body>
 
 </html>

@@ -461,6 +461,46 @@
 		</div>
 		<!-- .b-links -->
 		<div id="gmap_canvas"></div>
+
+		<script>
+			main_js = function () {
+				//****************************** owlCarousel plugin activate ******************************//
+				$(".owl-carousel-1").owlCarousel({
+					loop: true
+					, margin: 30
+					, responsiveClass: true
+					, responsive: {
+						0: {
+							items: 1
+							, nav: true
+						}
+						, 600: {
+							items: 2
+							, nav: true
+						}
+						, 1000: {
+							items: 3
+							, nav: true
+							, loop: false
+						}
+					}
+				});
+				//****************************** Lightcase plugin activate ******************************//
+				$('a[data-rel^=lightcase]').lightcase();
+				$('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({
+					showSequenceInfo: false
+					, transition: 'scrollHorizontal'
+				});
+				$('a[data-rel="lightcase:myCollection"]').lightcase({
+					showSequenceInfo: false
+				});
+				$('#example1').lightcase({
+					transition: 'none'
+				});
+				tooltip();
+				//                    parallax();
+			}
+		</script>
 	</div>
 	<!-- .b-main-container -->
 	<div class="b-footer">
@@ -543,45 +583,7 @@
 	<script src="js/tooltip.js"></script>
 	<script src="js/compiled_lib.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-		main_js = function () {
-			//****************************** owlCarousel plugin activate ******************************//
-			$(".owl-carousel-1").owlCarousel({
-				loop: true
-				, margin: 30
-				, responsiveClass: true
-				, responsive: {
-					0: {
-						items: 1
-						, nav: true
-					}
-					, 600: {
-						items: 2
-						, nav: true
-					}
-					, 1000: {
-						items: 3
-						, nav: true
-						, loop: false
-					}
-				}
-			});
-			//****************************** Lightcase plugin activate ******************************//
-			$('a[data-rel^=lightcase]').lightcase();
-			$('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({
-				showSequenceInfo: false
-				, transition: 'scrollHorizontal'
-			});
-			$('a[data-rel="lightcase:myCollection"]').lightcase({
-				showSequenceInfo: false
-			});
-			$('#example1').lightcase({
-				transition: 'none'
-			});
-			tooltip();
-			//                    parallax();
-		}
-	</script>
+
 </body>
 
 </html>
