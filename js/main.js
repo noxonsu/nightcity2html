@@ -1,6 +1,225 @@
+//map init
+
+function addMarkers() {
+
+    var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
+
+    var mapObject,
+            markers = [],
+            markersData = {
+                                'bar': [
+                    
+            {
+            name: 'Lincoln square steak old Restaurant',
+            location_latitude: '51.50906037965617',
+            location_longitude:  '-0.11402538984384591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/upcoming-event-1-1-mush5flz5eip2rjl9f2b5diccn80uompql80zrefug.jpg',
+            name_point: 'Lincoln square steak old Restaurant',
+            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak-old-restaurant/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'Night club',
+            location_latitude: '51.517606815864085',
+            location_longitude:  '-0.13874462812509591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-4-murrc89n1eibw19j5rjc9uu7s35fmbr7bgg60h52uw.jpg',
+            name_point: 'Night club',
+            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
+            url_point: 'http://city2.wpmix.net/places/night-club/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'Snack bar',
+            location_latitude: '51.51076979517296',
+            location_longitude:  '-0.13874462812509591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-3-murr24i3kiod2xxx5wapywmtvyydvgn2xfz9ae4fqw.jpg',
+            name_point: 'Snack bar',
+            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/snack-bar/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'bar',
+            location_latitude: '51.49880253959759',
+            location_longitude:  '-0.16071728437509591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-1-murqyfyusvmxlxafnt0bpc2u4n3mq50xf7zsmdky48.jpg',
+            name_point: 'bar',
+            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/bar/',
+            moreinfo: 'More info'
+            }
+            ]
+                ,               'cinema': [
+                    
+            {
+            name: 'Cinema',
+            location_latitude: '51.50735089999999',
+            location_longitude:  '-0.11402538984384591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-6-murrknvicw1y230iwwru5883njkzok8i57600umx14.jpg',
+            name_point: 'Cinema',
+            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/195.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/cinema/',
+            moreinfo: 'More info'
+            }
+            ]
+                ,               'entertainments': [
+                    
+            {
+            name: 'Entertainments',
+            location_latitude: '51.51589765689595',
+            location_longitude:  '-0.10303906171884591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/unicorn-wallpaper-mrhrymww0ea20p64fhbfj1tf7rcuuz5e31cmfvsdko.jpg',
+            name_point: 'Entertainments',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: 'Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis ',
+            url_point: 'http://city2.wpmix.net/places/entertainments/',
+            moreinfo: 'More info'
+            }
+            ]
+                ,               'hotels': [
+                    
+            {
+            name: 'Hotels',
+            location_latitude: '51.49452775804691',
+            location_longitude:  '-0.12501171796884591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-7-murrpneom8vpnlrqskdkvgx54503ir18hvrqop8q0o.jpg',
+            name_point: 'Hotels',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/hotels/',
+            moreinfo: 'More info'
+            }
+            ]
+                ,               'restaurant': [
+                    
+            {
+            name: 'Spice symphony',
+            location_latitude: '51.54152830765201',
+            location_longitude:  '-0.12775830000009591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-3-muq8294878dqfhte834c0iq9adhoqsoqpzkqslp5tk.jpg',
+            name_point: 'Spice symphony',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/spice-symphony/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'Club a steakhouse',
+            location_latitude: '51.50393174826599',
+            location_longitude:  '-0.16895703046884591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-2-muq7xea8w1qeg0vckzjq4quispfez3eo1y8fj4wdyw.jpg',
+            name_point: 'Club a steakhouse',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/club-a-steakhouse/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'Lincoln square steak',
+            location_latitude: '51.51589765689595',
+            location_longitude:  '-0.13050488203134591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-1-muq1gab5z6mf5fh5s82jrkj78mee1dz405tewqj92w.jpg',
+            name_point: 'Lincoln square steak',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak/',
+            moreinfo: 'More info'
+            }
+            ,
+            {
+            name: 'Test',
+            location_latitude: '51.52786042287008',
+            location_longitude:  '-0.16895703046884591',
+            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-bg-muhft6igxz2q6r9p1tr64i4of92amcqm3418kqgj3s.jpg',
+            name_point: 'Test',
+            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: 'http://city2.wpmix.net/places/test/',
+            moreinfo: 'More info'
+            }
+            ]
+        };
+}
+
+        function loadScript(src, callback) {
+            var s,
+                r,
+                t;
+            r = false;
+            s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = src;
+            s.onload = s.onreadystatechange = function () {
+                ////console.log( this.readyState ); //uncomment this line to see which ready states are called.
+                if (!r && (!this.readyState || this.readyState == 'complete')) {
+                    r = true;
+                    callback();
+                }
+            };
+            t = document.getElementsByTagName('script')[0];
+            t.parentNode.insertBefore(s, t);
+        }
+        function initialize_map() {
+            
+            /*   document.querySelector('header').className += " sticky";
+             document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
+             */
+            loadScript("http://city2.wpmix.net/wp-content/themes/nightcity/js/infobox.js", after_load);
+        }
+        function after_load() {
+            initialize_new();
+        }
+        // jQuery(document).ready(function ($) {
+        //  google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
+        // });
+
 //**************************************** Parallax script ****************************************** //
 
-
+addMarkers();
 
 function parallax() {
     var $window = $(window);
@@ -14,84 +233,7 @@ function parallax() {
     });
 }
 
-function masonryInit() {
-    if($(window).width() > 1140) {
-        jQuery('.b-place-list').masonry({
-            // options
-            // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.b-grid-item',
-            // use element for option
-            gutter: 20
-        });
-    }
-}
-
-jQuery('.b-hide-filters').on('click', function () {
-    var filterBtn = jQuery('.b-hide-filters');
-    var menuForm = jQuery('.b-slide-menu__form');
-    if (menuForm.hasClass('opened')) {
-        menuForm.removeClass('opened').addClass('closed');
-        filterBtn.text('Show filters');
-    } else if (menuForm.hasClass('closed')) {
-        menuForm.removeClass('closed').addClass('opened');
-        filterBtn.text('Hide filters');
-    }
-    jQuery('.b-slide-menu__form').slideToggle('medium');
-});
-
-//****************************** Slide menu on map pages ******************************//
-jQuery('.b-slide-menu__toggle').on('click', function () {
-    var slideMenu = jQuery('.b-slide-menu');
-    if (slideMenu.hasClass('opened')) {
-        slideMenu.removeClass('opened').addClass('closed');
-        jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
-        jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
-        slideMenu.removeClass('oopeen').addClass('closseed');
-    } else if (slideMenu.hasClass('closed')) {
-        slideMenu.removeClass('closed').addClass('opened');
-        jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
-        jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
-        slideMenu.removeClass('closseed').addClass('oopeen');
-    }
-});
-
-/*ajax subscribe*/
-jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
-    e.preventDefault();
-    var email = jQuery(".b-gadget__subscribe__field");
-    email.removeClass('error');
-    var thisbtn = jQuery(this);
-
-
-    if (isValidEmailAddress(email.val())) {
-        thisbtn.prop('disabled', true);
-
-        jQuery.ajax({
-            url: nightcity_obj.ajaxurl,
-            type: 'POST',
-            data: "action=nightcity_mailchimp_send&email=" + email.val(),
-            success: function (date) {
-                jQuery('#subscribe_mini_form').append("<div class=\"alert alert-success fade in\">" +
-                    "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">&times;</button><strong>" +
-                    "" + date + "" +
-                    "</strong></div>");
-                jQuery('#subscribe_mini_form')[0].reset();
-                thisbtn.prop('disabled', false);
-            }
-
-        });
-    } else {
-        email.addClass('error');
-
-    }
-});
-
-
-//****************************** Lazy load ******************************//
-window.addEventListener("DOMContentLoaded", lazyLoadImages);
-window.addEventListener("load", lazyLoadImages);
-window.addEventListener("resize", lazyLoadImages);
-window.addEventListener("scroll", lazyLoadImages);
+//**************************************** lazyLoadImages ****************************************** //
 
 function lazyLoadImages() {
     var images = document.querySelectorAll(".lazy[data-src]"), item;
@@ -127,24 +269,7 @@ function tooltip() {
     jQuery('[data-toggle="tooltip"]').tooltip()
 }
 
-
-// //****************************** Sly plugin activate ******************************//
-// function customScrollInit(){
-//     var $frame = $('.custom-scroll');
-//     var $wrap  = $frame.parent();
-//
-//     // Call Sly on frame
-//     $frame.sly({
-//         speed: 300,
-//         easing: 'easeOutExpo',
-//         scrollBar: $wrap.find('.scrollbar'),
-//         scrollBy: 50,
-//         dragHandle: 1,
-//         dynamicHandle: 1
-//     });
-// }
-
-
+//****************************** Button up ******************************//
 function buttonUp() {
     var inputVal = $('.searchbox-input').val();
     inputVal = jQuery.trim(inputVal).length;
@@ -156,26 +281,14 @@ function buttonUp() {
     }
 }
 
-/*
-function init_map() {
-    var myOptions = {
-        zoom: 10,
-        center: new google.maps.LatLng(51.5073509, -0.12775829999998223),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-    marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(51.5073509, -0.12775829999998223)});
-    infowindow = new google.maps.InfoWindow({content: '<strong>Title</strong><br>London, United Kingdom<br>'});
-    google.maps.event.addListener(marker, 'click', function () {
-        infowindow.open(map, marker);
-    });
-    infowindow.open(map, marker);
-}
-google.maps.event.addDomListener(window, 'load', init_map);
-*/
 
 
 
+//****************************** Lazy load ******************************//
+window.addEventListener("DOMContentLoaded", lazyLoadImages);
+window.addEventListener("load", lazyLoadImages);
+window.addEventListener("resize", lazyLoadImages);
+window.addEventListener("scroll", lazyLoadImages);
 
 
 (function ($) {
@@ -188,6 +301,66 @@ google.maps.event.addDomListener(window, 'load', init_map);
           no_results_text: "Oops, nothing found!",
           width: "100%"
 
+        });
+
+        jQuery('.b-hide-filters').on('click', function () {
+            var filterBtn = jQuery('.b-hide-filters');
+            var menuForm = jQuery('.b-slide-menu__form');
+            if (menuForm.hasClass('opened')) {
+                menuForm.removeClass('opened').addClass('closed');
+                filterBtn.text('Show filters');
+            } else if (menuForm.hasClass('closed')) {
+                menuForm.removeClass('closed').addClass('opened');
+                filterBtn.text('Hide filters');
+            }
+            jQuery('.b-slide-menu__form').slideToggle('medium');
+        });
+
+        //****************************** Slide menu on map pages ******************************//
+        $('.b-slide-menu__toggle').on('click', function () {
+            var slideMenu = jQuery('.b-slide-menu');
+            if (slideMenu.hasClass('opened')) {
+                slideMenu.removeClass('opened').addClass('closed');
+                jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
+                jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
+                slideMenu.removeClass('oopeen').addClass('closseed');
+            } else if (slideMenu.hasClass('closed')) {
+                slideMenu.removeClass('closed').addClass('opened');
+                jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
+                jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
+                slideMenu.removeClass('closseed').addClass('oopeen');
+            }
+        });
+
+        /*ajax subscribe*/
+        jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
+            e.preventDefault();
+            var email = jQuery(".b-gadget__subscribe__field");
+            email.removeClass('error');
+            var thisbtn = jQuery(this);
+
+
+            if (isValidEmailAddress(email.val())) {
+                thisbtn.prop('disabled', true);
+
+                jQuery.ajax({
+                    url: nightcity_obj.ajaxurl,
+                    type: 'POST',
+                    data: "action=nightcity_mailchimp_send&email=" + email.val(),
+                    success: function (date) {
+                        jQuery('#subscribe_mini_form').append("<div class=\"alert alert-success fade in\">" +
+                            "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">&times;</button><strong>" +
+                            "" + date + "" +
+                            "</strong></div>");
+                        jQuery('#subscribe_mini_form')[0].reset();
+                        thisbtn.prop('disabled', false);
+                    }
+
+                });
+            } else {
+                email.addClass('error');
+
+            }
         });
         
         // main_js();
@@ -231,30 +404,6 @@ google.maps.event.addDomListener(window, 'load', init_map);
         });
 
 
-        //****************************** determine and set the window height to the home page promo ******************************//
-        // $(function(){
-        //     var windowHeight = $(window).height();
-        //     var topMenu = $('.b-header').height();
-        //     var promoHeight = windowHeight-topMenu;
-        //     $('.b-promo').css({
-        //         height: promoHeight
-        //     })
-        // })
-
-
-        //****************************** Preloader script ******************************//
-        // var hellopreloader = document.getElementById("hellopreloader_preload");
-        // function fadeOutnojquery(el){el.style.opacity = 1;
-        //     var interhellopreloader = setInterval(function(){
-        //         el.style.opacity = el.style.opacity - 0.05;
-        //         if (el.style.opacity <=0.05){
-        //             clearInterval(interhellopreloader);
-        //             hellopreloader.style.display = "none";
-        //         }},16);
-        // }
-        // window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
-
-
         if ($("div").is(".b-map-menu")) {
             $(".b-footer").hide(0);
         } else {
@@ -268,7 +417,7 @@ google.maps.event.addDomListener(window, 'load', init_map);
             $('a:not(.noajax):not(.ab-item):not(.chosen-single)').unbind( "click" );
             $('a:not(.noajax):not(.ab-item):not(.chosen-single)').click(function () {
                 var $linkClicked = $(this).attr('href');
-                console.log($linkClicked + 'lala');
+                console.log($linkClicked);
                 //$("body").css('opacity',"0.5");
                 $('.b-preloader').show();
                 $.get($linkClicked, function (d) { 
@@ -286,7 +435,6 @@ google.maps.event.addDomListener(window, 'load', init_map);
                         "pageTitle": response.pageTitle
                     }, "", $linkClicked);
                     lazyLoadImages();
-                    masonryInit();
                     ajax_init();
                     main_js();
                     window.scrollTo(0, 0);
@@ -298,29 +446,6 @@ google.maps.event.addDomListener(window, 'load', init_map);
         }
         
         ajax_init();
-        
-        // var hash = window.location.hash.substr(1);
-        // var href = $('a').each(function(){
-        //     var href = $(this).attr('href');
-        //     if(hash==href.substr(0,href.length-5)){
-        //         var toLoad = hash+'.html #content';
-        //         $('#content').load(toLoad)
-        //     }
-        // });
-
-        // $('a').click(function(){
-        //     var toLoad = $(this).attr('href')+' #content';
-        //     $('#content').hide(0,loadContent);
-        //     window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
-        //     function loadContent() {
-        //         $('#content').load(toLoad,'',showNewContent())
-        //     }
-        //     function showNewContent() {
-        //         $('#content').show(0);
-        //     }
-        //     return false;
-        // });
-        //
 
         var submitIcon = $('.searchbox-icon');
         var inputBox = $('.searchbox-input');
@@ -391,6 +516,91 @@ google.maps.event.addDomListener(window, 'load', init_map);
 
         main_js($);
 
+        // //****************************** Sly plugin activate ******************************//
+        // function customScrollInit(){
+        //     var $frame = $('.custom-scroll');
+        //     var $wrap  = $frame.parent();
+        //
+        //     // Call Sly on frame
+        //     $frame.sly({
+        //         speed: 300,
+        //         easing: 'easeOutExpo',
+        //         scrollBar: $wrap.find('.scrollbar'),
+        //         scrollBy: 50,
+        //         dragHandle: 1,
+        //         dynamicHandle: 1
+        //     });
+        // }
+
+
+        /*
+        function init_map() {
+            var myOptions = {
+                zoom: 10,
+                center: new google.maps.LatLng(51.5073509, -0.12775829999998223),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(51.5073509, -0.12775829999998223)});
+            infowindow = new google.maps.InfoWindow({content: '<strong>Title</strong><br>London, United Kingdom<br>'});
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+        */
+
+
+        // var hash = window.location.hash.substr(1);
+        // var href = $('a').each(function(){
+        //     var href = $(this).attr('href');
+        //     if(hash==href.substr(0,href.length-5)){
+        //         var toLoad = hash+'.html #content';
+        //         $('#content').load(toLoad)
+        //     }
+        // });
+
+        // $('a').click(function(){
+        //     var toLoad = $(this).attr('href')+' #content';
+        //     $('#content').hide(0,loadContent);
+        //     window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+        //     function loadContent() {
+        //         $('#content').load(toLoad,'',showNewContent())
+        //     }
+        //     function showNewContent() {
+        //         $('#content').show(0);
+        //     }
+        //     return false;
+        // });
+        //
+
+
+        //****************************** determine and set the window height to the home page promo ******************************//
+        // $(function(){
+        //     var windowHeight = $(window).height();
+        //     var topMenu = $('.b-header').height();
+        //     var promoHeight = windowHeight-topMenu;
+        //     $('.b-promo').css({
+        //         height: promoHeight
+        //     })
+        // })
+
+
+        //****************************** Preloader script ******************************//
+        // var hellopreloader = document.getElementById("hellopreloader_preload");
+        // function fadeOutnojquery(el){el.style.opacity = 1;
+        //     var interhellopreloader = setInterval(function(){
+        //         el.style.opacity = el.style.opacity - 0.05;
+        //         if (el.style.opacity <=0.05){
+        //             clearInterval(interhellopreloader);
+        //             hellopreloader.style.display = "none";
+        //         }},16);
+        // }
+        // window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
+
+
 
     });
 })(jQuery);
+

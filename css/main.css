@@ -3622,9 +3622,9 @@ html .btn--buy-ticket:hover {
 }
 
 .b-place-list .b-grid-item {
-    /*margin-bottom: 15px;*/
     display: inline-block;
     width: 300px;
+    height: initial;
     margin-bottom: 20px;
 }
 

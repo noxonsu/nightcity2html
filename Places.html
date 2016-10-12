@@ -74,273 +74,17 @@
 
 
 	<div class="b-main-container places-page" id="content">
-	<script>
-
-
-
-
-
-		main_js = function () {
-
-			var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
-
-
-			$(".chosen-select").chosen({
-			  disable_search_threshold: 10,
-			  no_results_text: "Oops, nothing found!",
-			  width: "100%"
-
-			});
-
-			//****************************** Ion range slider plugin activate ******************************//
-			jQuery('.example_class').ionRangeSlider({
-				type: 'double',
-				min: 0,
-				max: 750,
-				from: 150,
-				to: 590
-			});
-			jQuery('.custom-scroll').customScrollbar({
-				updateOnWindowResize: true
-			});
-			masonryInit();
-			//****************************** Form styler plugin activate ******************************//
-			jQuery(window).trigger('resize');
-			tooltip();
-			//init_map();
-			initialize_map();
-			alert('1');
-
-		}
-		main_js();
-	</script>
-
-		<script type='text/javascript'>
-
-
-
-			var mapObject,
-				markers = [],
-				markersData = {
-									'bar': [
-						
-	            {
-	            name: 'Lincoln square steak old Restaurant',
-	            location_latitude: '51.50906037965617',
-	            location_longitude:  '-0.11402538984384591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/upcoming-event-1-1-mush5flz5eip2rjl9f2b5diccn80uompql80zrefug.jpg',
-	            name_point: 'Lincoln square steak old Restaurant',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak-old-restaurant/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'Night club',
-	            location_latitude: '51.517606815864085',
-	            location_longitude:  '-0.13874462812509591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-4-murrc89n1eibw19j5rjc9uu7s35fmbr7bgg60h52uw.jpg',
-	            name_point: 'Night club',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-	            url_point: 'http://city2.wpmix.net/places/night-club/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'Snack bar',
-	            location_latitude: '51.51076979517296',
-	            location_longitude:  '-0.13874462812509591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-3-murr24i3kiod2xxx5wapywmtvyydvgn2xfz9ae4fqw.jpg',
-	            name_point: 'Snack bar',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/snack-bar/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'bar',
-	            location_latitude: '51.49880253959759',
-	            location_longitude:  '-0.16071728437509591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-1-murqyfyusvmxlxafnt0bpc2u4n3mq50xf7zsmdky48.jpg',
-	            name_point: 'bar',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/191.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/bar/',
-	            moreinfo: 'More info'
-	            }
-	            ]
-					,				'cinema': [
-						
-	            {
-	            name: 'Cinema',
-	            location_latitude: '51.50735089999999',
-	            location_longitude:  '-0.11402538984384591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-6-murrknvicw1y230iwwru5883njkzok8i57600umx14.jpg',
-	            name_point: 'Cinema',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/uploads/195.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/cinema/',
-	            moreinfo: 'More info'
-	            }
-	            ]
-					,				'entertainments': [
-						
-	            {
-	            name: 'Entertainments',
-	            location_latitude: '51.51589765689595',
-	            location_longitude:  '-0.10303906171884591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/unicorn-wallpaper-mrhrymww0ea20p64fhbfj1tf7rcuuz5e31cmfvsdko.jpg',
-	            name_point: 'Entertainments',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: 'Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis ',
-	            url_point: 'http://city2.wpmix.net/places/entertainments/',
-	            moreinfo: 'More info'
-	            }
-	            ]
-					,				'hotels': [
-						
-	            {
-	            name: 'Hotels',
-	            location_latitude: '51.49452775804691',
-	            location_longitude:  '-0.12501171796884591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-category-7-murrpneom8vpnlrqskdkvgx54503ir18hvrqop8q0o.jpg',
-	            name_point: 'Hotels',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/hotels/',
-	            moreinfo: 'More info'
-	            }
-	            ]
-					,				'restaurant': [
-						
-	            {
-	            name: 'Spice symphony',
-	            location_latitude: '51.54152830765201',
-	            location_longitude:  '-0.12775830000009591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-3-muq8294878dqfhte834c0iq9adhoqsoqpzkqslp5tk.jpg',
-	            name_point: 'Spice symphony',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/spice-symphony/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'Club a steakhouse',
-	            location_latitude: '51.50393174826599',
-	            location_longitude:  '-0.16895703046884591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-2-muq7xea8w1qeg0vckzjq4quispfez3eo1y8fj4wdyw.jpg',
-	            name_point: 'Club a steakhouse',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/club-a-steakhouse/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'Lincoln square steak',
-	            location_latitude: '51.51589765689595',
-	            location_longitude:  '-0.13050488203134591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/pop-place-1-muq1gab5z6mf5fh5s82jrkj78mee1dz405tewqj92w.jpg',
-	            name_point: 'Lincoln square steak',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/lincoln-square-steak/',
-	            moreinfo: 'More info'
-	            }
-	            ,
-	            {
-	            name: 'Test',
-	            location_latitude: '51.52786042287008',
-	            location_longitude:  '-0.16895703046884591',
-	            map_image_url: 'http://city2.wpmix.net/wp-content/uploads/bfi_thumb/place-bg-muhft6igxz2q6r9p1tr64i4of92amcqm3418kqgj3s.jpg',
-	            name_point: 'Test',
-	            fa_icon: 'http://city2.wpmix.net/wp-content/themes/nightcity/img/marker-1.png',
-	            km: '',
-	            time: '',
-	            fetaturesicon: '',
-	            description_point: '',
-	            url_point: 'http://city2.wpmix.net/places/test/',
-	            moreinfo: 'More info'
-	            }
-	            ]
-								};
-			function loadScript(src, callback) {
-				var s,
-					r,
-					t;
-				r = false;
-				s = document.createElement('script');
-				s.type = 'text/javascript';
-				s.src = src;
-				s.onload = s.onreadystatechange = function () {
-					////console.log( this.readyState ); //uncomment this line to see which ready states are called.
-					if (!r && (!this.readyState || this.readyState == 'complete')) {
-						r = true;
-						callback();
-					}
-				};
-				t = document.getElementsByTagName('script')[0];
-				t.parentNode.insertBefore(s, t);
-			}
-			function initialize_map() {
-				
-				/*   document.querySelector('header').className += " sticky";
-				 document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
-				 */
-				loadScript("http://city2.wpmix.net/wp-content/themes/nightcity/js/infobox.js", after_load);
-			}
-			function after_load() {
-				initialize_new();
-			}
-			// jQuery(document).ready(function ($) {
-			// 	google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
-			// });
-		</script>
 		<div class="b-map-menu">
 			<ul class="b-map-menu__list">
-				<li class="b-map-menu__list__bars active"><a href="#"><i class="fmr fmr-icon-2810"></i>bars</a></li>
-				<li class="b-map-menu__list__food"><a href="#"><i class="fmr fmr-icon-467"></i>Food</a></li>
-				<li class="b-map-menu__list__restaurants"><a href="#"><i class="fmr fmr-icon-466"></i>Restaurants</a></li>
-				<li class="b-map-menu__list__night-life"><a href="#"><i class="fmr fmr-icon-1100"></i>Night Life</a></li>
-				<li class="b-map-menu__list__entertainment"><a href="#"><i class="fmr fmr-icon-4514"></i>Entertainment</a></li>
-				<li class="b-map-menu__list__cinema"><a href="#"><i class="fmr fmr-icon-1618"></i>Cinema</a></li>
-				<li class="b-map-menu__list__hotels"><a href="#"><i class="fmr fmr-icon-53"></i>Hotels</a></li>
-				<li class="b-map-menu__list__shopping"><a href="#"><i class="fmr fmr-icon-454"></i>Shopping</a></li>
-				<li class="b-map-menu__list__all-places"><a href="#">all <br>places</a></li>
+				<li class="b-map-menu__list__bars active"><a href="#" class="noajax"><i class="fmr fmr-icon-2810"></i>bars</a></li>
+				<li class="b-map-menu__list__food"><a href="#" class="noajax"><i class="fmr fmr-icon-467"></i>Food</a></li>
+				<li class="b-map-menu__list__restaurants"><a href="#" class="noajax"><i class="fmr fmr-icon-466"></i>Restaurants</a></li>
+				<li class="b-map-menu__list__night-life"><a href="#" class="noajax"><i class="fmr fmr-icon-1100"></i>Night Life</a></li>
+				<li class="b-map-menu__list__entertainment"><a href="#" class="noajax"><i class="fmr fmr-icon-4514"></i>Entertainment</a></li>
+				<li class="b-map-menu__list__cinema"><a href="#" class="noajax"><i class="fmr fmr-icon-1618"></i>Cinema</a></li>
+				<li class="b-map-menu__list__hotels"><a href="#" class="noajax"><i class="fmr fmr-icon-53"></i>Hotels</a></li>
+				<li class="b-map-menu__list__shopping"><a href="#" class="noajax"><i class="fmr fmr-icon-454"></i>Shopping</a></li>
+				<li class="b-map-menu__list__all-places"><a href="#" class="noajax">all <br>places</a></li>
 			</ul>
 		</div>
 		<!-- .b-map-menu -->
@@ -413,9 +157,9 @@
 					<div class="btn btn--white press--left b-hide-filters">Hide filters</div>
 					<div class="b-slide-menu__pages-num press--right">1-10 of 24</div>
 				</div>
-				<div class="b-place-list clearfix">
+				<div class="b-place-list b-place-list--grid clearfix">
 					<div class="b-grid-sizer"></div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div>
@@ -430,7 +174,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="t2rue"></i></a>
@@ -445,7 +189,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -460,7 +204,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -474,7 +218,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -488,7 +232,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -502,7 +246,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -516,7 +260,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -530,7 +274,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -544,7 +288,7 @@
 								<h5 class="b-pop-place__cat">Restaurant</h5> </div>
 						</div>
 					</div>
-					<div class="b-grid-item">
+					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
 								<div class="b-pop-place__img__img"><img src="img/src/events111.jpg" alt=""></div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -591,6 +335,62 @@
 			<li><a href="#">3</a></li>
 			<li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
 		</ul>
+<script>
+
+
+
+
+	main_js = function () {
+
+			addMarkers();
+
+			//chosen-select init
+
+			$(".chosen-select").chosen({
+			  disable_search_threshold: 10,
+			  no_results_text: "Oops, nothing found!",
+			  width: "100%"
+			});
+
+			//****************************** Ion range slider plugin activate ******************************//
+
+			$('.example_class').ionRangeSlider({
+				type: 'double',
+				min: 0,
+				max: 750,
+				from: 150,
+				to: 590
+			});
+
+			// init Masonry
+			var $grid = $('.b-place-list').masonry({
+			  itemSelector: '.b-grid-item',
+			  percentPosition: true,
+			  gutter: 20
+			});
+			// layout Isotope after each image loads
+			$grid.imagesLoaded().progress( function() {
+			  $grid.masonry();
+			});  
+			//custom-scroll init
+
+			$('.custom-scroll').customScrollbar({
+				updateOnWindowResize: true
+			});
+
+			//rezise trigger
+
+			$(window).trigger('resize');
+
+			//tooltip init
+
+			tooltip();
+
+			//map init
+			initialize_map();
+
+		}
+</script>
 	</div>
 	<!-- .b-main-container -->
 	<div class="b-footer">
@@ -655,38 +455,27 @@
 		<!--.b-footer__info-->
 	</div>
 	<!--.b-footer-->
-	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
-  	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-	</script>
-	<!--<script src="js/dropzone.js"></script>-->
-	<script src="js/ion.rangeSlider.min.js"></script>
-	<script src="js/jquery.custom-scrollbar.js"></script>
-	<!--<script src="js/jquery.formstyler.min.js"></script>-->
-	<!--<script src="js/jquery.popup.min.js"></script>-->
-	<!--<script src="js/jssor.slider.mini.js"></script>-->
-	<!--<script src="js/lightcase.js"></script>-->
-	<!--<script src="js/masonry.pkgd.min.js"></script>-->
-	<!--<script src="js/owl.carousel.js"></script>-->
-	<!--<script src="js/tabs.js"></script>-->
-	<!--<script src="js/tooltip.js"></script>-->
-
-	<script src="js/compiled_lib.js"></script>
-	<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
-	<script src="js/main.js"></script>
-
-	<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/compiled_lib.js?ver=1'></script>
-
-	<script type='text/javascript'>
-	/* <![CDATA[ */
-
-	/* ]]> */
-	</script>
-
-
-
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	  	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+	  	<script>
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+		</script>
+		<!--<script src="js/dropzone.js"></script>-->
+		<!--<script src="js/ion.rangeSlider.min.js"></script>-->
+		<script src="js/jquery.custom-scrollbar.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<!--<script src="js/jquery.formstyler.min.js"></script>-->
+		<!--<script src="js/jquery.popup.min.js"></script>-->
+		<!--<script src="js/jssor.slider.mini.js"></script>-->
+		<!--<script src="js/lightcase.js"></script>-->
+		<!--<script src="js/masonry.pkgd.min.js"></script>-->
+		<!--<script src="js/owl.carousel.js"></script>-->
+		<!--<script src="js/tabs.js"></script>-->
+		<!--<script src="js/tooltip.js"></script>-->
+		<script src="js/compiled_lib.js"></script>
+		<script src="js/main.js"></script>
+		<script type='text/javascript' src='http://city2.wpmix.net/wp-content/themes/nightcity/js/custum.js?ver=1'></script>
 
 </body>
 

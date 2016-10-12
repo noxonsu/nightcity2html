@@ -72,6 +72,9 @@
 	<!-- .b-header -->
 	<div class="b-main-container" id="content">
 	<script>
+
+		var MyCity_map_init_obj = {"upload":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_dropped_media","delete":"http:\/\/city2.wpmix.net\/wp-admin\/admin-post.php?action=nightcity_handle_delete_media","theme_url":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","global_map_styles":"[]","lat":"51.5073509","longu":"-0.12775829999998223","zum":"13","ajaxurl":"http:\/\/city2.wpmix.net\/wp-admin\/admin-ajax.php","direct":"http:\/\/city2.wpmix.net\/wp-content\/themes\/nightcity","weather_latitude":"0","weather_longitude":"0","weather_APPID":"","hide_paralax":"false","uber_dp":"15","uber_sd":"","geolocation":"","weather":"s2"};
+
 		main_js = function () {
 			//********************************************** Stars script **************************************** //
 			var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
@@ -943,7 +946,8 @@
 	<script src="js/jquery.popup.min.js"></script>
 	<script src="js/jssor.slider.mini.js"></script>
 	<script src="js/lightcase.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js" async></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/tabs.js"></script>
 	<script src="js/tooltip.js"></script>
