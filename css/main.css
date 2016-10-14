@@ -791,20 +791,32 @@ select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:f
 }
 
 .logo{
-    float:left;
+    float: left;
     line-height: 11px;
     width: 200px;
+    align-items: center;
     cursor: pointer;
     height: 80px;
+    justify-content: center;
+    display: flex;
+    background: #de443a;
     margin-right: 20px;
 }
 
 .logo img{
     display: block;
-    width: 200px;
-    height: 80px;
+    width: auto;
+    height: auto;
 }
-
+.logo span {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 15px;
+}
 .weather {
     color: white;
     float: left;
@@ -1277,11 +1289,13 @@ html .b-promo__search {
     box-shadow: 0 2px 2px #ddd;
 }
 
-.b-pop-place__img {
+.b-pop-place__img,
+.b-event__img {
     position: relative;
     overflow: hidden;
 }
-.b-pop-place__img:before{
+.b-pop-place__img:before,
+.b-event__img:before{
     position: absolute;
     content: '';
     transition: background 0.4s ease 0s;
@@ -1292,7 +1306,8 @@ html .b-promo__search {
     height: 100%;
     z-index: 111;
 }
-.b-pop-place__img:hover:before {
+.b-pop-place__img:hover:before,
+.b-event__img:hover:before {
     background: rgba(0, 0, 0, 0.35);
 }
 .b-pop-place__img:hover .b-pop-place__img__img {
@@ -1311,6 +1326,7 @@ html .b-promo__search {
     position: absolute;
     right: 10px;
     top: 10px;
+    z-index: 1111;
     color: #fff;
     font-size: 20px;
 }
@@ -1323,6 +1339,7 @@ html .b-promo__search {
     position: absolute;
     bottom: 0;
     color: #fff;
+    z-index: 11111;
     font: 300 16px Roboto;
     width: 100%;
     padding: 60px 10px 10px;
@@ -1342,12 +1359,24 @@ html .b-promo__search {
 
 .b-pop-place__rating {
     float: left;
-    background: url('../img/rating-bg.jpg') center top no-repeat;
-    width: 55px;
+    width: 61px;
+    position: relative;
+    border-radius: 50%;
     height: 61px;
+    border: 1px solid #fdbe2c;
     text-align: center;
     font: 400 14px/61px Roboto;
     margin-right: 20px;
+}
+.b-pop-place__rating:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/star_rating.png);
 }
 
 .b-pop-place__name {
@@ -1384,11 +1413,11 @@ html .b-promo__search {
 
 .b-place-cat__item .b-place-cat__item__img {
     transition: all 0.4s ease 0s;
-    transform: scale(1.01);
+    transform: scale(1.15);
 }
 
 .b-place-cat__item:hover .b-place-cat__item__img {
-    transform: scale(1.25);
+    transform: scale(1.01);
 }
 
 .b-place-cat__item:hover i {
@@ -1462,6 +1491,7 @@ html .b-promo__search {
     bottom: 0;
     color: #fff;
     font: 300 16px Roboto;
+    z-index: 1111;
     width: 100%;
     padding: 0 10px 10px;
     height: 30px;
@@ -1899,6 +1929,7 @@ html .b-promo__search {
     position: absolute;
     left: 10px;
     top: 10px;
+    z-index: 11111;
     width: 60px;
     height: 60px;
     text-align: center;
