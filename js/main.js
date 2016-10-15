@@ -117,29 +117,6 @@ window.addEventListener("scroll", lazyLoadImages);
 
         initialize_map();
 
-        setTimeout(function(){
-            var header = $('.b-placeholder--fadeout');
-            var range = 400;
-
-            $(window).on('scroll', function () {
-                $('.b-placeholder--fadeout').css("transition","none");
-                var scrollTop = $(this).scrollTop();
-                var offset = header.offset().top;
-                var height = header.outerHeight();
-                offset = offset + height / 1.5;
-                var calc =  (scrollTop - offset + range) / range;
-                
-                header.css({ 'opacity': calc });
-                
-                if ( calc > '1' ) {
-                    header.css({ 'opacity': 1 });
-                } else if ( calc < '0' ) {
-                    header.css({ 'opacity': 0 });
-                }
-
-            });
-        },1000);
-
 
         jQuery('.b-hide-filters').on('click', function () {
             var filterBtn = jQuery('.b-hide-filters');

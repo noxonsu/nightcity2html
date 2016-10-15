@@ -9,6 +9,8 @@ label{display:block;margin-top:2em;font-size:0.9em;color:#777;}
 .dropdown{position:relative;display:block;margin-top:0.5em;overflow:hidden;width:100%;max-width:100%;}
 .b-promo__form__col1{font:300 16px Roboto;color:#878787;}
 .b-promo__form__col1 .dropdown{margin-top:0;}
+
+
 .b-promo__form__col1 select{height:60px;}
 .b-slide-menu__content select,
 .b-promo__search select{height:50px;}
