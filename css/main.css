@@ -5482,6 +5482,16 @@ ul.gp_content {
     top: 0;
     box-shadow: 2px -2px 5px rgba(0,0,0,0.5);
 }
+.b-desc .b-gmap {
+    margin-bottom: 0;
+}
+.b-desc .b-map {
+    position: relative;
+    height: 296px;
+}
+.b-desc .b-map .marker_info2 {
+    display: none!important;
+}
 
 
 

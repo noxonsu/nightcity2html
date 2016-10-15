@@ -18,7 +18,7 @@
             t.parentNode.insertBefore(s, t);
         }
         function initialize_map() {
-            
+
             /*   document.querySelector('header').className += " sticky";
              document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
              */
@@ -113,31 +113,33 @@ window.addEventListener("scroll", lazyLoadImages);
             content: $('.b-jquery-popup')
         });
 
-        // $('.jquery_popup').click(function(e){
-        //     if($(".chosen-select-2").length <= 1){
-
-        //     }
-        // });
-        // $(document).one( "click", ".jquery_popup", function() {
-        //             setTimeout(function(){
-        //                 $(".chosen-select-2").chosen({
-        //                   disable_search_threshold: 10,
-        //                   no_results_text: "Oops, nothing found!",
-        //                   width: "100%"
-        //                 });
-        //             }, 50);
-        // });
-
-
         $('html').removeClass('no-js');
 
         initialize_map();
 
-        // $(".chosen-select").chosen({
-        //     disable_search_threshold: 10,
-        //     no_results_text: "Oops, nothing found!",
-        //     width: "100%"
-        // });
+        setTimeout(function(){
+            var header = $('.b-placeholder--fadeout');
+            var range = 400;
+
+            $(window).on('scroll', function () {
+                $('.b-placeholder--fadeout').css("transition","none");
+                var scrollTop = $(this).scrollTop();
+                var offset = header.offset().top;
+                var height = header.outerHeight();
+                offset = offset + height / 1.5;
+                var calc =  (scrollTop - offset + range) / range;
+                
+                header.css({ 'opacity': calc });
+                
+                if ( calc > '1' ) {
+                    header.css({ 'opacity': 1 });
+                } else if ( calc < '0' ) {
+                    header.css({ 'opacity': 0 });
+                }
+
+            });
+        },1000);
+
 
         jQuery('.b-hide-filters').on('click', function () {
             var filterBtn = jQuery('.b-hide-filters');

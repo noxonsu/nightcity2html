@@ -155,9 +155,9 @@
 				<div class="col-md-7">
 					<h2 class="b-cont-title">Description</h2>
 					<div class="b-desc__links">
-						<div class="b-desc__links__item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i> <span>Write a review</span></a></div>
-						<div class="b-desc__links__item"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> <span>Add to favorites</span></a></div>
-						<div class="b-desc__links__item"><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> <span>Share</span></a></div>
+						<div class="b-desc__links__item"><a href="#" class="ab-item"><i class="fa fa-star" aria-hidden="true"></i> <span>Write a review</span></a></div>
+						<div class="b-desc__links__item"><a href="#" class="ab-item"><i class="fa fa-heart" aria-hidden="true"></i> <span>Add to favorites</span></a></div>
+						<div class="b-desc__links__item"><a href="#" class="ab-item html_popup"><i class="fa fa-share-alt" aria-hidden="true"></i> <span>Share</span></a></div>
 					</div>
 					<div class="b-desc__text">
 						<p>Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis mauris nulla ut dolor. Pellentesque non enim eget sem placerat ornare accumsan ac massa. Donec tempus sagittis diam sit amet fringilla. Fusce condimentum egestas est, nec varius quam porta eu. Vivamus dictum id id finibus.</p>
@@ -165,9 +165,21 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="b-gmap"> <img src="img/src/map-1.jpg" alt="">
-						<div class="b-map__footer"><i class="fa fa-map-marker" aria-hidden="true"></i> 75 Wall st, New York, NY 10005</div>
+					<div class="b-gmap">
+								<div class="b-map">
+									<div class="b-map__wrapper">
+										<div id='gmap_canvas' class="b-gmap-canvas"></div>
+										<div> <small>
+						                            <a href="http://embedgooglemaps.com">embed google maps</a>
+						                        </small> </div>
+										<div> <small>
+						                            <a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
+						                        </small> </div>
+									</div>
+									<div class="b-map__footer"><i class="fa fa-map-marker" aria-hidden="true"></i> 75 Wall st, New York, NY 10005</div>
+								</div>
 					</div>
+
 					<div class="b-contact-info clearfix">
 						<div class="b-contact-info__item press--left"><i class="fa fa-paper-plane-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></div>
 						<div class="b-contact-info__item press--right"><i class="fa fa-mobile" aria-hidden="true"></i><a href="tel:+445762809001">+44 57 6280 9001</a></div>
@@ -179,7 +191,6 @@
 		</div>
 		<!-- b-desc -->
 		<div class="b-mini-promo b-mini-promo--3 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-8.jpg">
-			<div class="b-placeholder"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
@@ -390,7 +401,7 @@
 		</div>
 		<!-- .b-reviews -->
 		<div class="b-pic-1 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-5.jpg">
-			<div class="b-placeholder"></div>
+			<!-- <div class="b-placeholder"></div> -->
 		</div>
 		<div class="b-events container">
 			<h2 class="b-cont-title">Upcoming events</h2>
@@ -564,6 +575,29 @@
 				        });
 				    }, 50);
 				});
+
+				setTimeout(function(){
+				    var header = $('.b-placeholder--fadeout');
+				    var range = 400;
+
+				    $(window).on('scroll', function () {
+				        $('.b-placeholder--fadeout').css("transition","none");
+				        var scrollTop = $(this).scrollTop();
+				        var offset = header.offset().top;
+				        var height = header.outerHeight();
+				        offset = offset + height / 1.5;
+				        var calc =  (scrollTop - offset + range) / range;
+				        
+				        header.css({ 'opacity': calc });
+				        
+				        if ( calc > '1' ) {
+				            header.css({ 'opacity': 1 });
+				        } else if ( calc < '0' ) {
+				            header.css({ 'opacity': 0 });
+				        }
+
+				    });
+				},1000);
 			}
 		</script>
 	</div>
