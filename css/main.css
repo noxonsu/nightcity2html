@@ -4419,7 +4419,11 @@ html .btn--buy-ticket:hover {
         padding-top: 100px;
     }
     .b-promo__title {
-        font-size: 40px;
+        font-size: 36px;
+    }
+    .b-promo__sub-title {
+        font: 300 17px Roboto;
+        margin: 30px 20px 60px;
     }
     html .b-promo__search {
         position: relative;
