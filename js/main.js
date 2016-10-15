@@ -1,4 +1,4 @@
-
+alert('1');
         function loadScript(src, callback) {
             var s,
                 r,

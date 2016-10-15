@@ -990,9 +990,38 @@
 		<!--.b-footer__info-->
 	</div>
 	<!--.b-footer--> 
+	<script>
+
+	</script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4" async></script> -->
 	<script src="js/jquery.min.js"></script>
-	<script src="js/chosen.jquery.min.js"></script>
+	<script>
+				function addScript(src){
+		  			var script = document.createElement('script');
+		  			script.src = src;
+		  			script.async = false; // чтобы гарантировать порядок
+		  			document.body.appendChild(script);
+				}
+
+		$(document).ready(function(){
+			addScript('js/chosen.jquery.min.js');
+			addScript('js/dropzone.js');
+			addScript('js/ion.rangeSlider.min.js');
+			addScript('js/jquery.custom-scrollbar.js');
+			addScript('js/jquery.popup.min.js');
+			addScript('js/jssor.slider.mini.js');
+			addScript('js/lightcase.js');
+			addScript('js/imagesloaded.pkgd.min.js');
+			addScript('js/masonry.pkgd.min.js');
+			addScript('js/owl.carousel.js');
+			addScript('js/tabs.js');
+			addScript('js/tooltip.js');
+			addScript('js/compiled_lib.js');
+			addScript('js/custum.js');
+			addScript('js/main.js');
+		});
+	</script>
+<!-- 	<script src="js/chosen.jquery.min.js"></script>
 	<script src="js/dropzone.js"></script>
 	<script src="js/ion.rangeSlider.min.js"></script>
 	<script src="js/jquery.custom-scrollbar.js"></script>
@@ -1006,7 +1035,7 @@
 	<script src="js/tooltip.js"></script>
 	<script src="js/compiled_lib.js"></script>
 	<script src="js/custum.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.js"></script> -->
 </body>
 
 </html>
