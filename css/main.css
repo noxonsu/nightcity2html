@@ -1148,7 +1148,7 @@ html .b-promo__search {
 .b-promo {
     position: relative;
     background-size: cover;
-    min-height: 620px;
+    min-height: 720px;
     background-attachment: fixed;
 }
 
