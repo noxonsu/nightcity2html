@@ -10,8 +10,21 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/combined.css">
+	<script>
+    if (window.XMLHttpRequest) {
+      xhr = new XMLHttpRequest();    
+    } else {
+      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.open("GET",'css/main.css',false);
+    xhr.send();
+    var lazyStyle = document.createElement('style');
+    lazyStyle.innerHTML = xhr.responseText;
+    document.head.appendChild(lazyStyle);
+
+  </script>
+<!-- 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/combined.css"> -->
 	<!--[if lt IE 9]>
     <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
     <![endif]-->
