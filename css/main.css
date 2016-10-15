@@ -4431,7 +4431,7 @@ html .btn--buy-ticket:hover {
     }
     .b-promo {
         padding-bottom: 100px;
-        height: auto;
+        /*height: auto;*/
     }
     .b-header__ctrl__item {
         border:none;
