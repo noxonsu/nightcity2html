@@ -600,6 +600,7 @@ function initialize_new() {
     //code with location detect http://pastebin.com/ZAMECBU4
 
     for (var key in markersData) {
+		markers[key] = [];
         markersData[key].forEach(function (item) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(item.location_latitude, item.location_longitude),
