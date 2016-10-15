@@ -994,16 +994,16 @@
 
 	</script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4" async></script> -->
-	<script src="js/jquery.min.js"></script>
 	<script>
-				function addScript(src){
-		  			var script = document.createElement('script');
-		  			script.src = src;
-		  			script.async = false; // чтобы гарантировать порядок
-		  			document.body.appendChild(script);
-				}
+		function addScript(src){
+		  	var script = document.createElement('script');
+		  		script.src = src;
+		  		script.async = false; // чтобы гарантировать порядок
+		  		document.body.appendChild(script);
+		}
 
-		$(document).ready(function(){
+		// $(document).ready(function(){
+			addScript('js/jquery.min.js');
 			addScript('js/chosen.jquery.min.js');
 			addScript('js/dropzone.js');
 			addScript('js/ion.rangeSlider.min.js');
@@ -1019,7 +1019,7 @@
 			addScript('js/compiled_lib.js');
 			addScript('js/custum.js');
 			addScript('js/main.js');
-		});
+		// });
 	</script>
 <!-- 	<script src="js/chosen.jquery.min.js"></script>
 	<script src="js/dropzone.js"></script>
