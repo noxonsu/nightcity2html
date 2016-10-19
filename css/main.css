@@ -3968,6 +3968,11 @@ html .btn--buy-ticket:hover {
 #gmap_canvas img {
     max-width:none!important;background:none!important
 }
+#gmap_canvas .marker_info2 .info img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+}
 
 
 
@@ -5195,10 +5200,10 @@ pre {
     height: 190px;
     top: 0;
 }
-.none {
+/*.none {
     top: -150%;
     transition: 0.3s linear;
-}
+}*/
 .marker_info2 .info {
     border-radius: 0;
     box-shadow: 1px 0px 10px rgba(0,0,0,0.22);
@@ -5209,7 +5214,7 @@ pre {
 
 .marker_info .info, .marker_info2 .info {
     width: 300px;
-    height: 400px;
+    height: auto;
     border-radius: 5px;
 
     position: relative;
@@ -5218,7 +5223,7 @@ pre {
 .info {
     text-align: center;
 }
-marker_info .info span, .marker_info2 .info span {
+.marker_info .info span, .marker_info2 .info span {
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
     color: #FFFFFF;
@@ -5278,7 +5283,7 @@ marker_info .info span, .marker_info2 .info span {
     top: 170px;
     position: absolute;
     font-weight: 300;
-    color: #191818;
+    color: #fff;
     width: 100%;
 }
 .marker_info2 .info p {
@@ -5286,13 +5291,11 @@ marker_info .info span, .marker_info2 .info span {
     font-weight: 300;
     color: #615858;
     line-height: 22px;
-    position: absolute;
-    bottom: 36px;
-    height: 47px;
+    position: relative;
     overflow: hidden;
     text-align: center;
     display: block;
-    padding: 0px 30px;
+    padding: 20px 30px;
     font-size: 16px;
 }
 
@@ -5305,10 +5308,10 @@ marker_info .info span, .marker_info2 .info span {
     display: block;
     width: 180px;
     text-align: center;
-    bottom: 14px;
+    bottom: 20px;
     left: 50%;
     margin-left: -90px;
-    position: absolute;
+    position: relative;
     transition: 0.3s;
 }
 .marker_info .info span, .marker_info2 .info span {
@@ -5319,6 +5322,7 @@ marker_info .info span, .marker_info2 .info span {
     text-align: center;
     display: block;
     padding: 0px 30px;
+    margin-top: 10px;
     font-size: 16px;
 }
 .marker_info .arrow, .marker_info2 .arrow {
