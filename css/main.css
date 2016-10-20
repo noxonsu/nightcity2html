@@ -1148,7 +1148,7 @@ html .b-promo__search {
 .b-promo {
     position: relative;
     background-size: cover;
-    min-height: 720px;
+    min-height: calc(100vh - 60px);
     background-attachment: fixed;
 }
 
@@ -1242,6 +1242,8 @@ html .b-promo__search {
 
 .b-promo__form__col1 {
     float: left;
+    height: 60px;
+    background: #fff;
     width: 28%;
 }
 
@@ -1297,8 +1299,8 @@ html .b-promo__search {
     position: relative;
     overflow: hidden;
 }
-.b-pop-place__img:before,
-.b-event__img:before{
+.b-pop-place__img a:before,
+.b-event__img .b-pop-place__img__img:before {
     position: absolute;
     content: '';
     transition: background 0.4s ease 0s;
@@ -1309,12 +1311,9 @@ html .b-promo__search {
     height: 100%;
     z-index: 111;
 }
-.b-pop-place__img:hover:before,
-.b-event__img:hover:before {
+.b-pop-place__img a:hover:before,
+.b-event__img .b-pop-place__img__img:hover:before {
     background: rgba(0, 0, 0, 0.35);
-}
-.b-pop-place__img:hover .b-pop-place__img__img {
-    transform: scale(1);
 }
 
 .b-pop-place__img__img {
@@ -1323,6 +1322,10 @@ html .b-promo__search {
     height: auto;
     display: block;
     transition: all 0.4s ease 0s;
+}
+.b-pop-place__img:hover .b-pop-place__img__img,
+.b-event__img:hover .b-pop-place__img__img {
+    transform: scale(1);
 }
 
 .b-icon-like {
@@ -3758,6 +3761,12 @@ html .btn--buy-ticket:hover {
     background: url("../img/src/upcoming-event-2.jpg");
 }
 
+.b-pop-place__img__img,
+.b-event__img {
+    position: relative;
+    display: block;
+}
+
 .b-place-list__pager {
     list-style-type: none;
     padding: 0;
@@ -3773,6 +3782,7 @@ html .btn--buy-ticket:hover {
 .b-place-list__pager li a {
     display: block;
     width: 40px;
+    border-radius: 50%;
     height: 40px;
     background: #fff;
     text-align: center;
@@ -3786,7 +3796,9 @@ html .btn--buy-ticket:hover {
 }
 
 .b-place-list__pager li.active a {
-    border-color: #555;
+    border-color: #fff;
+    color: white;
+    background: #de443a;
 }
 
 .b-slide-menu__pages-num {
@@ -4452,6 +4464,9 @@ html .btn--buy-ticket:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .b-promo {
+        min-height: 720px;
+    }
 	.b-event-counter .btn--buy-ticket {
 		margin-top:0;
 	}
@@ -5276,13 +5291,16 @@ pre {
     border: none;
     background: #ffffff;
 }
+.marker_info2 .info_img {
+    position: relative;
+}
 .marker_info2 .info h2 {
     text-align: center;
     padding: 17px 15px 18px;
     font-family: 'Roboto',sans-serif;
-    top: 170px;
     position: absolute;
     font-weight: 300;
+    bottom:50px;
     color: #fff;
     width: 100%;
 }

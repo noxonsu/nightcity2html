@@ -22,10 +22,11 @@
             /*   document.querySelector('header').className += " sticky";
              document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
              */
-            loadScript("http://city2.wpmix.net/wp-content/themes/nightcity/js/infobox.js", after_load);
+            loadScript('js/infobox.js', after_load);
         }
         function after_load() {
             initialize_new();
+            initialize_smallMap();
         }
         // jQuery(document).ready(function ($) {
         //  google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
@@ -116,7 +117,6 @@ window.addEventListener("scroll", lazyLoadImages);
         $('html').removeClass('no-js');
 
         initialize_map();
-
 
         jQuery('.b-hide-filters').on('click', function () {
             var filterBtn = jQuery('.b-hide-filters');
@@ -393,4 +393,5 @@ window.addEventListener("scroll", lazyLoadImages);
 
     });
 })(jQuery);
+
 

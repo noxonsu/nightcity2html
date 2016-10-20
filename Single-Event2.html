@@ -77,14 +77,14 @@
     </header>
 
         <div class="b-main-container" id="content">
-            <section class="b-pic b-pic--event b-parallax lazy" data-type="background" data-speed="3" data-src="img/event-bg.jpg">
+            <section class="b-pic b-pic--event b-parallax lazy" data-type="background" data-speed="3" data-src="img/rave.jpg">
                 <div class="b-placeholder"></div>
                 <div class="container b-pic-hgroup lazy-cont">
-                    <h1 class="b-pic__title">Big music festival</h1>
+                    <h1 class="b-pic__title">Rave</h1>
                     <h6 class="b-pic__sub-title">
-                        Festival
+                        Party
                         <span class="rating">
-                            <span>★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span>
+                            <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span>
                         </span>
                     </h6>
                 </div>
@@ -97,8 +97,8 @@
                     <div class="b-pic__event-time__date">09-13 May 2017</div>
                     <div class="b-pic__event-time__time">08:00 PM - 05:00 AM</div>
                 </div>
-                <a rel="prev" class="b-pic__arrow b-pic__arrow--left" href="Single-Event2.html"></a>
-                <a rel="next" class="b-pic__arrow b-pic__arrow--right" href="Single-Event2.html"></a>
+                <a rel="prev" class="b-pic__arrow b-pic__arrow--left" href="Single-Event.html"></a>
+                <a rel="next" class="b-pic__arrow b-pic__arrow--right" href="Single-Event.html"></a>
             </section>
 
             <div class="b-event-counter-container">
@@ -147,6 +147,12 @@
                                 <div class="b-map">
                                     <div class="b-map__wrapper">
                                         <div id="map_place" class="b-gmap-canvas"></div>
+                                        <div> <small>
+                                                    <a href="http://embedgooglemaps.com">embed google maps</a>
+                                                </small> </div>
+                                        <div> <small>
+                                                    <a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
+                                                </small> </div>
                                     </div>
                                     <div class="b-map__footer"><i class="fa fa-map-marker" aria-hidden="true"></i> 75 Wall st, New York, NY 10005</div>
                                 </div>
@@ -973,7 +979,6 @@
             <div id="gmap_canvas"></div>
                         <script>
                             main_js = function(){
-
                                 //****************************** Stick counter to top on the event page ******************************//
 
                                 if($('.b-event-counter').length > 0){
@@ -1061,11 +1066,11 @@
                                 });
 
                                 setTimeout(function(){
-                                    var header = $('.b-placeholder');
+                                    var header = $('.b-placeholder--fadeout');
                                     var range = 400;
 
                                     $(window).on('scroll', function () {
-                                        $('.b-placeholder').css("transition","none");
+                                        $('.b-placeholder--fadeout').css("transition","none");
                                         var scrollTop = $(this).scrollTop();
                                         var offset = header.offset().top;
                                         var height = header.outerHeight();
@@ -1151,8 +1156,11 @@
             </div><!--.b-footer__info-->
         </div><!--.b-footer-->
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
-        <script src="js/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+        </script>
         <script src="js/dropzone.js"></script>
         <script src="js/ion.rangeSlider.min.js"></script>
         <script src="js/jquery.popup.min.js"></script>
