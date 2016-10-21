@@ -118,18 +118,7 @@ window.addEventListener("scroll", lazyLoadImages);
 
         initialize_map();
 
-        jQuery('.b-hide-filters').on('click', function () {
-            var filterBtn = jQuery('.b-hide-filters');
-            var menuForm = jQuery('.b-slide-menu__form');
-            if (menuForm.hasClass('opened')) {
-                menuForm.removeClass('opened').addClass('closed');
-                filterBtn.text('Show filters');
-            } else if (menuForm.hasClass('closed')) {
-                menuForm.removeClass('closed').addClass('opened');
-                filterBtn.text('Hide filters');
-            }
-            jQuery('.b-slide-menu__form').slideToggle('medium');
-        });
+
 
         /*ajax subscribe*/
         jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {

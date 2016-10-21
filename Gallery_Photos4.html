@@ -10,8 +10,19 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/combined.css">
+	<script>
+	    if (window.XMLHttpRequest) {
+	      xhr = new XMLHttpRequest();    
+	    } else {
+	      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	    xhr.open("GET",'css/main.css',false);
+	    xhr.send();
+	    var lazyStyle = document.createElement('style');
+	    lazyStyle.innerHTML = xhr.responseText;
+	    document.head.appendChild(lazyStyle);
+
+	</script>
 	<!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
@@ -26,7 +37,7 @@
 	</div>
 	<header class="b-header clearfix">
 		<a href="index.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night City</span> </a>
-		<a class="weather" href="#"> <img width="35" height="35" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+		<a class="weather" href="#"> <img width="35" height="35" src="img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
 		<div class="b-header__ctrl">
 			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
 			<div class="b-header__ctrl__item">
@@ -115,6 +126,347 @@
 			<!-- #endregion Jssor Slider End -->
 		</div>
 		<!-- .container -->
+			<script>
+			main_js = function () {
+				jQuery(function () {
+		                    var jssor_1_SlideshowTransitions = [
+		                        {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: -0.3
+		                            , $SlideOut: true
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: -0.3
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , $SlideOut: true
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: 0.3
+		                            , $During: {
+		                                $Top: [0.3, 0.7]
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: -0.3
+		                            , $SlideOut: true
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: -0.3
+		                            , $During: {
+		                                $Top: [0.3, 0.7]
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: 0.3
+		                            , $SlideOut: true
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , $Cols: 2
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                            }
+		                            , $ChessMode: {
+		                                $Column: 3
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , $Cols: 2
+		                            , $SlideOut: true
+		                            , $ChessMode: {
+		                                $Column: 3
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: 0.3
+		                            , $Rows: 2
+		                            , $During: {
+		                                $Top: [0.3, 0.7]
+		                            }
+		                            , $ChessMode: {
+		                                $Row: 12
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: 0.3
+		                            , $Rows: 2
+		                            , $SlideOut: true
+		                            , $ChessMode: {
+		                                $Row: 12
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: 0.3
+		                            , $Cols: 2
+		                            , $During: {
+		                                $Top: [0.3, 0.7]
+		                            }
+		                            , $ChessMode: {
+		                                $Column: 12
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , y: -0.3
+		                            , $Cols: 2
+		                            , $SlideOut: true
+		                            , $ChessMode: {
+		                                $Column: 12
+		                            }
+		                            , $Easing: {
+		                                $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , $Rows: 2
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                            }
+		                            , $ChessMode: {
+		                                $Row: 3
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: -0.3
+		                            , $Rows: 2
+		                            , $SlideOut: true
+		                            , $ChessMode: {
+		                                $Row: 3
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , y: 0.3
+		                            , $Cols: 2
+		                            , $Rows: 2
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                                , $Top: [0.3, 0.7]
+		                            }
+		                            , $ChessMode: {
+		                                $Column: 3
+		                                , $Row: 12
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , x: 0.3
+		                            , y: 0.3
+		                            , $Cols: 2
+		                            , $Rows: 2
+		                            , $During: {
+		                                $Left: [0.3, 0.7]
+		                                , $Top: [0.3, 0.7]
+		                            }
+		                            , $SlideOut: true
+		                            , $ChessMode: {
+		                                $Column: 3
+		                                , $Row: 12
+		                            }
+		                            , $Easing: {
+		                                $Left: $Jease$.$InCubic
+		                                , $Top: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , $Delay: 20
+		                            , $Clip: 3
+		                            , $Assembly: 260
+		                            , $Easing: {
+		                                $Clip: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , $Delay: 20
+		                            , $Clip: 3
+		                            , $SlideOut: true
+		                            , $Assembly: 260
+		                            , $Easing: {
+		                                $Clip: $Jease$.$OutCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , $Delay: 20
+		                            , $Clip: 12
+		                            , $Assembly: 260
+		                            , $Easing: {
+		                                $Clip: $Jease$.$InCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        , {
+		                            $Duration: 1200
+		                            , $Delay: 20
+		                            , $Clip: 12
+		                            , $SlideOut: true
+		                            , $Assembly: 260
+		                            , $Easing: {
+		                                $Clip: $Jease$.$OutCubic
+		                                , $Opacity: $Jease$.$Linear
+		                            }
+		                            , $Opacity: 2
+		                        }
+		                        ];
+		                    var jssor_1_options = {
+		                        $AutoPlay: true
+		                        , $SlideshowOptions: {
+		                            $Class: $JssorSlideshowRunner$
+		                            , $Transitions: jssor_1_SlideshowTransitions
+		                            , $TransitionsOrder: 1
+		                        }
+		                        , $ArrowNavigatorOptions: {
+		                            $Class: $JssorArrowNavigator$
+		                        }
+		                        , $ThumbnailNavigatorOptions: {
+		                            $Class: $JssorThumbnailNavigator$
+		                            , $Cols: 6
+		                            , $SpacingX: 30
+		                            , $SpacingY: 30
+		                            , $Align: 360
+		                        }
+		                    };
+		                    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+		                    //responsive code begin
+		                    //you can remove responsive code if you don't want the slider scales while window resizing
+		                    function ScaleSlider() {
+		                        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+		                        if (refSize) {
+		                            refSize = Math.min(refSize, 800);
+		                            jssor_1_slider.$ScaleWidth(refSize);
+		                        }
+		                        else {
+		                            window.setTimeout(ScaleSlider, 30);
+		                        }
+		                    }
+		                    ScaleSlider();
+		                    $(window).bind("load", ScaleSlider);
+		                    $(window).bind("resize", ScaleSlider);
+		                    $(window).bind("orientationchange", ScaleSlider);
+		                    //responsive code end
+		                });
+				}
+			</script>
 	</div>
 	<!-- .b-main-container -->
 	<div class="b-footer">
@@ -179,362 +531,32 @@
 		<!--.b-footer__info-->
 	</div>
 	<!--.b-footer-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+		function addScript(src){
+		  	var script = document.createElement('script');
+		  		script.src = src;
+		  		script.async = false; // чтобы гарантировать порядок
+		  		document.body.appendChild(script);
+		}
+			addScript('js/jquery.min.js');
+			addScript('js/maps.js');
+			addScript('js/chosen.jquery.min.js');
+			addScript('js/dropzone.js');
+			addScript('js/ion.rangeSlider.min.js');
+			addScript('js/jquery.custom-scrollbar.js');
+			addScript('js/jquery.popup.min.js');
+			addScript('js/jssor.slider.mini.js');
+			addScript('js/lightcase.js');
+			addScript('js/imagesloaded.pkgd.min.js');
+			addScript('js/masonry.pkgd.min.js');
+			addScript('js/owl.carousel.js');
+			addScript('js/tabs.js');
+			addScript('js/tooltip.js');
+			addScript('js/compiled_lib.js');
+			addScript('js/custum.js');
+			addScript('js/main.js');
 	</script>
-	<script src="js/dropzone.js"></script>
-	<script src="js/ion.rangeSlider.min.js"></script>
-	<script src="js/jquery.custom-scrollbar.js"></script>
-	<script src="js/jquery.popup.min.js"></script>
-	<script src="js/jssor.slider.mini.js"></script>
-	<script src="js/lightcase.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/tabs.js"></script>
-	<script src="js/tooltip.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-		
-		jQuery(function () {
-                    var jssor_1_SlideshowTransitions = [
-                        {
-                            $Duration: 1200
-                            , x: 0.3
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: -0.3
-                            , $SlideOut: true
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: -0.3
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , $SlideOut: true
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: 0.3
-                            , $During: {
-                                $Top: [0.3, 0.7]
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: -0.3
-                            , $SlideOut: true
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: -0.3
-                            , $During: {
-                                $Top: [0.3, 0.7]
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: 0.3
-                            , $SlideOut: true
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , $Cols: 2
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                            }
-                            , $ChessMode: {
-                                $Column: 3
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , $Cols: 2
-                            , $SlideOut: true
-                            , $ChessMode: {
-                                $Column: 3
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: 0.3
-                            , $Rows: 2
-                            , $During: {
-                                $Top: [0.3, 0.7]
-                            }
-                            , $ChessMode: {
-                                $Row: 12
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: 0.3
-                            , $Rows: 2
-                            , $SlideOut: true
-                            , $ChessMode: {
-                                $Row: 12
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: 0.3
-                            , $Cols: 2
-                            , $During: {
-                                $Top: [0.3, 0.7]
-                            }
-                            , $ChessMode: {
-                                $Column: 12
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , y: -0.3
-                            , $Cols: 2
-                            , $SlideOut: true
-                            , $ChessMode: {
-                                $Column: 12
-                            }
-                            , $Easing: {
-                                $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , $Rows: 2
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                            }
-                            , $ChessMode: {
-                                $Row: 3
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: -0.3
-                            , $Rows: 2
-                            , $SlideOut: true
-                            , $ChessMode: {
-                                $Row: 3
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , y: 0.3
-                            , $Cols: 2
-                            , $Rows: 2
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                                , $Top: [0.3, 0.7]
-                            }
-                            , $ChessMode: {
-                                $Column: 3
-                                , $Row: 12
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , x: 0.3
-                            , y: 0.3
-                            , $Cols: 2
-                            , $Rows: 2
-                            , $During: {
-                                $Left: [0.3, 0.7]
-                                , $Top: [0.3, 0.7]
-                            }
-                            , $SlideOut: true
-                            , $ChessMode: {
-                                $Column: 3
-                                , $Row: 12
-                            }
-                            , $Easing: {
-                                $Left: $Jease$.$InCubic
-                                , $Top: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , $Delay: 20
-                            , $Clip: 3
-                            , $Assembly: 260
-                            , $Easing: {
-                                $Clip: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , $Delay: 20
-                            , $Clip: 3
-                            , $SlideOut: true
-                            , $Assembly: 260
-                            , $Easing: {
-                                $Clip: $Jease$.$OutCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , $Delay: 20
-                            , $Clip: 12
-                            , $Assembly: 260
-                            , $Easing: {
-                                $Clip: $Jease$.$InCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        , {
-                            $Duration: 1200
-                            , $Delay: 20
-                            , $Clip: 12
-                            , $SlideOut: true
-                            , $Assembly: 260
-                            , $Easing: {
-                                $Clip: $Jease$.$OutCubic
-                                , $Opacity: $Jease$.$Linear
-                            }
-                            , $Opacity: 2
-                        }
-                        ];
-                    var jssor_1_options = {
-                        $AutoPlay: true
-                        , $SlideshowOptions: {
-                            $Class: $JssorSlideshowRunner$
-                            , $Transitions: jssor_1_SlideshowTransitions
-                            , $TransitionsOrder: 1
-                        }
-                        , $ArrowNavigatorOptions: {
-                            $Class: $JssorArrowNavigator$
-                        }
-                        , $ThumbnailNavigatorOptions: {
-                            $Class: $JssorThumbnailNavigator$
-                            , $Cols: 6
-                            , $SpacingX: 30
-                            , $SpacingY: 30
-                            , $Align: 360
-                        }
-                    };
-                    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-                    //responsive code begin
-                    //you can remove responsive code if you don't want the slider scales while window resizing
-                    function ScaleSlider() {
-                        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                        if (refSize) {
-                            refSize = Math.min(refSize, 800);
-                            jssor_1_slider.$ScaleWidth(refSize);
-                        }
-                        else {
-                            window.setTimeout(ScaleSlider, 30);
-                        }
-                    }
-                    ScaleSlider();
-                    $(window).bind("load", ScaleSlider);
-                    $(window).bind("resize", ScaleSlider);
-                    $(window).bind("orientationchange", ScaleSlider);
-                    //responsive code end
-                });
 
-	</script>
 </body>
 
 </html>

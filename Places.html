@@ -11,9 +11,19 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="css/chosen.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/combined.css">
+	<script>
+	    if (window.XMLHttpRequest) {
+	      xhr = new XMLHttpRequest();    
+	    } else {
+	      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	    xhr.open("GET",'css/main.css',false);
+	    xhr.send();
+	    var lazyStyle = document.createElement('style');
+	    lazyStyle.innerHTML = xhr.responseText;
+	    document.head.appendChild(lazyStyle);
+
+	</script>
 	<!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
@@ -28,7 +38,7 @@
 	</div>
 	<header class="b-header clearfix">
 		<a href="index.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night City</span> </a>
-		<a class="weather" href="#"> <img width="35" height="35" src="http://city1.wpmix.net/wp-content/themes/mycity/img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+		<a class="weather" href="#"> <img width="35" height="35" src="img/icon/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
 		<div class="b-header__ctrl">
 			<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
 			<div class="b-header__ctrl__item">
@@ -191,10 +201,10 @@
 								<input type="text" placeholder="Enter location"> </div>
 						</div>
 						<div class="col-md-3">
-							<div class="b-checkbox">
-								<label>
-									<input type="checkbox"> Near me</label>
-							</div>
+						<div class="b-checkbox">
+								<input id="box1" type="checkbox">
+								<label for="box1">Near me</label>
+						</div>
 						</div>
 					</div>
 					<div class="b-slide-menu__form__row row">
@@ -216,10 +226,10 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a>
-								<a href="#" class="b-icon-medal"></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/rest.jpg" alt=""></a>
+								<a href="#" class="b-icon-medal"></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -232,10 +242,10 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="t2rue"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/s-bar.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="t2rue"></i></a>
 								<a href="#" class="b-icon-fire"></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -247,10 +257,10 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/bar.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<a href="#" class="b-icon-coins"></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -262,9 +272,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/cinema.jpeg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -276,9 +286,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-6.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -290,9 +300,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/latest-photo-1.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -304,9 +314,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-7.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -318,9 +328,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-8.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -332,9 +342,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/pop-place-1.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -346,9 +356,9 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/events111.jpg" alt=""></a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/pop-place-2.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
-									<div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
 								</div>
 							</div>
@@ -373,12 +383,6 @@
 		<div class="b-map">
 			<div class="b-map__wrapper">
 				<div id='gmap_canvas' class="b-gmap-canvas"></div>
-				<div> <small>
-                            <a href="http://embedgooglemaps.com">embed google maps</a>
-                        </small> </div>
-				<div> <small>
-                            <a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
-                        </small> </div>
 			</div>
 		</div>
 
@@ -393,6 +397,22 @@
 <script>
 
 	main_js = function () {
+
+
+			//b-hide-filters
+
+			$('.b-hide-filters').on('click', function () {
+			    var filterBtn = jQuery('.b-hide-filters');
+			    var menuForm = jQuery('.b-slide-menu__form');
+			    if (menuForm.hasClass('opened')) {
+			        menuForm.removeClass('opened').addClass('closed');
+			        filterBtn.text('Show filters');
+			    } else if (menuForm.hasClass('closed')) {
+			        menuForm.removeClass('closed').addClass('opened');
+			        filterBtn.text('Hide filters');
+			    }
+			    jQuery('.b-slide-menu__form').slideToggle('medium');
+			});
 
 			//chosen-select init
 
@@ -431,7 +451,7 @@
 
 			//tooltip init
 
-			tooltip();
+			// tooltip();
 
 			$(document).on( "click", ".jquery_popup", function() {
 			    setTimeout(function(){
@@ -525,26 +545,31 @@
 		<!--.b-footer__info-->
 	</div>
 	<!--.b-footer-->
-	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4' async defer></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
 	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+		function addScript(src){
+		  	var script = document.createElement('script');
+		  		script.src = src;
+		  		script.async = false; // чтобы гарантировать порядок
+		  		document.body.appendChild(script);
+		}
+			addScript('js/jquery.min.js');
+			addScript('js/maps.js');
+			addScript('js/chosen.jquery.min.js');
+			addScript('js/dropzone.js');
+			addScript('js/ion.rangeSlider.min.js');
+			addScript('js/jquery.custom-scrollbar.js');
+			addScript('js/jquery.popup.min.js');
+			addScript('js/jssor.slider.mini.js');
+			addScript('js/lightcase.js');
+			addScript('js/imagesloaded.pkgd.min.js');
+			addScript('js/masonry.pkgd.min.js');
+			addScript('js/owl.carousel.js');
+			addScript('js/tabs.js');
+			addScript('js/tooltip.js');
+			addScript('js/compiled_lib.js');
+			addScript('js/custum.js');
+			addScript('js/main.js');
 	</script>
-	<script src="js/dropzone.js"></script>
-	<script src="js/ion.rangeSlider.min.js"></script>
-	<script src="js/jquery.popup.min.js"></script>
-	<script src="js/jssor.slider.mini.js"></script>
-	<script src="js/lightcase.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/tabs.js"></script>
-	<script src="js/tooltip.js"></script>
-	<script src="js/compiled_lib.js"></script>
-	<script src="js/custum.js"></script>
-	<script src="js/jquery.custom-scrollbar.js"></script>
-	<script src="js/main.js"></script>
 
 </body>
 

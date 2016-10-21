@@ -430,7 +430,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/lincoln-square-steak-old-restaurant/',
+        url_point: '/places/lincoln-square-steak-old-restaurant/',
         moreinfo: 'More info'
     }, {
         name: 'Night club',
@@ -443,7 +443,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: 'http://city2.wpmix.net/places/night-club/',
+        url_point: '/places/night-club/',
         moreinfo: 'More info'
     }, {
         name: 'Snack bar',
@@ -456,7 +456,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/snack-bar/',
+        url_point: '/places/snack-bar/',
         moreinfo: 'More info'
     }, {
         name: 'bar',
@@ -469,7 +469,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/bar/',
+        url_point: '/places/bar/',
         moreinfo: 'More info'
     }],
     'cinema': [{
@@ -483,7 +483,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/cinema/',
+        url_point: '/places/cinema/',
         moreinfo: 'More info'
     }],
     'entertainments': [{
@@ -497,7 +497,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis ',
-        url_point: 'http://city2.wpmix.net/places/entertainments/',
+        url_point: '/places/entertainments/',
         moreinfo: 'More info'
     }],
     'hotels': [{
@@ -511,7 +511,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/hotels/',
+        url_point: '/places/hotels/',
         moreinfo: 'More info'
     }],
     'restaurant': [{
@@ -525,7 +525,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/spice-symphony/',
+        url_point: '/places/spice-symphony/',
         moreinfo: 'More info'
     }, {
         name: 'Club a steakhouse',
@@ -538,7 +538,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/club-a-steakhouse/',
+        url_point: '/places/club-a-steakhouse/',
         moreinfo: 'More info'
     }, {
         name: 'Lincoln square steak',
@@ -551,7 +551,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/lincoln-square-steak/',
+        url_point: '/places/lincoln-square-steak/',
         moreinfo: 'More info'
     }, {
         name: 'Restaurant',
@@ -564,7 +564,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: '',
-        url_point: 'http://city2.wpmix.net/places/test/',
+        url_point: '/places/test/',
         moreinfo: 'More info'
     }]
 };
