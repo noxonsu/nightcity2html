@@ -17,6 +17,7 @@
             t = document.getElementsByTagName('script')[0];
             t.parentNode.insertBefore(s, t);
         }
+
         function initialize_map() {
 
             /*   document.querySelector('header').className += " sticky";
@@ -26,7 +27,6 @@
         }
         function after_load() {
             initialize_new();
-            initialize_smallMap();
         }
         // jQuery(document).ready(function ($) {
         //  google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
