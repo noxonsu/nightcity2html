@@ -1451,14 +1451,18 @@ html .b-promo__search {
     height: 300px;
 }
 
-/*.b-place-cat__item .b-place-cat__item__img {
-    transition: all 0.4s ease 0s;
-    transform: scale(1.15);
+.b-place-cat__item .b-place-cat__item__img {
+    transition: all 0.7s ease 0s;
+/*    transform: scale(1.15);*/
 }
 
 .b-place-cat__item:hover .b-place-cat__item__img {
-    transform: scale(1.01);
-}*/
+    transform: scale(1.05);
+}
+
+.b-place-cat__item:hover .b-place-cat__item__img:before {
+   background: rgba(0,0,0,0.45);
+}
 
 .b-place-cat__item:hover i {
     color: #fff;
@@ -1489,6 +1493,7 @@ html .b-promo__search {
     position: absolute;
     content:'';
     left:0;
+    transition: all 0.7s ease 0s;
     top:0;
     z-index: 22;
     width: 100%;
@@ -11738,14 +11743,11 @@ button.close {
 }
 
 .tooltip {
-    position: absolute;
     z-index: 1070;
-    display: block;
     font-size: 12px;
-    text-align: left;
-    text-align: start;
     filter: alpha(opacity=0);
-    opacity: 0
+    opacity: 0;
+    position:absolute;
 }
 
 .tooltip.in {
@@ -11774,7 +11776,6 @@ button.close {
 }
 
 .tooltip-inner {
-    min-width: 150px;
     padding: 3px 8px;
     color: #fff;
     text-align: center;
