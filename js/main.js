@@ -32,6 +32,7 @@
         //  google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
         // });
 
+
 //**************************************** Parallax script ****************************************** //
 
 
@@ -110,13 +111,20 @@ window.addEventListener("scroll", lazyLoadImages);
     $(document).ready(function () {
         'use strict';
 
+        // $(document).mousemove(function(){
+            
+        // });
+        jQuery(document).one('mousemove','body', function(){
+            $('.home').prepend('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script><script scr="js/custom.js"></script>');
+        });
+
         $('.jquery_popup').popup({
             content: $('.b-jquery-popup')
         });
 
         $('html').removeClass('no-js');
 
-        initialize_map();
+        
 
 
 
