@@ -12,16 +12,22 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<script>
-    if (window.XMLHttpRequest) {
-      xhr = new XMLHttpRequest();    
-    } else {
-      xhr = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xhr.open("GET",'css/main.css',false);
-    xhr.send();
-    var lazyStyle = document.createElement('style');
-    lazyStyle.innerHTML = xhr.responseText;
-    document.head.appendChild(lazyStyle);
+	
+		String.prototype.replaceAll = function(search, replacement) {
+		  var target = this;
+		  return target.split(search).join(replacement);
+		 };
+
+	    if (window.XMLHttpRequest) {
+	      xhr = new XMLHttpRequest();    
+	    } else {
+	      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	    xhr.open("GET",'css/main.css',false);
+	    xhr.send();
+	    var lazyStyle = document.createElement('style');
+	    lazyStyle.innerHTML = xhr.responseText.replaceAll('../','./');
+	    document.head.appendChild(lazyStyle);
 
     </script>
     <!-- <link rel="stylesheet" href="css/main.css"> -->
