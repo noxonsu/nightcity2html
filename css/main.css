@@ -3322,7 +3322,7 @@ html .btn--buy-ticket:hover {
     content: "\f0dd";
     color: #a5a5a5;
     /* top: 50%; */
-    height: 25px;
+    height: 28px;
     /* transform: translateY(-50%); */
     /* position: relative; */
     /* position: absolute; */
@@ -3334,6 +3334,9 @@ html .btn--buy-ticket:hover {
     content: "\f0de";
     top:24px;
     position: absolute;
+}
+.b-slide-menu__form .chosen-container-active.chosen-with-drop .chosen-single div b:before {
+    top:20px;
 }
 .b-promo__search .chosen-container-single .chosen-single div b,
 .popup .chosen-container-single .chosen-single div b{
