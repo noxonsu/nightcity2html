@@ -558,7 +558,7 @@ var mapObject, markers = [], markersData = {
         location_latitude: '51.52786042287008',
         location_longitude: '-0.16895703046884591',
         map_image_url: 'img/src/rest.jpg',
-        name_point: 'Test',
+        name_point: 'TESTSTEP',
         fa_icon: 'img/map/marker-1.png',
         km: '',
         time: '',
@@ -566,7 +566,24 @@ var mapObject, markers = [], markersData = {
         description_point: '',
         url_point: '/places/test/',
         moreinfo: 'More info'
-    }]
+    },
+
+    {
+            name: 'Theatre',
+            location_latitude: '51.52786042287008',
+            location_longitude: '-0.17895703046884591',
+            map_image_url: 'https://upload.wikimedia.org/wikipedia/commons/8/89/The_Main_House_Theatre,_The_Maltings_Theatre_%26_Arts_Centre,_Berwick-upon-Tweed,_March_2009.jpg',
+            name_point: 'Theatre',
+            fa_icon: 'img/map/marker-1.png',
+            km: '',
+            time: '',
+            fetaturesicon: '',
+            description_point: '',
+            url_point: '/places/test/',
+            moreinfo: 'More info'
+        },
+
+    ]
 };
 function getCurrentLocation(callback) {
     if (!MyCity_map_init_obj.geolocation == false) {
