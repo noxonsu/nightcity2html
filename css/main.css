@@ -1332,13 +1332,16 @@ html .b-promo__search {
     overflow: hidden;
 }
 .b-pop-place__img > a:first-child:before,
-.b-event__img > .b-pop-place__img__img:before {
+.b-event__img > .b-pop-place__img__img:before,
+.b-event__img > a:first-child:before,
+.b-album > a:first-child:before,
+.b-sm-post__img-cont:before{
     position: absolute;
     content: '';
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease 0s;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.15);
     width: 100%;
     height: 100%;
     z-index: 111;
@@ -1353,7 +1356,7 @@ html .b-promo__search {
     width: 100%;
     height: auto;
     display: block;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease 0s;
 }
 .b-pop-place__img:hover .b-pop-place__img__img,
 .b-event__img:hover .b-pop-place__img__img {
@@ -1460,7 +1463,7 @@ html .b-promo__search {
 }
 
 .b-place-cat__item .b-place-cat__item__img {
-    transition: all 0.7s ease 0s;
+    transition: all 0.4s ease 0s;
 /*    transform: scale(1.15);*/
 }
 
@@ -1541,7 +1544,7 @@ html .b-promo__search {
 }
 
 .b-event__img:hover .b-event__img__img {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-event__img__img {
@@ -1607,7 +1610,7 @@ html .b-promo__search {
 }
 
 .b-album:hover .b-album__img {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-album__img {
@@ -1621,6 +1624,7 @@ html .b-promo__search {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 11111;
 }
 
 .b-album__links {
@@ -1736,7 +1740,7 @@ html .b-promo__search {
 }
 
 .b-price-card:hover .b-price-card__img__img {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-price-card__img {
@@ -1985,7 +1989,7 @@ html .b-promo__search {
 }
 
 .b-sm-post__img-cont:hover img {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-sm-post__img-cont img {
@@ -2026,6 +2030,7 @@ html .b-promo__search {
     overflow: hidden;
     color: #fff;
     font-size: 25px;
+    z-index: 11111;
     font-weight: 300;
 }
 
@@ -2035,6 +2040,7 @@ html .b-promo__search {
     height: 90px;
     bottom: 0;
     left: 0;
+    z-index: 11111;
     background: url("../img/b-sm-post--bg.png") center bottom repeat-x;
     padding-top: 55px;
     padding-left: 15px;
@@ -2542,7 +2548,7 @@ html .b-gadget__subscribe__field {
 
 .b-photo:hover img {
     cursor: pointer;
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-showcase {
@@ -2955,7 +2961,7 @@ html .btn--buy-ticket:hover {
 }
 
 .b-speaker__img:hover img {
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .b-speaker__img:hover .b-speaker__img__social {
