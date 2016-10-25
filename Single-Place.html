@@ -525,6 +525,8 @@
 		<script>
 			main_js = function () {
 
+				$('.b-slider').addClass('visible');
+
 
 				var mapOptions_place = {
 				    scrollwheel: true,
@@ -635,6 +637,20 @@
 				});
 				$('#example1').lightcase({
 					transition: 'none'
+				});
+
+				$('.google_view').click(function () {
+				    $('.google_view iframe').css("pointer-events", "auto");
+				});
+				$(window).scroll(function(){
+				    $('.google_view iframe').css("pointer-events", "none");
+				});
+
+				$('.b-map__wrapper').click(function () {
+				    $('#map_place').css("pointer-events", "auto");
+				});
+				$(window).scroll(function(){
+				    $('#map_place').css("pointer-events", "none");
 				});
 				
 				tooltip();

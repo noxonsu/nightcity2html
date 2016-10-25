@@ -1335,7 +1335,8 @@ html .b-promo__search {
 .b-event__img > .b-pop-place__img__img:before,
 .b-event__img > a:first-child:before,
 .b-album > a:first-child:before,
-.b-sm-post__img-cont:before{
+.b-sm-post__img-cont:before,
+.b-event__img:before{
     position: absolute;
     content: '';
     transition: all 0.4s ease 0s;
@@ -1431,11 +1432,11 @@ html .b-promo__search {
 .b-slider {
     margin-bottom: 60px;
 }
-.home .b-slider{
+.b-slider{
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-.home .b-slider.visible {
+.b-slider.visible {
     opacity: 1;
 }
 .b-place-cat {
@@ -5499,6 +5500,12 @@ pre {
     position: absolute;
     top: 190px !important;
     width: 0;
+}
+.marker_info .arrow, .marker_info2 .arrow{
+    margin-top: 0!important;
+    top: 50%!important;
+    position: absolute;
+    transform: translateY(-50%);
 }
 .marker_info_popup {
     position: absolute;
