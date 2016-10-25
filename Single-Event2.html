@@ -76,7 +76,8 @@
 
         <div class="b-main-container" id="content">
             <section class="b-pic b-pic--event b-parallax lazy" data-type="background" data-speed="1" data-src="img/rave.jpg">
-                <div class="b-placeholder" style="background: url(img/base64-2.jpeg) no-repeat center top; background-size: cover;"></div>
+                <img class="b-placeholder" src="img/base64-2.jpeg" alt="">
+                <!-- <div class="b-placeholder" data-img="img/base64-2.jpeg" style="background: url(img/base64-2.jpeg) no-repeat center top; background-size: cover;"></div> -->
                 <div class="container b-pic-hgroup lazy-cont">
                     <h1 class="b-pic__title">Synthwave</h1>
                     <h6 class="b-pic__sub-title">
@@ -111,10 +112,12 @@
                                 <span class="b-event-counter__title">Time left to event:</span>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="b-event-counter__item"><b>135</b>Days</div>
-                                <div class="b-event-counter__item"><b>105</b>Hours</div>
-                                <div class="b-event-counter__item"><b>12</b>Minutes</div>
-                                <div class="b-event-counter__item"><b>1343</b>Seconds</div>
+                                <div id="timer"> 
+                                    <div class="b-event-counter__item"><span class="time"></span>days</div>
+                                    <div class="b-event-counter__item"><span class="time"></span>hours</div>
+                                    <div class="b-event-counter__item"><span class="time"></span>minutes</div>
+                                    <div class="b-event-counter__item"><span class="time"></span>seconds</div>
+                                </div>
                             </div>
                             <div class="col-md-3 col-sm-2 col-xs-4 col-xs-offset-4 col-md-offset-0 col-sm-offset-0">
                                 <a href="#" class="btn btn--buy-ticket">Buy tickets</a>
@@ -163,7 +166,7 @@
                 </div>
             </div><!-- b-desc -->
 
-            <div class="lazy b-parallax" data-type="background" data-speed="7" data-src="img/src/banner-6.jpg">
+            <div class="b-mini-promo lazy b-parallax" data-type="background" data-speed="7" data-src="img/src/banner-6.jpg">
                 
                 <div class="container">
                     <div class="row">
@@ -976,6 +979,44 @@
                         <script>
                             main_js = function(){
 
+
+                                // var res = jQuery('.b-placeholder').attr('data-img');
+                                // jQuery('.b-placeholder').hide();
+                                // var pic = new Image();
+                                // pic.src = res; //
+                                // jQuery(pic).load(function () {
+                                //     jQuery('.b-placeholder').css('background-image', 'url(' + res + ')');
+                                //     setTimeout(function () {
+                                //         jQuery(".body_opacity").addClass('fade_op');
+                                //     }, 100);
+
+                                //     jQuery('.b-placeholder').addClass('fade-hero');
+                                // });
+
+
+                                //timer
+
+                                var s = document.getElementsByClassName('time');
+                                var oneDay = 24 * 60 * 60 * 1000;
+                                var firstDate = new Date("Nov 2, 2016 11:14:00");var secondDate = new Date();
+                                var days = 135;
+                                var hrs = (days - Math.floor(days)) * 24;
+                                var min = (hrs - Math.floor(hrs)) * 60;
+                                s[0].innerHTML = Math.floor(days);
+                                s[1].innerHTML = Math.floor(hrs);
+                                s[2].innerHTML = Math.floor(min);
+                                s[3].innerHTML = Math.floor((min - Math.floor(min)) * 60);
+                                var i = setInterval(function() {n()}, 1000)
+                                function f(d, x) {s[d].innerHTML = x;s[d - 1].innerHTML = Number(s[d - 1].innerHTML) - 1;}
+                                function n() {s[3].innerHTML = Number(s[3].innerHTML) - 1;
+                                if (s[3].innerHTML == -1) {f(3, 59)
+                                if (s[2].innerHTML == -1) {f(2, 59)
+                                if (s[1].innerHTML == -1) {f(1, 23)
+                                }}}if(s[0].innerHTML <= -1) {clearInterval(i);document.getElementsById('timer')[0].innerHTML='<h2>The event is over.</h2>'}}
+
+                                //map init
+
+
                                 var mapOptions_place = {
                                     scrollwheel: true,
                                     zoom: 14,
@@ -1125,6 +1166,13 @@
                                 });
                                 $(window).scroll(function(){
                                     $('.google_view iframe').css("pointer-events", "none");
+                                });
+
+                                $('.b-map__wrapper').click(function () {
+                                    $('#map_place').css("pointer-events", "auto");
+                                });
+                                $(window).scroll(function(){
+                                    $('#map_place').css("pointer-events", "none");
                                 });
 
                                 $(document).on( "click", ".jquery_popup", function() {

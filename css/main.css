@@ -1427,6 +1427,13 @@ html .b-promo__search {
 .b-slider {
     margin-bottom: 60px;
 }
+.home .b-slider{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.home .b-slider.visible {
+    opacity: 1;
+}
 .b-place-cat {
     width: 100%;
 }
@@ -2779,7 +2786,7 @@ html .b-gadget__subscribe__field {
     width: 24%;
 }
 
-.b-event-counter__item b {
+.b-event-counter__item span {
     display: block;
     font: bold 24px Philosopher;
     color: #fff;
@@ -5573,6 +5580,9 @@ ul.gp_content {
 .google_view iframe {
     width: 100%;
     border:none;
+    pointer-events: none;
+}
+#map_place {
     pointer-events: none;
 }
 
