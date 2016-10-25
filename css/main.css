@@ -781,6 +781,7 @@ html .m--border-radius-right {
 }
 
 .b-main-container {
+    background-color: transparent;
     width: 100%;
     overflow-x: hidden;
 }
