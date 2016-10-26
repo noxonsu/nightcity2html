@@ -29,6 +29,7 @@ function i(a, b, c) {
     this.D = this.b.getZoom();
     var e = this;
     google.maps.event.addListener(this.b, "zoom_changed", function() {
+        // alert('1');
         var g = e.b.mapTypes[e.b.getMapTypeId()].maxZoom
           , k = e.b.getZoom();
         if (!(k < 0 || k > g))
@@ -429,7 +430,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/lincoln-square-steak-old-restaurant/',
         moreinfo: 'More info'
     }, {
@@ -455,7 +456,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/snack-bar/',
         moreinfo: 'More info'
     }, {
@@ -468,7 +469,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/bar/',
         moreinfo: 'More info'
     }],
@@ -482,7 +483,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/cinema/',
         moreinfo: 'More info'
     }],
@@ -496,7 +497,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: 'Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis ',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/entertainments/',
         moreinfo: 'More info'
     }],
@@ -510,7 +511,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/hotels/',
         moreinfo: 'More info'
     }],
@@ -524,7 +525,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/spice-symphony/',
         moreinfo: 'More info'
     }, {
@@ -537,7 +538,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/club-a-steakhouse/',
         moreinfo: 'More info'
     }, {
@@ -550,7 +551,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/lincoln-square-steak/',
         moreinfo: 'More info'
     }, {
@@ -563,7 +564,7 @@ var mapObject, markers = [], markersData = {
         km: '',
         time: '',
         fetaturesicon: '',
-        description_point: '',
+        description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
         url_point: '/places/test/',
         moreinfo: 'More info'
     },
@@ -578,7 +579,7 @@ var mapObject, markers = [], markersData = {
             km: '',
             time: '',
             fetaturesicon: '',
-            description_point: '',
+            description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
             url_point: '/places/test/',
             moreinfo: 'More info'
         },
@@ -656,6 +657,9 @@ function initialize_new() {
                 closeInfoBox();
                 getInfoBoxBigImage(item).open(mapObject, this);
                 var lng1 = new google.maps.LatLng(item.location_latitude,item.location_longitude);
+                if ($('.b-slide-menu').hasClass('opened')) {
+                    lng1 = new google.maps.LatLng(item.location_latitude,item.location_longitude-0.04);
+                }
                 mapObject.setCenter(lng1);
             }));
         });

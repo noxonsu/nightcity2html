@@ -4105,7 +4105,6 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
     max-width:none!important;background:none!important
 }
 #gmap_canvas .marker_info2 .info img {
-    height: auto;
     max-width: 100%;
     position: relative;
 }
@@ -5370,9 +5369,8 @@ pre {
 
 .marker_info .info, .marker_info2 .info {
     width: 300px;
-    height: auto;
+    height: 450px;
     border-radius: 5px;
-
     position: relative;
     z-index: 9999999;
 }
@@ -5421,19 +5419,10 @@ pre {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.87);
     line-height: 17px;
 }
-.marker_info .info img, .marker_info2 .info img {
-    display: block;
-    border-radius: 0;
-    width: 300px;
-    height: 190px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    background: #ffffff;
-}
 .marker_info2 .info_img {
     position: relative;
+    height: 300px;
+    overflow:hidden;
 }
 .marker_info2 .info h2 {
     text-align: center;
@@ -5452,6 +5441,7 @@ pre {
     color: #615858;
     line-height: 22px;
     position: relative;
+    max-height: 90px;
     overflow: hidden;
     text-align: center;
     display: block;
@@ -5468,10 +5458,10 @@ pre {
     display: block;
     width: 180px;
     text-align: center;
-    bottom: 20px;
+    bottom: 15px;
     left: 50%;
     margin-left: -90px;
-    position: relative;
+    position: absolute;
     transition: 0.3s;
 }
 .marker_info .info span, .marker_info2 .info span {
@@ -5503,9 +5493,9 @@ pre {
 }
 .marker_info .arrow, .marker_info2 .arrow{
     margin-top: 0!important;
-    top: 50%!important;
+    top: 37%!important;
     position: absolute;
-    transform: translateY(-50%);
+/*    transform: translateY(-50%);*/
 }
 .marker_info_popup {
     position: absolute;
@@ -5513,7 +5503,9 @@ pre {
     height: 190px;
     top: 0;
 }
-
+/*.infoBox {
+    top:0!important;
+}*/
 .infoBox .fa-star {
     color: rgba(255, 210, 0, 0.84);
 }
