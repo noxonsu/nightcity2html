@@ -29,7 +29,6 @@ function i(a, b, c) {
     this.D = this.b.getZoom();
     var e = this;
     google.maps.event.addListener(this.b, "zoom_changed", function() {
-        // alert('1');
         var g = e.b.mapTypes[e.b.getMapTypeId()].maxZoom
           , k = e.b.getZoom();
         if (!(k < 0 || k > g))
@@ -542,11 +541,11 @@ var mapObject, markers = [], markersData = {
         url_point: '/places/club-a-steakhouse/',
         moreinfo: 'More info'
     }, {
-        name: 'Lincoln square steak',
+        name: 'Lincoln square',
         location_latitude: '51.51589765689595',
         location_longitude: '-0.13050488203134591',
         map_image_url: 'img/src/pop-place-1.jpg',
-        name_point: 'Lincoln square steak',
+        name_point: 'Lincoln square',
         fa_icon: 'img/map/marker-1.png',
         km: '',
         time: '',
@@ -607,7 +606,7 @@ function initialize_new() {
     var mapOptions2 = {
         zoom: parseInt(MyCity_map_init_obj.zum),
         minZoom: 3,
-        center: new google.maps.LatLng(parseFloat(MyCity_map_init_obj.lat),parseFloat(MyCity_map_init_obj.longu)),
+        center: new google.maps.LatLng(parseFloat(MyCity_map_init_obj.lat -  -0.01),parseFloat(MyCity_map_init_obj.longu - 0.06)),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
         mapTypeControlOptions: {
@@ -640,6 +639,7 @@ function initialize_new() {
         closeInfoBox();
     });
     var markerCluster;
+
     for (var key in markersData) {
         markers[key] = [];
         markersData[key].forEach(function(item) {
@@ -660,10 +660,14 @@ function initialize_new() {
                 if ($('.b-slide-menu').hasClass('opened')) {
                     lng1 = new google.maps.LatLng(item.location_latitude,item.location_longitude-0.04);
                 }
+                if(mapObject.zoom > 13) {
+                    lng1 = new google.maps.LatLng(item.location_latitude,item.location_longitude);
+                }
                 mapObject.setCenter(lng1);
             }));
         });
     }
+
     if (MyCity_map_init_obj.geolocation == false) {
         // if (navigator.geolocation) {
         //     navigator.geolocation.getCurrentPosition(function(position) {

@@ -3805,6 +3805,11 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
     /*column-gap: 10px;*/
     /*column-width: 300px;*/
     padding: 0 20px 15px 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.b-place-list.visible {
+    opacity: 1;
 }
 
 .b-place-list.opened {
