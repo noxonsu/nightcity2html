@@ -33,6 +33,8 @@
         // });
 
 
+
+
 //**************************************** Parallax script ****************************************** //
 
 
@@ -97,9 +99,6 @@ function buttonUp() {
     }
 }
 
-
-
-
 //****************************** Lazy load ******************************//
 window.addEventListener("DOMContentLoaded", lazyLoadImages);
 window.addEventListener("load", lazyLoadImages);
@@ -111,10 +110,7 @@ window.addEventListener("scroll", lazyLoadImages);
     $(document).ready(function () {
         'use strict';
 
-        // $(document).mousemove(function(){
-            
-        // });
-        jQuery(document).one('mousemove','body', function(){
+        jQuery(document).one('mousemove', 'body', function(){
             $('.home').prepend('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script><script scr="js/custom.js"></script>');
         });
 
@@ -124,12 +120,8 @@ window.addEventListener("scroll", lazyLoadImages);
 
         $('html').removeClass('no-js');
 
-        
-
-
-
         /*ajax subscribe*/
-        jQuery(document).on("click", '.b-gadget__subscribe__button ', function (e) {
+        jQuery(document).on("click", '.b-gadget__subscribe__button', function (e) {
             e.preventDefault();
             var email = jQuery(".b-gadget__subscribe__field");
             email.removeClass('error');
@@ -198,47 +190,47 @@ window.addEventListener("scroll", lazyLoadImages);
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-            $('a:not(.noajax):not(.ab-item):not(.chosen-single)').unbind( "click" );
-            $('a:not(.noajax):not(.ab-item):not(.chosen-single)').click(function () {
-                var $linkClicked = $(this).attr('href');
-                console.log($linkClicked);
-                //$("body").css('opacity',"0.5");
-                $('.b-preloader').show();
-                $.get($linkClicked, function (d) { 
-                    var response = new Object();
-                    response.html = $('<div>').html(d);
-                    $("#content").html($(response.html).find('#content').html());
-                    if ($("div").is(".b-map-menu")) {
-                        $(".b-footer").hide(0);
-                    } else {
-                        $(".b-footer").show(0);
-                    }
-                    document.title = $(response.html).find('title').html();
-                    window.history.pushState({
-                        "html": $(response.html).find('html').html(),
-                        "pageTitle": response.pageTitle
-                    }, "", $linkClicked);
-                    lazyLoadImages();
-                    ajax_init();
-                    main_js();
-                    initialize_new();
-                    window.scrollTo(0, 0);
-                    $('.b-preloader').hide();
-                    //$("body").css('opacity',"1");
-                });
-            return false;
+            // $('a:not(.noajax):not(.ab-item):not(.chosen-single)').unbind( "click" );
+            $(document).on('click' , 'a:not(.noajax):not(.ab-item):not(.chosen-single)', function(){
+                    var $linkClicked = $(this).attr('href');
+                    console.log($linkClicked);
+                    //$("body").css('opacity',"0.5");
+                    $('.b-preloader').show();
+                    $.get($linkClicked, function (d) { 
+                        var response = new Object();
+                        response.html = $('<div>').html(d);
+                        $("#content").html($(response.html).find('#content').html());
+                        if ($("div").is(".b-map-menu")) {
+                            $(".b-footer").hide(0);
+                        } else {
+                            $(".b-footer").show(0);
+                        }
+                        document.title = $(response.html).find('title').html();
+                        window.history.pushState({
+                            "html": $(response.html).find('html').html(),
+                            "pageTitle": response.pageTitle
+                        }, "", $linkClicked);
+                        lazyLoadImages();
+                        ajax_init();
+                        main_js();
+                        // clearInterval(i);
+                        initialize_new();
+                        window.scrollTo(0, 0);
+                        $('.b-preloader').hide();
+                        //$("body").css('opacity',"1");
+                    });
+                return false;
             });
         }
         
         ajax_init();
 
-
-
         var submitIcon = $('.searchbox-icon');
         var inputBox = $('.searchbox-input');
         var searchBox = $('.searchbox');
         var isOpen = false;
-        submitIcon.click(function () {
+
+        jQuery(document).on("click",'.searchbox-icon', function (e) {
             if (isOpen == false) {
                 searchBox.addClass('searchbox-open');
                 inputBox.focus();
@@ -249,17 +241,17 @@ window.addEventListener("scroll", lazyLoadImages);
                 isOpen = false;
             }
         });
-        submitIcon.mouseup(function () {
+
+        jQuery(document).on("mouseup", submitIcon , function () {
             return false;
         });
-        searchBox.mouseup(function () {
+
+        jQuery(document).on("mouseup", searchBox , function () {
             return false;
         });
-        $(document).mouseup(function () {
-            if (isOpen == true) {
-                $('.searchbox-icon').css('display', 'block');
-                submitIcon.click();
-            }
+
+        jQuery(document).on("mouseup", searchBox , function () {
+            return false;
         });
 
         if($(window).width() > 992) {
@@ -269,12 +261,7 @@ window.addEventListener("scroll", lazyLoadImages);
             });
         }
 
-
-
-
-
-
-        $('.b-nav-toggle').on('click', function () {
+        jQuery(document).on("click", '.b-nav-toggle' , function (e) {
             var bNav = $('.b-nav');
             var iconToggle = $(this).find('.fa');
             if ($(this).hasClass('closed')) {
@@ -286,107 +273,23 @@ window.addEventListener("scroll", lazyLoadImages);
                 $(this).removeClass('opened').addClass('closed');
                 iconToggle.removeClass('fa-chevron-up').addClass('fa-chevron-down');
             }
-        });
+        })
 
         $('.b-nav>ul>li.menu-item-has-children>a').append('<i class="fa fa-angle-down"></i>');
 
-        $('.b-view-btn__grid').on('click', function(){
+        jQuery(document).on('click', '.b-view-btn__grid' , function (e) { 
             $('.b-place-list--list').removeClass('opened').addClass('closed');
             $('.b-place-list--grid').removeClass('closed').addClass('opened');
             $(window).trigger('resize');
         });
-        $('.b-view-btn__list').on('click', function(){
+
+        jQuery(document).on('click', '.b-view-btn__list' , function (e) { 
             $('.b-place-list--grid').removeClass('opened').addClass('closed');
             $('.b-place-list--list').removeClass('closed').addClass('opened');
             $(window).trigger('resize');
         });
 
         main_js(jQuery);
-
-        // //****************************** Sly plugin activate ******************************//
-        // function customScrollInit(){
-        //     var $frame = $('.custom-scroll');
-        //     var $wrap  = $frame.parent();
-        //
-        //     // Call Sly on frame
-        //     $frame.sly({
-        //         speed: 300,
-        //         easing: 'easeOutExpo',
-        //         scrollBar: $wrap.find('.scrollbar'),
-        //         scrollBy: 50,
-        //         dragHandle: 1,
-        //         dynamicHandle: 1
-        //     });
-        // }
-
-
-        /*
-        function init_map() {
-            var myOptions = {
-                zoom: 10,
-                center: new google.maps.LatLng(51.5073509, -0.12775829999998223),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-            marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(51.5073509, -0.12775829999998223)});
-            infowindow = new google.maps.InfoWindow({content: '<strong>Title</strong><br>London, United Kingdom<br>'});
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
-            infowindow.open(map, marker);
-        }
-        google.maps.event.addDomListener(window, 'load', init_map);
-        */
-
-
-        // var hash = window.location.hash.substr(1);
-        // var href = $('a').each(function(){
-        //     var href = $(this).attr('href');
-        //     if(hash==href.substr(0,href.length-5)){
-        //         var toLoad = hash+'.html #content';
-        //         $('#content').load(toLoad)
-        //     }
-        // });
-
-        // $('a').click(function(){
-        //     var toLoad = $(this).attr('href')+' #content';
-        //     $('#content').hide(0,loadContent);
-        //     window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
-        //     function loadContent() {
-        //         $('#content').load(toLoad,'',showNewContent())
-        //     }
-        //     function showNewContent() {
-        //         $('#content').show(0);
-        //     }
-        //     return false;
-        // });
-        //
-
-
-        //****************************** determine and set the window height to the home page promo ******************************//
-        // $(function(){
-        //     var windowHeight = $(window).height();
-        //     var topMenu = $('.b-header').height();
-        //     var promoHeight = windowHeight-topMenu;
-        //     $('.b-promo').css({
-        //         height: promoHeight
-        //     })
-        // })
-
-
-        //****************************** Preloader script ******************************//
-        // var hellopreloader = document.getElementById("hellopreloader_preload");
-        // function fadeOutnojquery(el){el.style.opacity = 1;
-        //     var interhellopreloader = setInterval(function(){
-        //         el.style.opacity = el.style.opacity - 0.05;
-        //         if (el.style.opacity <=0.05){
-        //             clearInterval(interhellopreloader);
-        //             hellopreloader.style.display = "none";
-        //         }},16);
-        // }
-        // window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};
-
-
 
     });
 })(jQuery);

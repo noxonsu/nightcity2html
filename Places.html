@@ -18,13 +18,6 @@
 </head>
 
 <body>
-<!-- HelloPreload http://hello-site.ru/preloader/ -->
-<!-- HelloPreload http://hello-site.ru/preloader/ -->
-<style type="text/css">#hellopreloader>p{
-	display:none;}#hellopreloader_preload{display: block;position: absolute;z-index: 2;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #0f0f11 url(http://hello-site.ru//main/images/preloads/bars.svg) 70% 50% no-repeat;background-size:41px;}</style>
-<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script>
-<!-- HelloPreload http://hello-site.ru/preloader/ -->
 	<!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -87,6 +80,7 @@
 
 
 	<div class="b-main-container places-page" id="content">
+	<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
 	<div class="hidden b-jquery-popup">
 	    <div class="b-form-reg-popup">
 	        <h2 class="b-form-reg-popup__title m--centered">Register Now</h2>
@@ -267,7 +261,7 @@
 					<div class="b-grid-item b-grid-item--masonryPl">
 						<div class="b-pop-place">
 							<div class="b-pop-place__img">
-								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/cinema.jpeg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+								<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/cinema.jpg" alt=""></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
 								<div class="b-pop-place__links">
 									<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
 									<div class="press--right">$100 - $150</div>
@@ -389,29 +383,31 @@
 			<li><a href="#">3</a></li>
 			<li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
 		</ul>
+
 <script>
 
 	main_js = function () {
+
 
 			initialize_map();
 
 			setTimeout(function(){
 				$('.b-place-list').addClass('visible');
-			},1000);
+			},500);
 
 			//b-hide-filters
 
-			$('.b-hide-filters').on('click', function () {
-			    var filterBtn = jQuery('.b-hide-filters');
-			    var menuForm = jQuery('.b-slide-menu__form');
-			    if (menuForm.hasClass('opened')) {
-			        menuForm.removeClass('opened').addClass('closed');
-			        filterBtn.text('Show filters');
-			    } else if (menuForm.hasClass('closed')) {
-			        menuForm.removeClass('closed').addClass('opened');
-			        filterBtn.text('Hide filters');
-			    }
-			    jQuery('.b-slide-menu__form').slideToggle('medium');
+			jQuery(document).on('click', '.b-hide-filters' , function(){
+				var filterBtn = jQuery('.b-hide-filters');
+				var menuForm = jQuery('.b-slide-menu__form');
+				if (menuForm.hasClass('opened')) {
+				    menuForm.removeClass('opened').addClass('closed');
+				    filterBtn.text('Show filters');
+				} else if (menuForm.hasClass('closed')) {
+				    menuForm.removeClass('closed').addClass('opened');
+				    filterBtn.text('Hide filters');
+				}
+				jQuery('.b-slide-menu__form').slideToggle('medium');
 			});
 
 			//chosen-select init
@@ -464,20 +460,29 @@
 			});
 
 			//****************************** Slide menu on map pages ******************************//
-			$('.b-slide-menu__toggle').on('click', function () {
-			    var slideMenu = jQuery('.b-slide-menu');
-			    if (slideMenu.hasClass('opened')) {
-			        slideMenu.removeClass('opened').addClass('closed');
-			        jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
-			        jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
-			        slideMenu.removeClass('oopeen').addClass('closseed');
-			    } else if (slideMenu.hasClass('closed')) {
-			        slideMenu.removeClass('closed').addClass('opened');
-			        jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
-			        jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
-			        slideMenu.removeClass('closseed').addClass('oopeen');
-			    }
+			jQuery(document).on('click', '.b-slide-menu__toggle' , function(){
+				var slideMenu = jQuery('.b-slide-menu');
+				if (slideMenu.hasClass('opened')) {
+				    slideMenu.removeClass('opened').addClass('closed');
+				    jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
+				    jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
+				    slideMenu.removeClass('oopeen').addClass('closseed');
+				} else if (slideMenu.hasClass('closed')) {
+				    slideMenu.removeClass('closed').addClass('opened');
+				    jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
+				    jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
+				    slideMenu.removeClass('closseed').addClass('oopeen');
+				}
 			});
+
+			var hellopreloader = document.getElementById("hellopreloader_preload");
+			function fadeOutnojquery(el){
+				el.style.opacity = 1;
+				var interhellopreloader = setInterval(function(){
+					el.style.opacity = el.style.opacity - 0.05;
+					if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);
+						hellopreloader.style.display = "none";}},16);}
+			setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);
 
 		}
 </script>

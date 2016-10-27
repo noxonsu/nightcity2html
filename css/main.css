@@ -3630,7 +3630,7 @@ input[type=checkbox] + label:before {
 input[type=checkbox] + label:before { 
     content: "\f096";
     font-size: 23px;
-    color: #ed5565;
+    color: #de443a;
     top: 4px;
     width: 30px;
     position: relative;
@@ -4106,9 +4106,9 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
     overflow:hidden;height:100%;width:100%;
 }
 
-#gmap_canvas img {
+/*#gmap_canvas img {
     max-width:none!important;background:none!important
-}
+}*/
 #gmap_canvas .marker_info2 .info img {
     max-width: 100%;
     position: relative;
@@ -20811,6 +20811,7 @@ i.fmr {
 .irs-bar {
     height: 12px;
     top: 25px;
+    background: #de443a;
     background-position: 0 -60px
 }
 
@@ -20866,7 +20867,7 @@ i.fmr {
 .irs-to {
     color: #fff;
     padding: 1px 5px;
-    background: #ed5565;
+    background: #de443a;
     -moz-border-radius: 4px;
     border-radius: 4px
 }
@@ -22442,8 +22443,19 @@ div.popup {
     top: 50%
 }
 
-
-
+#hellopreloader > p{
+    display:none;
+}
+#hellopreloader_preload {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 770px;
+    width: calc(100vw - 770px);
+    height: 100%;
+    background: #fff url(../img/rings.svg) no-repeat 50% 50%;
+}
 
 
 

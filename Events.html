@@ -78,6 +78,7 @@
 	</header>
 	<!-- .b-header -->
 	<div class="b-main-container places-page" id="content">
+	<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
 	<div class="hidden b-jquery-popup">
 	    <div class="b-form-reg-popup">
 	        <h2 class="b-form-reg-popup__title m--centered">Register Now</h2>
@@ -645,21 +646,25 @@
 
 		main_js = function () {
 
+			setTimeout(function(){
+				$('.b-place-list').addClass('visible');
+			},500);
+
 			initialize_map();
 
 			//b-hide-filters
 
-			$('.b-hide-filters').on('click', function () {
-			    var filterBtn = jQuery('.b-hide-filters');
-			    var menuForm = jQuery('.b-slide-menu__form');
-			    if (menuForm.hasClass('opened')) {
-			        menuForm.removeClass('opened').addClass('closed');
-			        filterBtn.text('Show filters');
-			    } else if (menuForm.hasClass('closed')) {
-			        menuForm.removeClass('closed').addClass('opened');
-			        filterBtn.text('Hide filters');
-			    }
-			    jQuery('.b-slide-menu__form').slideToggle('medium');
+			jQuery(document).on('click', '.b-hide-filters' , function(){
+				var filterBtn = jQuery('.b-hide-filters');
+				var menuForm = jQuery('.b-slide-menu__form');
+				if (menuForm.hasClass('opened')) {
+				    menuForm.removeClass('opened').addClass('closed');
+				    filterBtn.text('Show filters');
+				} else if (menuForm.hasClass('closed')) {
+				    menuForm.removeClass('closed').addClass('opened');
+				    filterBtn.text('Hide filters');
+				}
+				jQuery('.b-slide-menu__form').slideToggle('medium');
 			});
 
 			//chosen-select init
@@ -702,7 +707,7 @@
 
 			tooltip();
 
-			$(document).on( "click", ".jquery_popup", function() {
+			jQuery(document).on( "click", ".jquery_popup", function() {
 			    setTimeout(function(){
 			       	$(".popup .chosen-select-2").chosen({
 			            disable_search_threshold: 10,
@@ -713,20 +718,29 @@
 			});
 
 			//****************************** Slide menu on map pages ******************************//
-			$('.b-slide-menu__toggle').on('click', function () {
-			    var slideMenu = jQuery('.b-slide-menu');
-			    if (slideMenu.hasClass('opened')) {
-			        slideMenu.removeClass('opened').addClass('closed');
-			        jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
-			        jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
-			        slideMenu.removeClass('oopeen').addClass('closseed');
-			    } else if (slideMenu.hasClass('closed')) {
-			        slideMenu.removeClass('closed').addClass('opened');
-			        jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
-			        jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
-			        slideMenu.removeClass('closseed').addClass('oopeen');
-			    }
+			jQuery(document).on('click', '.b-slide-menu__toggle' , function(){
+				var slideMenu = jQuery('.b-slide-menu');
+				if (slideMenu.hasClass('opened')) {
+				    slideMenu.removeClass('opened').addClass('closed');
+				    jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
+				    jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
+				    slideMenu.removeClass('oopeen').addClass('closseed');
+				} else if (slideMenu.hasClass('closed')) {
+				    slideMenu.removeClass('closed').addClass('opened');
+				    jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
+				    jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
+				    slideMenu.removeClass('closseed').addClass('oopeen');
+				}
 			});
+
+			var hellopreloader = document.getElementById("hellopreloader_preload");
+			function fadeOutnojquery(el){
+				el.style.opacity = 1;
+				var interhellopreloader = setInterval(function(){
+					el.style.opacity = el.style.opacity - 0.05;
+					if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);
+						hellopreloader.style.display = "none";}},16);}
+			setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);
 
 		}
 	</script>
