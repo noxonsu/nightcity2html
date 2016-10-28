@@ -188,43 +188,7 @@ window.addEventListener("scroll", lazyLoadImages);
         }
 
 
-        //********************************************** Ajax script **************************************** //
 
-        function ajax_init() {
-            // $('a:not(.noajax):not(.ab-item):not(.chosen-single)').unbind( "click" );
-            $(document).on('click' , 'a:not(.noajax):not(.ab-item):not(.chosen-single)', function(){
-                    var $linkClicked = $(this).attr('href');
-                    console.log($linkClicked);
-                    //$("body").css('opacity',"0.5");
-                    $('.b-preloader').show();
-                    $.get($linkClicked, function (d) { 
-                        var response = new Object();
-                        response.html = $('<div>').html(d);
-                        $("#content").html($(response.html).find('#content').html());
-                        if ($("div").is(".b-map-menu")) {
-                            $(".b-footer").hide(0);
-                        } else {
-                            $(".b-footer").show(0);
-                        }
-                        document.title = $(response.html).find('title').html();
-                        window.history.pushState({
-                            "html": $(response.html).find('html').html(),
-                            "pageTitle": response.pageTitle
-                        }, "", $linkClicked);
-                        lazyLoadImages();
-                        ajax_init();
-                        main_js();
-                        // clearInterval(i);
-                        initialize_new();
-                        window.scrollTo(0, 0);
-                        $('.b-preloader').hide();
-                        //$("body").css('opacity',"1");
-                    });
-                return false;
-            });
-        }
-        
-        ajax_init();
 
         var submitIcon = $('.searchbox-icon');
         var inputBox = $('.searchbox-input');
