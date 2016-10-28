@@ -3366,12 +3366,18 @@ html .btn--buy-ticket:hover {
 .chosen-container-single .chosen-drop {
     margin-top: 0;
 }
-/*.b-place-list .b-grid-item {
-	margin-right: 15px;
+.b-form-cont .chosen-container-single .chosen-single {
+    height: 62px;
+    background: #f7f7f7;
+    line-height: 62px;
+    font-size: 16px;
+    border: 1px solid #e2e2e2;
+    border-radius: 0;
+    box-shadow: 0 0 0 0;
 }
-.b-place-list .b-grid-item:nth-child(odd) {
-	margin-right: 0;
-}*/
+.b-form-cont .b-form--place textarea {
+    line-height: 30px;
+}
 /* end new select */
 .irs-slider {
     width: 18px!important;

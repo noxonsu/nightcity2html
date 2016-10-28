@@ -58,11 +58,11 @@
         		<li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
         		<li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
         		<li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
-        			<ul>
-        				<li><a href="Single-Post_Standart.html">Single Page</a></li>
-        				<li><a href="#">Classic grid</a></li>
-        				<li><a href="#">Wide mansonry</a></li>
-        			</ul>
+	        		<ul>
+	        			<li><a href="Single-Post_Standart.html">Single Page</a></li>
+	        			<li><a href="blog.html">Blog category</a></li>
+	        			<li><a href="#">Wide mansonry</a></li>
+	        		</ul>
         		</li>
         		<li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Apps</a> 
         			<ul>
@@ -525,6 +525,8 @@
 		<script>
 			main_js = function () {
 
+				'use strict';
+
 				$('.b-slider').addClass('visible');
 
 				var mapOptions_place = {
@@ -638,16 +640,18 @@
 				
 				tooltip();
 
-				$('.google_view').click(function () {
-				    $('.google_view iframe').css("pointer-events", "auto");
+				jQuery(document).on('click', '.google_view', function(){
+				    jQuery('.google_view iframe').css("pointer-events", "auto");
 				});
+
 				$(window).scroll(function(){
 				    $('.google_view iframe').css("pointer-events", "none");
 				});
 
-				$('.b-map__wrapper').click(function () {
+				jQuery(document).on('click', '.b-map__wrapper', function(){
 				    $('#map_place').css("pointer-events", "auto");
 				});
+				
 				$(window).scroll(function(){
 				    $('#map_place').css("pointer-events", "none");
 				});

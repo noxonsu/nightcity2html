@@ -1,5 +1,8 @@
 
+
+
         function loadScript(src, callback) {
+            'use strict';
             var s,
                 r,
                 t;
@@ -19,18 +22,15 @@
         }
 
         function initialize_map() {
+            'use strict';
 
-            /*   document.querySelector('header').className += " sticky";
-             document.querySelector('.mycity_o-grid__item').className += ' grid_item_fix';
-             */
             loadScript('js/infobox.js', after_load);
         }
         function after_load() {
+            'use strict';
             initialize_new();
         }
-        // jQuery(document).ready(function ($) {
-        //  google.maps.event.addDomListener(window, 'initialize_map', initialize_map);
-        // });
+
 
 
 
@@ -40,6 +40,7 @@
 
 
 function parallax() {
+    'use strict';
     var $window = $(window);
     $('.b-parallax[data-type="background"]').each(function(){
         var $bgobj = $(this);
@@ -54,6 +55,7 @@ function parallax() {
 //**************************************** lazyLoadImages ****************************************** //
 
 function lazyLoadImages() {
+    'use strict';
     var images = document.querySelectorAll(".lazy[data-src]"), item;
     // load images that have entered the viewport
 
@@ -84,11 +86,13 @@ function lazyLoadImages() {
 
 //****************************** Tooltip plugin activate ******************************//
 function tooltip() {
+    'use strict';
     jQuery('[data-toggle="tooltip"]').tooltip()
 }
 
 //****************************** Button up ******************************//
 function buttonUp() {
+    'use strict';
     var inputVal = $('.searchbox-input').val();
     inputVal = jQuery.trim(inputVal).length;
     if (inputVal !== 0) {
@@ -150,10 +154,7 @@ window.addEventListener("scroll", lazyLoadImages);
 
             }
         });
-        
-        // main_js();
-        
-
+    
         //****************************** Ion range slider plugin activate ******************************//
         jQuery('.example_class').ionRangeSlider({
             type: 'double',
