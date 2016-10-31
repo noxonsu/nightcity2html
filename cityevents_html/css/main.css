@@ -1102,7 +1102,11 @@ input[type="search"].searchbox-input:focus, input[type="search"].searchbox-input
     top: 0;
     transition: all 1s ease 0s;
 }
-
+.b-counter2 .b-counter2__sub-title ~ p {
+    max-width: 250px;
+    text-align: center;
+    margin: auto;
+}
 .b-placeholder--fadeout {
     opacity: 0;
 }
@@ -1156,7 +1160,7 @@ html .b-promo__search {
 .b-cont-title {
     font: bold 30px Philosopher;
     text-transform: capitalize;
-    margin: 0 0 50px;
+    margin: 0 0 60px;
 }
 
 .b-cont-title:after {
@@ -1318,7 +1322,7 @@ html .b-promo__search {
 }
 
 .b-pop-places, .b-events {
-    padding: 90px 15px;
+    padding: 100px 15px;
 }
 
 .b-pop-place {
@@ -1444,12 +1448,12 @@ html .b-promo__search {
 }
 .b-slider.owl-carousel-2 .owl-prev{
     left: 46%;
-    bottom: -80px;
+    bottom: -89px;
     top: auto;
 }
 .b-slider.owl-carousel-2 .owl-next{
     right: 46%;
-    bottom: -80px;
+    bottom: -89px;
     top: auto;
 }
 .b-place-cat .col-md-3 {
@@ -1460,7 +1464,6 @@ html .b-promo__search {
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 300px;
 }
 
 .b-place-cat__item .b-place-cat__item__img {
@@ -1659,7 +1662,7 @@ html .b-promo__search {
 
 .b-promo2 {
     background: #151515 url('../img/promo2-bg.jpg') center top repeat;
-    padding: 90px 0 0;
+    padding: 100px 0 0;
     color: #fff;
 }
 
@@ -1672,7 +1675,11 @@ html .b-promo__search {
     margin-bottom: 40px;
     clear: both;
 }
-
+.b-promo2__list li:last-child,
+.b-promo2__list li:last-child .b-promo2__list__icon,
+.b-promo2__list li:last-child p{
+    margin-bottom: 0;
+}
 .b-promo2__list__icon {
     float: left;
     font-size: 50px;
@@ -1688,11 +1695,12 @@ html .b-promo__search {
 .b-promo2__footer {
     background: #0e0f11;
     padding: 60px 0;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .b-people-say {
-    padding: 90px 15px;
+  padding: 100px 15px;
+  padding-bottom: 130px;
 }
 
 .b-comment {
@@ -1732,7 +1740,7 @@ html .b-promo__search {
 }
 
 .b-add-place {
-    padding: 90px 15px;
+    padding: 100px 15px;
     background: #eeeded;
 }
 
@@ -1796,6 +1804,9 @@ html .b-promo__search {
     width: 100%;
     position: absolute;
     top: 195px;
+    transform: translateX(-50%);
+    max-width: 287px;
+    left: 50%;
     text-align: center;
     color: #fff;
 }
@@ -1817,11 +1828,11 @@ html .b-promo__search {
 .b-counter2 {
     color: #fff;
     display: flex;
-    height: 310px;
+    height: 360px;
+    padding-top: 33px;
     align-items: center;
     text-align: center;
     position: relative;
-
 }
 
 .b-counter2__title {
@@ -1835,7 +1846,7 @@ html .b-promo__search {
 }
 
 .b-latest-post {
-    padding: 90px 15px;
+    padding: 100px 15px;
 }
 
 .b-promo3 {
@@ -1844,6 +1855,11 @@ html .b-promo__search {
     background-attachment: fixed;
     background-position: 50% 0;
     background-size: cover;
+}
+.b-promo3__descr {
+    font-family: Roboto-Light;
+    font-size: 16px;
+    padding-right: 80px;
 }
 
 .b-promo3__cont {
@@ -1979,7 +1995,7 @@ html .b-promo__search {
     height: auto;
     background: #fff;
     box-shadow: 0 2px 2px #ddd;
-    margin-bottom: 30px;
+   /* margin-bottom: 30px;*/
 }
 
 .b-sm-post__img-cont {
@@ -4138,7 +4154,7 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 
 .b-footer__info{
     background: #0f0f11;
-    padding-top: 35px;
+    padding-top: 60px;
 }
 
 .b-footer__text{
@@ -4170,7 +4186,7 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 }
 
 .b-footer__nav__col{
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .b-footer__nav__col__title{
     margin-bottom:30px;
@@ -4208,7 +4224,6 @@ input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow sp
 .shared{
     padding:15px 0;
     border-top:1px solid #202022;
-    margin-top:45px;
 }
 
 .b-soc{
@@ -22213,7 +22228,7 @@ input[type=submit].styler[disabled] {
     position: relative;
     min-height: 1px;
     float: left;
-    padding: 0 4px;
+    /*padding: 0 4px;*/
     -webkit-backface-visibility: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
