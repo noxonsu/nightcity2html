@@ -1,39 +1,33 @@
-
-
-
-        function loadScript(src, callback) {
-            'use strict';
-            var s,
-                r,
-                t;
-            r = false;
-            s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.src = src;
-            s.onload = s.onreadystatechange = function () {
-                ////console.log( this.readyState ); //uncomment this line to see which ready states are called.
-                if (!r && (!this.readyState || this.readyState == 'complete')) {
-                    r = true;
-                    callback();
-                }
-            };
-            t = document.getElementsByTagName('script')[0];
-            t.parentNode.insertBefore(s, t);
+function loadScript(src, callback) {
+    'use strict';
+    var s,
+        r,
+        t;
+    r = false;
+    s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = src;
+    s.onload = s.onreadystatechange = function() {
+        ////console.log( this.readyState ); //uncomment this line to see which ready states are called.
+        if (!r && (!this.readyState || this.readyState == 'complete')) {
+            r = true;
+            callback();
         }
+    };
+    t = document.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(s, t);
+}
 
-        function initialize_map() {
-            'use strict';
+function initialize_map() {
+    'use strict';
 
-            loadScript('js/infobox.js', after_load);
-        }
-        function after_load() {
-            'use strict';
-            initialize_new();
-        }
+    loadScript('js/infobox.js', after_load);
+}
 
-
-
-
+function after_load() {
+    'use strict';
+    initialize_new();
+}
 
 //**************************************** Parallax script ****************************************** //
 
@@ -42,12 +36,14 @@
 function parallax() {
     'use strict';
     var $window = $(window);
-    $('.b-parallax[data-type="background"]').each(function(){
+    $('.b-parallax[data-type="background"]').each(function() {
         var $bgobj = $(this);
         $(window).scroll(function() {
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-            var coords = '50% '+ yPos +'px';
-            $bgobj.css({ backgroundPosition: coords });
+            var coords = '50% ' + yPos + 'px';
+            $bgobj.css({
+                backgroundPosition: coords
+            });
         });
     });
 }
@@ -56,25 +52,26 @@ function parallax() {
 
 function lazyLoadImages() {
     'use strict';
-    var images = document.querySelectorAll(".lazy[data-src]"), item;
+    var images = document.querySelectorAll(".lazy[data-src]"),
+        item;
     // load images that have entered the viewport
 
-    [].forEach.call(images, function (item) {
-        if (item.getBoundingClientRect().top > 0) { //alert(1);
+    [].forEach.call(images, function(item) {
+            if (item.getBoundingClientRect().top > 0) { //alert(1);
 
-            //$(this).
-            var image = item.getAttribute("data-src"),
-                img = jQuery('<img />');
-            img.bind('load', function () {
-                jQuery(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
-            });
-            img.attr('src', image);
-            jQuery(item).css("background-image", "url(" + image + ")")
+                //$(this).
+                var image = item.getAttribute("data-src"),
+                    img = jQuery('<img />');
+                img.bind('load', function() {
+                    jQuery(item).find(".b-placeholder").addClass('b-placeholder--fadeout');
+                });
+                img.attr('src', image);
+                jQuery(item).css("background-image", "url(" + image + ")")
 
-            item.removeAttribute("data-src");
-        }
-    })
-    // if all the images are loaded, stop calling the handler
+                item.removeAttribute("data-src");
+            }
+        })
+        // if all the images are loaded, stop calling the handler
     if (images.length == 0) {
         window.removeEventListener("DOMContentLoaded", lazyLoadImages);
         window.removeEventListener("load", lazyLoadImages);
@@ -110,11 +107,11 @@ window.addEventListener("resize", lazyLoadImages);
 window.addEventListener("scroll", lazyLoadImages);
 
 
-(function ($) {
-    $(document).ready(function () {
+(function($) {
+    $(document).ready(function() {
         'use strict';
 
-        jQuery(document).one('mousemove', 'body', function(){
+        jQuery(document).one('mousemove', 'body', function() {
             $('.home').prepend('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script><script scr="js/custom.js"></script>');
         });
 
@@ -125,7 +122,7 @@ window.addEventListener("scroll", lazyLoadImages);
         $('html').removeClass('no-js');
 
         /*ajax subscribe*/
-        jQuery(document).on("click", '.b-gadget__subscribe__button', function (e) {
+        jQuery(document).on("click", '.b-gadget__subscribe__button', function(e) {
             e.preventDefault();
             var email = jQuery(".b-gadget__subscribe__field");
             email.removeClass('error');
@@ -139,7 +136,7 @@ window.addEventListener("scroll", lazyLoadImages);
                     url: nightcity_obj.ajaxurl,
                     type: 'POST',
                     data: "action=nightcity_mailchimp_send&email=" + email.val(),
-                    success: function (date) {
+                    success: function(date) {
                         jQuery('#subscribe_mini_form').append("<div class=\"alert alert-success fade in\">" +
                             "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">&times;</button><strong>" +
                             "" + date + "" +
@@ -154,7 +151,7 @@ window.addEventListener("scroll", lazyLoadImages);
 
             }
         });
-    
+
         //****************************** Ion range slider plugin activate ******************************//
         jQuery('.example_class').ionRangeSlider({
             type: 'double',
@@ -166,9 +163,9 @@ window.addEventListener("scroll", lazyLoadImages);
 
         //****************************** Script for animate.css ******************************//
         $.fn.extend({
-            animateCss: function (animationName) {
+            animateCss: function(animationName) {
                 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-                $(this).addClass('animated ' + animationName).one(animationEnd, function () {
+                $(this).addClass('animated ' + animationName).one(animationEnd, function() {
                     $(this).removeClass('animated ' + animationName);
                 });
             }
@@ -195,7 +192,7 @@ window.addEventListener("scroll", lazyLoadImages);
         var searchBox = $('.searchbox');
         var isOpen = false;
 
-        jQuery(document).on("click",'.searchbox-icon', function (e) {
+        jQuery(document).on("click", '.searchbox-icon', function(e) {
             if (isOpen == false) {
                 searchBox.addClass('searchbox-open');
                 inputBox.focus();
@@ -207,26 +204,26 @@ window.addEventListener("scroll", lazyLoadImages);
             }
         });
 
-        jQuery(document).on("mouseup", submitIcon , function () {
+        jQuery(document).on("mouseup", submitIcon, function() {
             return false;
         });
 
-        jQuery(document).on("mouseup", searchBox , function () {
+        jQuery(document).on("mouseup", searchBox, function() {
             return false;
         });
 
-        jQuery(document).on("mouseup", searchBox , function () {
+        jQuery(document).on("mouseup", searchBox, function() {
             return false;
         });
 
-        if($(window).width() > 992) {
-            $('.fadein').delay(2000).queue(function (next) {
+        if ($(window).width() > 992) {
+            $('.fadein').delay(2000).queue(function(next) {
                 $(this).addClass('active');
                 next();
             });
         }
 
-        jQuery(document).on("click", '.b-nav-toggle' , function (e) {
+        jQuery(document).on("click", '.b-nav-toggle', function(e) {
             var bNav = $('.b-nav');
             var iconToggle = $(this).find('.fa');
             if ($(this).hasClass('closed')) {
@@ -242,13 +239,13 @@ window.addEventListener("scroll", lazyLoadImages);
 
         $('.b-nav>ul>li.menu-item-has-children>a').append('<i class="fa fa-angle-down"></i>');
 
-        jQuery(document).on('click', '.b-view-btn__grid' , function (e) { 
+        jQuery(document).on('click', '.b-view-btn__grid', function(e) {
             $('.b-place-list--list').removeClass('opened').addClass('closed');
             $('.b-place-list--grid').removeClass('closed').addClass('opened');
             $(window).trigger('resize');
         });
 
-        jQuery(document).on('click', '.b-view-btn__list' , function (e) { 
+        jQuery(document).on('click', '.b-view-btn__list', function(e) {
             $('.b-place-list--grid').removeClass('opened').addClass('closed');
             $('.b-place-list--list').removeClass('closed').addClass('opened');
             $(window).trigger('resize');
@@ -258,5 +255,3 @@ window.addEventListener("scroll", lazyLoadImages);
 
     });
 })(jQuery);
-
-
