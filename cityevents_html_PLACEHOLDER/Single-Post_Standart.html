@@ -370,48 +370,6 @@
         </div>
         <!-- .container -->
         <div id="gmap_canvas"></div>
-        <script>
-            main_js = function() {
-
-                'use strict';
-
-                //chosen-select init
-
-                $(".chosen-select").chosen({
-                    disable_search_threshold: 10,
-                    no_results_text: "Oops, nothing found!",
-                    width: "100%"
-                });
-
-                $(".owl-carousel-3").owlCarousel({
-                    responsiveClass: true,
-                    responsive: {
-                        0: {
-                            items: 1,
-                            nav: true
-                        },
-                        600: {
-                            items: 1,
-                            nav: true
-                        },
-                        1000: {
-                            items: 1,
-                            nav: true
-                        }
-                    }
-                });
-
-                $(document).on("click", ".jquery_popup", function() {
-                    setTimeout(function() {
-                        $(".popup .chosen-select-2").chosen({
-                            disable_search_threshold: 10,
-                            no_results_text: "Oops, nothing found!",
-                            width: "100%"
-                        });
-                    }, 50);
-                });
-            }
-        </script>
     </div>
     <!-- .b-main-container -->
     <div class="b-footer">
