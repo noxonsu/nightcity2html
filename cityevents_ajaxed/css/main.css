@@ -1319,10 +1319,8 @@ only screen and (min-resolution: 1.5dppx) {
     vertical-align: middle;
 }
 .b-nav > ul {
-    min-height: 80px;
-    padding-top: 28px;
     top: 80px;
-    z-index: -1;
+    z-index: 11111;
     text-align: center;
     width: 100%;
     position: absolute;
@@ -1330,21 +1328,15 @@ only screen and (min-resolution: 1.5dppx) {
 .b-nav ul li ul {
     top: 40px;
 }
-.b-nav > ul > li {
-    height: 25px;
-}
-.b-nav > ul > li:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
 .b-nav > ul > li:after {
     content: "";
     position: absolute;
-    border-bottom: 26px solid transparent;
+/*    border-bottom: 50px solid transparent;*/
     width: 100%;
     left: 0;
+    z-index: 1111111;
+    height: 33px;
+    background: transparent;
 }
 .b-nav ul li {
     display: inline-block;
@@ -1356,6 +1348,7 @@ only screen and (min-resolution: 1.5dppx) {
 .b-nav ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;
     font-size: 14px;
     font-weight: normal;
     cursor: pointer;
@@ -4269,14 +4262,14 @@ html .btn--buy-ticket:hover {
 }
 @media only screen and (min-width: 1371px) {
     .b-nav > ul {
-        top: 2px;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
         left: 40%;
     }
 }
 @media only screen and (min-width: 1440px) {
     .b-nav > ul {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-50%);
         left: 43%;
     }
 }
@@ -4287,8 +4280,7 @@ html .btn--buy-ticket:hover {
 }
 @media only screen and (max-width: 1370px) {
     .b-nav > ul {
-        min-height: 80px;
-        padding-top: 28px;
+    
         top: 2px;
         left: -70px;
         text-align: center;

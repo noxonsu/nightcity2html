@@ -21,7 +21,6 @@ function loadScript(src, callback) {
 
 function initialize_map() {
     'use strict';
-
     loadScript('js/infobox.js', after_load);
 }
 
@@ -148,14 +147,7 @@ window.addEventListener("scroll", lazyLoadImages);
             }
         });
 
-        //****************************** Ion range slider plugin activate ******************************//
-        jQuery('.example_class').ionRangeSlider({
-            type: 'double',
-            min: 0,
-            max: 750,
-            from: 150,
-            to: 600
-        });
+
 
         //****************************** Script for animate.css ******************************//
         $.fn.extend({
@@ -234,18 +226,6 @@ window.addEventListener("scroll", lazyLoadImages);
             }
         });
 
-        jQuery(document).on("mouseup", submitIcon, function() {
-            return false;
-        });
-
-        jQuery(document).on("mouseup", searchBox, function() {
-            return false;
-        });
-
-        jQuery(document).on("mouseup", searchBox, function() {
-            return false;
-        });
-
         if ($(window).width() > 992) {
             $('.fadein').delay(2000).queue(function(next) {
                 $(this).addClass('active');
@@ -281,7 +261,7 @@ window.addEventListener("scroll", lazyLoadImages);
             $(window).trigger('resize');
         });
 
-      	main_js(jQuery);
+      	main_js($);
 
     });
 })(jQuery);

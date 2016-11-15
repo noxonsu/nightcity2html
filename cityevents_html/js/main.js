@@ -200,17 +200,6 @@ window.addEventListener("scroll", lazyLoadImages);
             }
         });
 
-        jQuery(document).on("mouseup", submitIcon, function() {
-            return false;
-        });
-
-        jQuery(document).on("mouseup", searchBox, function() {
-            return false;
-        });
-
-        jQuery(document).on("mouseup", searchBox, function() {
-            return false;
-        });
 
         if ($(window).width() > 992) {
             $('.fadein').delay(2000).queue(function(next) {
