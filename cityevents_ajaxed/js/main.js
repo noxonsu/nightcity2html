@@ -225,7 +225,7 @@ window.addEventListener("scroll", lazyLoadImages);
             $('a:not(.noajax):not(.ab-item)').click(function() {
             	alert('1');
                 var $linkClicked = $(this).attr('href');
-                // console.log($linkClicked);
+                console.log($linkClicked);
                 $('.b-preloader').show();
                 $.get($linkClicked, function(d) {
                     var response = new Object();
@@ -245,7 +245,9 @@ window.addEventListener("scroll", lazyLoadImages);
                     main_js();
                     ajax_init();
                     window.scrollTo(0, 0);
-                    $('.b-preloader').hide();
+                    setTimeout(function(){
+                    	$('.b-preloader').hide();
+                    },1500);
                 });
                 return false;
             });

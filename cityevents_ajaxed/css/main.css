@@ -5516,7 +5516,7 @@ ul.gp_content {
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease;
     background: #de443a;
-    height: 7px;
+    height: 4px;
     left: 0;
     position: fixed;
     top: 0;
@@ -5528,6 +5528,12 @@ ul.gp_content {
     0% {
         width: 0%;
     }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
+    }
     75% {
         width: 83%;
     }
@@ -5535,12 +5541,15 @@ ul.gp_content {
         width: 100%;
     }
 }
-@-webkit-keyframes horizontalProgressBar
-/* Safari and Chrome */
-
-{
+@-webkit-keyframes horizontalProgressBar {
     0% {
         width: 0%;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
     }
     75% {
         width: 83%;
