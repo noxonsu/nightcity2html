@@ -1319,10 +1319,8 @@ only screen and (min-resolution: 1.5dppx) {
     vertical-align: middle;
 }
 .b-nav > ul {
-    min-height: 80px;
-    padding-top: 28px;
     top: 80px;
-    z-index: -1;
+    z-index: 11111;
     text-align: center;
     width: 100%;
     position: absolute;
@@ -1330,21 +1328,15 @@ only screen and (min-resolution: 1.5dppx) {
 .b-nav ul li ul {
     top: 40px;
 }
-.b-nav > ul > li {
-    height: 25px;
-}
-.b-nav > ul > li:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
 .b-nav > ul > li:after {
     content: "";
     position: absolute;
-    border-bottom: 26px solid transparent;
+/*    border-bottom: 50px solid transparent;*/
     width: 100%;
     left: 0;
+    z-index: 1111111;
+    height: 33px;
+    background: transparent;
 }
 .b-nav ul li {
     display: inline-block;
@@ -1356,6 +1348,7 @@ only screen and (min-resolution: 1.5dppx) {
 .b-nav ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;
     font-size: 14px;
     font-weight: normal;
     cursor: pointer;
@@ -4269,14 +4262,14 @@ html .btn--buy-ticket:hover {
 }
 @media only screen and (min-width: 1371px) {
     .b-nav > ul {
-        top: 2px;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
         left: 40%;
     }
 }
 @media only screen and (min-width: 1440px) {
     .b-nav > ul {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-50%);
         left: 43%;
     }
 }
@@ -4287,9 +4280,8 @@ html .btn--buy-ticket:hover {
 }
 @media only screen and (max-width: 1370px) {
     .b-nav > ul {
-        min-height: 80px;
-        padding-top: 28px;
-        top: 2px;
+        top: 50%;
+        transform: translateY(-50%);
         left: -70px;
         text-align: center;
         width: 100%;
@@ -4325,7 +4317,6 @@ html .btn--buy-ticket:hover {
     }
     .b-nav > ul {
         left: 15px;
-        top: 0;
     }
     .b-header__ctrl__item {
         padding: 16px 5px;
@@ -4372,6 +4363,9 @@ html .btn--buy-ticket:hover {
     }
 }
 @media only screen and (max-width: 992px) {
+    .b-nav > ul > li:after {
+        height: 0;
+    }
     .b-event-counter .btn--buy-ticket {
         width: 100%;
         text-align: center;
@@ -4469,8 +4463,9 @@ html .btn--buy-ticket:hover {
     }
     .b-nav > ul {
         background: #0f0f11;
-        top: 59px;
-        padding-top: 0;
+    }
+    .b-nav > ul {
+        top: 235px;
     }
     .b-header__ctrl {
         float: none;
@@ -4858,7 +4853,7 @@ html .btn--buy-ticket:hover {
         display: none;
     }
     .b-nav > ul {
-        top: 60px;
+        top: 235px;
     }
     .searchbox-icon {
         width: 62px;
@@ -5516,17 +5511,23 @@ ul.gp_content {
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease;
     background: #de443a;
-    height: 3px;
+    height: 4px;
     left: 0;
     position: fixed;
     top: 0;
     width: 0%;
-    z-index: 9999;
+    z-index: 9999999999;
     display: none;
 }
 @keyframes horizontalProgressBar {
     0% {
         width: 0%;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
     }
     75% {
         width: 83%;
@@ -5535,12 +5536,15 @@ ul.gp_content {
         width: 100%;
     }
 }
-@-webkit-keyframes horizontalProgressBar
-/* Safari and Chrome */
-
-{
+@-webkit-keyframes horizontalProgressBar {
     0% {
         width: 0%;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
     }
     75% {
         width: 83%;

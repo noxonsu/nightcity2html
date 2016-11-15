@@ -4280,8 +4280,8 @@ html .btn--buy-ticket:hover {
 }
 @media only screen and (max-width: 1370px) {
     .b-nav > ul {
-    
-        top: 2px;
+        top: 50%;
+        transform: translateY(-50%);
         left: -70px;
         text-align: center;
         width: 100%;
@@ -4317,7 +4317,6 @@ html .btn--buy-ticket:hover {
     }
     .b-nav > ul {
         left: 15px;
-        top: 0;
     }
     .b-header__ctrl__item {
         padding: 16px 5px;
@@ -4364,6 +4363,9 @@ html .btn--buy-ticket:hover {
     }
 }
 @media only screen and (max-width: 992px) {
+    .b-nav > ul > li:after {
+        height: 0;
+    }
     .b-event-counter .btn--buy-ticket {
         width: 100%;
         text-align: center;
@@ -4461,8 +4463,9 @@ html .btn--buy-ticket:hover {
     }
     .b-nav > ul {
         background: #0f0f11;
-        top: 59px;
-        padding-top: 0;
+    }
+    .b-nav > ul {
+        top: 235px;
     }
     .b-header__ctrl {
         float: none;
@@ -4850,7 +4853,7 @@ html .btn--buy-ticket:hover {
         display: none;
     }
     .b-nav > ul {
-        top: 60px;
+        top: 235px;
     }
     .searchbox-icon {
         width: 62px;
