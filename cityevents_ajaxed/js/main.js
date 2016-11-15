@@ -184,8 +184,11 @@ window.addEventListener("scroll", lazyLoadImages);
         //********************************************** Ajax script **************************************** //
 
         function ajax_init() {
-            $(document).unbind('click');
+            //$(document).unbind('click');
+            $(document).off('click', 'a:not(.noajax):not(.ab-item):not(.chosen-single)');
+            // $(document).unbind('click', 'a:not(.noajax):not(.ab-item):not(.chosen-single)');
             $(document).on('click' , 'a:not(.noajax):not(.ab-item):not(.chosen-single)', function(){
+            		alert('1');
             	    var $linkClicked = $(this).attr('href');
             	    console.log($linkClicked);
             	    $('.b-preloader').show();
