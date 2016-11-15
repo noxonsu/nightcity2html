@@ -5521,7 +5521,7 @@ ul.gp_content {
     position: fixed;
     top: 0;
     width: 0%;
-    z-index: 9999;
+    z-index: 9999999999;
     display: none;
 }
 @keyframes horizontalProgressBar {
