@@ -469,7 +469,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/bar/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }],
     'cinema': [{
@@ -483,7 +483,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/cinema/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }],
     'entertainments': [{
@@ -497,7 +497,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/entertainments/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }],
     'hotels': [{
@@ -511,7 +511,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/hotels/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }],
     'restaurant': [{
@@ -525,7 +525,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/spice-symphony/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'Club a steakhouse',
@@ -538,7 +538,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/club-a-steakhouse/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'Lincoln square',
@@ -551,7 +551,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/lincoln-square-steak/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'Restaurant',
@@ -564,7 +564,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/test/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     },
 
@@ -579,7 +579,7 @@ var mapObject, markers = [], markersData = {
             time: '',
             fetaturesicon: '',
             description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-            url_point: '/places/test/',
+            url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
             moreinfo: 'More info'
         },
 
