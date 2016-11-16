@@ -430,7 +430,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/lincoln-square-steak-old-restaurant/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'Night club',
@@ -443,7 +443,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/night-club/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'Snack bar',
@@ -456,7 +456,7 @@ var mapObject, markers = [], markersData = {
         time: '',
         fetaturesicon: '',
         description_point: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis fuga id incidunt. Dicta hic officiis',
-        url_point: '/places/snack-bar/',
+        url_point: 'http://city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html',
         moreinfo: 'More info'
     }, {
         name: 'bar',
