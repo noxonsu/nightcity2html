@@ -8,6 +8,7 @@
 - home page style
 - banner style 
 - blog page style
+- blog masonry single
 - single post page style
 - gallery page style
 - single event page style
@@ -820,7 +821,7 @@ input[type="email"],
 input[type="tel"],
 input[type="search"],
 input[type="time"],
-textarea {
+textarea{
     border: 1px solid #e2e2e2;
     background: #fff;
     min-height: 50px;
@@ -835,6 +836,10 @@ textarea {
 textarea {
     padding: 15px;
     line-height: 20px;
+}
+textarea[name="post_content"] {
+    font: 300 16px Roboto-Light;
+    height: 170px;
 }
 select:focus,
 textarea:focus,
@@ -2576,6 +2581,27 @@ html .b-gadget__subscribe__field {
 .b-sm-post__popup__share-link {
     color: #9f9f9f;
     margin-bottom: 5px;
+}
+/* ---------------------------------------------------- blog masonry single style ---------------------------------------------------- */
+.blog-masonry-single .b-pic {
+    height: 590px;
+}
+
+.blog-masonry-single .b-content {
+    width:770px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.blog-masonry-single .b-post-feature__tag {
+    float:none;
+}
+.blog-masonry-single .b-single-post h3 {
+    font-size: 20px;
+    margin: 22px 0;
+    font-weight: bold;
+    line-height: 31px;
+    font-style: italic;
+    font-family: Philosopher;
 }
 /* ---------------------------------------------------- Single post page style ---------------------------------------------------- */
 
