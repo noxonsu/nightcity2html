@@ -2631,6 +2631,9 @@ html .b-gadget__subscribe__field {
 .b-post-container {
     margin: 0 -15px;
 }
+.b-post-container .b-grid .b-grid-item {
+    margin-bottom: 30px;
+}
 .b-post-feature__tag {
     float: right;
     background: #de443a;
