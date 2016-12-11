@@ -254,17 +254,17 @@
 
                 'use strict';
 
-                
-
-                // alert('1');
                 //****************************** Masonry plugin activate ******************************//
-                $('.b-grid').masonry({
-                    // options
-                    // set itemSelector so .grid-sizer is not used in layout
-                    itemSelector: '.b-grid-item',
-                    // use element for option
-                    percentPosition: true
-                });
+                setTimeout(function(){
+                    $('.b-grid').masonry({
+                        // options
+                        // set itemSelector so .grid-sizer is not used in layout
+                        itemSelector: '.b-grid-item',
+                        // use element for option
+                        percentPosition: true
+                    });
+                },50)
+
 
                 $('.b-content .b-loadmore').css('margin','42px auto');
 
@@ -382,7 +382,7 @@
     <script src="js/jssor.slider.mini.js"></script>
     <script src="js/lightcase.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
+    <!-- <script src="js/masonry.pkgd.min.js"></script> -->
     <script src="js/owl.carousel.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/tooltip.js"></script>
