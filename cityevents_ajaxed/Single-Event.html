@@ -129,12 +129,7 @@
                             <span class="b-event-counter__title">Time left to event:</span>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <div id="timer">
-                                <div class="b-event-counter__item f-time"><span class="time"></span>days</div>
-                                <div class="b-event-counter__item f-time"><span class="time"></span>hours</div>
-                                <div class="b-event-counter__item f-time"><span class="time"></span>minutes</div>
-                                <div class="b-event-counter__item f-time"><span class="time"></span>seconds</div>
-                            </div>
+                            <div id="timer"></div>   
                         </div>
                         <div class="col-md-3 col-sm-2 col-xs-4 col-xs-offset-4 col-md-offset-0 col-sm-offset-0">
                             <a href="#" class="btn btn--buy-ticket">Buy tickets</a>
@@ -1014,32 +1009,45 @@
 
                             'use strict';
 
-                            if($('.b-event-counter__item').hasClass('f-time')) {
-                                var s = document.getElementsByClassName('time');
-                                var oneDay = 24 * 60 * 60 * 1000;
-                                var firstDate = new Date("Nov 2, 2016 11:14:00");var secondDate = new Date();
-                                var days = 135;
-                                var hrs = (days - Math.floor(days)) * 24;
-                                var min = (hrs - Math.floor(hrs)) * 60;
-                                s[0].innerHTML = Math.floor(days);
-                                s[1].innerHTML = Math.floor(hrs);
-                                s[2].innerHTML = Math.floor(min);
-                                s[3].innerHTML = Math.floor((min - Math.floor(min)) * 60);
-                                var i = setInterval(function() {n()}, 1000);
-                                function f(d, x) {s[d].innerHTML = x;s[d - 1].innerHTML = Number(s[d - 1].innerHTML) - 1;}
-                                function n() {s[3].innerHTML = Number(s[3].innerHTML) - 1;
-                                if (s[3].innerHTML == -1) {f(3, 59)
-                                if (s[2].innerHTML == -1) {f(2, 59)
-                                if (s[1].innerHTML == -1) {f(1, 23)
-                                }}}}
+                            function updateTimer() {
+
+                                if($('#timer').length > 0) {
+
+                                        var future  = Date.parse("June 11, 2018 11:30:00"),
+                                        now     = new Date(),
+                                        diff    = future - now;
+
+                                        var days  = Math.floor( diff / (1000*60*60*24) );
+                                        var hours = Math.floor( diff / (1000*60*60) );
+                                        var mins  = Math.floor( diff / (1000*60) );
+                                        var secs  = Math.floor( diff / 1000 );
+
+                                        d = days;
+                                        h = hours - days  * 24;
+                                        var m = mins  - hours * 60;
+                                        var s = secs  - mins  * 60;
+
+                                        document.getElementById("timer")
+                                          .innerHTML =
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + d + '</span>days</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + h + '</span>hours</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + m + '</span>minutes</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + s + '</span>seconds</div>';
+                                    }
+                            }
+          
+                            var myVar = setInterval(function(){ updateTimer() }, 1000);
+
+                            function myStopFunction() {
+                                clearInterval(myVar);
                             }
 
                             $(document).on('click', '.b-nav li a', function (e) { 
-                                clearInterval(i);
+                                myStopFunction();
                             });
 
                             $(document).on('click', '.b-pic--event a', function (e) { 
-                                clearInterval(i);
+                                myStopFunction();
                             });
 
                             $('.b-slider').addClass('visible');
@@ -1244,6 +1252,7 @@
                                 });
                             },1000);
                         }
+                    
                     </script>
     </div>
     <!-- .b-main-container -->
