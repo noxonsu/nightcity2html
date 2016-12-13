@@ -1012,14 +1012,46 @@
 
                             'use strict';
                             
+                            function updateTimer() {
+
+                                if($('#timer').length > 0) {
+
+                                        var future  = Date.parse("June 11, 2018 11:30:00"),
+                                        now     = new Date(),
+                                        diff    = future - now;
+
+                                        var days  = Math.floor( diff / (1000*60*60*24) );
+                                        var hours = Math.floor( diff / (1000*60*60) );
+                                        var mins  = Math.floor( diff / (1000*60) );
+                                        var secs  = Math.floor( diff / 1000 );
+
+                                        d = days;
+                                        h = hours - days  * 24;
+                                        var m = mins  - hours * 60;
+                                        var s = secs  - mins  * 60;
+
+                                        document.getElementById("timer")
+                                          .innerHTML =
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + d + '</span>days</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + h + '</span>hours</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + m + '</span>minutes</div>' +
+                                            '<div class="b-event-counter__item f-time"><span class="time">' + s + '</span>seconds</div>';
+                                    }
+                            }
+                            
+                            var myVar = setInterval(function(){ updateTimer() }, 1000);
+
+                            function myStopFunction() {
+                                clearInterval(myVar);
+                            }
+
                             $(document).on('click', '.b-nav li a', function (e) { 
-                                clearInterval(i);
+                                myStopFunction();
                             });
 
                             $(document).on('click', '.b-pic--event a', function (e) { 
-                                clearInterval(i);
+                                myStopFunction();
                             });
-
                             $('.b-slider').addClass('visible');
 
                             //map init
